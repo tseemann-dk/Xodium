@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Xodium</RootNamespace>
+    <Authors>Torsten Seemann</Authors>
+    <Product>Xodium</Product>
+    <Description>Xodium Library, Core types</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <LangVersion>latest</LangVersion>
+    <Company>Torsten Seemann</Company>
+  </PropertyGroup>
+
+</Project>

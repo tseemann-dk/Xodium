@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Xodium Library, Common cross-platform services</Description>
+    <Authors>Torsten Seemann</Authors>
+    <Product>Xodium</Product>
+    <Company>Torsten Seemann</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Plugin.NetStandardStorage" Version="1.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Torsten Seemann</Authors>
+    <Company>Torsten Seemann</Company>
+    <Product>Xodium</Product>
+    <Description>Xodium MVVM Framework, base types</Description>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+  </ItemGroup>
+
+</Project>

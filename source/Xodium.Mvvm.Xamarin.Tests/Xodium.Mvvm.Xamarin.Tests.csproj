@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Authors>Torsten Seemann</Authors>
+
+    <Company>Torsten Seemann</Company>
+
+    <Product>Xodium</Product>
+
+    <Description />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="Moq" Version="4.12.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+    <ProjectReference Include="..\Xodium.Injection.MicrosoftUnity\Xodium.Injection.MicrosoftUnity.csproj" />
+    <ProjectReference Include="..\Xodium.Mvvm.Xamarin\Xodium.Mvvm.Xamarin.csproj" />
+    <ProjectReference Include="..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+  </ItemGroup>
+
+</Project>

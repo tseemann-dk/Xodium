@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Xodium MVVM Framework, Reactive UI support</Description>
+    <Authors>Torsten Seemann</Authors>
+    <Company>Torsten Seemann</Company>
+    <Product>Xodium</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReactiveUI" Version="9.19.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+  </ItemGroup>
+
+</Project>

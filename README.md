@@ -1,8 +1,6 @@
 ![Xodium Logo](https://github.com/tseemann-dk/Xodium/blob/master/images/Xodium_96.png "Xodium Logo")
 # Xodium
-A library of common cross-platform functionality for solutions running on top of any variant of .NET.
-
-The Xodium library is to x-platform development what sodium in table salt is to your everyday household ... a natural ingredient that adds a little flavor ;)
+A library of cross-platform functionality for solutions running on top of .NET. Xodium provides a basic ingredient for many common applications ... similar to the sodium in your everyday household table salt.
 
 Xodium is a collection of reusable constructs and components commonly used in .NET applications that require running across multiple devices, platforms and operating systems.
 The primary goal of the library is to abstract away similarities across various platforms and at the same time provide implementations of these abstractions for the most popular platforms.

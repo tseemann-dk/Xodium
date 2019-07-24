@@ -1,4 +1,4 @@
-![Xodium Logo](https://github.com/tseemann-dk/Xodium/blob/master/images/Xodium_128.png "Xodium Logo")
+![Xodium Logo](https://github.com/tseemann-dk/Xodium/blob/master/images/Xodium_96.png "Xodium Logo")
 # Xodium
 A library of common cross-platform functionality for solutions running on top of any variant of .NET.
 

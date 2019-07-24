@@ -1,0 +1,16 @@
+# Build and deploy Xodium packages from GitHub to GitHub
+# (Learn yaml at https://aka.ms/yaml)
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/*.csproj'
+    versioningScheme: 'off'
+    verbosityPack: 'Minimal'

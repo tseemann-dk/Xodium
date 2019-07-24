@@ -13,3 +13,4 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
+    verbosityPack: 'Minimal'

@@ -9,6 +9,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
     <Company>Torsten Seemann</Company>
+    <PackageIconUrl>https://github.com/tseemann-dk/Xodium/blob/master/images/Xodium_128.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>

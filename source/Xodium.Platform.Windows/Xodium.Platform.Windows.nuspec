@@ -9,6 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Xodium Library, Windows platform support</description>
     <copyright>Copyright 2019</copyright>
+    <iconUrl>https://github.com/tseemann-dk/Xodium/blob/master/images/Xodium_128.png</iconUrl>
     <tags></tags>
   </metadata>
 </package>

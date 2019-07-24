@@ -8,6 +8,7 @@
     <Product>Xodium</Product>
     <Description>Xodium MVVM Framework, base types</Description>
     <LangVersion>latest</LangVersion>
+    <PackageIconUrl>https://github.com/tseemann-dk/Xodium/blob/master/images/Xodium_128.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

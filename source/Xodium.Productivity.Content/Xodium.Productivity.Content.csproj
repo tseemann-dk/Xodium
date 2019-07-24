@@ -8,6 +8,7 @@
     <Product>Xodium</Product>
     <Description>Xodium Library, Content management support</Description>
     <LangVersion>latest</LangVersion>
+    <PackageIconUrl>https://github.com/tseemann-dk/Xodium/blob/master/images/Xodium_128.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>

@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Xodium MVVM Framework, WPF Support</description>
     <copyright>Copyright 2019</copyright>
-    <iconUrl>https://raw.githubusercontent.com/tseemann-dk/Xodium/master/images/Xodium_128.png?token=ALELTYON4A56XE4RCJ5KD725HDOAM</iconUrl>
+    <iconUrl>https://tseemann-dk.github.io/images/Xodium_128.png</iconUrl>
     <tags></tags>
   </metadata>
 </package>

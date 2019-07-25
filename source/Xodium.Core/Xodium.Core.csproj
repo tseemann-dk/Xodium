@@ -9,7 +9,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
     <Company>Torsten Seemann</Company>
-    <PackageIconUrl>https://seemann.visualstudio.com/42207092-3403-4b9b-8acd-c1b9b9435df1/_apis/git/repositories/55383771-f7ff-4253-8650-fdcc3d919a58/Items?path=%2FImages%2FXodium_128.png&amp;versionDescriptor%5BversionOptions%5D=0&amp;versionDescriptor%5BversionType%5D=0&amp;versionDescriptor%5Bversion%5D=master&amp;download=false&amp;resolveLfs=true&amp;%24format=octetStream&amp;api-version=5.0-preview.1</PackageIconUrl>
+    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_128.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>

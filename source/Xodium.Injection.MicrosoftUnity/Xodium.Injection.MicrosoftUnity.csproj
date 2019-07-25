@@ -7,7 +7,7 @@
     <Description>Xodium Dependency Injection, Microsoft Unity support</Description>
     <LangVersion>latest</LangVersion>
     <Company>Torsten Seemann</Company>
-    <PackageIconUrl>https://raw.githubusercontent.com/tseemann-dk/Xodium/master/images/Xodium_128.png?token=ALELTYON4A56XE4RCJ5KD725HDOAM</PackageIconUrl>
+    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_128.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

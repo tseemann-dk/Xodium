@@ -9,10 +9,12 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
     <Company>Torsten Seemann</Company>
+    <IconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</IconUrl>
     <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
     <Copyright>Copyright (c) Torsten Seemann</Copyright>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/tseemann-dk/Xodium</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>

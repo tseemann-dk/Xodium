@@ -6,7 +6,7 @@
     <Authors>Torsten Seemann</Authors>
     <Company />
     <Product>Xodium</Product>
-    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_128.png</PackageIconUrl>
+    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

@@ -7,7 +7,7 @@
     <Product>Xodium</Product>
     <Description>Xodium Library, Redux.NET support for unidirectional dataflow state management</Description>
     <LangVersion>latest</LangVersion>
-    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_128.png</PackageIconUrl>
+    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

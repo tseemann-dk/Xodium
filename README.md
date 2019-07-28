@@ -9,7 +9,7 @@ Xodium provides a collection of reusable constructs and components designed for 
 The library contains components organized into the following categories:
 
 ## Xodium.Core
-Common base types and general extensions for the .NET BCL.
+Common base types and interfaces as well as general extensions for the .NET BCL.
 
 ## Xodium.Injection
 An abstraction of dependency injection that enables inversion of control in your applications without taking a direct dependency on the chosen IoC container. Includes support for Microsoft Unity and Microsoft DependencyInjection. Others can easily be added by implementing a few simple bridge interfaces.
@@ -24,4 +24,4 @@ Features that are common amongst many platforms, but vary in API implementation,
 The productivity category of Xodium enables unified access to various personal and work related features like calendars, e-mails, notes, contacts, documents and more. The library provides implementations of these features for Microsft Office 365, Apple iCloud and Google Services. In addition, the library contains a content management API focused on managing the internal structure of hierarchical documents by enabling manipulation of the document structure in an immutable fashion.
 
 ## Xodium.Redux
-...
+The fundamental idea of improved state management via unidirectional data flow proposed by architectural patterns like CQRS has gained a lot of popularity in the recent years when maintaining state in complex application user interfaces. In particular, the pattern has been used with great success in frameworks like [Flux](https://facebook.github.io/flux/) and [Redux](https://redux.js.org/) in the JavaScript/React movement within web development, thanks to developers like ? and ?. These frameworks have let to the creation of several similar libraries in the .NET community, each offering its own take on a Redux-like API for .NET. Xodium provides a generic abstraction of the basic concept of actions, stores, reducers, middleware and dispatchers introduced by Redux. This abstraction enables unidirectional data flow in any application by supporting different Redux implementations without direct knowledge of the Redux library in use. Xodium.Redux is an implementation of this abstraction for [Redux.NET](https://github.com/GuillaumeSalles/redux.NET) by Guillaume Salles.

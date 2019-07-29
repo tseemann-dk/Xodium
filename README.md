@@ -30,7 +30,7 @@ Features that are common amongst many platforms, but vary in API implementation,
 Includes support for Windows Desktop, UWP, Xamarin, iOS and Android.
 
 ## Xodium.Productivity
-The productivity category of Xodium enables unified access to various personal and work related features like calendars, e-mails, notes, contacts, documents and more. The library provides implementations of these features for Microsft Office 365, Apple iCloud and Google Services. 
+The productivity category of Xodium enables unified access to various personal and work related features like calendars, e-mails, notes, contacts, documents and more. The library provides implementations of these features for Microsoft Office 365, Apple iCloud and Google Services. 
 
 In addition, the library contains a content management API focused on managing the internal structure of hierarchical documents by enabling manipulation of the document structure in an immutable fashion.
 

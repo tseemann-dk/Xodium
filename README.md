@@ -12,7 +12,7 @@ The library contains components organized into the following categories:
 Common base types and interfaces as well as general extensions for the .NET BCL.
 
 ## Xodium.Injection
-An abstraction of dependency injection that enables inversion of control in your applications without taking a direct dependency on the chosen IoC container. Includes support for [Unity Container](https://github.com/unitycontainer/unity) and [Microsoft DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/). Others can easily be added by implementing a few simple bridge interfaces.
+An abstraction of dependency injection that enables inversion of control in your applications without taking a direct dependency on the chosen IoC container. Includes support for [Unity Container](https://github.com/unitycontainer/unity) and [Microsoft Extensions DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/). Others can easily be added by implementing a few simple bridge interfaces.
 
 ## Xodium.Mvvm
 Yet another MVVM library. Like every other MVVM library or framework, this library contains base classes for basic MVVM elements like view models, commands and more. In an unopinionated approach to how to apply MVVM to your code, this library aims at providing you with a generic toolset of components and abstractions that work together with your favorite choice of MVVM library. 

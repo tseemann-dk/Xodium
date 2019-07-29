@@ -14,7 +14,7 @@ Common base types and interfaces as well as general extensions for the .NET BCL.
 ## Xodium.Injection
 An abstraction of dependency injection that enables inversion of control in your applications without taking a direct dependency on the chosen IoC container. 
 
-Includes support for [Unity Container](https://github.com/unitycontainer/unity) and [Microsoft Extensions DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/). 
+Includes support for [Unity Container](https://github.com/unitycontainer/unity) and [Microsoft Extensions DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/).<br>
 Others can easily be added by implementing a few simple bridge interfaces.
 
 ## Xodium.Mvvm

@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
-    <ProjectReference Include="..\Xodium.Injection.MicrosoftUnity\Xodium.Injection.MicrosoftUnity.csproj" />
+    <ProjectReference Include="..\Xodium.Injection.UnityContainer\Xodium.Injection.UnityContainer.csproj" />
     <ProjectReference Include="..\Xodium.Mvvm.Xamarin\Xodium.Mvvm.Xamarin.csproj" />
     <ProjectReference Include="..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
   </ItemGroup>

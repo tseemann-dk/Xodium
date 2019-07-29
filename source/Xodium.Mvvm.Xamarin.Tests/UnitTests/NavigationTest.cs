@@ -4,7 +4,7 @@ using FluentAssertions;
 using Moq;
 using Unity;
 using Xamarin.Forms;
-using Xodium.Injection.Unity;
+using Xodium.Injection.UnityContainer;
 using Xodium.Mvvm.Xamarin.Services;
 using Xodium.Mvvm.Xamarin.Test.TestDoubles;
 using Xunit;

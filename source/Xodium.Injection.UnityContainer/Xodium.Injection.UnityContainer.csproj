@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Torsten Seemann</Authors>
     <Product>Xodium</Product>
-    <Description>Xodium Dependency Injection, Microsoft Unity support</Description>
+    <Description>Xodium Dependency Injection, Unity Container support</Description>
     <LangVersion>latest</LangVersion>
     <Company>Torsten Seemann</Company>
     <IconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</IconUrl>

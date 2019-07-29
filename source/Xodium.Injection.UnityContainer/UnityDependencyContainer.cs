@@ -1,7 +1,7 @@
 ﻿using System;
 using Unity;
 
-namespace Xodium.Injection.Unity
+namespace Xodium.Injection.UnityContainer
 {
     public class UnityDependencyContainer : IDependencyContainer
     {

@@ -37,6 +37,6 @@ In addition, the library contains a content management API focused on managing t
 ## Xodium.Redux
 The fundamental idea of improved state management via unidirectional data flow proposed by architectural patterns like [CQS](https://en.wikipedia.org/wiki/Command–query_separation)/[CQRS](http://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf) has gained a lot of popularity in the recent years for maintaining state in complex application user interfaces. In particular, the pattern has been used with great success in frameworks like [Flux](https://facebook.github.io/flux/) and [Redux](https://redux.js.org/) in the JavaScript/React community of web development. These frameworks have led to the creation of several similar libraries in the .NET community, each offering its own take on a Redux-like API for .NET. 
 
-Xodium provides a generic abstraction of the basic concept of actions, stores, reducers, middleware and dispatchers introduced by Redux. This abstraction enables unidirectional data flow in any application by supporting different Redux implementations without direct knowledge of the Redux library in use. 
+Xodium provides a generic abstraction of the basic concept of stores, actions, dispatchers, reducers and middleware introduced by Redux. This abstraction enables unidirectional data flow in any application by supporting different Redux implementations without direct knowledge of the Redux library in use. 
 
 Xodium.Redux is an implementation of this abstraction for [Redux.NET](https://github.com/GuillaumeSalles/redux.NET) by Guillaume Salles.

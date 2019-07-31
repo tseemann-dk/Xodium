@@ -18,7 +18,7 @@ Includes support for [Unity Container](https://github.com/unitycontainer/unity) 
 Others can easily be added by implementing a few simple bridge interfaces.
 
 ## Xodium.Mvvm
-Yet another MVVM library. Like every other MVVM library or framework, this library contains base classes for basic MVVM elements like view models, commands and more. In an unopinionated approach to how to apply MVVM to your code, this library aims at providing you with a generic toolset of components and abstractions that work together with your favorite choice of MVVM library. 
+Yet another MVVM library. Like every other MVVM library or framework, this library contains base classes for basic MVVM elements like view models, commands and more. In an unopinionated approach to how to apply MVVM to your code, this library aims at providing you with a generic toolset of components and abstractions that play well together with your favorite choice of MVVM library. 
 
 Beside the basic building blocks of MVVM, the library also contains a navigation system for navigating between view models independently of the underlying UI framework and infrastructure.
 

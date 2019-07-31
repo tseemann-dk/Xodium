@@ -6,6 +6,7 @@
     <Product>Xodium</Product>
     <Description>Xodium Library, Productivity feature support for Microsoft 365</Description>
     <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

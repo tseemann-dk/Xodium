@@ -2,9 +2,9 @@
 # Xodium
 A library of cross-platform functionality for solutions running on top of .NET. 
 
-Xodium is a basic ingredient for many common application types - like sodium in table salt is for your everyday meal ...
-
 Xodium provides a collection of reusable constructs and components designed for .NET applications that need to run across multiple devices, platforms and operating systems. One of the primary goals of the library is to handle differences between the various platforms via rich abstractions and platform-specific implementations of these abstractions for the most popular platforms.
+
+Xodium is a basic ingredient for many common application types - like sodium in table salt is for your everyday meal ...
 
 The library contains components organized into the following categories:
 
@@ -18,7 +18,7 @@ Includes support for [Unity Container](https://github.com/unitycontainer/unity) 
 Others can easily be added by implementing a few simple bridge interfaces.
 
 ## Xodium.Mvvm
-Yet another MVVM library. Like every other MVVM library or framework, this library contains base classes for basic MVVM elements like view models, commands and more. In an unopinionated approach to how to apply MVVM to your code, this library aims at providing you with a generic toolset of components and abstractions that play well together with your favorite choice of MVVM library. 
+Yet another MVVM library. Like every other MVVM library or framework, this library contains base classes for basic MVVM elements like view models, commands and more. In an unopinionated approach to how to apply MVVM to your code, this library aims at providing you with a generic toolset of components and abstractions that can either be used alone or play well together with your favorite choice of MVVM library. 
 
 Beside the basic building blocks of MVVM, the library also contains a navigation system for navigating between view models independently of the underlying UI framework and infrastructure.
 
@@ -30,7 +30,7 @@ Features that are common amongst many platforms, but vary in API implementation,
 Includes support for Windows Desktop, UWP, Xamarin, iOS and Android.
 
 ## Xodium.Productivity
-The productivity category of Xodium enables unified access to various personal and work related features like calendars, e-mails, notes, contacts, documents and more. The library provides implementations of these features for Microsoft Office 365, Apple iCloud and Google Services. 
+The productivity category of Xodium enables unified access to various personal and work related features like calendars, e-mails, notes, contacts, documents and more. The library provides implementations of these features for Microsoft 365, Apple iCloud and Google Services. 
 
 In addition, the library contains a content management API focused on managing the internal structure of hierarchical documents by enabling manipulation of the document structure in an immutable fashion.
 

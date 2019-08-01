@@ -85,7 +85,7 @@ namespace Sidekick.ViewModels
         private void AddNewLine()
         {
             var number = this.GetAppState().Global.NextElementNumber;
-            var element = new Element($"o-{number}", $"{number}", $"Operation {number}");
+            var element = new Element($"e-{number}", $"{number}", $"Element {number}");
 
             this.DispatchAction(new AddLineAction(folder.Id, element, 1, selectedNode?.Id));
         }

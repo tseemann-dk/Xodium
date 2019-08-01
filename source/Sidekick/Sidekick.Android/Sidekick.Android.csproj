@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -92,17 +92,37 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Xodium.Core\Xodium.Core.csproj">
+      <Project>{2158dfbd-a40e-4f0d-a703-16ff1970d739}</Project>
+      <Name>Xodium.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Mvvm.ReactiveUI\Xodium.Mvvm.ReactiveUI.csproj">
+      <Project>{32df0473-e25c-48d6-a634-99093017b64e}</Project>
+      <Name>Xodium.Mvvm.ReactiveUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Mvvm\Xodium.Mvvm.csproj">
+      <Project>{6417c355-2592-4649-8713-6287d35aa4a7}</Project>
+      <Name>Xodium.Mvvm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj">
+      <Project>{53e482dd-18df-4a9d-9b6c-3e9986be986e}</Project>
+      <Name>Xodium.Productivity.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj">
+      <Project>{4a79797f-8251-4072-9ae4-a79fbd9af10b}</Project>
+      <Name>Xodium.Redux</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sidekick\Sidekick.csproj">
       <Project>{82C93EA4-A7A8-4252-B49A-F2DE9BD77C08}</Project>
       <Name>Sidekick</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

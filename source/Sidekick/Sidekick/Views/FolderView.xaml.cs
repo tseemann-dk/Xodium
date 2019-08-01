@@ -1,0 +1,59 @@
+﻿using System;
+using System.Reactive.Disposables;
+using ReactiveUI;
+using ReactiveUI.XamForms;
+using Sidekick.ViewModels;
+using Xamarin.Forms.Xaml;
+
+namespace Sidekick.Views
+{
+    public abstract class FolderViewBase : ReactiveContentView<FolderViewModel> { }
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class FolderView : FolderViewBase
+    {
+        public FolderView(FolderViewModel viewModel)
+        {
+            InitializeComponent();
+            ViewModel = viewModel;
+
+            this.WhenActivated(disposables =>
+            {
+                this.OneWayBind(ViewModel, 
+                    vm => vm.Title, 
+                    v => v.TitleLabel.Text)
+                    .DisposeWith(disposables);
+
+                this.OneWayBind(ViewModel, 
+                    vm => vm.Nodes, 
+                    v => v.NodeCollectionView.ItemsSource)
+                    .DisposeWith(disposables);
+
+                this.OneWayBind(ViewModel,
+                    vm => vm.SelectedNode,
+                    v => v.NodeCollectionView.SelectedItem)
+                    .DisposeWith(disposables);
+
+                this.BindCommand(ViewModel, 
+                    vm => vm.AddNewLineCommand, 
+                    v => v.AddButton)
+                    .DisposeWith(disposables);
+
+                this.BindCommand(ViewModel,
+                    vm => vm.DeleteNodeCommand,
+                    v => v.DeleteButton)
+                    .DisposeWith(disposables);
+
+                this.BindCommand(ViewModel, 
+                    vm => vm.ChangeTitleCommand, 
+                    v => v.RenameButton)
+                    .DisposeWith(disposables);
+            });
+        }
+
+        private void NodeCollectionView_SelectionChanged(object sender, EventArgs args)
+        {
+            ViewModel.SelectNode(NodeCollectionView.SelectedItem as NodeListItemViewModel);
+        }
+    }
+}

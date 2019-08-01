@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,7 +10,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+    <PackageReference Include="ReactiveUI.XamForms" Version="9.19.5" />
+    <PackageReference Include="Redux.NET" Version="2.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.618606" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Xodium.Core\Xodium.Core.csproj" />
+    <ProjectReference Include="..\..\Xodium.Injection.MicrosoftExtensions\Xodium.Injection.MicrosoftExtensions.csproj" />
+    <ProjectReference Include="..\..\Xodium.Mvvm.ReactiveUI\Xodium.Mvvm.ReactiveUI.csproj" />
+    <ProjectReference Include="..\..\Xodium.Mvvm.Xamarin\Xodium.Mvvm.Xamarin.csproj" />
+    <ProjectReference Include="..\..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+    <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj" />
+    <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj" />
   </ItemGroup>
 </Project>

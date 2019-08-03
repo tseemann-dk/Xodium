@@ -4,7 +4,7 @@ using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Models
 {
-    public interface IFolder : IContainer, IQuantitativeNode
+    public interface IFolder : IContainer, IExpenseNode
     {
         new IFolder Clone(IEnumerable<INode> nodes);
     }

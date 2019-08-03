@@ -8,7 +8,7 @@
     x:Class="Sidekick.Views.NodeListItemView">
 
     <StackLayout Orientation="Horizontal">
-        <Label Text="{Binding Number}" />
+        <Label Text="{Binding Date}" />
         <Label Text="{Binding Text}" />
     </StackLayout>
 

@@ -13,13 +13,13 @@ using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.ViewModels
 {
-    public class FolderViewModel : ReactiveViewModelBase<IObservable<ProjectState>>
+    public class FolderViewModel : ReactiveViewModelBase<IObservable<DocumentState>>
     {
         private IFolder folder;
         private string title;
         private NodeListItemViewModel selectedNode;
 
-        public FolderViewModel(IObservable<ProjectState> model, IExecutionEnvironment executionEnvironment) 
+        public FolderViewModel(IObservable<DocumentState> model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
         {
             Nodes = new ObservableCollection<NodeListItemViewModel>();
@@ -30,11 +30,11 @@ namespace Sidekick.ViewModels
 
             Model.Subscribe(state =>
             {
-                folder = state.Project.Content
+                folder = state.Document.Content
                     .FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
 
                 var newNodes = folder.Nodes
-                    .OfType<IQuantitativeNode>()
+                    .OfType<IExpenseNode>()
                     .Select(x => new NodeListItemViewModel(x, ExecutionEnvironment))
                     .ToList();
 
@@ -47,7 +47,7 @@ namespace Sidekick.ViewModels
                     Title = folder.Text;
 
                     Nodes.MorphTo(
-                        folder.Nodes.OfType<IQuantitativeNode>().ToArray(),
+                        folder.Nodes.OfType<IExpenseNode>().ToArray(),
                         (x, y) => x.Id == y.Id,
                         (x, y) => x.IsSameNode(y),
                         x => new NodeListItemViewModel(x, ExecutionEnvironment));
@@ -84,10 +84,11 @@ namespace Sidekick.ViewModels
 
         private void AddNewLine()
         {
-            var number = this.GetAppState().Global.NextElementNumber;
-            var element = new Element($"e-{number}", $"{number}", $"Element {number}");
+            var number = this.GetAppState().Global.NextExpenseNumber;
+            var text = $"Expense {number}";
+            var value = 10;
 
-            this.DispatchAction(new AddLineAction(folder.Id, element, 1, selectedNode?.Id));
+            this.DispatchAction(new AddLineAction(folder.Id, DateTime.Today, text, 1, value, selectedNode?.Id));
         }
 
         private void DeleteNode()

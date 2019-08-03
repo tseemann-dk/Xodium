@@ -1,7 +1,9 @@
-﻿namespace Sidekick.Models
+﻿using System;
+
+namespace Sidekick.Models
 {
-    public interface ILine : IQuantitativeNode
+    public interface ILine : IExpenseNode
     {
-        IElement Element { get; }
+        DateTime Date { get; }
     }
 }

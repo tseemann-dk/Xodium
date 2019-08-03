@@ -2,6 +2,7 @@
 using Sidekick.Extensions;
 using System.Linq;
 using Xodium.Productivity.Content.Models;
+using System;
 
 namespace Sidekick.Transformers
 {
@@ -9,12 +10,14 @@ namespace Sidekick.Transformers
     {
         public static (IFolder, string) AddLine(
             IFolder folder,
-            IElement element,
+            DateTime date,
+            string text,
             double quantity,
+            double value,
             string afterNodeId)
         {
             IFolder newFolder;
-            var line = new Line(element, quantity);
+            var line = new Line(date, text, quantity, value);
 
             if (afterNodeId == null)
             {

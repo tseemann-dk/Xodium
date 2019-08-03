@@ -7,12 +7,12 @@ namespace Sidekick.Reducers
 {
     public class ProjectStateReducer
     {
-        public static ProjectState Execute(ProjectState state, object action)
+        public static DocumentState Execute(DocumentState state, object action)
         {
-            var project = state.Project;
+            var project = state.Document;
             var currentFolderId = state.CurrentFolderId;
             var selectedNodeId = state.SelectedNodeId;
-            var currentFolder = state.Project.Content.FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
+            var currentFolder = state.Document.Content.FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
             IFolder newFolder = null;
 
             switch (action)
@@ -34,8 +34,10 @@ namespace Sidekick.Reducers
                 case AddLineAction addLineAction:
                     (newFolder, selectedNodeId) = FolderTransformer.AddLine(
                         currentFolder, 
-                        addLineAction.Payload.Element, 
+                        addLineAction.Payload.Date, 
+                        addLineAction.Payload.Text, 
                         addLineAction.Payload.Quantity, 
+                        addLineAction.Payload.Value, 
                         addLineAction.Payload.InsertAfterNodeId);
                     break;
 
@@ -49,13 +51,13 @@ namespace Sidekick.Reducers
             if (newFolder != null)
             {
                 project = currentFolder.Id == project.Content.Id
-                    ? state.Project.Clone(newFolder) as Project
-                    : state.Project.ReplaceNode(currentFolder, newFolder) as Project;
+                    ? state.Document.Clone(newFolder) as ExpenseDocument
+                    : state.Document.ReplaceNode(currentFolder, newFolder) as ExpenseDocument;
             }
 
-            return new ProjectState
+            return new DocumentState
             {
-                Project = project,
+                Document = project,
                 CurrentFolderId = currentFolderId,
                 SelectedNodeId = selectedNodeId
             };

@@ -2,10 +2,10 @@
 
 namespace Sidekick.Models
 {
-    public interface IQuantitativeNode : INode
+    public interface IExpenseNode : INode
     {
-        string Number { get; }
         string Text { get; }
         double Quantity { get; }
+        double Value { get; }
     }
 }

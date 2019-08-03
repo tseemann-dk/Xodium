@@ -1,4 +1,5 @@
 ﻿using Sidekick.Models;
+using System;
 using System.Linq;
 
 namespace Sidekick.Samples
@@ -7,31 +8,31 @@ namespace Sidekick.Samples
     {
         public static AppState BuildSampleAppState()
         {
-            var project = BuildSampleProject();
+            var project = BuildSampleDocument();
             var folder = project.Content;
 
             return new AppState
             {
                 Global = new GlobalState
                 {
-                    NextElementNumber = 1
+                    NextExpenseNumber = 3
                 },
-                CurrentProject = new ProjectState
+                CurrentDocument = new DocumentState
                 {
-                    Project = project,
+                    Document = project,
                     CurrentFolderId = folder.Id,
                     SelectedNodeId = folder.Nodes.Last().Id
                 },
             };
         }
 
-        private static Project BuildSampleProject()
+        private static ExpenseDocument BuildSampleDocument()
         {
-            return new Project("project-1", "P1",
-                new Folder("folder-1", "F1", "Folder 1", 1, new[]
+            return new ExpenseDocument("doc-1", "D1",
+                new Folder("folder-1", "Folder 1", 1, new[]
                 {
-                    new Line(new Element("e1", "9000001", "Element 1"), 10),
-                    new Line(new Element("e2", "9000002", "Element 2"), 5),
+                    new Line(DateTime.Today, "Expense 1", 1, 10),
+                    new Line(DateTime.Today, "Expense 2", 1, 20),
                 })
             );
         }

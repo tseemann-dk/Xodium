@@ -28,7 +28,7 @@ namespace Sidekick
 
             var projectChanges = store
                 .ObserveState()
-                .Select(state => state.CurrentProject)
+                .Select(state => state.CurrentDocument)
                 .DistinctUntilChanged();
 
             var vm = new FolderViewModel(projectChanges, environment);

@@ -8,28 +8,29 @@ namespace Sidekick.Models
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class Line : ILine
     {
-
-        public Line(IElement element, double quantity = 1)
-            : this(Guid.NewGuid().ToString(), element, quantity)
+        public Line(DateTime date, string text, double quantity, double value)
+            : this(Guid.NewGuid().ToString(), date, text, quantity, value)
         {
         }
 
-        public Line(string id, IElement element, double quantity = 1)
+        public Line(string id, DateTime date, string text, double quantity, double value)
         {
-            Id = id;
-            Element = element;
+            Id = id ?? throw new ArgumentNullException(nameof(id));
+            Date = date;
+            Text = text;
             Quantity = quantity;
+            Value = value;
         }
 
         public string Id { get; }
-        public string Number => Element?.Number;
-        public string Text => Element?.Text;
+        public DateTime Date { get; }
+        public string Text { get; }
         public double Quantity { get; }
-        public IElement Element { get; }
+        public double Value { get; }
 
         [ExcludeFromCodeCoverage]
-        private string DebuggerDisplay => $"{Number}, {Text}";
+        private string DebuggerDisplay => $"{Date}, {Text}";
 
-        public INode Clone() => new Line(Id, Element, Quantity);
+        public INode Clone() => new Line(Id, Date, Text, Quantity, Value);
     }
 }

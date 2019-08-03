@@ -5,9 +5,9 @@ using Xodium.Productivity.Content.Models;
 namespace Sidekick.Models
 {
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public class Project : DocumentBase, IProject
+    public class ExpenseDocument : DocumentBase, IExpenseDocument
     {
-        public Project(string id, string name, IFolder root)
+        public ExpenseDocument(string id, string name, IFolder root)
             : base(id, name, root)
         {
         }
@@ -15,9 +15,9 @@ namespace Sidekick.Models
         public new IFolder Content => base.Content as IFolder;
 
         [ExcludeFromCodeCoverage]
-        private string DebuggerDisplay => $"{Name}; {Content.Number}, {Content.Text}";
+        private string DebuggerDisplay => $"{Name}; {Content.Text}";
 
-        public IProject Clone(IFolder content) => new Project(Id, Name, content);
+        public IExpenseDocument Clone(IFolder content) => new ExpenseDocument(Id, Name, content);
         public override IDocument Clone(IContainer content) => Clone(content as IFolder);
     }
 }

@@ -10,7 +10,7 @@ namespace Sidekick.Reducers
             return new AppState
             {
                 Global = GlobalStateReducer.Execute(state.Global, action),
-                CurrentProject = ProjectStateReducer.Execute(state.CurrentProject, action)
+                CurrentDocument = ProjectStateReducer.Execute(state.CurrentDocument, action)
             };
         }
     }

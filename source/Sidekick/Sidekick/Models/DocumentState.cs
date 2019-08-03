@@ -1,8 +1,8 @@
 ﻿namespace Sidekick.Models
 {
-    public struct ProjectState
+    public struct DocumentState
     {
-        public Project Project;
+        public ExpenseDocument Document;
         public string CurrentFolderId; 
         public string SelectedNodeId;
     }

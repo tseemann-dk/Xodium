@@ -28,7 +28,7 @@ namespace Sidekick.Models
         public double Quantity { get; }
         public double Value { get; }
 
-        DateTime? IProjectNode.Date => Date;
+        string IProjectNode.ReferenceNumber => Date.ToString("dd-MM-yy");
 
         [ExcludeFromCodeCoverage]
         private string DebuggerDisplay => $"{Date}, {Text}";

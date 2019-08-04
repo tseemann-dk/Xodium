@@ -29,7 +29,7 @@ namespace Sidekick.Samples
         private static Project BuildSampleDocument()
         {
             return new Project("doc-1", "D1",
-                new Folder("folder-1", "Folder 1", 1, new[]
+                new Folder("folder-1", "F1", "Folder 1", 1, new[]
                 {
                     new Line(DateTime.Today, "Line 1", 1, 10),
                     new Line(DateTime.Today, "Line 2", 1, 20),

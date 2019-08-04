@@ -3,21 +3,19 @@ using Xodium.Redux;
 
 namespace Sidekick.Actions
 {
-    public class AddLineAction : ReduxAction<AddLineAction.Properties>
+    public class AddFolderAction : ReduxAction<AddFolderAction.Properties>
     {
-        public AddLineAction(
+        public AddFolderAction(
             string parentFolderId, 
-            DateTime date, 
+            string number, 
             string text, 
             double quantity, 
-            double value, 
             string insertAfterNodeId = null)
-            : base(typeof(AddLineAction).FullName, new Properties(
+            : base(typeof(AddFolderAction).FullName, new Properties(
                 parentFolderId, 
-                date, 
+                number, 
                 text, 
                 quantity, 
-                value, 
                 insertAfterNodeId
             ))
         {
@@ -26,26 +24,23 @@ namespace Sidekick.Actions
         public struct Properties
         {
             public Properties(
-                string folderId,
-                DateTime date, 
+                string folderId, 
+                string number, 
                 string text, 
                 double quantity, 
-                double value, 
                 string insertAfterNodeId)
             {
                 ParentFolderId = folderId ?? throw new ArgumentNullException(nameof(folderId));
-                Date = date;
+                Number = number;
                 Text = text;
                 Quantity = quantity;
-                Value = value;
                 InsertAfterNodeId = insertAfterNodeId;
             }
 
             public string ParentFolderId;
-            public DateTime Date;
+            public string Number;
             public string Text;
             public double Quantity;
-            public double Value;
             public string InsertAfterNodeId;
         }
     }

@@ -6,6 +6,8 @@ namespace Sidekick.Models
 {
     public interface IFolder : IContainer, IProjectNode
     {
+        string Number { get; }
+
         new IFolder Clone(IEnumerable<INode> nodes);
     }
 

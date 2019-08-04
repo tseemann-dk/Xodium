@@ -37,10 +37,16 @@
             </CollectionView.ItemTemplate>
         </CollectionView>-->
 
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" Margin="4">
             <Button 
-                x:Name="AddButton"
-                Text="Add"/>
+                x:Name="AddLineButton"
+                Text="Add Line"/>
+            <Button 
+                x:Name="AddFolderButton"
+                Text="Add Folder"/>
+            <Button 
+                x:Name="EditButton"
+                Text="Edit"/>
             <Button 
                 x:Name="DeleteButton"
                 Text="Delete"/>

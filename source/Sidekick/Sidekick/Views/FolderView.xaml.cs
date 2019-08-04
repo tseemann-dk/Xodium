@@ -35,8 +35,13 @@ namespace Sidekick.Views
                     .DisposeWith(disposables);
 
                 this.BindCommand(ViewModel, 
-                    vm => vm.AddNewLineCommand, 
-                    v => v.AddButton)
+                    vm => vm.AddNewFolderCommand, 
+                    v => v.AddFolderButton)
+                    .DisposeWith(disposables);
+
+                this.BindCommand(ViewModel,
+                    vm => vm.AddNewLineCommand,
+                    v => v.AddLineButton)
                     .DisposeWith(disposables);
 
                 this.BindCommand(ViewModel,

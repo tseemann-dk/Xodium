@@ -8,32 +8,53 @@ namespace Sidekick.Transformers
 {
     public static class FolderTransformer
     {
+        public static (IFolder, string) AddFolder(
+            IFolder parentFolder,
+            string number,
+            string text,
+            double quantity,
+            string afterNodeId)
+        {
+            var folder = new Folder(number, text, quantity);
+            var newParentFolder = AddNode(parentFolder, folder, afterNodeId);
+            return (newParentFolder, folder.Id);
+        }
+
         public static (IFolder, string) AddLine(
-            IFolder folder,
+            IFolder parentFolder,
             DateTime date,
             string text,
             double quantity,
             double value,
             string afterNodeId)
         {
-            IFolder newFolder;
             var line = new Line(date, text, quantity, value);
+            var newFolder = AddNode(parentFolder, line, afterNodeId);
+            return (newFolder, line.Id);
+        }
+
+        public static IFolder AddNode(
+            IFolder parentFolder,
+            INode node,
+            string afterNodeId)
+        {
+            IFolder newParentFolder;
 
             if (afterNodeId == null)
             {
-                newFolder = folder.InsertNode(0, line);
+                newParentFolder = parentFolder.InsertNode(0, node);
             }
             else
             {
-                var afterNode = folder.Nodes.FirstOrDefault(x => x.Id == afterNodeId);
-                var index = folder.GetIndexOfNode(afterNode);
+                var afterNode = parentFolder.Nodes.FirstOrDefault(x => x.Id == afterNodeId);
+                var index = parentFolder.GetIndexOfNode(afterNode);
 
-                newFolder = index >= folder.Nodes.Count
-                    ? folder.AddNode(line)
-                    : folder.InsertNode(index + 1, line);
+                newParentFolder = index >= parentFolder.Nodes.Count
+                    ? parentFolder.AddNode(node)
+                    : parentFolder.InsertNode(index + 1, node);
             }
 
-            return (newFolder, line.Id);
+            return newParentFolder;
         }
 
         public static (IFolder, string) DeleteNode(IFolder folder, string nodeId)

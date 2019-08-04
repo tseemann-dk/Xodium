@@ -31,6 +31,15 @@ namespace Sidekick.Reducers
                         changeFolderTitleAction.Payload.NewTitle);
                     break;
 
+                case AddFolderAction addFolderAction:
+                    (newFolder, selectedNodeId) = FolderTransformer.AddFolder(
+                        currentFolder, 
+                        addFolderAction.Payload.Number, 
+                        addFolderAction.Payload.Text, 
+                        addFolderAction.Payload.Quantity, 
+                        addFolderAction.Payload.InsertAfterNodeId);
+                    break;
+
                 case AddLineAction addLineAction:
                     (newFolder, selectedNodeId) = FolderTransformer.AddLine(
                         currentFolder, 

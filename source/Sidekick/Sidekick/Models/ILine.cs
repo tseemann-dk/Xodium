@@ -4,6 +4,6 @@ namespace Sidekick.Models
 {
     public interface ILine : IProjectNode
     {
-        new DateTime Date { get; }
+        DateTime Date { get; }
     }
 }

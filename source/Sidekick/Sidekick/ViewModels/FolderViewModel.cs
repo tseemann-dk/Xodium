@@ -24,6 +24,7 @@ namespace Sidekick.ViewModels
         {
             Nodes = new ObservableCollection<NodeListItemViewModel>();
 
+            AddNewFolderCommand = ReactiveCommand.Create(() => AddNewFolder());
             AddNewLineCommand = ReactiveCommand.Create(() => AddNewLine());
             DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode());
             ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle());
@@ -57,6 +58,7 @@ namespace Sidekick.ViewModels
             });
         }
 
+        public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }
         public ReactiveCommand<Unit, Unit> AddNewLineCommand { get; }
         public ReactiveCommand<Unit, Unit> DeleteNodeCommand { get; }
         public ReactiveCommand<Unit, Unit> ChangeTitleCommand { get; }
@@ -80,6 +82,11 @@ namespace Sidekick.ViewModels
             if (node?.Id == SelectedNode?.Id) return;
 
             this.DispatchAction(new SelectNodeAction(node?.Id));
+        }
+
+        private void AddNewFolder()
+        {
+            this.DispatchAction(new AddFolderAction(folder.Id, "F1", "New Folder", 1, selectedNode?.Id));
         }
 
         private void AddNewLine()

@@ -5,7 +5,7 @@ namespace Sidekick.Models
 {
     public interface IProjectNode : INode
     {
-        DateTime? Date { get; }
+        string ReferenceNumber { get; }
         string Text { get; }
         double Quantity { get; }
         double Value { get; }

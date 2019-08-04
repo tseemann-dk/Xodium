@@ -13,7 +13,7 @@ namespace Sidekick.ViewModels
         }
 
         public string Id => Model.Id;
-        public DateTime? Date => Model.Date;
+        public string DisplayNumber => Model.ReferenceNumber;
         public string Text => Model.Text;
 
         public bool IsSameNode(INode node) => node == Model;

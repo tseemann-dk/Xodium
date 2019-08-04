@@ -2,7 +2,7 @@
 
 namespace Sidekick.Models
 {
-    public interface ILine : IExpenseNode
+    public interface ILine : IProjectNode
     {
         DateTime Date { get; }
     }

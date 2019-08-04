@@ -17,7 +17,7 @@ namespace Sidekick.Samples
                 {
                     NextExpenseNumber = 3
                 },
-                CurrentDocument = new DocumentState
+                CurrentDocument = new ProjectState
                 {
                     Document = project,
                     CurrentFolderId = folder.Id,
@@ -26,9 +26,9 @@ namespace Sidekick.Samples
             };
         }
 
-        private static ExpenseDocument BuildSampleDocument()
+        private static Project BuildSampleDocument()
         {
-            return new ExpenseDocument("doc-1", "D1",
+            return new Project("doc-1", "D1",
                 new Folder("folder-1", "Folder 1", 1, new[]
                 {
                     new Line(DateTime.Today, "Expense 1", 1, 10),

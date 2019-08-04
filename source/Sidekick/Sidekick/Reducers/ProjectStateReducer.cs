@@ -7,7 +7,7 @@ namespace Sidekick.Reducers
 {
     public class ProjectStateReducer
     {
-        public static DocumentState Execute(DocumentState state, object action)
+        public static ProjectState Execute(ProjectState state, object action)
         {
             var project = state.Document;
             var currentFolderId = state.CurrentFolderId;
@@ -51,11 +51,11 @@ namespace Sidekick.Reducers
             if (newFolder != null)
             {
                 project = currentFolder.Id == project.Content.Id
-                    ? state.Document.Clone(newFolder) as ExpenseDocument
-                    : state.Document.ReplaceNode(currentFolder, newFolder) as ExpenseDocument;
+                    ? state.Document.Clone(newFolder) as Project
+                    : state.Document.ReplaceNode(currentFolder, newFolder) as Project;
             }
 
-            return new DocumentState
+            return new ProjectState
             {
                 Document = project,
                 CurrentFolderId = currentFolderId,

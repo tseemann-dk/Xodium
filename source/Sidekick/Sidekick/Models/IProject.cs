@@ -2,9 +2,9 @@
 
 namespace Sidekick.Models
 {
-    public interface IExpenseDocument : IDocument
+    public interface IProject : IDocument
     {
-        IExpenseDocument Clone(IFolder content);
+        IProject Clone(IFolder content);
         new IFolder Content { get; }
     }
 }

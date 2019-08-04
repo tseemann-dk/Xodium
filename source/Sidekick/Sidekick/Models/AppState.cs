@@ -3,6 +3,6 @@
     public struct AppState
     {
         public GlobalState Global;
-        public DocumentState CurrentDocument;
+        public ProjectState CurrentDocument;
     }
 }

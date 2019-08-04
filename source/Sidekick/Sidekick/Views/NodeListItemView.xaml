@@ -4,11 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:Sidekick.Converters"
     mc:Ignorable="d"
     x:Class="Sidekick.Views.NodeListItemView">
 
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeToStringConverter x:Key="DateTimeToStringConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
     <StackLayout Orientation="Horizontal">
-        <Label Text="{Binding Date}" />
+        <Label Text="{Binding Date, Converter={StaticResource DateTimeToStringConverter}, ConverterParameter='dd-MM'}" />
         <Label Text="{Binding Text}" />
     </StackLayout>
 

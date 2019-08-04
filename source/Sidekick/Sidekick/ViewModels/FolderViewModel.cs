@@ -13,13 +13,13 @@ using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.ViewModels
 {
-    public class FolderViewModel : ReactiveViewModelBase<IObservable<DocumentState>>
+    public class FolderViewModel : ReactiveViewModelBase<IObservable<ProjectState>>
     {
         private IFolder folder;
         private string title;
         private NodeListItemViewModel selectedNode;
 
-        public FolderViewModel(IObservable<DocumentState> model, IExecutionEnvironment executionEnvironment) 
+        public FolderViewModel(IObservable<ProjectState> model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
         {
             Nodes = new ObservableCollection<NodeListItemViewModel>();
@@ -34,7 +34,7 @@ namespace Sidekick.ViewModels
                     .FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
 
                 var newNodes = folder.Nodes
-                    .OfType<IExpenseNode>()
+                    .OfType<IProjectNode>()
                     .Select(x => new NodeListItemViewModel(x, ExecutionEnvironment))
                     .ToList();
 
@@ -47,7 +47,7 @@ namespace Sidekick.ViewModels
                     Title = folder.Text;
 
                     Nodes.MorphTo(
-                        folder.Nodes.OfType<IExpenseNode>().ToArray(),
+                        folder.Nodes.OfType<IProjectNode>().ToArray(),
                         (x, y) => x.Id == y.Id,
                         (x, y) => x.IsSameNode(y),
                         x => new NodeListItemViewModel(x, ExecutionEnvironment));

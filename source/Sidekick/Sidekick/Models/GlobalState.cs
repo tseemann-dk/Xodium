@@ -2,6 +2,6 @@
 {
     public struct GlobalState
     {
-        public int NextExpenseNumber;
+        public int NextLineNumber;
     }
 }

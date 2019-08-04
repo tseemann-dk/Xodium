@@ -84,8 +84,8 @@ namespace Sidekick.ViewModels
 
         private void AddNewLine()
         {
-            var number = this.GetAppState().Global.NextExpenseNumber;
-            var text = $"Expense {number}";
+            var number = this.GetAppState().Global.NextLineNumber;
+            var text = $"Line {number}";
             var value = 10;
 
             this.DispatchAction(new AddLineAction(folder.Id, DateTime.Today, text, 1, value, selectedNode?.Id));

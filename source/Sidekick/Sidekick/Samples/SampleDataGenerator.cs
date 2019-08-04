@@ -15,7 +15,7 @@ namespace Sidekick.Samples
             {
                 Global = new GlobalState
                 {
-                    NextExpenseNumber = 3
+                    NextLineNumber = 3
                 },
                 CurrentDocument = new ProjectState
                 {
@@ -31,8 +31,8 @@ namespace Sidekick.Samples
             return new Project("doc-1", "D1",
                 new Folder("folder-1", "Folder 1", 1, new[]
                 {
-                    new Line(DateTime.Today, "Expense 1", 1, 10),
-                    new Line(DateTime.Today, "Expense 2", 1, 20),
+                    new Line(DateTime.Today, "Line 1", 1, 10),
+                    new Line(DateTime.Today, "Line 2", 1, 20),
                 })
             );
         }

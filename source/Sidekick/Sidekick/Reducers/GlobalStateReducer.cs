@@ -11,7 +11,7 @@ namespace Sidekick.Reducers
             {
                 case AddLineAction _:
                     return new GlobalState {
-                        NextExpenseNumber = state.NextExpenseNumber + 1
+                        NextLineNumber = state.NextLineNumber + 1
                     };
                 default:
                     return state;

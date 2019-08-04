@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using Xodium.Productivity.Content.Models;
@@ -17,6 +18,7 @@ namespace Sidekick.Models
         }
 
         public string Id { get; }
+        public DateTime? Date => null;
         public string Text { get; }
         public double Quantity { get; }
         public double Value { get; }

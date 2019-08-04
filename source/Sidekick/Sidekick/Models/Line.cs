@@ -28,6 +28,8 @@ namespace Sidekick.Models
         public double Quantity { get; }
         public double Value { get; }
 
+        DateTime? IProjectNode.Date => Date;
+
         [ExcludeFromCodeCoverage]
         private string DebuggerDisplay => $"{Date}, {Text}";
 

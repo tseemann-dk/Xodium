@@ -12,7 +12,7 @@
 
         <Label FontSize="Large" x:Name="TitleLabel"/>
 
-        <!--<ListView 
+        <ListView 
             x:Name="NodeListView"
             SelectedItem="{Binding SelectedNode}"
             ItemSelected="NodeListView_ItemSelected">
@@ -23,9 +23,9 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>        
-        </ListView>-->
+        </ListView>
 
-        <CollectionView 
+        <!--<CollectionView 
             x:Name="NodeCollectionView"
             SelectedItem="{Binding SelectedNode}"
             SelectionMode="Single"
@@ -35,7 +35,7 @@
                     <views:NodeListItemView/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+        </CollectionView>-->
 
         <StackLayout Orientation="Horizontal">
             <Button 

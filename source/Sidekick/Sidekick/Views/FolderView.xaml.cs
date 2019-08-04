@@ -26,12 +26,12 @@ namespace Sidekick.Views
 
                 this.OneWayBind(ViewModel, 
                     vm => vm.Nodes, 
-                    v => v.NodeCollectionView.ItemsSource)
+                    v => v.NodeListView.ItemsSource)
                     .DisposeWith(disposables);
 
                 this.OneWayBind(ViewModel,
                     vm => vm.SelectedNode,
-                    v => v.NodeCollectionView.SelectedItem)
+                    v => v.NodeListView.SelectedItem)
                     .DisposeWith(disposables);
 
                 this.BindCommand(ViewModel, 
@@ -51,9 +51,16 @@ namespace Sidekick.Views
             });
         }
 
+        private void NodeListView_ItemSelected(object sender, EventArgs args)
+        {
+            ViewModel.SelectNode(NodeListView.SelectedItem as NodeListItemViewModel);
+        }
+
+        /*
         private void NodeCollectionView_SelectionChanged(object sender, EventArgs args)
         {
             ViewModel.SelectNode(NodeCollectionView.SelectedItem as NodeListItemViewModel);
         }
+        */
     }
 }

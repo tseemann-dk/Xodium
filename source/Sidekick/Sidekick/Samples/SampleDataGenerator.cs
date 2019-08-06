@@ -15,6 +15,7 @@ namespace Sidekick.Samples
             {
                 Global = new GlobalState
                 {
+                    NextFolderNumber = 1,
                     NextLineNumber = 3
                 },
                 CurrentDocument = new ProjectState

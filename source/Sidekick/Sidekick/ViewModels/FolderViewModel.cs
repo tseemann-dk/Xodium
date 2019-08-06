@@ -86,7 +86,10 @@ namespace Sidekick.ViewModels
 
         private void AddNewFolder()
         {
-            this.DispatchAction(new AddFolderAction(folder.Id, "F1", "New Folder", 1, selectedNode?.Id));
+            var number = this.GetAppState().Global.NextFolderNumber;
+            var text = $"Folder {number}";
+
+            this.DispatchAction(new AddFolderAction(folder.Id, $"F{number}", text, 1, selectedNode?.Id));
         }
 
         private void AddNewLine()

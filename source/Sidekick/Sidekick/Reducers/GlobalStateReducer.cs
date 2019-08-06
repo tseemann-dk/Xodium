@@ -9,8 +9,14 @@ namespace Sidekick.Reducers
         {
             switch (action)
             {
+                case AddFolderAction _:
+                    return new GlobalState {
+                        NextFolderNumber = state.NextFolderNumber + 1,
+                        NextLineNumber = state.NextLineNumber
+                    };
                 case AddLineAction _:
                     return new GlobalState {
+                        NextFolderNumber = state.NextFolderNumber,
                         NextLineNumber = state.NextLineNumber + 1
                     };
                 default:

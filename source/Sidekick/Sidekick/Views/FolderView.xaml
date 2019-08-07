@@ -51,8 +51,14 @@
                 x:Name="DeleteButton"
                 Text="Delete"/>
             <Button 
-                x:Name="RenameButton"
-                Text="Rename"/>
+                x:Name="EnterFolderButton"
+                Text="Enter Folder"/>
+            <Button 
+                x:Name="ExitFolderButton"
+                Text="Exit Folder"/>
+            <Button 
+                x:Name="ChangeTitleButton"
+                Text="Rename Folder"/>
         </StackLayout>
         
     </StackLayout>

@@ -44,14 +44,24 @@ namespace Sidekick.Views
                     v => v.AddLineButton)
                     .DisposeWith(disposables);
 
+                this.BindCommand(ViewModel, 
+                    vm => vm.ChangeTitleCommand, 
+                    v => v.ChangeTitleButton)
+                    .DisposeWith(disposables);
+
                 this.BindCommand(ViewModel,
                     vm => vm.DeleteNodeCommand,
                     v => v.DeleteButton)
                     .DisposeWith(disposables);
 
-                this.BindCommand(ViewModel, 
-                    vm => vm.ChangeTitleCommand, 
-                    v => v.RenameButton)
+                this.BindCommand(ViewModel,
+                    vm => vm.EnterFolderCommand,
+                    v => v.EnterFolderButton)
+                    .DisposeWith(disposables);
+
+                this.BindCommand(ViewModel,
+                    vm => vm.ExitFolderCommand,
+                    v => v.ExitFolderButton)
                     .DisposeWith(disposables);
             });
         }

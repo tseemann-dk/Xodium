@@ -26,8 +26,10 @@ namespace Sidekick.ViewModels
 
             AddNewFolderCommand = ReactiveCommand.Create(() => AddNewFolder());
             AddNewLineCommand = ReactiveCommand.Create(() => AddNewLine());
-            DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode());
             ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle());
+            DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode());
+            EnterFolderCommand = ReactiveCommand.Create(() => EnterFolder());
+            ExitFolderCommand = ReactiveCommand.Create(() => ExitFolder());
 
             Model.Subscribe(state =>
             {
@@ -60,8 +62,10 @@ namespace Sidekick.ViewModels
 
         public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }
         public ReactiveCommand<Unit, Unit> AddNewLineCommand { get; }
-        public ReactiveCommand<Unit, Unit> DeleteNodeCommand { get; }
         public ReactiveCommand<Unit, Unit> ChangeTitleCommand { get; }
+        public ReactiveCommand<Unit, Unit> DeleteNodeCommand { get; }
+        public ReactiveCommand<Unit, Unit> EnterFolderCommand { get; }
+        public ReactiveCommand<Unit, Unit> ExitFolderCommand { get; }
 
         public string Title
         {
@@ -101,13 +105,6 @@ namespace Sidekick.ViewModels
             this.DispatchAction(new AddLineAction(folder.Id, DateTime.Today, text, 1, value, selectedNode?.Id));
         }
 
-        private void DeleteNode()
-        {
-            if (selectedNode == null) return;
-
-            this.DispatchAction(new DeleteNodeAction(folder.Id, selectedNode.Id));
-        }
-
         private void ChangeTitle()
         {
             var words = Title.Split();
@@ -121,6 +118,25 @@ namespace Sidekick.ViewModels
             var newTitle = $"{prefix} {++count}";
 
             this.DispatchAction(new ChangeFolderTitleAction(folder.Id, newTitle));
+        }
+
+        private void DeleteNode()
+        {
+            if (selectedNode == null) return;
+
+            this.DispatchAction(new DeleteNodeAction(folder.Id, selectedNode.Id));
+        }
+
+        private void EnterFolder()
+        {
+            if (!(selectedNode.Model is IFolder folder)) return;
+
+            this.DispatchAction(new EnterFolderAction(folder.Id));
+        }
+
+        private void ExitFolder()
+        {
+            this.DispatchAction(new ExitFolderAction());
         }
     }
 }

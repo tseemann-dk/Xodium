@@ -79,6 +79,6 @@ namespace Xodium.Mvvm
             Model = model;
         }
 
-        protected TModel Model { get; }
+        public TModel Model { get; }
     }
 }

@@ -17,43 +17,53 @@ namespace Sidekick.Reducers
 
             switch (action)
             {
-                case SelectFolderAction selectFolderAction:
-                    currentFolderId = selectFolderAction.Payload.FolderId;
+                case EnterFolderAction a:
+                    currentFolderId = a.Payload.FolderId;
+                    selectedNodeId = null;
                     break;
 
-                case SelectNodeAction selectNodeAction:
-                    selectedNodeId = selectNodeAction.Payload.NodeId;
+                case ExitFolderAction a:
+                    var parentId = currentFolder?.GetParent(state.Document.Content)?.Id;
+                    if (parentId != null)
+                    {
+                        selectedNodeId = currentFolderId;
+                        currentFolderId = parentId;
+                    }
                     break;
 
-                case ChangeFolderTitleAction changeFolderTitleAction:
+                case SelectNodeAction a:
+                    selectedNodeId = a.Payload.NodeId;
+                    break;
+
+                case ChangeFolderTitleAction a:
                     newFolder = FolderTransformer.ChangeTitle(
                         currentFolder, 
-                        changeFolderTitleAction.Payload.NewTitle);
+                        a.Payload.NewTitle);
                     break;
 
-                case AddFolderAction addFolderAction:
+                case AddFolderAction a:
                     (newFolder, selectedNodeId) = FolderTransformer.AddFolder(
                         currentFolder, 
-                        addFolderAction.Payload.Number, 
-                        addFolderAction.Payload.Text, 
-                        addFolderAction.Payload.Quantity, 
-                        addFolderAction.Payload.InsertAfterNodeId);
+                        a.Payload.Number, 
+                        a.Payload.Text, 
+                        a.Payload.Quantity, 
+                        a.Payload.InsertAfterNodeId);
                     break;
 
-                case AddLineAction addLineAction:
+                case AddLineAction a:
                     (newFolder, selectedNodeId) = FolderTransformer.AddLine(
                         currentFolder, 
-                        addLineAction.Payload.Date, 
-                        addLineAction.Payload.Text, 
-                        addLineAction.Payload.Quantity, 
-                        addLineAction.Payload.Value, 
-                        addLineAction.Payload.InsertAfterNodeId);
+                        a.Payload.Date, 
+                        a.Payload.Text, 
+                        a.Payload.Quantity, 
+                        a.Payload.Value, 
+                        a.Payload.InsertAfterNodeId);
                     break;
 
-                case DeleteNodeAction deleteNodeAction:
+                case DeleteNodeAction a:
                     (newFolder, selectedNodeId) = FolderTransformer.DeleteNode(
                         currentFolder, 
-                        deleteNodeAction.Payload.NodeId);
+                        a.Payload.NodeId);
                     break;
             }
 

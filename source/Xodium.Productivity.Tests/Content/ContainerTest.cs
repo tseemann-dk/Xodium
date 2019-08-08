@@ -176,14 +176,14 @@ namespace Xodium.Productivity.Tests.Content
         }
 
         [Fact]
-        public void RemoveNodes_WhenNodesExists_ShouldRemoveNodes()
+        public void RemoveChildNodes_WhenNodesExists_ShouldRemoveNodes()
         {
             var root = treeBuilder.BuildTree("A", 1, 3);
 
             root.Nodes.Should().HaveCount(3);
             root.Nodes.First().Id.Should().Be("A.1");
 
-            root = root.RemoveNodes(root.Nodes.Take(2));
+            root = root.RemoveChildNodes(root.Nodes.Take(2));
 
             root.Nodes.Should().HaveCount(1);
             root.Nodes.First().Id.Should().Be("A.3");

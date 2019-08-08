@@ -1,4 +1,6 @@
-﻿using System.Reactive.Linq;
+﻿
+using System;
+using System.Reactive.Linq;
 using Sidekick.Models;
 using Sidekick.ViewModels;
 using Sidekick.Views;
@@ -7,6 +9,7 @@ using Redux.DevTools;
 using Redux.Reactive;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Newtonsoft.Json;
 
 namespace Sidekick
 {
@@ -23,8 +26,8 @@ namespace Sidekick
             var environment = Startup.ExecutionEnvironment;
             var store = environment.GetService<IStore<AppState>>();
 
-            BindingContext = store as TimeMachineStore<AppState>;
-            TimeMachineSection.IsVisible = isDebugging;
+            DebuggerView.IsVisible = isDebugging;
+            TimeMachineSection.BindingContext = store as TimeMachineStore<AppState>;
 
             var projectChanges = store
                 .ObserveState()
@@ -32,6 +35,11 @@ namespace Sidekick
                 .DistinctUntilChanged();
 
             var vm = new FolderViewModel(projectChanges, environment);
+
+            projectChanges.Subscribe(projectState =>
+            {
+                StateView.Text = JsonConvert.SerializeObject(projectState, Formatting.Indented);    
+            });
 
             Workspace.Children.Add(new FolderView(vm));
         }

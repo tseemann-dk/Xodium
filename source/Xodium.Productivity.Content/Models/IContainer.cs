@@ -22,19 +22,9 @@ namespace Xodium.Productivity.Content.Models
             where T : class, IContainer
             => self.AddNodesAt(parent, new[] { node });
 
-        public static T InsertNode<T>(this T self, int index, INode node)
-            where T : class, IContainer
-            => self.InsertNodes(index, new[] { node });
-
-        public static T InsertNodeAt<T>(this T self, IContainer parent, int index, INode node)
-            where T : class, IContainer
-            => self.InsertNodesAt(parent, index, new[] { node });
-
         public static T AddNodes<T>(this T self, IEnumerable<INode> nodes)
-            where T : class, IContainer
-        {
-            return self.Clone(self.Nodes.Concat(nodes)) as T;
-        }
+            where T : class, IContainer 
+            => self.Clone(self.Nodes.Concat(nodes)) as T;
 
         public static T AddNodesAt<T>(this T self, IContainer parent, IEnumerable<INode> nodes)
             where T : class, IContainer
@@ -46,6 +36,14 @@ namespace Xodium.Productivity.Content.Models
 
             throw new ArgumentException("Not found", nameof(parent));
         }
+
+        public static T InsertNode<T>(this T self, int index, INode node)
+            where T : class, IContainer
+            => self.InsertNodes(index, new[] { node });
+
+        public static T InsertNodeAt<T>(this T self, IContainer parent, int index, INode node)
+            where T : class, IContainer
+            => self.InsertNodesAt(parent, index, new[] { node });
 
         public static T InsertNodes<T>(this T self, int index, IEnumerable<INode> nodes)
             where T : class, IContainer
@@ -66,7 +64,66 @@ namespace Xodium.Productivity.Content.Models
             throw new ArgumentException("Not found", nameof(parent));
         }
 
+        public static T RemoveNode<T>(this T self, INode oldNode)
+            where T : class, IContainer
+        {
+            if (oldNode.IsChildOf(self))
+            {
+                return self.RemoveChildNode(oldNode);
+            }
+
+            if (oldNode.GetParent(self) is IContainer parent)
+            {
+                return self.RemoveNodeAt(parent, oldNode);
+            }
+
+            throw new ArgumentException("Not found", nameof(oldNode));
+        }
+
+        private static T RemoveChildNode<T>(this T self, INode oldNode)
+            where T : class, IContainer
+        {
+            var nodes = self.Nodes.ToList();
+            nodes.Remove(oldNode);
+            return self.Clone(nodes) as T;
+        }
+
+        public static T RemoveNodeAt<T>(this T self, IContainer parent, INode oldNode)
+            where T : class, IContainer
+        {
+            if (self.TryRemoveNode(parent, oldNode, out var result))
+            {
+                return result as T;
+            }
+
+            throw new ArgumentException("Not found", nameof(oldNode));
+        }
+
+        public static T RemoveChildNodes<T>(this T self, IEnumerable<INode> oldNodes)
+            where T : class, IContainer
+        {
+            var nodes = self.Nodes.ToList();
+            nodes.RemoveAll(x => oldNodes.Contains(x));
+            return self.Clone(nodes) as T;
+        }
+
         public static T ReplaceNode<T>(this T self, INode oldNode, INode newNode)
+            where T : class, IContainer
+        {
+            if (self.Nodes.Contains(oldNode))
+            {
+                return self.ReplaceChildNode(oldNode, newNode);
+            }
+
+            if (oldNode.GetParent(self) is IContainer parent)
+            {
+                return self.ReplaceNodeAt(parent, oldNode, newNode);
+            }
+
+            throw new ArgumentException("Not found", nameof(oldNode));
+        }
+
+        private static T ReplaceChildNode<T>(this T self, INode oldNode, INode newNode)
             where T : class, IContainer
         {
             var nodes = self.Nodes.ToList();
@@ -92,22 +149,6 @@ namespace Xodium.Productivity.Content.Models
             throw new ArgumentException("Not found", nameof(oldNode));
         }
 
-        public static T RemoveNode<T>(this T self, INode oldNode)
-            where T : class, IContainer
-        {
-            var nodes = self.Nodes.ToList();
-            nodes.Remove(oldNode);
-            return self.Clone(nodes) as T;
-        }
-
-        public static T RemoveNodes<T>(this T self, IEnumerable<INode> oldNodes)
-            where T : class, IContainer
-        {
-            var nodes = self.Nodes.ToList();
-            nodes.RemoveAll(x => oldNodes.Contains(x));
-            return self.Clone(nodes) as T;
-        }
-
         public static bool TryAddNodes<T>(this T self, IContainer parent, IEnumerable<INode> nodes, out T result)
             where T : class, IContainer
         {
@@ -121,7 +162,7 @@ namespace Xodium.Productivity.Content.Models
             {
                 if (container.TryAddNodes(parent, nodes, out var branch))
                 {
-                    result = self.ReplaceNode(container, branch);
+                    result = self.ReplaceChildNode(container, branch);
                     return true;
                 }
             }
@@ -143,7 +184,29 @@ namespace Xodium.Productivity.Content.Models
             {
                 if (container.TryInsertNodes(parent, index, nodes, out var branch))
                 {
-                    result = self.ReplaceNode(container, branch);
+                    result = self.ReplaceChildNode(container, branch);
+                    return true;
+                }
+            }
+
+            result = null;
+            return false;
+        }
+
+        public static bool TryRemoveNode<T>(this T self, IContainer parent, INode oldNode, out T result)
+            where T : class, IContainer
+        {
+            if (self == parent)
+            {
+                result = self.RemoveChildNode(oldNode);
+                return true;
+            }
+
+            foreach (var container in self.GetContainers())
+            {
+                if (container.TryRemoveNode(parent, oldNode, out var branch))
+                {
+                    result = self.ReplaceChildNode(container, branch);
                     return true;
                 }
             }
@@ -157,7 +220,7 @@ namespace Xodium.Productivity.Content.Models
         {
             if (self == parent)
             {
-                result = self.ReplaceNode(oldNode, newNode);
+                result = self.ReplaceChildNode(oldNode, newNode);
                 return true;
             }
 
@@ -165,7 +228,7 @@ namespace Xodium.Productivity.Content.Models
             {
                 if (container.TryReplaceNode(parent, oldNode, newNode, out var branch))
                 {
-                    result = self.ReplaceNode(container, branch);
+                    result = self.ReplaceChildNode(container, branch);
                     return true;
                 }
             }

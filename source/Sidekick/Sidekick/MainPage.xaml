@@ -10,14 +10,25 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid x:Name="Workspace" Grid.Column="0"/>
 
-        <Grid x:Name="TimeMachineSection" Grid.Column="1">
-            <win:TimeMachine TimeMachineStore="{Binding}"/>
+        <Grid x:Name="DebuggerView" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="TimeMachineSection" Grid.Row="0">
+                <win:TimeMachine TimeMachineStore="{Binding}"/>
+            </Grid>
+
+            <ScrollView Grid.Row="1" HorizontalScrollBarVisibility="Always">
+                <Editor x:Name="StateView" IsReadOnly="True"/>
+            </ScrollView>
         </Grid>
     </Grid>
 

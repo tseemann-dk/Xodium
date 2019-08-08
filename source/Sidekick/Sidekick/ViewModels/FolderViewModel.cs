@@ -50,7 +50,7 @@ namespace Sidekick.ViewModels
             AddNewShortcutCommand = ReactiveCommand.Create(() => AddNewShortcut());
             ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle(), hasCurrentFolder);
             DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode(), hasFocusedNode);
-            EnterFolderCommand = ReactiveCommand.Create(() => EnterFolder(), focusedNodeIsFolder);
+            EnterFolderCommand = ReactiveCommand.Create(() => EnterFocusedFolder(), focusedNodeIsFolder);
             ExitFolderCommand = ReactiveCommand.Create(() => ExitFolder(), isNotAtRoot);
 
             Model.Subscribe(state =>
@@ -77,11 +77,18 @@ namespace Sidekick.ViewModels
                         CurrentFolder.Nodes.OfType<IArchiveNode>().ToArray(),
                         (x, y) => x.Id == y.Id,
                         (x, y) => x.IsSameNode(y),
-                        x => new NodeListItemViewModel(x, ExecutionEnvironment));
+                        CreateNodeItemViewModel);
 
                     FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
                 });
             });
+        }
+
+        private NodeListItemViewModel CreateNodeItemViewModel(IArchiveNode node)
+        {
+            var vm = new NodeListItemViewModel(node, ExecutionEnvironment);
+            vm.OpenRequested += (s, e) => EnterFolder(vm);
+            return vm;
         }
 
         public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }
@@ -116,6 +123,13 @@ namespace Sidekick.ViewModels
         }
 
         public ObservableCollection<NodeListItemViewModel> Nodes { get; }
+
+        public void EnterFolder(NodeListItemViewModel node)
+        {
+            if (!(node.Model is IFolder folder)) return;
+
+            this.DispatchAction(new EnterFolderAction(folder.Id));
+        }
 
         public void FocusNode(NodeListItemViewModel node)
         {
@@ -162,11 +176,9 @@ namespace Sidekick.ViewModels
             this.DispatchAction(new DeleteNodeAction(CurrentFolder.Id, focusedNode.Id));
         }
 
-        private void EnterFolder()
+        private void EnterFocusedFolder()
         {
-            if (!(focusedNode.Model is IFolder folder)) return;
-
-            this.DispatchAction(new EnterFolderAction(folder.Id));
+            EnterFolder(focusedNode);
         }
 
         private void ExitFolder()

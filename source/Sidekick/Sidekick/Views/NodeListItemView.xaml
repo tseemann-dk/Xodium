@@ -21,4 +21,8 @@
         <Label Text="{Binding Text}" />
     </StackLayout>
 
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding OpenCommand}"/>
+    </ContentView.GestureRecognizers>
+
 </ContentView>

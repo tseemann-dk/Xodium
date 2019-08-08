@@ -22,7 +22,7 @@
                         <views:NodeListItemView/>
                     </ViewCell>
                 </DataTemplate>
-            </ListView.ItemTemplate>        
+            </ListView.ItemTemplate>       
         </ListView>
 
         <!--<CollectionView 

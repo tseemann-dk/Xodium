@@ -68,7 +68,7 @@ namespace Sidekick.Views
 
         private void NodeListView_ItemSelected(object sender, EventArgs args)
         {
-            ViewModel.SelectNode(NodeListView.SelectedItem as NodeListItemViewModel);
+            ViewModel.FocusNode(NodeListView.SelectedItem as NodeListItemViewModel);
         }
 
         /*

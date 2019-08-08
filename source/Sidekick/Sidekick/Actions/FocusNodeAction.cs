@@ -2,10 +2,10 @@
 
 namespace Sidekick.Actions
 {
-    public class SelectNodeAction : ReduxAction<SelectNodeAction.Properties>
+    public class FocusNodeAction : ReduxAction<FocusNodeAction.Properties>
     {
-        public SelectNodeAction(string nodeId)
-            : base(typeof(SelectNodeAction).FullName, new Properties(nodeId))
+        public FocusNodeAction(string nodeId)
+            : base(typeof(FocusNodeAction).FullName, new Properties(nodeId))
         {
         }
 

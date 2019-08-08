@@ -2,7 +2,7 @@
 {
     public struct GlobalState
     {
+        public int NextElementNumber;
         public int NextFolderNumber;
-        public int NextShortcutNumber;
     }
 }

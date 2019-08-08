@@ -14,7 +14,7 @@
 
         <ListView 
             x:Name="NodeListView"
-            SelectedItem="{Binding SelectedNode}"
+            SelectedItem="{Binding FocusedNode}"
             ItemSelected="NodeListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -27,7 +27,7 @@
 
         <!--<CollectionView 
             x:Name="NodeCollectionView"
-            SelectedItem="{Binding SelectedNode}"
+            SelectedItem="{Binding FocusedNode}"
             SelectionMode="Single"
             SelectionChanged="NodeCollectionView_SelectionChanged">
             <CollectionView.ItemTemplate>

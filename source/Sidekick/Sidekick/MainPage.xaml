@@ -18,8 +18,8 @@
 
         <Grid x:Name="DebuggerView" Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <Grid x:Name="TimeMachineSection" Grid.Row="0">

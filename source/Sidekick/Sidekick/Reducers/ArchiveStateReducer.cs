@@ -31,7 +31,7 @@ namespace Sidekick.Reducers
                     }
                     break;
 
-                case SelectNodeAction a:
+                case FocusNodeAction a:
                     focusedNodeId = a.Payload.NodeId;
                     break;
 
@@ -53,9 +53,9 @@ namespace Sidekick.Reducers
                 case AddShortcutAction a:
                     (newFolder, focusedNodeId) = FolderTransformer.AddShortcut(
                         currentFolder, 
-                        a.Payload.Date, 
-                        a.Payload.Text, 
+                        a.Payload.Target, 
                         a.Payload.Quantity, 
+                        a.Payload.Text, 
                         a.Payload.Value, 
                         a.Payload.InsertAfterNodeId);
                     break;

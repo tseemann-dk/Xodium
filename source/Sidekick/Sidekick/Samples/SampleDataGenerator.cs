@@ -1,5 +1,4 @@
 ﻿using Sidekick.Models;
-using System;
 using System.Linq;
 
 namespace Sidekick.Samples
@@ -15,8 +14,8 @@ namespace Sidekick.Samples
             {
                 Global = new GlobalState
                 {
-                    NextFolderNumber = 2,
-                    NextShortcutNumber = 3
+                    NextElementNumber = 3,
+                    NextFolderNumber = 2
                 },
                 CurrentArchive = new ArchiveState
                 {
@@ -32,8 +31,8 @@ namespace Sidekick.Samples
             return new Archive("archive-1", "A1",
                 new Folder("folder-1", "F1", "Folder 1", 1, new[]
                 {
-                    new Shortcut(DateTime.Today, "Shortcut 1", 1, 10),
-                    new Shortcut(DateTime.Today, "Shortcut 2", 1, 20),
+                    new Shortcut(new Element("1", "Shortcut 1", 10), 1),
+                    new Shortcut(new Element("2", "Shortcut 2", 20), 1)
                 })
             );
         }

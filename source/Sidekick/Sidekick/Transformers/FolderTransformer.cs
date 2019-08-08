@@ -22,13 +22,13 @@ namespace Sidekick.Transformers
 
         public static (IFolder, string) AddShortcut(
             IFolder parentFolder,
-            DateTime date,
-            string text,
+            IElement target,
             double quantity,
-            double value,
+            string text,
+            double? value,
             string afterNodeId)
         {
-            var shortcut = new Shortcut(date, text, quantity, value);
+            var shortcut = new Shortcut(target, quantity, text, value);
             var newFolder = AddNode(parentFolder, shortcut, afterNodeId);
             return (newFolder, shortcut.Id);
         }

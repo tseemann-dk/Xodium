@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sidekick.Models;
+using System;
 using Xodium.Redux;
 
 namespace Sidekick.Actions
@@ -7,16 +8,16 @@ namespace Sidekick.Actions
     {
         public AddShortcutAction(
             string parentFolderId, 
-            DateTime date, 
-            string text, 
+            IElement target, 
             double quantity, 
-            double value, 
+            string text = null, 
+            double? value = null, 
             string insertAfterNodeId = null)
             : base(typeof(AddShortcutAction).FullName, new Properties(
                 parentFolderId, 
-                date, 
-                text, 
+                target, 
                 quantity, 
+                text, 
                 value, 
                 insertAfterNodeId
             ))
@@ -27,25 +28,25 @@ namespace Sidekick.Actions
         {
             public Properties(
                 string folderId,
-                DateTime date, 
-                string text, 
+                IElement target, 
                 double quantity, 
-                double value, 
+                string text, 
+                double? value, 
                 string insertAfterNodeId)
             {
                 ParentFolderId = folderId ?? throw new ArgumentNullException(nameof(folderId));
-                Date = date;
-                Text = text;
+                Target = target;
                 Quantity = quantity;
+                Text = text;
                 Value = value;
                 InsertAfterNodeId = insertAfterNodeId;
             }
 
             public string ParentFolderId;
-            public DateTime Date;
-            public string Text;
+            public IElement Target;
             public double Quantity;
-            public double Value;
+            public string Text;
+            public double? Value;
             public string InsertAfterNodeId;
         }
     }

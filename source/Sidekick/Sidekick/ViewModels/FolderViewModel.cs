@@ -117,11 +117,11 @@ namespace Sidekick.ViewModels
 
         public ObservableCollection<NodeListItemViewModel> Nodes { get; }
 
-        public void SelectNode(NodeListItemViewModel node)
+        public void FocusNode(NodeListItemViewModel node)
         {
             if (node?.Id == FocusedNode?.Id) return;
 
-            this.DispatchAction(new SelectNodeAction(node?.Id));
+            this.DispatchAction(new FocusNodeAction(node?.Id));
         }
 
         private void AddNewFolder()
@@ -134,11 +134,10 @@ namespace Sidekick.ViewModels
 
         private void AddNewShortcut()
         {
-            var number = this.GetAppState().Global.NextShortcutNumber;
-            var text = $"Shortcut {number}";
-            var value = 10;
+            var number = this.GetAppState().Global.NextElementNumber;
+            var element = new Element(number.ToString(), $"Shortcut {number}", 10);
 
-            this.DispatchAction(new AddShortcutAction(CurrentFolder.Id, DateTime.Today, text, 1, value, focusedNode?.Id));
+            this.DispatchAction(new AddShortcutAction(CurrentFolder.Id, element, 1, insertAfterNodeId: focusedNode?.Id));
         }
 
         private void ChangeTitle()

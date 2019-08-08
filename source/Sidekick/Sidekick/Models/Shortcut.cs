@@ -8,31 +8,36 @@ namespace Sidekick.Models
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class Shortcut : IShortcut
     {
-        public Shortcut(DateTime date, string text, double quantity, double value)
-            : this(Guid.NewGuid().ToString(), date, text, quantity, value)
+        public Shortcut(IElement target, double quantity, string text = null, double? value = null)
+            : this(Guid.NewGuid().ToString(), target, quantity, text, value)
         {
         }
 
-        public Shortcut(string id, DateTime date, string text, double quantity, double value)
+        public Shortcut(string id, IElement target, double quantity, string text = null, double? value = null)
         {
             Id = id ?? throw new ArgumentNullException(nameof(id));
-            Date = date;
-            Text = text;
+            Target = target;
             Quantity = quantity;
+            Text = text;
             Value = value;
         }
 
         public string Id { get; }
-        public DateTime Date { get; }
+        public IElement Target { get; }
         public string Text { get; }
         public double Quantity { get; }
-        public double Value { get; }
+        public double? Value { get; }
 
-        string IArchiveNode.ReferenceNumber => Date.ToString("dd-MM-yy");
+        private string DisplayNumber => Target?.Number;
+        private string DisplayText => Text ?? Target?.Text;
+
+        string IArchiveNode.ReferenceNumber => DisplayNumber;
+        string IArchiveNode.Text => DisplayText;
+        double IArchiveNode.Value => Value ?? Target?.Value ?? 0;
 
         [ExcludeFromCodeCoverage]
-        private string DebuggerDisplay => $"{Date}, {Text}";
+        private string DebuggerDisplay => $"{DisplayNumber}, {DisplayText}";
 
-        public INode Clone() => new Shortcut(Id, Date, Text, Quantity, Value);
+        public INode Clone() => new Shortcut(Id, Target, Quantity, Text, Value);
     }
 }

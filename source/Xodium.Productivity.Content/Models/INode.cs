@@ -20,7 +20,7 @@ namespace Xodium.Productivity.Content.Models
 
         public static IBranch GetParent(this INode node, IBranch root)
         {
-            return GetParents(node, root).FirstOrDefault();
+            return GetParents(node, root).LastOrDefault();
         }
 
         public static IEnumerable<IBranch> GetParents(this INode node, IBranch root)

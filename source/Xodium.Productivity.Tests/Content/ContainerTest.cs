@@ -15,7 +15,7 @@ namespace Xodium.Productivity.Tests.Content
 
         public ContainerTest()
         {
-            treeBuilder = new TreeBuilder<SampleContainer>((id, nodes) => new SampleContainer(id, nodes));
+            treeBuilder = SampleContainer.CreateTreeBuilder();
         }
 
         [Fact]

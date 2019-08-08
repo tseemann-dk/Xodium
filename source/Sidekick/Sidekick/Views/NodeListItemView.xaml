@@ -19,6 +19,7 @@
         <!--<Label Text="{Binding Date, Converter={StaticResource DateTimeToStringConverter}, ConverterParameter='dd-MM'}" />-->
         <Label Text="{Binding DisplayNumber}" />
         <Label Text="{Binding Text}" />
+        <Label Text="{Binding Value}" HorizontalOptions="EndAndExpand"/>
     </StackLayout>
 
     <ContentView.GestureRecognizers>

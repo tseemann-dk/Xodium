@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Models
@@ -21,6 +22,7 @@ namespace Sidekick.Models
             Text = text;
             Quantity = quantity;
             Nodes = nodes as IReadOnlyList<INode> ?? (nodes == null ? new List<INode>() : new List<INode>(nodes));
+            Value = Nodes.OfType<IArchiveNode>().Sum(x => x.Value);
         }
 
         public string Id { get; }

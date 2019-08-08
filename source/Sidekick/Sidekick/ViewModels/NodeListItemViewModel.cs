@@ -18,6 +18,7 @@ namespace Sidekick.ViewModels
         public string Id => Model.Id;
         public string DisplayNumber => Model.ReferenceNumber;
         public string Text => Model.Text;
+        public double Value => Model.Value;
 
         public ReactiveCommand<Unit, Unit> OpenCommand { get; }
 

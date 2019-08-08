@@ -30,7 +30,7 @@ namespace Sidekick.Models
         public double Value { get; }
         public IReadOnlyList<INode> Nodes { get; }
 
-        string IProjectNode.ReferenceNumber => Number;
+        string IArchiveNode.ReferenceNumber => Number;
 
         [ExcludeFromCodeCoverage]
         private string DebuggerDisplay => $"{Text}";

@@ -2,7 +2,7 @@
 
 namespace Sidekick.Models
 {
-    public interface ILine : IProjectNode
+    public interface IShortcut : IArchiveNode
     {
         DateTime Date { get; }
     }

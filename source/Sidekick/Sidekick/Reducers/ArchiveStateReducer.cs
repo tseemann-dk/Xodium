@@ -5,13 +5,13 @@ using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Reducers
 {
-    public class ProjectStateReducer
+    public class ArchiveStateReducer
     {
-        public static ProjectState Execute(ProjectState state, object action)
+        public static ArchiveState Execute(ArchiveState state, object action)
         {
-            var project = state.Document;
+            var archive = state.Document;
             var currentFolderId = state.CurrentFolderId;
-            var selectedNodeId = state.SelectedNodeId;
+            var focusedNodeId = state.FocusedNodeId;
             var currentFolder = state.Document.Content.FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
             IFolder newFolder = null;
 
@@ -19,20 +19,20 @@ namespace Sidekick.Reducers
             {
                 case EnterFolderAction a:
                     currentFolderId = a.Payload.FolderId;
-                    selectedNodeId = null;
+                    focusedNodeId = null;
                     break;
 
                 case ExitFolderAction a:
                     var parentId = currentFolder?.GetParent(state.Document.Content)?.Id;
                     if (parentId != null)
                     {
-                        selectedNodeId = currentFolderId;
+                        focusedNodeId = currentFolderId;
                         currentFolderId = parentId;
                     }
                     break;
 
                 case SelectNodeAction a:
-                    selectedNodeId = a.Payload.NodeId;
+                    focusedNodeId = a.Payload.NodeId;
                     break;
 
                 case ChangeFolderTitleAction a:
@@ -42,7 +42,7 @@ namespace Sidekick.Reducers
                     break;
 
                 case AddFolderAction a:
-                    (newFolder, selectedNodeId) = FolderTransformer.AddFolder(
+                    (newFolder, focusedNodeId) = FolderTransformer.AddFolder(
                         currentFolder, 
                         a.Payload.Number, 
                         a.Payload.Text, 
@@ -50,8 +50,8 @@ namespace Sidekick.Reducers
                         a.Payload.InsertAfterNodeId);
                     break;
 
-                case AddLineAction a:
-                    (newFolder, selectedNodeId) = FolderTransformer.AddLine(
+                case AddShortcutAction a:
+                    (newFolder, focusedNodeId) = FolderTransformer.AddShortcut(
                         currentFolder, 
                         a.Payload.Date, 
                         a.Payload.Text, 
@@ -61,7 +61,7 @@ namespace Sidekick.Reducers
                     break;
 
                 case DeleteNodeAction a:
-                    (newFolder, selectedNodeId) = FolderTransformer.DeleteNode(
+                    (newFolder, focusedNodeId) = FolderTransformer.DeleteNode(
                         currentFolder, 
                         a.Payload.NodeId);
                     break;
@@ -69,16 +69,16 @@ namespace Sidekick.Reducers
 
             if (newFolder != null)
             {
-                project = currentFolder.Id == project.Content.Id
-                    ? state.Document.Clone(newFolder) as Project
-                    : state.Document.ReplaceNode(currentFolder, newFolder) as Project;
+                archive = currentFolder.Id == archive.Content.Id
+                    ? state.Document.Clone(newFolder) as Archive
+                    : state.Document.ReplaceNode(currentFolder, newFolder) as Archive;
             }
 
-            return new ProjectState
+            return new ArchiveState
             {
-                Document = project,
+                Document = archive,
                 CurrentFolderId = currentFolderId,
-                SelectedNodeId = selectedNodeId
+                FocusedNodeId = focusedNodeId
             };
         }
     }

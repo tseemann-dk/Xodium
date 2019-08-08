@@ -30,7 +30,7 @@ namespace Sidekick.Views
                     .DisposeWith(disposables);
 
                 this.OneWayBind(ViewModel,
-                    vm => vm.SelectedNode,
+                    vm => vm.FocusedNode,
                     v => v.NodeListView.SelectedItem)
                     .DisposeWith(disposables);
 
@@ -40,8 +40,8 @@ namespace Sidekick.Views
                     .DisposeWith(disposables);
 
                 this.BindCommand(ViewModel,
-                    vm => vm.AddNewLineCommand,
-                    v => v.AddLineButton)
+                    vm => vm.AddNewShortcutCommand,
+                    v => v.AddShortcutButton)
                     .DisposeWith(disposables);
 
                 this.BindCommand(ViewModel, 

@@ -1,9 +1,8 @@
-﻿using System;
-using Xodium.Productivity.Content.Models;
+﻿using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Models
 {
-    public interface IProjectNode : INode
+    public interface IArchiveNode : INode
     {
         string ReferenceNumber { get; }
         string Text { get; }

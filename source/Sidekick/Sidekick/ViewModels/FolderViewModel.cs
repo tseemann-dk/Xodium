@@ -14,23 +14,23 @@ using System.Reactive.Linq;
 
 namespace Sidekick.ViewModels
 {
-    public class FolderViewModel : ReactiveViewModelBase<IObservable<ProjectState>>
+    public class FolderViewModel : ReactiveViewModelBase<IObservable<ArchiveState>>
     {
         private string title;
         private IFolder currentFolder;
-        private IProject currentProject;
-        private NodeListItemViewModel selectedNode;
+        private IArchive currentArchive;
+        private NodeListItemViewModel focusedNode;
 
-        public FolderViewModel(IObservable<ProjectState> model, IExecutionEnvironment executionEnvironment) 
+        public FolderViewModel(IObservable<ArchiveState> model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
         {
             Nodes = new ObservableCollection<NodeListItemViewModel>();
 
-            var selectedNodeChanges = this
-                .WhenAnyValue(x => x.SelectedNode);
+            var focusedNodeChanges = this
+                .WhenAnyValue(x => x.FocusedNode);
 
             var isAtRoot = this
-                .WhenAnyValue(x => x.CurrentProject, x => x.CurrentFolder)
+                .WhenAnyValue(x => x.CurrentArchive, x => x.CurrentFolder)
                 .Select(x => x.Item1?.Content == x.Item2);
 
             var isNotAtRoot = isAtRoot
@@ -40,28 +40,28 @@ namespace Sidekick.ViewModels
                 .WhenAnyValue(x => x.CurrentFolder)
                 .Select(x => x != null);
 
-            var hasSelectedNode = selectedNodeChanges
+            var hasFocusedNode = focusedNodeChanges
                 .Select(x => x != null);
 
-            var selectedNodeIsFolder = selectedNodeChanges
+            var focusedNodeIsFolder = focusedNodeChanges
                 .Select(x => x?.Model is Folder);
 
             AddNewFolderCommand = ReactiveCommand.Create(() => AddNewFolder());
-            AddNewLineCommand = ReactiveCommand.Create(() => AddNewLine());
+            AddNewShortcutCommand = ReactiveCommand.Create(() => AddNewShortcut());
             ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle(), hasCurrentFolder);
-            DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode(), hasSelectedNode);
-            EnterFolderCommand = ReactiveCommand.Create(() => EnterFolder(), selectedNodeIsFolder);
+            DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode(), hasFocusedNode);
+            EnterFolderCommand = ReactiveCommand.Create(() => EnterFolder(), focusedNodeIsFolder);
             ExitFolderCommand = ReactiveCommand.Create(() => ExitFolder(), isNotAtRoot);
 
             Model.Subscribe(state =>
             {
-                CurrentProject = state.Document;
+                CurrentArchive = state.Document;
 
                 CurrentFolder = state.Document.Content
                     .FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
 
                 var newNodes = CurrentFolder.Nodes
-                    .OfType<IProjectNode>()
+                    .OfType<IArchiveNode>()
                     .Select(x => new NodeListItemViewModel(x, ExecutionEnvironment))
                     .ToList();
 
@@ -74,18 +74,18 @@ namespace Sidekick.ViewModels
                     Title = CurrentFolder.Text;
 
                     Nodes.MorphTo(
-                        CurrentFolder.Nodes.OfType<IProjectNode>().ToArray(),
+                        CurrentFolder.Nodes.OfType<IArchiveNode>().ToArray(),
                         (x, y) => x.Id == y.Id,
                         (x, y) => x.IsSameNode(y),
                         x => new NodeListItemViewModel(x, ExecutionEnvironment));
 
-                    SelectedNode = Nodes.FirstOrDefault(x => x.Id == state.SelectedNodeId);
+                    FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
                 });
             });
         }
 
         public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }
-        public ReactiveCommand<Unit, Unit> AddNewLineCommand { get; }
+        public ReactiveCommand<Unit, Unit> AddNewShortcutCommand { get; }
         public ReactiveCommand<Unit, Unit> ChangeTitleCommand { get; }
         public ReactiveCommand<Unit, Unit> DeleteNodeCommand { get; }
         public ReactiveCommand<Unit, Unit> EnterFolderCommand { get; }
@@ -103,23 +103,23 @@ namespace Sidekick.ViewModels
             set => this.RaiseAndSetIfChanged(ref currentFolder, value);
         }
 
-        public IProject CurrentProject
+        public IArchive CurrentArchive
         {
-            get => currentProject;
-            set => this.RaiseAndSetIfChanged(ref currentProject, value);
+            get => currentArchive;
+            set => this.RaiseAndSetIfChanged(ref currentArchive, value);
         }
 
-        public NodeListItemViewModel SelectedNode
+        public NodeListItemViewModel FocusedNode
         {
-            get => selectedNode;
-            set => this.RaiseAndSetIfChanged(ref selectedNode, value);
+            get => focusedNode;
+            set => this.RaiseAndSetIfChanged(ref focusedNode, value);
         }
 
         public ObservableCollection<NodeListItemViewModel> Nodes { get; }
 
         public void SelectNode(NodeListItemViewModel node)
         {
-            if (node?.Id == SelectedNode?.Id) return;
+            if (node?.Id == FocusedNode?.Id) return;
 
             this.DispatchAction(new SelectNodeAction(node?.Id));
         }
@@ -129,16 +129,16 @@ namespace Sidekick.ViewModels
             var number = this.GetAppState().Global.NextFolderNumber;
             var text = $"Folder {number}";
 
-            this.DispatchAction(new AddFolderAction(CurrentFolder.Id, $"F{number}", text, 1, selectedNode?.Id));
+            this.DispatchAction(new AddFolderAction(CurrentFolder.Id, $"F{number}", text, 1, focusedNode?.Id));
         }
 
-        private void AddNewLine()
+        private void AddNewShortcut()
         {
-            var number = this.GetAppState().Global.NextLineNumber;
-            var text = $"Line {number}";
+            var number = this.GetAppState().Global.NextShortcutNumber;
+            var text = $"Shortcut {number}";
             var value = 10;
 
-            this.DispatchAction(new AddLineAction(CurrentFolder.Id, DateTime.Today, text, 1, value, selectedNode?.Id));
+            this.DispatchAction(new AddShortcutAction(CurrentFolder.Id, DateTime.Today, text, 1, value, focusedNode?.Id));
         }
 
         private void ChangeTitle()
@@ -158,14 +158,14 @@ namespace Sidekick.ViewModels
 
         private void DeleteNode()
         {
-            if (selectedNode == null) return;
+            if (focusedNode == null) return;
 
-            this.DispatchAction(new DeleteNodeAction(CurrentFolder.Id, selectedNode.Id));
+            this.DispatchAction(new DeleteNodeAction(CurrentFolder.Id, focusedNode.Id));
         }
 
         private void EnterFolder()
         {
-            if (!(selectedNode.Model is IFolder folder)) return;
+            if (!(focusedNode.Model is IFolder folder)) return;
 
             this.DispatchAction(new EnterFolderAction(folder.Id));
         }

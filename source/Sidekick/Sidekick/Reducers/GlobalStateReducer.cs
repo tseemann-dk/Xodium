@@ -12,12 +12,12 @@ namespace Sidekick.Reducers
                 case AddFolderAction _:
                     return new GlobalState {
                         NextFolderNumber = state.NextFolderNumber + 1,
-                        NextLineNumber = state.NextLineNumber
+                        NextShortcutNumber = state.NextShortcutNumber
                     };
-                case AddLineAction _:
+                case AddShortcutAction _:
                     return new GlobalState {
                         NextFolderNumber = state.NextFolderNumber,
-                        NextLineNumber = state.NextLineNumber + 1
+                        NextShortcutNumber = state.NextShortcutNumber + 1
                     };
                 default:
                     return state;

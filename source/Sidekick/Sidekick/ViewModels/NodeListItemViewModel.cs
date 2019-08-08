@@ -5,9 +5,9 @@ using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.ViewModels
 {
-    public class NodeListItemViewModel : ViewModelBase<IProjectNode>
+    public class NodeListItemViewModel : ViewModelBase<IArchiveNode>
     {
-        public NodeListItemViewModel(IProjectNode model, IExecutionEnvironment executionEnvironment) 
+        public NodeListItemViewModel(IArchiveNode model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
         {
         }

@@ -39,8 +39,8 @@
 
         <StackLayout Orientation="Horizontal" Margin="4">
             <Button 
-                x:Name="AddLineButton"
-                Text="Add Line"/>
+                x:Name="AddShortcutButton"
+                Text="Add Shortcut"/>
             <Button 
                 x:Name="AddFolderButton"
                 Text="Add Folder"/>

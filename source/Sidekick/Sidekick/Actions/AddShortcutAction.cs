@@ -3,16 +3,16 @@ using Xodium.Redux;
 
 namespace Sidekick.Actions
 {
-    public class AddLineAction : ReduxAction<AddLineAction.Properties>
+    public class AddShortcutAction : ReduxAction<AddShortcutAction.Properties>
     {
-        public AddLineAction(
+        public AddShortcutAction(
             string parentFolderId, 
             DateTime date, 
             string text, 
             double quantity, 
             double value, 
             string insertAfterNodeId = null)
-            : base(typeof(AddLineAction).FullName, new Properties(
+            : base(typeof(AddShortcutAction).FullName, new Properties(
                 parentFolderId, 
                 date, 
                 text, 

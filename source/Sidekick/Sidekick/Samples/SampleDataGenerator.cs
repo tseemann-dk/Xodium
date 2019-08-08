@@ -8,32 +8,32 @@ namespace Sidekick.Samples
     {
         public static AppState BuildSampleAppState()
         {
-            var project = BuildSampleDocument();
-            var folder = project.Content;
+            var archive = BuildSampleArchive();
+            var folder = archive.Content;
 
             return new AppState
             {
                 Global = new GlobalState
                 {
                     NextFolderNumber = 2,
-                    NextLineNumber = 3
+                    NextShortcutNumber = 3
                 },
-                CurrentDocument = new ProjectState
+                CurrentArchive = new ArchiveState
                 {
-                    Document = project,
+                    Document = archive,
                     CurrentFolderId = folder.Id,
-                    SelectedNodeId = folder.Nodes.Last().Id
+                    FocusedNodeId = folder.Nodes.Last().Id
                 },
             };
         }
 
-        private static Project BuildSampleDocument()
+        private static Archive BuildSampleArchive()
         {
-            return new Project("doc-1", "D1",
+            return new Archive("archive-1", "A1",
                 new Folder("folder-1", "F1", "Folder 1", 1, new[]
                 {
-                    new Line(DateTime.Today, "Line 1", 1, 10),
-                    new Line(DateTime.Today, "Line 2", 1, 20),
+                    new Shortcut(DateTime.Today, "Shortcut 1", 1, 10),
+                    new Shortcut(DateTime.Today, "Shortcut 2", 1, 20),
                 })
             );
         }

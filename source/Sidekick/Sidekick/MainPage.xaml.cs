@@ -29,16 +29,16 @@ namespace Sidekick
             DebuggerView.IsVisible = isDebugging;
             TimeMachineSection.BindingContext = store as TimeMachineStore<AppState>;
 
-            var projectChanges = store
+            var archiveChanges = store
                 .ObserveState()
-                .Select(state => state.CurrentDocument)
+                .Select(state => state.CurrentArchive)
                 .DistinctUntilChanged();
 
-            var vm = new FolderViewModel(projectChanges, environment);
+            var vm = new FolderViewModel(archiveChanges, environment);
 
-            projectChanges.Subscribe(projectState =>
+            archiveChanges.Subscribe(archiveState =>
             {
-                StateView.Text = JsonConvert.SerializeObject(projectState, Formatting.Indented);    
+                StateView.Text = JsonConvert.SerializeObject(archiveState, Formatting.Indented);    
             });
 
             Workspace.Children.Add(new FolderView(vm));

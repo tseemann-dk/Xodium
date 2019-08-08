@@ -20,7 +20,7 @@ namespace Sidekick.Transformers
             return (newParentFolder, folder.Id);
         }
 
-        public static (IFolder, string) AddLine(
+        public static (IFolder, string) AddShortcut(
             IFolder parentFolder,
             DateTime date,
             string text,
@@ -28,9 +28,9 @@ namespace Sidekick.Transformers
             double value,
             string afterNodeId)
         {
-            var line = new Line(date, text, quantity, value);
-            var newFolder = AddNode(parentFolder, line, afterNodeId);
-            return (newFolder, line.Id);
+            var shortcut = new Shortcut(date, text, quantity, value);
+            var newFolder = AddNode(parentFolder, shortcut, afterNodeId);
+            return (newFolder, shortcut.Id);
         }
 
         public static IFolder AddNode(

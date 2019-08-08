@@ -4,7 +4,7 @@ using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Models
 {
-    public interface IFolder : IContainer, IProjectNode
+    public interface IFolder : IContainer, IArchiveNode
     {
         string Number { get; }
 

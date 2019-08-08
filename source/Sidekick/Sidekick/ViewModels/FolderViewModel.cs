@@ -10,13 +10,15 @@ using Xodium.Collections;
 using Xodium.Mvvm;
 using Xodium.Mvvm.ReactiveUI;
 using Xodium.Productivity.Content.Models;
+using System.Reactive.Linq;
 
 namespace Sidekick.ViewModels
 {
     public class FolderViewModel : ReactiveViewModelBase<IObservable<ProjectState>>
     {
-        private IFolder folder;
         private string title;
+        private IFolder currentFolder;
+        private IProject currentProject;
         private NodeListItemViewModel selectedNode;
 
         public FolderViewModel(IObservable<ProjectState> model, IExecutionEnvironment executionEnvironment) 
@@ -24,19 +26,41 @@ namespace Sidekick.ViewModels
         {
             Nodes = new ObservableCollection<NodeListItemViewModel>();
 
+            var selectedNodeChanges = this
+                .WhenAnyValue(x => x.SelectedNode);
+
+            var isAtRoot = this
+                .WhenAnyValue(x => x.CurrentProject, x => x.CurrentFolder)
+                .Select(x => x.Item1?.Content == x.Item2);
+
+            var isNotAtRoot = isAtRoot
+                .Select(x => !x);
+
+            var hasCurrentFolder = this
+                .WhenAnyValue(x => x.CurrentFolder)
+                .Select(x => x != null);
+
+            var hasSelectedNode = selectedNodeChanges
+                .Select(x => x != null);
+
+            var selectedNodeIsFolder = selectedNodeChanges
+                .Select(x => x?.Model is Folder);
+
             AddNewFolderCommand = ReactiveCommand.Create(() => AddNewFolder());
             AddNewLineCommand = ReactiveCommand.Create(() => AddNewLine());
-            ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle());
-            DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode());
-            EnterFolderCommand = ReactiveCommand.Create(() => EnterFolder());
-            ExitFolderCommand = ReactiveCommand.Create(() => ExitFolder());
+            ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle(), hasCurrentFolder);
+            DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode(), hasSelectedNode);
+            EnterFolderCommand = ReactiveCommand.Create(() => EnterFolder(), selectedNodeIsFolder);
+            ExitFolderCommand = ReactiveCommand.Create(() => ExitFolder(), isNotAtRoot);
 
             Model.Subscribe(state =>
             {
-                folder = state.Document.Content
+                CurrentProject = state.Document;
+
+                CurrentFolder = state.Document.Content
                     .FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
 
-                var newNodes = folder.Nodes
+                var newNodes = CurrentFolder.Nodes
                     .OfType<IProjectNode>()
                     .Select(x => new NodeListItemViewModel(x, ExecutionEnvironment))
                     .ToList();
@@ -47,10 +71,10 @@ namespace Sidekick.ViewModels
 
                 Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
                 {
-                    Title = folder.Text;
+                    Title = CurrentFolder.Text;
 
                     Nodes.MorphTo(
-                        folder.Nodes.OfType<IProjectNode>().ToArray(),
+                        CurrentFolder.Nodes.OfType<IProjectNode>().ToArray(),
                         (x, y) => x.Id == y.Id,
                         (x, y) => x.IsSameNode(y),
                         x => new NodeListItemViewModel(x, ExecutionEnvironment));
@@ -73,6 +97,18 @@ namespace Sidekick.ViewModels
             set => this.RaiseAndSetIfChanged(ref title, value);
         }
 
+        public IFolder CurrentFolder
+        {
+            get => currentFolder;
+            set => this.RaiseAndSetIfChanged(ref currentFolder, value);
+        }
+
+        public IProject CurrentProject
+        {
+            get => currentProject;
+            set => this.RaiseAndSetIfChanged(ref currentProject, value);
+        }
+
         public NodeListItemViewModel SelectedNode
         {
             get => selectedNode;
@@ -93,7 +129,7 @@ namespace Sidekick.ViewModels
             var number = this.GetAppState().Global.NextFolderNumber;
             var text = $"Folder {number}";
 
-            this.DispatchAction(new AddFolderAction(folder.Id, $"F{number}", text, 1, selectedNode?.Id));
+            this.DispatchAction(new AddFolderAction(CurrentFolder.Id, $"F{number}", text, 1, selectedNode?.Id));
         }
 
         private void AddNewLine()
@@ -102,7 +138,7 @@ namespace Sidekick.ViewModels
             var text = $"Line {number}";
             var value = 10;
 
-            this.DispatchAction(new AddLineAction(folder.Id, DateTime.Today, text, 1, value, selectedNode?.Id));
+            this.DispatchAction(new AddLineAction(CurrentFolder.Id, DateTime.Today, text, 1, value, selectedNode?.Id));
         }
 
         private void ChangeTitle()
@@ -117,14 +153,14 @@ namespace Sidekick.ViewModels
             var prefix = string.Join(" ", words.Take(words.Length - 1));
             var newTitle = $"{prefix} {++count}";
 
-            this.DispatchAction(new ChangeFolderTitleAction(folder.Id, newTitle));
+            this.DispatchAction(new ChangeFolderTitleAction(CurrentFolder.Id, newTitle));
         }
 
         private void DeleteNode()
         {
             if (selectedNode == null) return;
 
-            this.DispatchAction(new DeleteNodeAction(folder.Id, selectedNode.Id));
+            this.DispatchAction(new DeleteNodeAction(CurrentFolder.Id, selectedNode.Id));
         }
 
         private void EnterFolder()

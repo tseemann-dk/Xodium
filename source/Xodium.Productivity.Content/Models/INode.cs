@@ -49,17 +49,13 @@ namespace Xodium.Productivity.Content.Models
             return false;
         }
 
-        public static INode GetNextNode(this INode node, IBranch root)
-        {
-            return node.GetParent(root)?.GetNextNode(node);
-        }
-
-        public static INode GetPreviousNode(this INode node, IBranch root)
-        {
-            return node.GetParent(root)?.GetPreviousNode(node);
-        }
-
         public static bool IsChildOf(this INode node, IBranch branch)
             => branch.Nodes.Contains(node);
+
+        public static bool IsFirstChildOf(this INode node, IBranch branch)
+            => node != null && branch.Nodes.FirstOrDefault() == node;
+
+        public static bool IsLastChildOf(this INode node, IBranch branch)
+            => node != null && branch.Nodes.LastOrDefault() == node;
     }
 }

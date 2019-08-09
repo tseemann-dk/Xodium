@@ -17,4 +17,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.7.0" />
+  </ItemGroup>
+
 </Project>

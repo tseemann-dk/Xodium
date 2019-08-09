@@ -18,30 +18,43 @@ namespace Xodium.Collections
                 .Where(x => !other.Any(y => areEqual(x, y)))
                 .ToArray();
 
-            foreach (var item in removableItems)
+            foreach (var removableItem in removableItems)
             {
-                self.Remove(item);
+                self.Remove(removableItem);
             }
 
             var index = 0;
 
-            foreach (var item in other)
+            foreach (var otherItem in other)
             {
                 if (index >= self.Count)
                 {
-                    self.Add(transform(item));
+                    self.Add(transform(otherItem));
                 }
                 else
                 {
-                    var existing = self[index];
+                    var existingItem = self[index];
 
-                    if (!areEqual(existing, item))
+                    if (!areEqual(existingItem, otherItem))
                     {
-                        self.Insert(index, transform(item));
+                        var equalItem = self.FirstOrDefault(x => areEqual(x, otherItem));
+
+                        if (equalItem != null)
+                        {
+                            var indexOfEqualItem = self.IndexOf(equalItem);
+                            var newItem = areSame(equalItem, otherItem) ? equalItem : transform(otherItem);
+
+                            self[index] = newItem;
+                            self[indexOfEqualItem] = existingItem;
+                        }
+                        else
+                        {
+                            self.Insert(index, transform(otherItem));
+                        }
                     }
-                    else if (!areSame(existing, item))
+                    else if (!areSame(existingItem, otherItem))
                     {
-                        self[index] = transform(item);
+                        self[index] = transform(otherItem);
                     }
                 }
 

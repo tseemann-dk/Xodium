@@ -149,6 +149,25 @@ namespace Xodium.Productivity.Content.Models
             throw new ArgumentException("Not found", nameof(oldNode));
         }
 
+        public static T SwapChildNodes<T>(this T self, INode node1, INode node2)
+            where T : class, IContainer
+        {
+            var nodes = self.Nodes.ToList();
+            var index1 = nodes.IndexOf(node1);
+            var index2 = nodes.IndexOf(node2);
+
+            if (index1 < 0)
+                throw new ArgumentException("Not found", nameof(node1));
+
+            if (index2 < 0)
+                throw new ArgumentException("Not found", nameof(node2));
+
+            nodes[index1] = node2;
+            nodes[index2] = node1;
+
+            return self.Clone(nodes) as T;
+        }
+
         public static bool TryAddNodes<T>(this T self, IContainer parent, IEnumerable<INode> nodes, out T result)
             where T : class, IContainer
         {

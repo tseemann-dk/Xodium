@@ -65,6 +65,18 @@ namespace Sidekick.Reducers
                         currentFolder, 
                         a.Payload.NodeId);
                     break;
+
+                case MoveNodeDownAction a:
+                    (newFolder, focusedNodeId) = FolderTransformer.MoveNodeDown(
+                        currentFolder, 
+                        a.Payload.NodeId);
+                    break;
+
+                case MoveNodeUpAction a:
+                    (newFolder, focusedNodeId) = FolderTransformer.MoveNodeUp(
+                        currentFolder, 
+                        a.Payload.NodeId);
+                    break;
             }
 
             if (newFolder != null)

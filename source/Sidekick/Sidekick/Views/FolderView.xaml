@@ -14,7 +14,6 @@
 
         <ListView 
             x:Name="NodeListView"
-            SelectedItem="{Binding FocusedNode}"
             ItemSelected="NodeListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -50,6 +49,12 @@
             <Button 
                 x:Name="DeleteButton"
                 Text="Delete"/>
+            <Button 
+                x:Name="MoveDownButton"
+                Text="Move Down"/>
+            <Button 
+                x:Name="MoveUpButton"
+                Text="Move Up"/>
             <Button 
                 x:Name="EnterFolderButton"
                 Text="Enter Folder"/>

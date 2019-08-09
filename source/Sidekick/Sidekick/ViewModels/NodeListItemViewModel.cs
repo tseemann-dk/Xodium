@@ -24,6 +24,8 @@ namespace Sidekick.ViewModels
 
         public event EventHandler OpenRequested;
 
+        public bool IsFirstNodeIn(IFolder folder) => Model.IsFirstChildOf(folder);
+        public bool IsLastNodeIn(IFolder folder) => Model.IsLastChildOf(folder);
         public bool IsSameNode(INode node) => node == Model;
 
         protected void OnOpenRequested()

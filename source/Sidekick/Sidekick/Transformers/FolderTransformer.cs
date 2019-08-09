@@ -64,6 +64,22 @@ namespace Sidekick.Transformers
             return (folder.RemoveNode(node), neighborId);
         }
 
+        public static (IFolder, string) MoveNodeDown(IFolder folder, string nodeId)
+        {
+            var node = folder.Nodes.First(x => x.Id == nodeId);
+            var nextNode = folder.GetNextNode(node);
+            if (nextNode == null) return (folder, nodeId);
+            return (folder.SwapChildNodes(node, nextNode), nodeId);
+        }
+
+        public static (IFolder, string) MoveNodeUp(IFolder folder, string nodeId)
+        {
+            var node = folder.Nodes.First(x => x.Id == nodeId);
+            var previousNode = folder.GetPreviousNode(node);
+            if (previousNode == null) return (folder, nodeId);
+            return (folder.SwapChildNodes(node, previousNode), nodeId);
+        }
+
         public static IFolder ChangeTitle(IFolder folder, string newTitle)
         {
             return folder.WithText(newTitle);

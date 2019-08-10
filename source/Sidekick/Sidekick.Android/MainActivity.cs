@@ -18,7 +18,7 @@ namespace Sidekick.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            var bootstrapper = new AndroidBootstrapper();
+            var bootstrapper = new AndroidBootstrapper(this);
             Startup.Init(bootstrapper);
 
             LoadApplication(new App());

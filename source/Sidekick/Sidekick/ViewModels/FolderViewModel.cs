@@ -93,8 +93,6 @@ namespace Sidekick.ViewModels
                         (x, y) => x.IsSameNode(y),
                         CreateNodeItemViewModel);
 
-                    Thread.Sleep(200);
-
                     FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
                 });
             });

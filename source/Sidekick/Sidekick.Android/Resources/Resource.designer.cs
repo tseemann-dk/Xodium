@@ -2770,6 +2770,2655 @@ namespace Sidekick.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ViewStubCompat_android_id = global::Sidekick.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Sidekick.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ViewStubCompat_android_layout = global::Sidekick.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Xodium.Platform.Android.Resource.Animation.abc_fade_in = global::Sidekick.Droid.Resource.Animation.abc_fade_in;
+			global::Xodium.Platform.Android.Resource.Animation.abc_fade_out = global::Sidekick.Droid.Resource.Animation.abc_fade_out;
+			global::Xodium.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::Sidekick.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Xodium.Platform.Android.Resource.Animation.abc_popup_enter = global::Sidekick.Droid.Resource.Animation.abc_popup_enter;
+			global::Xodium.Platform.Android.Resource.Animation.abc_popup_exit = global::Sidekick.Droid.Resource.Animation.abc_popup_exit;
+			global::Xodium.Platform.Android.Resource.Animation.abc_shrink_fade_out_from_bottom = global::Sidekick.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Xodium.Platform.Android.Resource.Animation.abc_slide_in_bottom = global::Sidekick.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Xodium.Platform.Android.Resource.Animation.abc_slide_in_top = global::Sidekick.Droid.Resource.Animation.abc_slide_in_top;
+			global::Xodium.Platform.Android.Resource.Animation.abc_slide_out_bottom = global::Sidekick.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Xodium.Platform.Android.Resource.Animation.abc_slide_out_top = global::Sidekick.Droid.Resource.Animation.abc_slide_out_top;
+			global::Xodium.Platform.Android.Resource.Animation.abc_tooltip_enter = global::Sidekick.Droid.Resource.Animation.abc_tooltip_enter;
+			global::Xodium.Platform.Android.Resource.Animation.abc_tooltip_exit = global::Sidekick.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Xodium.Platform.Android.Resource.Animation.design_bottom_sheet_slide_in = global::Sidekick.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Xodium.Platform.Android.Resource.Animation.design_bottom_sheet_slide_out = global::Sidekick.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Xodium.Platform.Android.Resource.Animation.design_snackbar_in = global::Sidekick.Droid.Resource.Animation.design_snackbar_in;
+			global::Xodium.Platform.Android.Resource.Animation.design_snackbar_out = global::Sidekick.Droid.Resource.Animation.design_snackbar_out;
+			global::Xodium.Platform.Android.Resource.Animation.EnterFromLeft = global::Sidekick.Droid.Resource.Animation.EnterFromLeft;
+			global::Xodium.Platform.Android.Resource.Animation.EnterFromRight = global::Sidekick.Droid.Resource.Animation.EnterFromRight;
+			global::Xodium.Platform.Android.Resource.Animation.ExitToLeft = global::Sidekick.Droid.Resource.Animation.ExitToLeft;
+			global::Xodium.Platform.Android.Resource.Animation.ExitToRight = global::Sidekick.Droid.Resource.Animation.ExitToRight;
+			global::Xodium.Platform.Android.Resource.Animator.design_appbar_state_list_animator = global::Sidekick.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Xodium.Platform.Android.Resource.Animator.design_fab_hide_motion_spec = global::Sidekick.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::Xodium.Platform.Android.Resource.Animator.design_fab_show_motion_spec = global::Sidekick.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::Xodium.Platform.Android.Resource.Animator.mtrl_btn_state_list_anim = global::Sidekick.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Xodium.Platform.Android.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::Sidekick.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Xodium.Platform.Android.Resource.Animator.mtrl_chip_state_list_anim = global::Sidekick.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Xodium.Platform.Android.Resource.Animator.mtrl_fab_hide_motion_spec = global::Sidekick.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Xodium.Platform.Android.Resource.Animator.mtrl_fab_show_motion_spec = global::Sidekick.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Xodium.Platform.Android.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::Sidekick.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Xodium.Platform.Android.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::Sidekick.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarDivider = global::Sidekick.Droid.Resource.Attribute.actionBarDivider;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarItemBackground = global::Sidekick.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarPopupTheme = global::Sidekick.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarSize = global::Sidekick.Droid.Resource.Attribute.actionBarSize;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarSplitStyle = global::Sidekick.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarStyle = global::Sidekick.Droid.Resource.Attribute.actionBarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarTabBarStyle = global::Sidekick.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarTabStyle = global::Sidekick.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarTabTextStyle = global::Sidekick.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarTheme = global::Sidekick.Droid.Resource.Attribute.actionBarTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.actionBarWidgetTheme = global::Sidekick.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.actionButtonStyle = global::Sidekick.Droid.Resource.Attribute.actionButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionDropDownStyle = global::Sidekick.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionLayout = global::Sidekick.Droid.Resource.Attribute.actionLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.actionMenuTextAppearance = global::Sidekick.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.actionMenuTextColor = global::Sidekick.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeBackground = global::Sidekick.Droid.Resource.Attribute.actionModeBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeCloseButtonStyle = global::Sidekick.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeCloseDrawable = global::Sidekick.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeCopyDrawable = global::Sidekick.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeCutDrawable = global::Sidekick.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeFindDrawable = global::Sidekick.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModePasteDrawable = global::Sidekick.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModePopupWindowStyle = global::Sidekick.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeSelectAllDrawable = global::Sidekick.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeShareDrawable = global::Sidekick.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeSplitBackground = global::Sidekick.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeStyle = global::Sidekick.Droid.Resource.Attribute.actionModeStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionModeWebSearchDrawable = global::Sidekick.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.actionOverflowButtonStyle = global::Sidekick.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionOverflowMenuStyle = global::Sidekick.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.actionProviderClass = global::Sidekick.Droid.Resource.Attribute.actionProviderClass;
+			global::Xodium.Platform.Android.Resource.Attribute.actionViewClass = global::Sidekick.Droid.Resource.Attribute.actionViewClass;
+			global::Xodium.Platform.Android.Resource.Attribute.activityChooserViewStyle = global::Sidekick.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.alertDialogButtonGroupStyle = global::Sidekick.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.alertDialogCenterButtons = global::Sidekick.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Xodium.Platform.Android.Resource.Attribute.alertDialogStyle = global::Sidekick.Droid.Resource.Attribute.alertDialogStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.alertDialogTheme = global::Sidekick.Droid.Resource.Attribute.alertDialogTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.allowStacking = global::Sidekick.Droid.Resource.Attribute.allowStacking;
+			global::Xodium.Platform.Android.Resource.Attribute.alpha = global::Sidekick.Droid.Resource.Attribute.alpha;
+			global::Xodium.Platform.Android.Resource.Attribute.alphabeticModifiers = global::Sidekick.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Xodium.Platform.Android.Resource.Attribute.arrowHeadLength = global::Sidekick.Droid.Resource.Attribute.arrowHeadLength;
+			global::Xodium.Platform.Android.Resource.Attribute.arrowShaftLength = global::Sidekick.Droid.Resource.Attribute.arrowShaftLength;
+			global::Xodium.Platform.Android.Resource.Attribute.autoCompleteTextViewStyle = global::Sidekick.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.autoSizeMaxTextSize = global::Sidekick.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Xodium.Platform.Android.Resource.Attribute.autoSizeMinTextSize = global::Sidekick.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Xodium.Platform.Android.Resource.Attribute.autoSizePresetSizes = global::Sidekick.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Xodium.Platform.Android.Resource.Attribute.autoSizeStepGranularity = global::Sidekick.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Xodium.Platform.Android.Resource.Attribute.autoSizeTextType = global::Sidekick.Droid.Resource.Attribute.autoSizeTextType;
+			global::Xodium.Platform.Android.Resource.Attribute.background = global::Sidekick.Droid.Resource.Attribute.background;
+			global::Xodium.Platform.Android.Resource.Attribute.backgroundSplit = global::Sidekick.Droid.Resource.Attribute.backgroundSplit;
+			global::Xodium.Platform.Android.Resource.Attribute.backgroundStacked = global::Sidekick.Droid.Resource.Attribute.backgroundStacked;
+			global::Xodium.Platform.Android.Resource.Attribute.backgroundTint = global::Sidekick.Droid.Resource.Attribute.backgroundTint;
+			global::Xodium.Platform.Android.Resource.Attribute.backgroundTintMode = global::Sidekick.Droid.Resource.Attribute.backgroundTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.barLength = global::Sidekick.Droid.Resource.Attribute.barLength;
+			global::Xodium.Platform.Android.Resource.Attribute.behavior_autoHide = global::Sidekick.Droid.Resource.Attribute.behavior_autoHide;
+			global::Xodium.Platform.Android.Resource.Attribute.behavior_fitToContents = global::Sidekick.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Xodium.Platform.Android.Resource.Attribute.behavior_hideable = global::Sidekick.Droid.Resource.Attribute.behavior_hideable;
+			global::Xodium.Platform.Android.Resource.Attribute.behavior_overlapTop = global::Sidekick.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Xodium.Platform.Android.Resource.Attribute.behavior_peekHeight = global::Sidekick.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.behavior_skipCollapsed = global::Sidekick.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Xodium.Platform.Android.Resource.Attribute.borderlessButtonStyle = global::Sidekick.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.borderWidth = global::Sidekick.Droid.Resource.Attribute.borderWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.bottomAppBarStyle = global::Sidekick.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.bottomNavigationStyle = global::Sidekick.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.bottomSheetDialogTheme = global::Sidekick.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.bottomSheetStyle = global::Sidekick.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.boxBackgroundColor = global::Sidekick.Droid.Resource.Attribute.boxBackgroundColor;
+			global::Xodium.Platform.Android.Resource.Attribute.boxBackgroundMode = global::Sidekick.Droid.Resource.Attribute.boxBackgroundMode;
+			global::Xodium.Platform.Android.Resource.Attribute.boxCollapsedPaddingTop = global::Sidekick.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Xodium.Platform.Android.Resource.Attribute.boxCornerRadiusBottomEnd = global::Sidekick.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.boxCornerRadiusBottomStart = global::Sidekick.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Xodium.Platform.Android.Resource.Attribute.boxCornerRadiusTopEnd = global::Sidekick.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.boxCornerRadiusTopStart = global::Sidekick.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Xodium.Platform.Android.Resource.Attribute.boxStrokeColor = global::Sidekick.Droid.Resource.Attribute.boxStrokeColor;
+			global::Xodium.Platform.Android.Resource.Attribute.boxStrokeWidth = global::Sidekick.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonBarButtonStyle = global::Sidekick.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonBarNegativeButtonStyle = global::Sidekick.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::Sidekick.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::Sidekick.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonBarStyle = global::Sidekick.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonGravity = global::Sidekick.Droid.Resource.Attribute.buttonGravity;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonIconDimen = global::Sidekick.Droid.Resource.Attribute.buttonIconDimen;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonPanelSideLayout = global::Sidekick.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonSize = global::Sidekick.Droid.Resource.Attribute.buttonSize;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonStyle = global::Sidekick.Droid.Resource.Attribute.buttonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonStyleSmall = global::Sidekick.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonTint = global::Sidekick.Droid.Resource.Attribute.buttonTint;
+			global::Xodium.Platform.Android.Resource.Attribute.buttonTintMode = global::Sidekick.Droid.Resource.Attribute.buttonTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.cardBackgroundColor = global::Sidekick.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Xodium.Platform.Android.Resource.Attribute.cardCornerRadius = global::Sidekick.Droid.Resource.Attribute.cardCornerRadius;
+			global::Xodium.Platform.Android.Resource.Attribute.cardElevation = global::Sidekick.Droid.Resource.Attribute.cardElevation;
+			global::Xodium.Platform.Android.Resource.Attribute.cardMaxElevation = global::Sidekick.Droid.Resource.Attribute.cardMaxElevation;
+			global::Xodium.Platform.Android.Resource.Attribute.cardPreventCornerOverlap = global::Sidekick.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Xodium.Platform.Android.Resource.Attribute.cardUseCompatPadding = global::Sidekick.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.cardViewStyle = global::Sidekick.Droid.Resource.Attribute.cardViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.checkboxStyle = global::Sidekick.Droid.Resource.Attribute.checkboxStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.checkedChip = global::Sidekick.Droid.Resource.Attribute.checkedChip;
+			global::Xodium.Platform.Android.Resource.Attribute.checkedIcon = global::Sidekick.Droid.Resource.Attribute.checkedIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.checkedIconEnabled = global::Sidekick.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.checkedIconVisible = global::Sidekick.Droid.Resource.Attribute.checkedIconVisible;
+			global::Xodium.Platform.Android.Resource.Attribute.checkedTextViewStyle = global::Sidekick.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.chipBackgroundColor = global::Sidekick.Droid.Resource.Attribute.chipBackgroundColor;
+			global::Xodium.Platform.Android.Resource.Attribute.chipCornerRadius = global::Sidekick.Droid.Resource.Attribute.chipCornerRadius;
+			global::Xodium.Platform.Android.Resource.Attribute.chipEndPadding = global::Sidekick.Droid.Resource.Attribute.chipEndPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.chipGroupStyle = global::Sidekick.Droid.Resource.Attribute.chipGroupStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.chipIcon = global::Sidekick.Droid.Resource.Attribute.chipIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.chipIconEnabled = global::Sidekick.Droid.Resource.Attribute.chipIconEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.chipIconSize = global::Sidekick.Droid.Resource.Attribute.chipIconSize;
+			global::Xodium.Platform.Android.Resource.Attribute.chipIconTint = global::Sidekick.Droid.Resource.Attribute.chipIconTint;
+			global::Xodium.Platform.Android.Resource.Attribute.chipIconVisible = global::Sidekick.Droid.Resource.Attribute.chipIconVisible;
+			global::Xodium.Platform.Android.Resource.Attribute.chipMinHeight = global::Sidekick.Droid.Resource.Attribute.chipMinHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.chipSpacing = global::Sidekick.Droid.Resource.Attribute.chipSpacing;
+			global::Xodium.Platform.Android.Resource.Attribute.chipSpacingHorizontal = global::Sidekick.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::Xodium.Platform.Android.Resource.Attribute.chipSpacingVertical = global::Sidekick.Droid.Resource.Attribute.chipSpacingVertical;
+			global::Xodium.Platform.Android.Resource.Attribute.chipStandaloneStyle = global::Sidekick.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.chipStartPadding = global::Sidekick.Droid.Resource.Attribute.chipStartPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.chipStrokeColor = global::Sidekick.Droid.Resource.Attribute.chipStrokeColor;
+			global::Xodium.Platform.Android.Resource.Attribute.chipStrokeWidth = global::Sidekick.Droid.Resource.Attribute.chipStrokeWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.chipStyle = global::Sidekick.Droid.Resource.Attribute.chipStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.circleCrop = global::Sidekick.Droid.Resource.Attribute.circleCrop;
+			global::Xodium.Platform.Android.Resource.Attribute.closeIcon = global::Sidekick.Droid.Resource.Attribute.closeIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.closeIconEnabled = global::Sidekick.Droid.Resource.Attribute.closeIconEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.closeIconEndPadding = global::Sidekick.Droid.Resource.Attribute.closeIconEndPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.closeIconSize = global::Sidekick.Droid.Resource.Attribute.closeIconSize;
+			global::Xodium.Platform.Android.Resource.Attribute.closeIconStartPadding = global::Sidekick.Droid.Resource.Attribute.closeIconStartPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.closeIconTint = global::Sidekick.Droid.Resource.Attribute.closeIconTint;
+			global::Xodium.Platform.Android.Resource.Attribute.closeIconVisible = global::Sidekick.Droid.Resource.Attribute.closeIconVisible;
+			global::Xodium.Platform.Android.Resource.Attribute.closeItemLayout = global::Sidekick.Droid.Resource.Attribute.closeItemLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.collapseContentDescription = global::Sidekick.Droid.Resource.Attribute.collapseContentDescription;
+			global::Xodium.Platform.Android.Resource.Attribute.collapsedTitleGravity = global::Sidekick.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Xodium.Platform.Android.Resource.Attribute.collapsedTitleTextAppearance = global::Sidekick.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.collapseIcon = global::Sidekick.Droid.Resource.Attribute.collapseIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.color = global::Sidekick.Droid.Resource.Attribute.color;
+			global::Xodium.Platform.Android.Resource.Attribute.colorAccent = global::Sidekick.Droid.Resource.Attribute.colorAccent;
+			global::Xodium.Platform.Android.Resource.Attribute.colorBackgroundFloating = global::Sidekick.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Xodium.Platform.Android.Resource.Attribute.colorButtonNormal = global::Sidekick.Droid.Resource.Attribute.colorButtonNormal;
+			global::Xodium.Platform.Android.Resource.Attribute.colorControlActivated = global::Sidekick.Droid.Resource.Attribute.colorControlActivated;
+			global::Xodium.Platform.Android.Resource.Attribute.colorControlHighlight = global::Sidekick.Droid.Resource.Attribute.colorControlHighlight;
+			global::Xodium.Platform.Android.Resource.Attribute.colorControlNormal = global::Sidekick.Droid.Resource.Attribute.colorControlNormal;
+			global::Xodium.Platform.Android.Resource.Attribute.colorError = global::Sidekick.Droid.Resource.Attribute.colorError;
+			global::Xodium.Platform.Android.Resource.Attribute.colorPrimary = global::Sidekick.Droid.Resource.Attribute.colorPrimary;
+			global::Xodium.Platform.Android.Resource.Attribute.colorPrimaryDark = global::Sidekick.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Xodium.Platform.Android.Resource.Attribute.colorScheme = global::Sidekick.Droid.Resource.Attribute.colorScheme;
+			global::Xodium.Platform.Android.Resource.Attribute.colorSecondary = global::Sidekick.Droid.Resource.Attribute.colorSecondary;
+			global::Xodium.Platform.Android.Resource.Attribute.colorSwitchThumbNormal = global::Sidekick.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Xodium.Platform.Android.Resource.Attribute.commitIcon = global::Sidekick.Droid.Resource.Attribute.commitIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.contentDescription = global::Sidekick.Droid.Resource.Attribute.contentDescription;
+			global::Xodium.Platform.Android.Resource.Attribute.contentInsetEnd = global::Sidekick.Droid.Resource.Attribute.contentInsetEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.contentInsetEndWithActions = global::Sidekick.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Xodium.Platform.Android.Resource.Attribute.contentInsetLeft = global::Sidekick.Droid.Resource.Attribute.contentInsetLeft;
+			global::Xodium.Platform.Android.Resource.Attribute.contentInsetRight = global::Sidekick.Droid.Resource.Attribute.contentInsetRight;
+			global::Xodium.Platform.Android.Resource.Attribute.contentInsetStart = global::Sidekick.Droid.Resource.Attribute.contentInsetStart;
+			global::Xodium.Platform.Android.Resource.Attribute.contentInsetStartWithNavigation = global::Sidekick.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Xodium.Platform.Android.Resource.Attribute.contentPadding = global::Sidekick.Droid.Resource.Attribute.contentPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.contentPaddingBottom = global::Sidekick.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Xodium.Platform.Android.Resource.Attribute.contentPaddingLeft = global::Sidekick.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Xodium.Platform.Android.Resource.Attribute.contentPaddingRight = global::Sidekick.Droid.Resource.Attribute.contentPaddingRight;
+			global::Xodium.Platform.Android.Resource.Attribute.contentPaddingTop = global::Sidekick.Droid.Resource.Attribute.contentPaddingTop;
+			global::Xodium.Platform.Android.Resource.Attribute.contentScrim = global::Sidekick.Droid.Resource.Attribute.contentScrim;
+			global::Xodium.Platform.Android.Resource.Attribute.controlBackground = global::Sidekick.Droid.Resource.Attribute.controlBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.coordinatorLayoutStyle = global::Sidekick.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.cornerRadius = global::Sidekick.Droid.Resource.Attribute.cornerRadius;
+			global::Xodium.Platform.Android.Resource.Attribute.counterEnabled = global::Sidekick.Droid.Resource.Attribute.counterEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.counterMaxLength = global::Sidekick.Droid.Resource.Attribute.counterMaxLength;
+			global::Xodium.Platform.Android.Resource.Attribute.counterOverflowTextAppearance = global::Sidekick.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.counterTextAppearance = global::Sidekick.Droid.Resource.Attribute.counterTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.customNavigationLayout = global::Sidekick.Droid.Resource.Attribute.customNavigationLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.defaultQueryHint = global::Sidekick.Droid.Resource.Attribute.defaultQueryHint;
+			global::Xodium.Platform.Android.Resource.Attribute.dialogCornerRadius = global::Sidekick.Droid.Resource.Attribute.dialogCornerRadius;
+			global::Xodium.Platform.Android.Resource.Attribute.dialogPreferredPadding = global::Sidekick.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.dialogTheme = global::Sidekick.Droid.Resource.Attribute.dialogTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.displayOptions = global::Sidekick.Droid.Resource.Attribute.displayOptions;
+			global::Xodium.Platform.Android.Resource.Attribute.divider = global::Sidekick.Droid.Resource.Attribute.divider;
+			global::Xodium.Platform.Android.Resource.Attribute.dividerHorizontal = global::Sidekick.Droid.Resource.Attribute.dividerHorizontal;
+			global::Xodium.Platform.Android.Resource.Attribute.dividerPadding = global::Sidekick.Droid.Resource.Attribute.dividerPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.dividerVertical = global::Sidekick.Droid.Resource.Attribute.dividerVertical;
+			global::Xodium.Platform.Android.Resource.Attribute.drawableSize = global::Sidekick.Droid.Resource.Attribute.drawableSize;
+			global::Xodium.Platform.Android.Resource.Attribute.drawerArrowStyle = global::Sidekick.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::Sidekick.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.dropDownListViewStyle = global::Sidekick.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.editTextBackground = global::Sidekick.Droid.Resource.Attribute.editTextBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.editTextColor = global::Sidekick.Droid.Resource.Attribute.editTextColor;
+			global::Xodium.Platform.Android.Resource.Attribute.editTextStyle = global::Sidekick.Droid.Resource.Attribute.editTextStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.elevation = global::Sidekick.Droid.Resource.Attribute.elevation;
+			global::Xodium.Platform.Android.Resource.Attribute.enforceMaterialTheme = global::Sidekick.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.enforceTextAppearance = global::Sidekick.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.errorEnabled = global::Sidekick.Droid.Resource.Attribute.errorEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.errorTextAppearance = global::Sidekick.Droid.Resource.Attribute.errorTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Sidekick.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.expanded = global::Sidekick.Droid.Resource.Attribute.expanded;
+			global::Xodium.Platform.Android.Resource.Attribute.expandedTitleGravity = global::Sidekick.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Xodium.Platform.Android.Resource.Attribute.expandedTitleMargin = global::Sidekick.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Xodium.Platform.Android.Resource.Attribute.expandedTitleMarginBottom = global::Sidekick.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Xodium.Platform.Android.Resource.Attribute.expandedTitleMarginEnd = global::Sidekick.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.expandedTitleMarginStart = global::Sidekick.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Xodium.Platform.Android.Resource.Attribute.expandedTitleMarginTop = global::Sidekick.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Xodium.Platform.Android.Resource.Attribute.expandedTitleTextAppearance = global::Sidekick.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.fabAlignmentMode = global::Sidekick.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Xodium.Platform.Android.Resource.Attribute.fabCradleMargin = global::Sidekick.Droid.Resource.Attribute.fabCradleMargin;
+			global::Xodium.Platform.Android.Resource.Attribute.fabCradleRoundedCornerRadius = global::Sidekick.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Xodium.Platform.Android.Resource.Attribute.fabCradleVerticalOffset = global::Sidekick.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::Xodium.Platform.Android.Resource.Attribute.fabCustomSize = global::Sidekick.Droid.Resource.Attribute.fabCustomSize;
+			global::Xodium.Platform.Android.Resource.Attribute.fabSize = global::Sidekick.Droid.Resource.Attribute.fabSize;
+			global::Xodium.Platform.Android.Resource.Attribute.fastScrollEnabled = global::Sidekick.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::Sidekick.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::Sidekick.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.fastScrollVerticalThumbDrawable = global::Sidekick.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.fastScrollVerticalTrackDrawable = global::Sidekick.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.firstBaselineToTopHeight = global::Sidekick.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.floatingActionButtonStyle = global::Sidekick.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.font = global::Sidekick.Droid.Resource.Attribute.font;
+			global::Xodium.Platform.Android.Resource.Attribute.fontFamily = global::Sidekick.Droid.Resource.Attribute.fontFamily;
+			global::Xodium.Platform.Android.Resource.Attribute.fontProviderAuthority = global::Sidekick.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Xodium.Platform.Android.Resource.Attribute.fontProviderCerts = global::Sidekick.Droid.Resource.Attribute.fontProviderCerts;
+			global::Xodium.Platform.Android.Resource.Attribute.fontProviderFetchStrategy = global::Sidekick.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Xodium.Platform.Android.Resource.Attribute.fontProviderFetchTimeout = global::Sidekick.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Xodium.Platform.Android.Resource.Attribute.fontProviderPackage = global::Sidekick.Droid.Resource.Attribute.fontProviderPackage;
+			global::Xodium.Platform.Android.Resource.Attribute.fontProviderQuery = global::Sidekick.Droid.Resource.Attribute.fontProviderQuery;
+			global::Xodium.Platform.Android.Resource.Attribute.fontStyle = global::Sidekick.Droid.Resource.Attribute.fontStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.fontVariationSettings = global::Sidekick.Droid.Resource.Attribute.fontVariationSettings;
+			global::Xodium.Platform.Android.Resource.Attribute.fontWeight = global::Sidekick.Droid.Resource.Attribute.fontWeight;
+			global::Xodium.Platform.Android.Resource.Attribute.foregroundInsidePadding = global::Sidekick.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Xodium.Platform.Android.Resource.Attribute.gapBetweenBars = global::Sidekick.Droid.Resource.Attribute.gapBetweenBars;
+			global::Xodium.Platform.Android.Resource.Attribute.goIcon = global::Sidekick.Droid.Resource.Attribute.goIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.headerLayout = global::Sidekick.Droid.Resource.Attribute.headerLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.height = global::Sidekick.Droid.Resource.Attribute.height;
+			global::Xodium.Platform.Android.Resource.Attribute.helperText = global::Sidekick.Droid.Resource.Attribute.helperText;
+			global::Xodium.Platform.Android.Resource.Attribute.helperTextEnabled = global::Sidekick.Droid.Resource.Attribute.helperTextEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.helperTextTextAppearance = global::Sidekick.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.hideMotionSpec = global::Sidekick.Droid.Resource.Attribute.hideMotionSpec;
+			global::Xodium.Platform.Android.Resource.Attribute.hideOnContentScroll = global::Sidekick.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Xodium.Platform.Android.Resource.Attribute.hideOnScroll = global::Sidekick.Droid.Resource.Attribute.hideOnScroll;
+			global::Xodium.Platform.Android.Resource.Attribute.hintAnimationEnabled = global::Sidekick.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.hintEnabled = global::Sidekick.Droid.Resource.Attribute.hintEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.hintTextAppearance = global::Sidekick.Droid.Resource.Attribute.hintTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.homeAsUpIndicator = global::Sidekick.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Xodium.Platform.Android.Resource.Attribute.homeLayout = global::Sidekick.Droid.Resource.Attribute.homeLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.hoveredFocusedTranslationZ = global::Sidekick.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Xodium.Platform.Android.Resource.Attribute.icon = global::Sidekick.Droid.Resource.Attribute.icon;
+			global::Xodium.Platform.Android.Resource.Attribute.iconEndPadding = global::Sidekick.Droid.Resource.Attribute.iconEndPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.iconGravity = global::Sidekick.Droid.Resource.Attribute.iconGravity;
+			global::Xodium.Platform.Android.Resource.Attribute.iconifiedByDefault = global::Sidekick.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Xodium.Platform.Android.Resource.Attribute.iconPadding = global::Sidekick.Droid.Resource.Attribute.iconPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.iconSize = global::Sidekick.Droid.Resource.Attribute.iconSize;
+			global::Xodium.Platform.Android.Resource.Attribute.iconStartPadding = global::Sidekick.Droid.Resource.Attribute.iconStartPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.iconTint = global::Sidekick.Droid.Resource.Attribute.iconTint;
+			global::Xodium.Platform.Android.Resource.Attribute.iconTintMode = global::Sidekick.Droid.Resource.Attribute.iconTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.imageAspectRatio = global::Sidekick.Droid.Resource.Attribute.imageAspectRatio;
+			global::Xodium.Platform.Android.Resource.Attribute.imageAspectRatioAdjust = global::Sidekick.Droid.Resource.Attribute.imageAspectRatioAdjust;
+			global::Xodium.Platform.Android.Resource.Attribute.imageButtonStyle = global::Sidekick.Droid.Resource.Attribute.imageButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.indeterminateProgressStyle = global::Sidekick.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.initialActivityCount = global::Sidekick.Droid.Resource.Attribute.initialActivityCount;
+			global::Xodium.Platform.Android.Resource.Attribute.insetForeground = global::Sidekick.Droid.Resource.Attribute.insetForeground;
+			global::Xodium.Platform.Android.Resource.Attribute.isLightTheme = global::Sidekick.Droid.Resource.Attribute.isLightTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.itemBackground = global::Sidekick.Droid.Resource.Attribute.itemBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.itemHorizontalPadding = global::Sidekick.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.itemHorizontalTranslationEnabled = global::Sidekick.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.itemIconPadding = global::Sidekick.Droid.Resource.Attribute.itemIconPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.itemIconSize = global::Sidekick.Droid.Resource.Attribute.itemIconSize;
+			global::Xodium.Platform.Android.Resource.Attribute.itemIconTint = global::Sidekick.Droid.Resource.Attribute.itemIconTint;
+			global::Xodium.Platform.Android.Resource.Attribute.itemPadding = global::Sidekick.Droid.Resource.Attribute.itemPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.itemSpacing = global::Sidekick.Droid.Resource.Attribute.itemSpacing;
+			global::Xodium.Platform.Android.Resource.Attribute.itemTextAppearance = global::Sidekick.Droid.Resource.Attribute.itemTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.itemTextAppearanceActive = global::Sidekick.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::Xodium.Platform.Android.Resource.Attribute.itemTextAppearanceInactive = global::Sidekick.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::Xodium.Platform.Android.Resource.Attribute.itemTextColor = global::Sidekick.Droid.Resource.Attribute.itemTextColor;
+			global::Xodium.Platform.Android.Resource.Attribute.keylines = global::Sidekick.Droid.Resource.Attribute.keylines;
+			global::Xodium.Platform.Android.Resource.Attribute.labelVisibilityMode = global::Sidekick.Droid.Resource.Attribute.labelVisibilityMode;
+			global::Xodium.Platform.Android.Resource.Attribute.lastBaselineToBottomHeight = global::Sidekick.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.layout = global::Sidekick.Droid.Resource.Attribute.layout;
+			global::Xodium.Platform.Android.Resource.Attribute.layoutManager = global::Sidekick.Droid.Resource.Attribute.layoutManager;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_anchor = global::Sidekick.Droid.Resource.Attribute.layout_anchor;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_anchorGravity = global::Sidekick.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_behavior = global::Sidekick.Droid.Resource.Attribute.layout_behavior;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_collapseMode = global::Sidekick.Droid.Resource.Attribute.layout_collapseMode;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_collapseParallaxMultiplier = global::Sidekick.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_dodgeInsetEdges = global::Sidekick.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_insetEdge = global::Sidekick.Droid.Resource.Attribute.layout_insetEdge;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_keyline = global::Sidekick.Droid.Resource.Attribute.layout_keyline;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_scrollFlags = global::Sidekick.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Xodium.Platform.Android.Resource.Attribute.layout_scrollInterpolator = global::Sidekick.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Xodium.Platform.Android.Resource.Attribute.liftOnScroll = global::Sidekick.Droid.Resource.Attribute.liftOnScroll;
+			global::Xodium.Platform.Android.Resource.Attribute.lineHeight = global::Sidekick.Droid.Resource.Attribute.lineHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.lineSpacing = global::Sidekick.Droid.Resource.Attribute.lineSpacing;
+			global::Xodium.Platform.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::Sidekick.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xodium.Platform.Android.Resource.Attribute.listDividerAlertDialog = global::Sidekick.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Xodium.Platform.Android.Resource.Attribute.listItemLayout = global::Sidekick.Droid.Resource.Attribute.listItemLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.listLayout = global::Sidekick.Droid.Resource.Attribute.listLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.listMenuViewStyle = global::Sidekick.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.listPopupWindowStyle = global::Sidekick.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.listPreferredItemHeight = global::Sidekick.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.listPreferredItemHeightLarge = global::Sidekick.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Xodium.Platform.Android.Resource.Attribute.listPreferredItemHeightSmall = global::Sidekick.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xodium.Platform.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::Sidekick.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Xodium.Platform.Android.Resource.Attribute.listPreferredItemPaddingRight = global::Sidekick.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xodium.Platform.Android.Resource.Attribute.logo = global::Sidekick.Droid.Resource.Attribute.logo;
+			global::Xodium.Platform.Android.Resource.Attribute.logoDescription = global::Sidekick.Droid.Resource.Attribute.logoDescription;
+			global::Xodium.Platform.Android.Resource.Attribute.materialButtonStyle = global::Sidekick.Droid.Resource.Attribute.materialButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.materialCardViewStyle = global::Sidekick.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.maxActionInlineWidth = global::Sidekick.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.maxButtonHeight = global::Sidekick.Droid.Resource.Attribute.maxButtonHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.maxImageSize = global::Sidekick.Droid.Resource.Attribute.maxImageSize;
+			global::Xodium.Platform.Android.Resource.Attribute.measureWithLargestChild = global::Sidekick.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Xodium.Platform.Android.Resource.Attribute.menu = global::Sidekick.Droid.Resource.Attribute.menu;
+			global::Xodium.Platform.Android.Resource.Attribute.multiChoiceItemLayout = global::Sidekick.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.navigationContentDescription = global::Sidekick.Droid.Resource.Attribute.navigationContentDescription;
+			global::Xodium.Platform.Android.Resource.Attribute.navigationIcon = global::Sidekick.Droid.Resource.Attribute.navigationIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.navigationMode = global::Sidekick.Droid.Resource.Attribute.navigationMode;
+			global::Xodium.Platform.Android.Resource.Attribute.navigationViewStyle = global::Sidekick.Droid.Resource.Attribute.navigationViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.numericModifiers = global::Sidekick.Droid.Resource.Attribute.numericModifiers;
+			global::Xodium.Platform.Android.Resource.Attribute.overlapAnchor = global::Sidekick.Droid.Resource.Attribute.overlapAnchor;
+			global::Xodium.Platform.Android.Resource.Attribute.paddingBottomNoButtons = global::Sidekick.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Xodium.Platform.Android.Resource.Attribute.paddingEnd = global::Sidekick.Droid.Resource.Attribute.paddingEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.paddingStart = global::Sidekick.Droid.Resource.Attribute.paddingStart;
+			global::Xodium.Platform.Android.Resource.Attribute.paddingTopNoTitle = global::Sidekick.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Xodium.Platform.Android.Resource.Attribute.panelBackground = global::Sidekick.Droid.Resource.Attribute.panelBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.panelMenuListTheme = global::Sidekick.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.panelMenuListWidth = global::Sidekick.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.passwordToggleContentDescription = global::Sidekick.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Xodium.Platform.Android.Resource.Attribute.passwordToggleDrawable = global::Sidekick.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Xodium.Platform.Android.Resource.Attribute.passwordToggleEnabled = global::Sidekick.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.passwordToggleTint = global::Sidekick.Droid.Resource.Attribute.passwordToggleTint;
+			global::Xodium.Platform.Android.Resource.Attribute.passwordToggleTintMode = global::Sidekick.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.popupMenuStyle = global::Sidekick.Droid.Resource.Attribute.popupMenuStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.popupTheme = global::Sidekick.Droid.Resource.Attribute.popupTheme;
+			global::Xodium.Platform.Android.Resource.Attribute.popupWindowStyle = global::Sidekick.Droid.Resource.Attribute.popupWindowStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.preserveIconSpacing = global::Sidekick.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Xodium.Platform.Android.Resource.Attribute.pressedTranslationZ = global::Sidekick.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Xodium.Platform.Android.Resource.Attribute.progressBarPadding = global::Sidekick.Droid.Resource.Attribute.progressBarPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.progressBarStyle = global::Sidekick.Droid.Resource.Attribute.progressBarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.queryBackground = global::Sidekick.Droid.Resource.Attribute.queryBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.queryHint = global::Sidekick.Droid.Resource.Attribute.queryHint;
+			global::Xodium.Platform.Android.Resource.Attribute.radioButtonStyle = global::Sidekick.Droid.Resource.Attribute.radioButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.ratingBarStyle = global::Sidekick.Droid.Resource.Attribute.ratingBarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.ratingBarStyleIndicator = global::Sidekick.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Xodium.Platform.Android.Resource.Attribute.ratingBarStyleSmall = global::Sidekick.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xodium.Platform.Android.Resource.Attribute.reverseLayout = global::Sidekick.Droid.Resource.Attribute.reverseLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.rippleColor = global::Sidekick.Droid.Resource.Attribute.rippleColor;
+			global::Xodium.Platform.Android.Resource.Attribute.scopeUris = global::Sidekick.Droid.Resource.Attribute.scopeUris;
+			global::Xodium.Platform.Android.Resource.Attribute.scrimAnimationDuration = global::Sidekick.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Xodium.Platform.Android.Resource.Attribute.scrimBackground = global::Sidekick.Droid.Resource.Attribute.scrimBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.scrimVisibleHeightTrigger = global::Sidekick.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Xodium.Platform.Android.Resource.Attribute.searchHintIcon = global::Sidekick.Droid.Resource.Attribute.searchHintIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.searchIcon = global::Sidekick.Droid.Resource.Attribute.searchIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.searchViewStyle = global::Sidekick.Droid.Resource.Attribute.searchViewStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.seekBarStyle = global::Sidekick.Droid.Resource.Attribute.seekBarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.selectableItemBackground = global::Sidekick.Droid.Resource.Attribute.selectableItemBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.selectableItemBackgroundBorderless = global::Sidekick.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Xodium.Platform.Android.Resource.Attribute.showAsAction = global::Sidekick.Droid.Resource.Attribute.showAsAction;
+			global::Xodium.Platform.Android.Resource.Attribute.showDividers = global::Sidekick.Droid.Resource.Attribute.showDividers;
+			global::Xodium.Platform.Android.Resource.Attribute.showMotionSpec = global::Sidekick.Droid.Resource.Attribute.showMotionSpec;
+			global::Xodium.Platform.Android.Resource.Attribute.showText = global::Sidekick.Droid.Resource.Attribute.showText;
+			global::Xodium.Platform.Android.Resource.Attribute.showTitle = global::Sidekick.Droid.Resource.Attribute.showTitle;
+			global::Xodium.Platform.Android.Resource.Attribute.singleChoiceItemLayout = global::Sidekick.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.singleLine = global::Sidekick.Droid.Resource.Attribute.singleLine;
+			global::Xodium.Platform.Android.Resource.Attribute.singleSelection = global::Sidekick.Droid.Resource.Attribute.singleSelection;
+			global::Xodium.Platform.Android.Resource.Attribute.snackbarButtonStyle = global::Sidekick.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.snackbarStyle = global::Sidekick.Droid.Resource.Attribute.snackbarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.spanCount = global::Sidekick.Droid.Resource.Attribute.spanCount;
+			global::Xodium.Platform.Android.Resource.Attribute.spinBars = global::Sidekick.Droid.Resource.Attribute.spinBars;
+			global::Xodium.Platform.Android.Resource.Attribute.spinnerDropDownItemStyle = global::Sidekick.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.spinnerStyle = global::Sidekick.Droid.Resource.Attribute.spinnerStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.splitTrack = global::Sidekick.Droid.Resource.Attribute.splitTrack;
+			global::Xodium.Platform.Android.Resource.Attribute.srcCompat = global::Sidekick.Droid.Resource.Attribute.srcCompat;
+			global::Xodium.Platform.Android.Resource.Attribute.stackFromEnd = global::Sidekick.Droid.Resource.Attribute.stackFromEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.state_above_anchor = global::Sidekick.Droid.Resource.Attribute.state_above_anchor;
+			global::Xodium.Platform.Android.Resource.Attribute.state_collapsed = global::Sidekick.Droid.Resource.Attribute.state_collapsed;
+			global::Xodium.Platform.Android.Resource.Attribute.state_collapsible = global::Sidekick.Droid.Resource.Attribute.state_collapsible;
+			global::Xodium.Platform.Android.Resource.Attribute.state_liftable = global::Sidekick.Droid.Resource.Attribute.state_liftable;
+			global::Xodium.Platform.Android.Resource.Attribute.state_lifted = global::Sidekick.Droid.Resource.Attribute.state_lifted;
+			global::Xodium.Platform.Android.Resource.Attribute.statusBarBackground = global::Sidekick.Droid.Resource.Attribute.statusBarBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.statusBarScrim = global::Sidekick.Droid.Resource.Attribute.statusBarScrim;
+			global::Xodium.Platform.Android.Resource.Attribute.strokeColor = global::Sidekick.Droid.Resource.Attribute.strokeColor;
+			global::Xodium.Platform.Android.Resource.Attribute.strokeWidth = global::Sidekick.Droid.Resource.Attribute.strokeWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.subMenuArrow = global::Sidekick.Droid.Resource.Attribute.subMenuArrow;
+			global::Xodium.Platform.Android.Resource.Attribute.submitBackground = global::Sidekick.Droid.Resource.Attribute.submitBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.subtitle = global::Sidekick.Droid.Resource.Attribute.subtitle;
+			global::Xodium.Platform.Android.Resource.Attribute.subtitleTextAppearance = global::Sidekick.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.subtitleTextColor = global::Sidekick.Droid.Resource.Attribute.subtitleTextColor;
+			global::Xodium.Platform.Android.Resource.Attribute.subtitleTextStyle = global::Sidekick.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.suggestionRowLayout = global::Sidekick.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Xodium.Platform.Android.Resource.Attribute.switchMinWidth = global::Sidekick.Droid.Resource.Attribute.switchMinWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.switchPadding = global::Sidekick.Droid.Resource.Attribute.switchPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.switchStyle = global::Sidekick.Droid.Resource.Attribute.switchStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.switchTextAppearance = global::Sidekick.Droid.Resource.Attribute.switchTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.tabBackground = global::Sidekick.Droid.Resource.Attribute.tabBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.tabContentStart = global::Sidekick.Droid.Resource.Attribute.tabContentStart;
+			global::Xodium.Platform.Android.Resource.Attribute.tabGravity = global::Sidekick.Droid.Resource.Attribute.tabGravity;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIconTint = global::Sidekick.Droid.Resource.Attribute.tabIconTint;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIconTintMode = global::Sidekick.Droid.Resource.Attribute.tabIconTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIndicator = global::Sidekick.Droid.Resource.Attribute.tabIndicator;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIndicatorAnimationDuration = global::Sidekick.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIndicatorColor = global::Sidekick.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIndicatorFullWidth = global::Sidekick.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIndicatorGravity = global::Sidekick.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::Xodium.Platform.Android.Resource.Attribute.tabIndicatorHeight = global::Sidekick.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Xodium.Platform.Android.Resource.Attribute.tabInlineLabel = global::Sidekick.Droid.Resource.Attribute.tabInlineLabel;
+			global::Xodium.Platform.Android.Resource.Attribute.tabMaxWidth = global::Sidekick.Droid.Resource.Attribute.tabMaxWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.tabMinWidth = global::Sidekick.Droid.Resource.Attribute.tabMinWidth;
+			global::Xodium.Platform.Android.Resource.Attribute.tabMode = global::Sidekick.Droid.Resource.Attribute.tabMode;
+			global::Xodium.Platform.Android.Resource.Attribute.tabPadding = global::Sidekick.Droid.Resource.Attribute.tabPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.tabPaddingBottom = global::Sidekick.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Xodium.Platform.Android.Resource.Attribute.tabPaddingEnd = global::Sidekick.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.tabPaddingStart = global::Sidekick.Droid.Resource.Attribute.tabPaddingStart;
+			global::Xodium.Platform.Android.Resource.Attribute.tabPaddingTop = global::Sidekick.Droid.Resource.Attribute.tabPaddingTop;
+			global::Xodium.Platform.Android.Resource.Attribute.tabRippleColor = global::Sidekick.Droid.Resource.Attribute.tabRippleColor;
+			global::Xodium.Platform.Android.Resource.Attribute.tabSelectedTextColor = global::Sidekick.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Xodium.Platform.Android.Resource.Attribute.tabStyle = global::Sidekick.Droid.Resource.Attribute.tabStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.tabTextAppearance = global::Sidekick.Droid.Resource.Attribute.tabTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.tabTextColor = global::Sidekick.Droid.Resource.Attribute.tabTextColor;
+			global::Xodium.Platform.Android.Resource.Attribute.tabUnboundedRipple = global::Sidekick.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::Xodium.Platform.Android.Resource.Attribute.textAllCaps = global::Sidekick.Droid.Resource.Attribute.textAllCaps;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceBody1 = global::Sidekick.Droid.Resource.Attribute.textAppearanceBody1;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceBody2 = global::Sidekick.Droid.Resource.Attribute.textAppearanceBody2;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceButton = global::Sidekick.Droid.Resource.Attribute.textAppearanceButton;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceCaption = global::Sidekick.Droid.Resource.Attribute.textAppearanceCaption;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceHeadline1 = global::Sidekick.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceHeadline2 = global::Sidekick.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceHeadline3 = global::Sidekick.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceHeadline4 = global::Sidekick.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceHeadline5 = global::Sidekick.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceHeadline6 = global::Sidekick.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceLargePopupMenu = global::Sidekick.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceListItem = global::Sidekick.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceListItemSecondary = global::Sidekick.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceListItemSmall = global::Sidekick.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceOverline = global::Sidekick.Droid.Resource.Attribute.textAppearanceOverline;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearancePopupMenuHeader = global::Sidekick.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Sidekick.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceSearchResultTitle = global::Sidekick.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceSmallPopupMenu = global::Sidekick.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceSubtitle1 = global::Sidekick.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::Xodium.Platform.Android.Resource.Attribute.textAppearanceSubtitle2 = global::Sidekick.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::Xodium.Platform.Android.Resource.Attribute.textColorAlertDialogListItem = global::Sidekick.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Xodium.Platform.Android.Resource.Attribute.textColorSearchUrl = global::Sidekick.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Xodium.Platform.Android.Resource.Attribute.textEndPadding = global::Sidekick.Droid.Resource.Attribute.textEndPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.textInputStyle = global::Sidekick.Droid.Resource.Attribute.textInputStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.textStartPadding = global::Sidekick.Droid.Resource.Attribute.textStartPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.theme = global::Sidekick.Droid.Resource.Attribute.theme;
+			global::Xodium.Platform.Android.Resource.Attribute.thickness = global::Sidekick.Droid.Resource.Attribute.thickness;
+			global::Xodium.Platform.Android.Resource.Attribute.thumbTextPadding = global::Sidekick.Droid.Resource.Attribute.thumbTextPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.thumbTint = global::Sidekick.Droid.Resource.Attribute.thumbTint;
+			global::Xodium.Platform.Android.Resource.Attribute.thumbTintMode = global::Sidekick.Droid.Resource.Attribute.thumbTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.tickMark = global::Sidekick.Droid.Resource.Attribute.tickMark;
+			global::Xodium.Platform.Android.Resource.Attribute.tickMarkTint = global::Sidekick.Droid.Resource.Attribute.tickMarkTint;
+			global::Xodium.Platform.Android.Resource.Attribute.tickMarkTintMode = global::Sidekick.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.tint = global::Sidekick.Droid.Resource.Attribute.tint;
+			global::Xodium.Platform.Android.Resource.Attribute.tintMode = global::Sidekick.Droid.Resource.Attribute.tintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.title = global::Sidekick.Droid.Resource.Attribute.title;
+			global::Xodium.Platform.Android.Resource.Attribute.titleEnabled = global::Sidekick.Droid.Resource.Attribute.titleEnabled;
+			global::Xodium.Platform.Android.Resource.Attribute.titleMargin = global::Sidekick.Droid.Resource.Attribute.titleMargin;
+			global::Xodium.Platform.Android.Resource.Attribute.titleMarginBottom = global::Sidekick.Droid.Resource.Attribute.titleMarginBottom;
+			global::Xodium.Platform.Android.Resource.Attribute.titleMarginEnd = global::Sidekick.Droid.Resource.Attribute.titleMarginEnd;
+			global::Xodium.Platform.Android.Resource.Attribute.titleMargins = global::Sidekick.Droid.Resource.Attribute.titleMargins;
+			global::Xodium.Platform.Android.Resource.Attribute.titleMarginStart = global::Sidekick.Droid.Resource.Attribute.titleMarginStart;
+			global::Xodium.Platform.Android.Resource.Attribute.titleMarginTop = global::Sidekick.Droid.Resource.Attribute.titleMarginTop;
+			global::Xodium.Platform.Android.Resource.Attribute.titleTextAppearance = global::Sidekick.Droid.Resource.Attribute.titleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Attribute.titleTextColor = global::Sidekick.Droid.Resource.Attribute.titleTextColor;
+			global::Xodium.Platform.Android.Resource.Attribute.titleTextStyle = global::Sidekick.Droid.Resource.Attribute.titleTextStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.toolbarId = global::Sidekick.Droid.Resource.Attribute.toolbarId;
+			global::Xodium.Platform.Android.Resource.Attribute.toolbarNavigationButtonStyle = global::Sidekick.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.toolbarStyle = global::Sidekick.Droid.Resource.Attribute.toolbarStyle;
+			global::Xodium.Platform.Android.Resource.Attribute.tooltipForegroundColor = global::Sidekick.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Xodium.Platform.Android.Resource.Attribute.tooltipFrameBackground = global::Sidekick.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Xodium.Platform.Android.Resource.Attribute.tooltipText = global::Sidekick.Droid.Resource.Attribute.tooltipText;
+			global::Xodium.Platform.Android.Resource.Attribute.track = global::Sidekick.Droid.Resource.Attribute.track;
+			global::Xodium.Platform.Android.Resource.Attribute.trackTint = global::Sidekick.Droid.Resource.Attribute.trackTint;
+			global::Xodium.Platform.Android.Resource.Attribute.trackTintMode = global::Sidekick.Droid.Resource.Attribute.trackTintMode;
+			global::Xodium.Platform.Android.Resource.Attribute.ttcIndex = global::Sidekick.Droid.Resource.Attribute.ttcIndex;
+			global::Xodium.Platform.Android.Resource.Attribute.useCompatPadding = global::Sidekick.Droid.Resource.Attribute.useCompatPadding;
+			global::Xodium.Platform.Android.Resource.Attribute.viewInflaterClass = global::Sidekick.Droid.Resource.Attribute.viewInflaterClass;
+			global::Xodium.Platform.Android.Resource.Attribute.voiceIcon = global::Sidekick.Droid.Resource.Attribute.voiceIcon;
+			global::Xodium.Platform.Android.Resource.Attribute.windowActionBar = global::Sidekick.Droid.Resource.Attribute.windowActionBar;
+			global::Xodium.Platform.Android.Resource.Attribute.windowActionBarOverlay = global::Sidekick.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Xodium.Platform.Android.Resource.Attribute.windowActionModeOverlay = global::Sidekick.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Xodium.Platform.Android.Resource.Attribute.windowFixedHeightMajor = global::Sidekick.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Xodium.Platform.Android.Resource.Attribute.windowFixedHeightMinor = global::Sidekick.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Xodium.Platform.Android.Resource.Attribute.windowFixedWidthMajor = global::Sidekick.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Xodium.Platform.Android.Resource.Attribute.windowFixedWidthMinor = global::Sidekick.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Xodium.Platform.Android.Resource.Attribute.windowMinWidthMajor = global::Sidekick.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Xodium.Platform.Android.Resource.Attribute.windowMinWidthMinor = global::Sidekick.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Xodium.Platform.Android.Resource.Attribute.windowNoTitle = global::Sidekick.Droid.Resource.Attribute.windowNoTitle;
+			global::Xodium.Platform.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::Sidekick.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xodium.Platform.Android.Resource.Boolean.abc_allow_stacked_button_bar = global::Sidekick.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Xodium.Platform.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Sidekick.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Xodium.Platform.Android.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::Sidekick.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Xodium.Platform.Android.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Sidekick.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.abc_background_cache_hint_selector_material_light = global::Sidekick.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Xodium.Platform.Android.Resource.Color.abc_btn_colored_borderless_text_material = global::Sidekick.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Xodium.Platform.Android.Resource.Color.abc_btn_colored_text_material = global::Sidekick.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Xodium.Platform.Android.Resource.Color.abc_color_highlight_material = global::Sidekick.Droid.Resource.Color.abc_color_highlight_material;
+			global::Xodium.Platform.Android.Resource.Color.abc_hint_foreground_material_dark = global::Sidekick.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.abc_hint_foreground_material_light = global::Sidekick.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Xodium.Platform.Android.Resource.Color.abc_input_method_navigation_guard = global::Sidekick.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Xodium.Platform.Android.Resource.Color.abc_primary_text_disable_only_material_dark = global::Sidekick.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.abc_primary_text_disable_only_material_light = global::Sidekick.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Xodium.Platform.Android.Resource.Color.abc_primary_text_material_dark = global::Sidekick.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.abc_primary_text_material_light = global::Sidekick.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Xodium.Platform.Android.Resource.Color.abc_search_url_text = global::Sidekick.Droid.Resource.Color.abc_search_url_text;
+			global::Xodium.Platform.Android.Resource.Color.abc_search_url_text_normal = global::Sidekick.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Xodium.Platform.Android.Resource.Color.abc_search_url_text_pressed = global::Sidekick.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Xodium.Platform.Android.Resource.Color.abc_search_url_text_selected = global::Sidekick.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Xodium.Platform.Android.Resource.Color.abc_secondary_text_material_dark = global::Sidekick.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.abc_secondary_text_material_light = global::Sidekick.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Xodium.Platform.Android.Resource.Color.abc_tint_btn_checkable = global::Sidekick.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Xodium.Platform.Android.Resource.Color.abc_tint_default = global::Sidekick.Droid.Resource.Color.abc_tint_default;
+			global::Xodium.Platform.Android.Resource.Color.abc_tint_edittext = global::Sidekick.Droid.Resource.Color.abc_tint_edittext;
+			global::Xodium.Platform.Android.Resource.Color.abc_tint_seek_thumb = global::Sidekick.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Xodium.Platform.Android.Resource.Color.abc_tint_spinner = global::Sidekick.Droid.Resource.Color.abc_tint_spinner;
+			global::Xodium.Platform.Android.Resource.Color.abc_tint_switch_track = global::Sidekick.Droid.Resource.Color.abc_tint_switch_track;
+			global::Xodium.Platform.Android.Resource.Color.accent_material_dark = global::Sidekick.Droid.Resource.Color.accent_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.accent_material_light = global::Sidekick.Droid.Resource.Color.accent_material_light;
+			global::Xodium.Platform.Android.Resource.Color.background_floating_material_dark = global::Sidekick.Droid.Resource.Color.background_floating_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.background_floating_material_light = global::Sidekick.Droid.Resource.Color.background_floating_material_light;
+			global::Xodium.Platform.Android.Resource.Color.background_material_dark = global::Sidekick.Droid.Resource.Color.background_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.background_material_light = global::Sidekick.Droid.Resource.Color.background_material_light;
+			global::Xodium.Platform.Android.Resource.Color.bright_foreground_disabled_material_dark = global::Sidekick.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.bright_foreground_disabled_material_light = global::Sidekick.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Xodium.Platform.Android.Resource.Color.bright_foreground_inverse_material_dark = global::Sidekick.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.bright_foreground_inverse_material_light = global::Sidekick.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Xodium.Platform.Android.Resource.Color.bright_foreground_material_dark = global::Sidekick.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.bright_foreground_material_light = global::Sidekick.Droid.Resource.Color.bright_foreground_material_light;
+			global::Xodium.Platform.Android.Resource.Color.browser_actions_bg_grey = global::Sidekick.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Xodium.Platform.Android.Resource.Color.browser_actions_divider_color = global::Sidekick.Droid.Resource.Color.browser_actions_divider_color;
+			global::Xodium.Platform.Android.Resource.Color.browser_actions_text_color = global::Sidekick.Droid.Resource.Color.browser_actions_text_color;
+			global::Xodium.Platform.Android.Resource.Color.browser_actions_title_color = global::Sidekick.Droid.Resource.Color.browser_actions_title_color;
+			global::Xodium.Platform.Android.Resource.Color.button_material_dark = global::Sidekick.Droid.Resource.Color.button_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.button_material_light = global::Sidekick.Droid.Resource.Color.button_material_light;
+			global::Xodium.Platform.Android.Resource.Color.cardview_dark_background = global::Sidekick.Droid.Resource.Color.cardview_dark_background;
+			global::Xodium.Platform.Android.Resource.Color.cardview_light_background = global::Sidekick.Droid.Resource.Color.cardview_light_background;
+			global::Xodium.Platform.Android.Resource.Color.cardview_shadow_end_color = global::Sidekick.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Xodium.Platform.Android.Resource.Color.cardview_shadow_start_color = global::Sidekick.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_dark = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_dark;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_dark_default = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_dark_default;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_dark_disabled = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_dark_disabled;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_dark_focused = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_dark_focused;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_dark_pressed = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_dark_pressed;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_light = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_light;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_light_default = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_light_default;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_light_disabled = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_light_disabled;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_light_focused = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_light_focused;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_text_light_pressed = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_text_light_pressed;
+			global::Xodium.Platform.Android.Resource.Color.common_google_signin_btn_tint = global::Sidekick.Droid.Resource.Color.common_google_signin_btn_tint;
+			global::Xodium.Platform.Android.Resource.Color.design_bottom_navigation_shadow_color = global::Sidekick.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Xodium.Platform.Android.Resource.Color.design_default_color_primary = global::Sidekick.Droid.Resource.Color.design_default_color_primary;
+			global::Xodium.Platform.Android.Resource.Color.design_default_color_primary_dark = global::Sidekick.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Xodium.Platform.Android.Resource.Color.design_error = global::Sidekick.Droid.Resource.Color.design_error;
+			global::Xodium.Platform.Android.Resource.Color.design_fab_shadow_end_color = global::Sidekick.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Xodium.Platform.Android.Resource.Color.design_fab_shadow_mid_color = global::Sidekick.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Xodium.Platform.Android.Resource.Color.design_fab_shadow_start_color = global::Sidekick.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Xodium.Platform.Android.Resource.Color.design_fab_stroke_end_inner_color = global::Sidekick.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Xodium.Platform.Android.Resource.Color.design_fab_stroke_end_outer_color = global::Sidekick.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Xodium.Platform.Android.Resource.Color.design_fab_stroke_top_inner_color = global::Sidekick.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Xodium.Platform.Android.Resource.Color.design_fab_stroke_top_outer_color = global::Sidekick.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Xodium.Platform.Android.Resource.Color.design_snackbar_background_color = global::Sidekick.Droid.Resource.Color.design_snackbar_background_color;
+			global::Xodium.Platform.Android.Resource.Color.design_tint_password_toggle = global::Sidekick.Droid.Resource.Color.design_tint_password_toggle;
+			global::Xodium.Platform.Android.Resource.Color.dim_foreground_disabled_material_dark = global::Sidekick.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.dim_foreground_disabled_material_light = global::Sidekick.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Xodium.Platform.Android.Resource.Color.dim_foreground_material_dark = global::Sidekick.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.dim_foreground_material_light = global::Sidekick.Droid.Resource.Color.dim_foreground_material_light;
+			global::Xodium.Platform.Android.Resource.Color.error_color_material_dark = global::Sidekick.Droid.Resource.Color.error_color_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.error_color_material_light = global::Sidekick.Droid.Resource.Color.error_color_material_light;
+			global::Xodium.Platform.Android.Resource.Color.foreground_material_dark = global::Sidekick.Droid.Resource.Color.foreground_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.foreground_material_light = global::Sidekick.Droid.Resource.Color.foreground_material_light;
+			global::Xodium.Platform.Android.Resource.Color.highlighted_text_material_dark = global::Sidekick.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.highlighted_text_material_light = global::Sidekick.Droid.Resource.Color.highlighted_text_material_light;
+			global::Xodium.Platform.Android.Resource.Color.material_blue_grey_800 = global::Sidekick.Droid.Resource.Color.material_blue_grey_800;
+			global::Xodium.Platform.Android.Resource.Color.material_blue_grey_900 = global::Sidekick.Droid.Resource.Color.material_blue_grey_900;
+			global::Xodium.Platform.Android.Resource.Color.material_blue_grey_950 = global::Sidekick.Droid.Resource.Color.material_blue_grey_950;
+			global::Xodium.Platform.Android.Resource.Color.material_deep_teal_200 = global::Sidekick.Droid.Resource.Color.material_deep_teal_200;
+			global::Xodium.Platform.Android.Resource.Color.material_deep_teal_500 = global::Sidekick.Droid.Resource.Color.material_deep_teal_500;
+			global::Xodium.Platform.Android.Resource.Color.material_grey_100 = global::Sidekick.Droid.Resource.Color.material_grey_100;
+			global::Xodium.Platform.Android.Resource.Color.material_grey_300 = global::Sidekick.Droid.Resource.Color.material_grey_300;
+			global::Xodium.Platform.Android.Resource.Color.material_grey_50 = global::Sidekick.Droid.Resource.Color.material_grey_50;
+			global::Xodium.Platform.Android.Resource.Color.material_grey_600 = global::Sidekick.Droid.Resource.Color.material_grey_600;
+			global::Xodium.Platform.Android.Resource.Color.material_grey_800 = global::Sidekick.Droid.Resource.Color.material_grey_800;
+			global::Xodium.Platform.Android.Resource.Color.material_grey_850 = global::Sidekick.Droid.Resource.Color.material_grey_850;
+			global::Xodium.Platform.Android.Resource.Color.material_grey_900 = global::Sidekick.Droid.Resource.Color.material_grey_900;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::Sidekick.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_bottom_nav_item_tint = global::Sidekick.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_bg_color_disabled = global::Sidekick.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_bg_color_selector = global::Sidekick.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_ripple_color = global::Sidekick.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_stroke_color_selector = global::Sidekick.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_text_btn_ripple_color = global::Sidekick.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_text_color_disabled = global::Sidekick.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_text_color_selector = global::Sidekick.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_btn_transparent_bg_color = global::Sidekick.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_chip_background_color = global::Sidekick.Droid.Resource.Color.mtrl_chip_background_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_chip_close_icon_tint = global::Sidekick.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_chip_ripple_color = global::Sidekick.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_chip_text_color = global::Sidekick.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_fab_ripple_color = global::Sidekick.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_scrim_color = global::Sidekick.Droid.Resource.Color.mtrl_scrim_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_tabs_colored_ripple_color = global::Sidekick.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_tabs_icon_color_selector = global::Sidekick.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::Sidekick.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::Sidekick.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_tabs_ripple_color = global::Sidekick.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_textinput_default_box_stroke_color = global::Sidekick.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_textinput_disabled_color = global::Sidekick.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::Sidekick.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::Sidekick.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Xodium.Platform.Android.Resource.Color.mtrl_text_btn_text_color_selector = global::Sidekick.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Xodium.Platform.Android.Resource.Color.notification_action_color_filter = global::Sidekick.Droid.Resource.Color.notification_action_color_filter;
+			global::Xodium.Platform.Android.Resource.Color.notification_icon_bg_color = global::Sidekick.Droid.Resource.Color.notification_icon_bg_color;
+			global::Xodium.Platform.Android.Resource.Color.notification_material_background_media_default_color = global::Sidekick.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Xodium.Platform.Android.Resource.Color.primary_dark_material_dark = global::Sidekick.Droid.Resource.Color.primary_dark_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.primary_dark_material_light = global::Sidekick.Droid.Resource.Color.primary_dark_material_light;
+			global::Xodium.Platform.Android.Resource.Color.primary_material_dark = global::Sidekick.Droid.Resource.Color.primary_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.primary_material_light = global::Sidekick.Droid.Resource.Color.primary_material_light;
+			global::Xodium.Platform.Android.Resource.Color.primary_text_default_material_dark = global::Sidekick.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.primary_text_default_material_light = global::Sidekick.Droid.Resource.Color.primary_text_default_material_light;
+			global::Xodium.Platform.Android.Resource.Color.primary_text_disabled_material_dark = global::Sidekick.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.primary_text_disabled_material_light = global::Sidekick.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Xodium.Platform.Android.Resource.Color.ripple_material_dark = global::Sidekick.Droid.Resource.Color.ripple_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.ripple_material_light = global::Sidekick.Droid.Resource.Color.ripple_material_light;
+			global::Xodium.Platform.Android.Resource.Color.secondary_text_default_material_dark = global::Sidekick.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.secondary_text_default_material_light = global::Sidekick.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Xodium.Platform.Android.Resource.Color.secondary_text_disabled_material_dark = global::Sidekick.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.secondary_text_disabled_material_light = global::Sidekick.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Xodium.Platform.Android.Resource.Color.switch_thumb_disabled_material_dark = global::Sidekick.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.switch_thumb_disabled_material_light = global::Sidekick.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Xodium.Platform.Android.Resource.Color.switch_thumb_material_dark = global::Sidekick.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.switch_thumb_material_light = global::Sidekick.Droid.Resource.Color.switch_thumb_material_light;
+			global::Xodium.Platform.Android.Resource.Color.switch_thumb_normal_material_dark = global::Sidekick.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Xodium.Platform.Android.Resource.Color.switch_thumb_normal_material_light = global::Sidekick.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Xodium.Platform.Android.Resource.Color.tooltip_background_dark = global::Sidekick.Droid.Resource.Color.tooltip_background_dark;
+			global::Xodium.Platform.Android.Resource.Color.tooltip_background_light = global::Sidekick.Droid.Resource.Color.tooltip_background_light;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_content_inset_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_default_height_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_default_padding_end_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_default_padding_start_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_elevation_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_stacked_max_height = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::Sidekick.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_button_min_height_material = global::Sidekick.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_button_min_width_material = global::Sidekick.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Sidekick.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Sidekick.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_alert_dialog_button_dimen = global::Sidekick.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_button_inset_horizontal_material = global::Sidekick.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_button_inset_vertical_material = global::Sidekick.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_button_padding_horizontal_material = global::Sidekick.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_button_padding_vertical_material = global::Sidekick.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::Sidekick.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_config_prefDialogWidth = global::Sidekick.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_control_corner_material = global::Sidekick.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_control_inset_material = global::Sidekick.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_control_padding_material = global::Sidekick.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_corner_radius_material = global::Sidekick.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_fixed_height_major = global::Sidekick.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_fixed_height_minor = global::Sidekick.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_fixed_width_major = global::Sidekick.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_fixed_width_minor = global::Sidekick.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::Sidekick.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::Sidekick.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_min_width_major = global::Sidekick.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_min_width_minor = global::Sidekick.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_padding_material = global::Sidekick.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_padding_top_material = global::Sidekick.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dialog_title_divider_material = global::Sidekick.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_disabled_alpha_material_dark = global::Sidekick.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_disabled_alpha_material_light = global::Sidekick.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dropdownitem_icon_width = global::Sidekick.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dropdownitem_text_padding_left = global::Sidekick.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_dropdownitem_text_padding_right = global::Sidekick.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_edit_text_inset_bottom_material = global::Sidekick.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::Sidekick.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::Sidekick.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_floating_window_z = global::Sidekick.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Sidekick.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_panel_menu_list_width = global::Sidekick.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_progress_bar_height_material = global::Sidekick.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_search_view_preferred_height = global::Sidekick.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_search_view_preferred_width = global::Sidekick.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_seekbar_track_background_height_material = global::Sidekick.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Sidekick.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_select_dialog_padding_start_material = global::Sidekick.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_switch_padding = global::Sidekick.Droid.Resource.Dimension.abc_switch_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_body_1_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_body_2_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_button_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_caption_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_display_1_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_display_2_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_display_3_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_display_4_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_headline_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_large_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_medium_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_menu_header_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_menu_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_small_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_subhead_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Sidekick.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_title_material = global::Sidekick.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Xodium.Platform.Android.Resource.Dimension.abc_text_size_title_material_toolbar = global::Sidekick.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Xodium.Platform.Android.Resource.Dimension.browser_actions_context_menu_max_width = global::Sidekick.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.browser_actions_context_menu_min_padding = global::Sidekick.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.cardview_compat_inset_shadow = global::Sidekick.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Xodium.Platform.Android.Resource.Dimension.cardview_default_elevation = global::Sidekick.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.cardview_default_radius = global::Sidekick.Droid.Resource.Dimension.cardview_default_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::Sidekick.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Xodium.Platform.Android.Resource.Dimension.compat_button_inset_vertical_material = global::Sidekick.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Xodium.Platform.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::Sidekick.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Xodium.Platform.Android.Resource.Dimension.compat_button_padding_vertical_material = global::Sidekick.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Xodium.Platform.Android.Resource.Dimension.compat_control_corner_material = global::Sidekick.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Xodium.Platform.Android.Resource.Dimension.compat_notification_large_icon_max_height = global::Sidekick.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Xodium.Platform.Android.Resource.Dimension.compat_notification_large_icon_max_width = global::Sidekick.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_appbar_elevation = global::Sidekick.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_active_text_size = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_elevation = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_height = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_icon_size = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_item_max_width = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_item_min_width = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_margin = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_shadow_height = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_navigation_text_size = global::Sidekick.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Sidekick.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.design_bottom_sheet_peek_height_min = global::Sidekick.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Xodium.Platform.Android.Resource.Dimension.design_fab_border_width = global::Sidekick.Droid.Resource.Dimension.design_fab_border_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_fab_elevation = global::Sidekick.Droid.Resource.Dimension.design_fab_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.design_fab_image_size = global::Sidekick.Droid.Resource.Dimension.design_fab_image_size;
+			global::Xodium.Platform.Android.Resource.Dimension.design_fab_size_mini = global::Sidekick.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Xodium.Platform.Android.Resource.Dimension.design_fab_size_normal = global::Sidekick.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Xodium.Platform.Android.Resource.Dimension.design_fab_translation_z_hovered_focused = global::Sidekick.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Xodium.Platform.Android.Resource.Dimension.design_fab_translation_z_pressed = global::Sidekick.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_elevation = global::Sidekick.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_icon_padding = global::Sidekick.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_icon_size = global::Sidekick.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_item_horizontal_padding = global::Sidekick.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_item_icon_padding = global::Sidekick.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_max_width = global::Sidekick.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_padding_bottom = global::Sidekick.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Xodium.Platform.Android.Resource.Dimension.design_navigation_separator_vertical_padding = global::Sidekick.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_action_inline_max_width = global::Sidekick.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_background_corner_radius = global::Sidekick.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_elevation = global::Sidekick.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Sidekick.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_max_width = global::Sidekick.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_min_width = global::Sidekick.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_padding_horizontal = global::Sidekick.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_padding_vertical = global::Sidekick.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Sidekick.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Xodium.Platform.Android.Resource.Dimension.design_snackbar_text_size = global::Sidekick.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Xodium.Platform.Android.Resource.Dimension.design_tab_max_width = global::Sidekick.Droid.Resource.Dimension.design_tab_max_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_tab_scrollable_min_width = global::Sidekick.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Xodium.Platform.Android.Resource.Dimension.design_tab_text_size = global::Sidekick.Droid.Resource.Dimension.design_tab_text_size;
+			global::Xodium.Platform.Android.Resource.Dimension.design_tab_text_size_2line = global::Sidekick.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Xodium.Platform.Android.Resource.Dimension.design_textinput_caption_translate_y = global::Sidekick.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Xodium.Platform.Android.Resource.Dimension.disabled_alpha_material_dark = global::Sidekick.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Xodium.Platform.Android.Resource.Dimension.disabled_alpha_material_light = global::Sidekick.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Xodium.Platform.Android.Resource.Dimension.fastscroll_default_thickness = global::Sidekick.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Xodium.Platform.Android.Resource.Dimension.fastscroll_margin = global::Sidekick.Droid.Resource.Dimension.fastscroll_margin;
+			global::Xodium.Platform.Android.Resource.Dimension.fastscroll_minimum_range = global::Sidekick.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Xodium.Platform.Android.Resource.Dimension.highlight_alpha_material_colored = global::Sidekick.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Xodium.Platform.Android.Resource.Dimension.highlight_alpha_material_dark = global::Sidekick.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Xodium.Platform.Android.Resource.Dimension.highlight_alpha_material_light = global::Sidekick.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Xodium.Platform.Android.Resource.Dimension.hint_alpha_material_dark = global::Sidekick.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Xodium.Platform.Android.Resource.Dimension.hint_alpha_material_light = global::Sidekick.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Xodium.Platform.Android.Resource.Dimension.hint_pressed_alpha_material_dark = global::Sidekick.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Xodium.Platform.Android.Resource.Dimension.hint_pressed_alpha_material_light = global::Sidekick.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Xodium.Platform.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Sidekick.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Xodium.Platform.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Sidekick.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Xodium.Platform.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Sidekick.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::Sidekick.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::Sidekick.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::Sidekick.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::Sidekick.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_bottomappbar_height = global::Sidekick.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_corner_radius = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_disabled_elevation = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_disabled_z = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_elevation = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_focused_z = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_hovered_z = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_icon_padding = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_inset = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_letter_spacing = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_padding_bottom = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_padding_left = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_padding_right = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_padding_top = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_pressed_z = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_stroke_size = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_text_size = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_btn_z = global::Sidekick.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_card_elevation = global::Sidekick.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_card_spacing = global::Sidekick.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_chip_pressed_translation_z = global::Sidekick.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_chip_text_size = global::Sidekick.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_fab_elevation = global::Sidekick.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::Sidekick.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_fab_translation_z_pressed = global::Sidekick.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_navigation_elevation = global::Sidekick.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::Sidekick.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_navigation_item_icon_padding = global::Sidekick.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::Sidekick.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_snackbar_margin = global::Sidekick.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_box_padding_end = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::Sidekick.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.mtrl_toolbar_default_height = global::Sidekick.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_action_icon_size = global::Sidekick.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_action_text_size = global::Sidekick.Droid.Resource.Dimension.notification_action_text_size;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_big_circle_margin = global::Sidekick.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_content_margin_start = global::Sidekick.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_large_icon_height = global::Sidekick.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_large_icon_width = global::Sidekick.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_main_column_padding_top = global::Sidekick.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_media_narrow_margin = global::Sidekick.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_right_icon_size = global::Sidekick.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_right_side_padding_top = global::Sidekick.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_small_icon_background_padding = global::Sidekick.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_small_icon_size_as_large = global::Sidekick.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_subtext_size = global::Sidekick.Droid.Resource.Dimension.notification_subtext_size;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_top_pad = global::Sidekick.Droid.Resource.Dimension.notification_top_pad;
+			global::Xodium.Platform.Android.Resource.Dimension.notification_top_pad_large_text = global::Sidekick.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Xodium.Platform.Android.Resource.Dimension.subtitle_corner_radius = global::Sidekick.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.subtitle_outline_width = global::Sidekick.Droid.Resource.Dimension.subtitle_outline_width;
+			global::Xodium.Platform.Android.Resource.Dimension.subtitle_shadow_offset = global::Sidekick.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::Xodium.Platform.Android.Resource.Dimension.subtitle_shadow_radius = global::Sidekick.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_corner_radius = global::Sidekick.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_horizontal_padding = global::Sidekick.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_margin = global::Sidekick.Droid.Resource.Dimension.tooltip_margin;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::Sidekick.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_precise_anchor_threshold = global::Sidekick.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_vertical_padding = global::Sidekick.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_y_offset_non_touch = global::Sidekick.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Xodium.Platform.Android.Resource.Dimension.tooltip_y_offset_touch = global::Sidekick.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_action_bar_item_background_material = global::Sidekick.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_borderless_material = global::Sidekick.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_check_material = global::Sidekick.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::Sidekick.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::Sidekick.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_colored_material = global::Sidekick.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::Sidekick.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_radio_material = global::Sidekick.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Sidekick.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Sidekick.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Sidekick.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Sidekick.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_cab_background_internal_bg = global::Sidekick.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_cab_background_top_material = global::Sidekick.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_control_background_material = global::Sidekick.Droid.Resource.Drawable.abc_control_background_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_dialog_material_background = global::Sidekick.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_edit_text_material = global::Sidekick.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_ab_back_material = global::Sidekick.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::Sidekick.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_clear_material = global::Sidekick.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_go_search_api_material = global::Sidekick.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Sidekick.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_menu_overflow_material = global::Sidekick.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Sidekick.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_search_api_material = global::Sidekick.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_star_black_16dp = global::Sidekick.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_star_black_36dp = global::Sidekick.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_star_black_48dp = global::Sidekick.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_star_half_black_16dp = global::Sidekick.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_star_half_black_36dp = global::Sidekick.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_star_half_black_48dp = global::Sidekick.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ic_voice_search_api_material = global::Sidekick.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_item_background_holo_dark = global::Sidekick.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_item_background_holo_light = global::Sidekick.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_divider_material = global::Sidekick.Droid.Resource.Drawable.abc_list_divider_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_focused_holo = global::Sidekick.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_longpressed_holo = global::Sidekick.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_pressed_holo_dark = global::Sidekick.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_pressed_holo_light = global::Sidekick.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::Sidekick.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::Sidekick.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::Sidekick.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_selector_disabled_holo_light = global::Sidekick.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_selector_holo_dark = global::Sidekick.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_list_selector_holo_light = global::Sidekick.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Sidekick.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_popup_background_mtrl_mult = global::Sidekick.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ratingbar_indicator_material = global::Sidekick.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ratingbar_material = global::Sidekick.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_ratingbar_small_material = global::Sidekick.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::Sidekick.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::Sidekick.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_seekbar_thumb_material = global::Sidekick.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_seekbar_tick_mark_material = global::Sidekick.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_seekbar_track_material = global::Sidekick.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::Sidekick.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_spinner_textfield_background_material = global::Sidekick.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_switch_thumb_material = global::Sidekick.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_switch_track_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_tab_indicator_material = global::Sidekick.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::Sidekick.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_textfield_search_material = global::Sidekick.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_text_cursor_material = global::Sidekick.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::Sidekick.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::Sidekick.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::Sidekick.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::Sidekick.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::Sidekick.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::Sidekick.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Xodium.Platform.Android.Resource.Drawable.abc_vector_test = global::Sidekick.Droid.Resource.Drawable.abc_vector_test;
+			global::Xodium.Platform.Android.Resource.Drawable.avd_hide_password = global::Sidekick.Droid.Resource.Drawable.avd_hide_password;
+			global::Xodium.Platform.Android.Resource.Drawable.avd_show_password = global::Sidekick.Droid.Resource.Drawable.avd_show_password;
+			global::Xodium.Platform.Android.Resource.Drawable.common_full_open_on_phone = global::Sidekick.Droid.Resource.Drawable.common_full_open_on_phone;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_dark = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_dark_focused = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_focused;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_dark_normal = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_disabled = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_disabled;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_light = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_light;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_light_focused = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_light_focused;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_light_normal = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_icon_light_normal_background = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal_background;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_dark = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_dark_focused = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_dark_focused;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_dark_normal = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_dark_normal_background = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal_background;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_disabled = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_disabled;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_light = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_light;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_light_focused = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_light_focused;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_light_normal = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal;
+			global::Xodium.Platform.Android.Resource.Drawable.common_google_signin_btn_text_light_normal_background = global::Sidekick.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal_background;
+			global::Xodium.Platform.Android.Resource.Drawable.design_bottom_navigation_item_background = global::Sidekick.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Xodium.Platform.Android.Resource.Drawable.design_fab_background = global::Sidekick.Droid.Resource.Drawable.design_fab_background;
+			global::Xodium.Platform.Android.Resource.Drawable.design_ic_visibility = global::Sidekick.Droid.Resource.Drawable.design_ic_visibility;
+			global::Xodium.Platform.Android.Resource.Drawable.design_ic_visibility_off = global::Sidekick.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Xodium.Platform.Android.Resource.Drawable.design_password_eye = global::Sidekick.Droid.Resource.Drawable.design_password_eye;
+			global::Xodium.Platform.Android.Resource.Drawable.design_snackbar_background = global::Sidekick.Droid.Resource.Drawable.design_snackbar_background;
+			global::Xodium.Platform.Android.Resource.Drawable.googleg_disabled_color_18 = global::Sidekick.Droid.Resource.Drawable.googleg_disabled_color_18;
+			global::Xodium.Platform.Android.Resource.Drawable.googleg_standard_color_18 = global::Sidekick.Droid.Resource.Drawable.googleg_standard_color_18;
+			global::Xodium.Platform.Android.Resource.Drawable.ic_mtrl_chip_checked_black = global::Sidekick.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Xodium.Platform.Android.Resource.Drawable.ic_mtrl_chip_checked_circle = global::Sidekick.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Xodium.Platform.Android.Resource.Drawable.ic_mtrl_chip_close_circle = global::Sidekick.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Xodium.Platform.Android.Resource.Drawable.mtrl_snackbar_background = global::Sidekick.Droid.Resource.Drawable.mtrl_snackbar_background;
+			global::Xodium.Platform.Android.Resource.Drawable.mtrl_tabs_default_indicator = global::Sidekick.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Xodium.Platform.Android.Resource.Drawable.navigation_empty_icon = global::Sidekick.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_action_background = global::Sidekick.Droid.Resource.Drawable.notification_action_background;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_bg = global::Sidekick.Droid.Resource.Drawable.notification_bg;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_bg_low = global::Sidekick.Droid.Resource.Drawable.notification_bg_low;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_bg_low_normal = global::Sidekick.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_bg_low_pressed = global::Sidekick.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_bg_normal = global::Sidekick.Droid.Resource.Drawable.notification_bg_normal;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_bg_normal_pressed = global::Sidekick.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_icon_background = global::Sidekick.Droid.Resource.Drawable.notification_icon_background;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_template_icon_bg = global::Sidekick.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_template_icon_low_bg = global::Sidekick.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xodium.Platform.Android.Resource.Drawable.notification_tile_bg = global::Sidekick.Droid.Resource.Drawable.notification_tile_bg;
+			global::Xodium.Platform.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Sidekick.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xodium.Platform.Android.Resource.Drawable.tooltip_frame_dark = global::Sidekick.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Xodium.Platform.Android.Resource.Drawable.tooltip_frame_light = global::Sidekick.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Xodium.Platform.Android.Resource.Id.action0 = global::Sidekick.Droid.Resource.Id.action0;
+			global::Xodium.Platform.Android.Resource.Id.actions = global::Sidekick.Droid.Resource.Id.actions;
+			global::Xodium.Platform.Android.Resource.Id.action_bar = global::Sidekick.Droid.Resource.Id.action_bar;
+			global::Xodium.Platform.Android.Resource.Id.action_bar_activity_content = global::Sidekick.Droid.Resource.Id.action_bar_activity_content;
+			global::Xodium.Platform.Android.Resource.Id.action_bar_container = global::Sidekick.Droid.Resource.Id.action_bar_container;
+			global::Xodium.Platform.Android.Resource.Id.action_bar_root = global::Sidekick.Droid.Resource.Id.action_bar_root;
+			global::Xodium.Platform.Android.Resource.Id.action_bar_spinner = global::Sidekick.Droid.Resource.Id.action_bar_spinner;
+			global::Xodium.Platform.Android.Resource.Id.action_bar_subtitle = global::Sidekick.Droid.Resource.Id.action_bar_subtitle;
+			global::Xodium.Platform.Android.Resource.Id.action_bar_title = global::Sidekick.Droid.Resource.Id.action_bar_title;
+			global::Xodium.Platform.Android.Resource.Id.action_container = global::Sidekick.Droid.Resource.Id.action_container;
+			global::Xodium.Platform.Android.Resource.Id.action_context_bar = global::Sidekick.Droid.Resource.Id.action_context_bar;
+			global::Xodium.Platform.Android.Resource.Id.action_divider = global::Sidekick.Droid.Resource.Id.action_divider;
+			global::Xodium.Platform.Android.Resource.Id.action_image = global::Sidekick.Droid.Resource.Id.action_image;
+			global::Xodium.Platform.Android.Resource.Id.action_menu_divider = global::Sidekick.Droid.Resource.Id.action_menu_divider;
+			global::Xodium.Platform.Android.Resource.Id.action_menu_presenter = global::Sidekick.Droid.Resource.Id.action_menu_presenter;
+			global::Xodium.Platform.Android.Resource.Id.action_mode_bar = global::Sidekick.Droid.Resource.Id.action_mode_bar;
+			global::Xodium.Platform.Android.Resource.Id.action_mode_bar_stub = global::Sidekick.Droid.Resource.Id.action_mode_bar_stub;
+			global::Xodium.Platform.Android.Resource.Id.action_mode_close_button = global::Sidekick.Droid.Resource.Id.action_mode_close_button;
+			global::Xodium.Platform.Android.Resource.Id.action_text = global::Sidekick.Droid.Resource.Id.action_text;
+			global::Xodium.Platform.Android.Resource.Id.activity_chooser_view_content = global::Sidekick.Droid.Resource.Id.activity_chooser_view_content;
+			global::Xodium.Platform.Android.Resource.Id.add = global::Sidekick.Droid.Resource.Id.add;
+			global::Xodium.Platform.Android.Resource.Id.adjust_height = global::Sidekick.Droid.Resource.Id.adjust_height;
+			global::Xodium.Platform.Android.Resource.Id.adjust_width = global::Sidekick.Droid.Resource.Id.adjust_width;
+			global::Xodium.Platform.Android.Resource.Id.alertTitle = global::Sidekick.Droid.Resource.Id.alertTitle;
+			global::Xodium.Platform.Android.Resource.Id.all = global::Sidekick.Droid.Resource.Id.all;
+			global::Xodium.Platform.Android.Resource.Id.ALT = global::Sidekick.Droid.Resource.Id.ALT;
+			global::Xodium.Platform.Android.Resource.Id.always = global::Sidekick.Droid.Resource.Id.always;
+			global::Xodium.Platform.Android.Resource.Id.async = global::Sidekick.Droid.Resource.Id.async;
+			global::Xodium.Platform.Android.Resource.Id.auto = global::Sidekick.Droid.Resource.Id.auto;
+			global::Xodium.Platform.Android.Resource.Id.beginning = global::Sidekick.Droid.Resource.Id.beginning;
+			global::Xodium.Platform.Android.Resource.Id.blocking = global::Sidekick.Droid.Resource.Id.blocking;
+			global::Xodium.Platform.Android.Resource.Id.bottom = global::Sidekick.Droid.Resource.Id.bottom;
+			global::Xodium.Platform.Android.Resource.Id.bottomtab_navarea = global::Sidekick.Droid.Resource.Id.bottomtab_navarea;
+			global::Xodium.Platform.Android.Resource.Id.bottomtab_tabbar = global::Sidekick.Droid.Resource.Id.bottomtab_tabbar;
+			global::Xodium.Platform.Android.Resource.Id.browser_actions_header_text = global::Sidekick.Droid.Resource.Id.browser_actions_header_text;
+			global::Xodium.Platform.Android.Resource.Id.browser_actions_menu_items = global::Sidekick.Droid.Resource.Id.browser_actions_menu_items;
+			global::Xodium.Platform.Android.Resource.Id.browser_actions_menu_item_icon = global::Sidekick.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Xodium.Platform.Android.Resource.Id.browser_actions_menu_item_text = global::Sidekick.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Xodium.Platform.Android.Resource.Id.browser_actions_menu_view = global::Sidekick.Droid.Resource.Id.browser_actions_menu_view;
+			global::Xodium.Platform.Android.Resource.Id.buttonPanel = global::Sidekick.Droid.Resource.Id.buttonPanel;
+			global::Xodium.Platform.Android.Resource.Id.cancel_action = global::Sidekick.Droid.Resource.Id.cancel_action;
+			global::Xodium.Platform.Android.Resource.Id.center = global::Sidekick.Droid.Resource.Id.center;
+			global::Xodium.Platform.Android.Resource.Id.center_horizontal = global::Sidekick.Droid.Resource.Id.center_horizontal;
+			global::Xodium.Platform.Android.Resource.Id.center_vertical = global::Sidekick.Droid.Resource.Id.center_vertical;
+			global::Xodium.Platform.Android.Resource.Id.checkbox = global::Sidekick.Droid.Resource.Id.checkbox;
+			global::Xodium.Platform.Android.Resource.Id.chronometer = global::Sidekick.Droid.Resource.Id.chronometer;
+			global::Xodium.Platform.Android.Resource.Id.clip_horizontal = global::Sidekick.Droid.Resource.Id.clip_horizontal;
+			global::Xodium.Platform.Android.Resource.Id.clip_vertical = global::Sidekick.Droid.Resource.Id.clip_vertical;
+			global::Xodium.Platform.Android.Resource.Id.collapseActionView = global::Sidekick.Droid.Resource.Id.collapseActionView;
+			global::Xodium.Platform.Android.Resource.Id.container = global::Sidekick.Droid.Resource.Id.container;
+			global::Xodium.Platform.Android.Resource.Id.content = global::Sidekick.Droid.Resource.Id.content;
+			global::Xodium.Platform.Android.Resource.Id.contentPanel = global::Sidekick.Droid.Resource.Id.contentPanel;
+			global::Xodium.Platform.Android.Resource.Id.coordinator = global::Sidekick.Droid.Resource.Id.coordinator;
+			global::Xodium.Platform.Android.Resource.Id.CTRL = global::Sidekick.Droid.Resource.Id.CTRL;
+			global::Xodium.Platform.Android.Resource.Id.custom = global::Sidekick.Droid.Resource.Id.custom;
+			global::Xodium.Platform.Android.Resource.Id.customPanel = global::Sidekick.Droid.Resource.Id.customPanel;
+			global::Xodium.Platform.Android.Resource.Id.dark = global::Sidekick.Droid.Resource.Id.dark;
+			global::Xodium.Platform.Android.Resource.Id.decor_content_parent = global::Sidekick.Droid.Resource.Id.decor_content_parent;
+			global::Xodium.Platform.Android.Resource.Id.default_activity_button = global::Sidekick.Droid.Resource.Id.default_activity_button;
+			global::Xodium.Platform.Android.Resource.Id.design_bottom_sheet = global::Sidekick.Droid.Resource.Id.design_bottom_sheet;
+			global::Xodium.Platform.Android.Resource.Id.design_menu_item_action_area = global::Sidekick.Droid.Resource.Id.design_menu_item_action_area;
+			global::Xodium.Platform.Android.Resource.Id.design_menu_item_action_area_stub = global::Sidekick.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Xodium.Platform.Android.Resource.Id.design_menu_item_text = global::Sidekick.Droid.Resource.Id.design_menu_item_text;
+			global::Xodium.Platform.Android.Resource.Id.design_navigation_view = global::Sidekick.Droid.Resource.Id.design_navigation_view;
+			global::Xodium.Platform.Android.Resource.Id.disableHome = global::Sidekick.Droid.Resource.Id.disableHome;
+			global::Xodium.Platform.Android.Resource.Id.edit_query = global::Sidekick.Droid.Resource.Id.edit_query;
+			global::Xodium.Platform.Android.Resource.Id.end = global::Sidekick.Droid.Resource.Id.end;
+			global::Xodium.Platform.Android.Resource.Id.end_padder = global::Sidekick.Droid.Resource.Id.end_padder;
+			global::Xodium.Platform.Android.Resource.Id.enterAlways = global::Sidekick.Droid.Resource.Id.enterAlways;
+			global::Xodium.Platform.Android.Resource.Id.enterAlwaysCollapsed = global::Sidekick.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Xodium.Platform.Android.Resource.Id.exitUntilCollapsed = global::Sidekick.Droid.Resource.Id.exitUntilCollapsed;
+			global::Xodium.Platform.Android.Resource.Id.expanded_menu = global::Sidekick.Droid.Resource.Id.expanded_menu;
+			global::Xodium.Platform.Android.Resource.Id.expand_activities_button = global::Sidekick.Droid.Resource.Id.expand_activities_button;
+			global::Xodium.Platform.Android.Resource.Id.fill = global::Sidekick.Droid.Resource.Id.fill;
+			global::Xodium.Platform.Android.Resource.Id.filled = global::Sidekick.Droid.Resource.Id.filled;
+			global::Xodium.Platform.Android.Resource.Id.fill_horizontal = global::Sidekick.Droid.Resource.Id.fill_horizontal;
+			global::Xodium.Platform.Android.Resource.Id.fill_vertical = global::Sidekick.Droid.Resource.Id.fill_vertical;
+			global::Xodium.Platform.Android.Resource.Id.@fixed = global::Sidekick.Droid.Resource.Id.@fixed;
+			global::Xodium.Platform.Android.Resource.Id.flyoutcontent_appbar = global::Sidekick.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Xodium.Platform.Android.Resource.Id.flyoutcontent_recycler = global::Sidekick.Droid.Resource.Id.flyoutcontent_recycler;
+			global::Xodium.Platform.Android.Resource.Id.forever = global::Sidekick.Droid.Resource.Id.forever;
+			global::Xodium.Platform.Android.Resource.Id.FUNCTION = global::Sidekick.Droid.Resource.Id.FUNCTION;
+			global::Xodium.Platform.Android.Resource.Id.ghost_view = global::Sidekick.Droid.Resource.Id.ghost_view;
+			global::Xodium.Platform.Android.Resource.Id.group_divider = global::Sidekick.Droid.Resource.Id.group_divider;
+			global::Xodium.Platform.Android.Resource.Id.home = global::Sidekick.Droid.Resource.Id.home;
+			global::Xodium.Platform.Android.Resource.Id.homeAsUp = global::Sidekick.Droid.Resource.Id.homeAsUp;
+			global::Xodium.Platform.Android.Resource.Id.icon = global::Sidekick.Droid.Resource.Id.icon;
+			global::Xodium.Platform.Android.Resource.Id.icon_group = global::Sidekick.Droid.Resource.Id.icon_group;
+			global::Xodium.Platform.Android.Resource.Id.icon_only = global::Sidekick.Droid.Resource.Id.icon_only;
+			global::Xodium.Platform.Android.Resource.Id.ifRoom = global::Sidekick.Droid.Resource.Id.ifRoom;
+			global::Xodium.Platform.Android.Resource.Id.image = global::Sidekick.Droid.Resource.Id.image;
+			global::Xodium.Platform.Android.Resource.Id.info = global::Sidekick.Droid.Resource.Id.info;
+			global::Xodium.Platform.Android.Resource.Id.italic = global::Sidekick.Droid.Resource.Id.italic;
+			global::Xodium.Platform.Android.Resource.Id.item_touch_helper_previous_elevation = global::Sidekick.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Xodium.Platform.Android.Resource.Id.labeled = global::Sidekick.Droid.Resource.Id.labeled;
+			global::Xodium.Platform.Android.Resource.Id.largeLabel = global::Sidekick.Droid.Resource.Id.largeLabel;
+			global::Xodium.Platform.Android.Resource.Id.left = global::Sidekick.Droid.Resource.Id.left;
+			global::Xodium.Platform.Android.Resource.Id.light = global::Sidekick.Droid.Resource.Id.light;
+			global::Xodium.Platform.Android.Resource.Id.line1 = global::Sidekick.Droid.Resource.Id.line1;
+			global::Xodium.Platform.Android.Resource.Id.line3 = global::Sidekick.Droid.Resource.Id.line3;
+			global::Xodium.Platform.Android.Resource.Id.listMode = global::Sidekick.Droid.Resource.Id.listMode;
+			global::Xodium.Platform.Android.Resource.Id.list_item = global::Sidekick.Droid.Resource.Id.list_item;
+			global::Xodium.Platform.Android.Resource.Id.main_appbar = global::Sidekick.Droid.Resource.Id.main_appbar;
+			global::Xodium.Platform.Android.Resource.Id.main_scrollview = global::Sidekick.Droid.Resource.Id.main_scrollview;
+			global::Xodium.Platform.Android.Resource.Id.main_tablayout = global::Sidekick.Droid.Resource.Id.main_tablayout;
+			global::Xodium.Platform.Android.Resource.Id.main_toolbar = global::Sidekick.Droid.Resource.Id.main_toolbar;
+			global::Xodium.Platform.Android.Resource.Id.masked = global::Sidekick.Droid.Resource.Id.masked;
+			global::Xodium.Platform.Android.Resource.Id.media_actions = global::Sidekick.Droid.Resource.Id.media_actions;
+			global::Xodium.Platform.Android.Resource.Id.message = global::Sidekick.Droid.Resource.Id.message;
+			global::Xodium.Platform.Android.Resource.Id.META = global::Sidekick.Droid.Resource.Id.META;
+			global::Xodium.Platform.Android.Resource.Id.middle = global::Sidekick.Droid.Resource.Id.middle;
+			global::Xodium.Platform.Android.Resource.Id.mini = global::Sidekick.Droid.Resource.Id.mini;
+			global::Xodium.Platform.Android.Resource.Id.mtrl_child_content_container = global::Sidekick.Droid.Resource.Id.mtrl_child_content_container;
+			global::Xodium.Platform.Android.Resource.Id.mtrl_internal_children_alpha_tag = global::Sidekick.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Xodium.Platform.Android.Resource.Id.multiply = global::Sidekick.Droid.Resource.Id.multiply;
+			global::Xodium.Platform.Android.Resource.Id.navigation_header_container = global::Sidekick.Droid.Resource.Id.navigation_header_container;
+			global::Xodium.Platform.Android.Resource.Id.never = global::Sidekick.Droid.Resource.Id.never;
+			global::Xodium.Platform.Android.Resource.Id.none = global::Sidekick.Droid.Resource.Id.none;
+			global::Xodium.Platform.Android.Resource.Id.normal = global::Sidekick.Droid.Resource.Id.normal;
+			global::Xodium.Platform.Android.Resource.Id.notification_background = global::Sidekick.Droid.Resource.Id.notification_background;
+			global::Xodium.Platform.Android.Resource.Id.notification_main_column = global::Sidekick.Droid.Resource.Id.notification_main_column;
+			global::Xodium.Platform.Android.Resource.Id.notification_main_column_container = global::Sidekick.Droid.Resource.Id.notification_main_column_container;
+			global::Xodium.Platform.Android.Resource.Id.outline = global::Sidekick.Droid.Resource.Id.outline;
+			global::Xodium.Platform.Android.Resource.Id.parallax = global::Sidekick.Droid.Resource.Id.parallax;
+			global::Xodium.Platform.Android.Resource.Id.parentPanel = global::Sidekick.Droid.Resource.Id.parentPanel;
+			global::Xodium.Platform.Android.Resource.Id.parent_matrix = global::Sidekick.Droid.Resource.Id.parent_matrix;
+			global::Xodium.Platform.Android.Resource.Id.pin = global::Sidekick.Droid.Resource.Id.pin;
+			global::Xodium.Platform.Android.Resource.Id.progress_circular = global::Sidekick.Droid.Resource.Id.progress_circular;
+			global::Xodium.Platform.Android.Resource.Id.progress_horizontal = global::Sidekick.Droid.Resource.Id.progress_horizontal;
+			global::Xodium.Platform.Android.Resource.Id.radio = global::Sidekick.Droid.Resource.Id.radio;
+			global::Xodium.Platform.Android.Resource.Id.right = global::Sidekick.Droid.Resource.Id.right;
+			global::Xodium.Platform.Android.Resource.Id.right_icon = global::Sidekick.Droid.Resource.Id.right_icon;
+			global::Xodium.Platform.Android.Resource.Id.right_side = global::Sidekick.Droid.Resource.Id.right_side;
+			global::Xodium.Platform.Android.Resource.Id.save_image_matrix = global::Sidekick.Droid.Resource.Id.save_image_matrix;
+			global::Xodium.Platform.Android.Resource.Id.save_non_transition_alpha = global::Sidekick.Droid.Resource.Id.save_non_transition_alpha;
+			global::Xodium.Platform.Android.Resource.Id.save_scale_type = global::Sidekick.Droid.Resource.Id.save_scale_type;
+			global::Xodium.Platform.Android.Resource.Id.screen = global::Sidekick.Droid.Resource.Id.screen;
+			global::Xodium.Platform.Android.Resource.Id.scroll = global::Sidekick.Droid.Resource.Id.scroll;
+			global::Xodium.Platform.Android.Resource.Id.scrollable = global::Sidekick.Droid.Resource.Id.scrollable;
+			global::Xodium.Platform.Android.Resource.Id.scrollIndicatorDown = global::Sidekick.Droid.Resource.Id.scrollIndicatorDown;
+			global::Xodium.Platform.Android.Resource.Id.scrollIndicatorUp = global::Sidekick.Droid.Resource.Id.scrollIndicatorUp;
+			global::Xodium.Platform.Android.Resource.Id.scrollView = global::Sidekick.Droid.Resource.Id.scrollView;
+			global::Xodium.Platform.Android.Resource.Id.search_badge = global::Sidekick.Droid.Resource.Id.search_badge;
+			global::Xodium.Platform.Android.Resource.Id.search_bar = global::Sidekick.Droid.Resource.Id.search_bar;
+			global::Xodium.Platform.Android.Resource.Id.search_button = global::Sidekick.Droid.Resource.Id.search_button;
+			global::Xodium.Platform.Android.Resource.Id.search_close_btn = global::Sidekick.Droid.Resource.Id.search_close_btn;
+			global::Xodium.Platform.Android.Resource.Id.search_edit_frame = global::Sidekick.Droid.Resource.Id.search_edit_frame;
+			global::Xodium.Platform.Android.Resource.Id.search_go_btn = global::Sidekick.Droid.Resource.Id.search_go_btn;
+			global::Xodium.Platform.Android.Resource.Id.search_mag_icon = global::Sidekick.Droid.Resource.Id.search_mag_icon;
+			global::Xodium.Platform.Android.Resource.Id.search_plate = global::Sidekick.Droid.Resource.Id.search_plate;
+			global::Xodium.Platform.Android.Resource.Id.search_src_text = global::Sidekick.Droid.Resource.Id.search_src_text;
+			global::Xodium.Platform.Android.Resource.Id.search_voice_btn = global::Sidekick.Droid.Resource.Id.search_voice_btn;
+			global::Xodium.Platform.Android.Resource.Id.selected = global::Sidekick.Droid.Resource.Id.selected;
+			global::Xodium.Platform.Android.Resource.Id.select_dialog_listview = global::Sidekick.Droid.Resource.Id.select_dialog_listview;
+			global::Xodium.Platform.Android.Resource.Id.shellcontent_appbar = global::Sidekick.Droid.Resource.Id.shellcontent_appbar;
+			global::Xodium.Platform.Android.Resource.Id.shellcontent_scrollview = global::Sidekick.Droid.Resource.Id.shellcontent_scrollview;
+			global::Xodium.Platform.Android.Resource.Id.shellcontent_toolbar = global::Sidekick.Droid.Resource.Id.shellcontent_toolbar;
+			global::Xodium.Platform.Android.Resource.Id.SHIFT = global::Sidekick.Droid.Resource.Id.SHIFT;
+			global::Xodium.Platform.Android.Resource.Id.shortcut = global::Sidekick.Droid.Resource.Id.shortcut;
+			global::Xodium.Platform.Android.Resource.Id.showCustom = global::Sidekick.Droid.Resource.Id.showCustom;
+			global::Xodium.Platform.Android.Resource.Id.showHome = global::Sidekick.Droid.Resource.Id.showHome;
+			global::Xodium.Platform.Android.Resource.Id.showTitle = global::Sidekick.Droid.Resource.Id.showTitle;
+			global::Xodium.Platform.Android.Resource.Id.smallLabel = global::Sidekick.Droid.Resource.Id.smallLabel;
+			global::Xodium.Platform.Android.Resource.Id.snackbar_action = global::Sidekick.Droid.Resource.Id.snackbar_action;
+			global::Xodium.Platform.Android.Resource.Id.snackbar_text = global::Sidekick.Droid.Resource.Id.snackbar_text;
+			global::Xodium.Platform.Android.Resource.Id.snap = global::Sidekick.Droid.Resource.Id.snap;
+			global::Xodium.Platform.Android.Resource.Id.snapMargins = global::Sidekick.Droid.Resource.Id.snapMargins;
+			global::Xodium.Platform.Android.Resource.Id.spacer = global::Sidekick.Droid.Resource.Id.spacer;
+			global::Xodium.Platform.Android.Resource.Id.split_action_bar = global::Sidekick.Droid.Resource.Id.split_action_bar;
+			global::Xodium.Platform.Android.Resource.Id.src_atop = global::Sidekick.Droid.Resource.Id.src_atop;
+			global::Xodium.Platform.Android.Resource.Id.src_in = global::Sidekick.Droid.Resource.Id.src_in;
+			global::Xodium.Platform.Android.Resource.Id.src_over = global::Sidekick.Droid.Resource.Id.src_over;
+			global::Xodium.Platform.Android.Resource.Id.standard = global::Sidekick.Droid.Resource.Id.standard;
+			global::Xodium.Platform.Android.Resource.Id.start = global::Sidekick.Droid.Resource.Id.start;
+			global::Xodium.Platform.Android.Resource.Id.status_bar_latest_event_content = global::Sidekick.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Xodium.Platform.Android.Resource.Id.stretch = global::Sidekick.Droid.Resource.Id.stretch;
+			global::Xodium.Platform.Android.Resource.Id.submenuarrow = global::Sidekick.Droid.Resource.Id.submenuarrow;
+			global::Xodium.Platform.Android.Resource.Id.submit_area = global::Sidekick.Droid.Resource.Id.submit_area;
+			global::Xodium.Platform.Android.Resource.Id.SYM = global::Sidekick.Droid.Resource.Id.SYM;
+			global::Xodium.Platform.Android.Resource.Id.tabMode = global::Sidekick.Droid.Resource.Id.tabMode;
+			global::Xodium.Platform.Android.Resource.Id.tag_transition_group = global::Sidekick.Droid.Resource.Id.tag_transition_group;
+			global::Xodium.Platform.Android.Resource.Id.tag_unhandled_key_event_manager = global::Sidekick.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Xodium.Platform.Android.Resource.Id.tag_unhandled_key_listeners = global::Sidekick.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Xodium.Platform.Android.Resource.Id.text = global::Sidekick.Droid.Resource.Id.text;
+			global::Xodium.Platform.Android.Resource.Id.text2 = global::Sidekick.Droid.Resource.Id.text2;
+			global::Xodium.Platform.Android.Resource.Id.textinput_counter = global::Sidekick.Droid.Resource.Id.textinput_counter;
+			global::Xodium.Platform.Android.Resource.Id.textinput_error = global::Sidekick.Droid.Resource.Id.textinput_error;
+			global::Xodium.Platform.Android.Resource.Id.textinput_helper_text = global::Sidekick.Droid.Resource.Id.textinput_helper_text;
+			global::Xodium.Platform.Android.Resource.Id.textSpacerNoButtons = global::Sidekick.Droid.Resource.Id.textSpacerNoButtons;
+			global::Xodium.Platform.Android.Resource.Id.textSpacerNoTitle = global::Sidekick.Droid.Resource.Id.textSpacerNoTitle;
+			global::Xodium.Platform.Android.Resource.Id.textStart = global::Sidekick.Droid.Resource.Id.textStart;
+			global::Xodium.Platform.Android.Resource.Id.text_input_password_toggle = global::Sidekick.Droid.Resource.Id.text_input_password_toggle;
+			global::Xodium.Platform.Android.Resource.Id.time = global::Sidekick.Droid.Resource.Id.time;
+			global::Xodium.Platform.Android.Resource.Id.title = global::Sidekick.Droid.Resource.Id.title;
+			global::Xodium.Platform.Android.Resource.Id.titleDividerNoCustom = global::Sidekick.Droid.Resource.Id.titleDividerNoCustom;
+			global::Xodium.Platform.Android.Resource.Id.title_template = global::Sidekick.Droid.Resource.Id.title_template;
+			global::Xodium.Platform.Android.Resource.Id.top = global::Sidekick.Droid.Resource.Id.top;
+			global::Xodium.Platform.Android.Resource.Id.topPanel = global::Sidekick.Droid.Resource.Id.topPanel;
+			global::Xodium.Platform.Android.Resource.Id.touch_outside = global::Sidekick.Droid.Resource.Id.touch_outside;
+			global::Xodium.Platform.Android.Resource.Id.transition_current_scene = global::Sidekick.Droid.Resource.Id.transition_current_scene;
+			global::Xodium.Platform.Android.Resource.Id.transition_layout_save = global::Sidekick.Droid.Resource.Id.transition_layout_save;
+			global::Xodium.Platform.Android.Resource.Id.transition_position = global::Sidekick.Droid.Resource.Id.transition_position;
+			global::Xodium.Platform.Android.Resource.Id.transition_scene_layoutid_cache = global::Sidekick.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Xodium.Platform.Android.Resource.Id.transition_transform = global::Sidekick.Droid.Resource.Id.transition_transform;
+			global::Xodium.Platform.Android.Resource.Id.uniform = global::Sidekick.Droid.Resource.Id.uniform;
+			global::Xodium.Platform.Android.Resource.Id.unlabeled = global::Sidekick.Droid.Resource.Id.unlabeled;
+			global::Xodium.Platform.Android.Resource.Id.up = global::Sidekick.Droid.Resource.Id.up;
+			global::Xodium.Platform.Android.Resource.Id.useLogo = global::Sidekick.Droid.Resource.Id.useLogo;
+			global::Xodium.Platform.Android.Resource.Id.view_offset_helper = global::Sidekick.Droid.Resource.Id.view_offset_helper;
+			global::Xodium.Platform.Android.Resource.Id.visible = global::Sidekick.Droid.Resource.Id.visible;
+			global::Xodium.Platform.Android.Resource.Id.wide = global::Sidekick.Droid.Resource.Id.wide;
+			global::Xodium.Platform.Android.Resource.Id.withText = global::Sidekick.Droid.Resource.Id.withText;
+			global::Xodium.Platform.Android.Resource.Id.wrap_content = global::Sidekick.Droid.Resource.Id.wrap_content;
+			global::Xodium.Platform.Android.Resource.Integer.abc_config_activityDefaultDur = global::Sidekick.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Xodium.Platform.Android.Resource.Integer.abc_config_activityShortDur = global::Sidekick.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Xodium.Platform.Android.Resource.Integer.app_bar_elevation_anim_duration = global::Sidekick.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Xodium.Platform.Android.Resource.Integer.bottom_sheet_slide_duration = global::Sidekick.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Xodium.Platform.Android.Resource.Integer.cancel_button_image_alpha = global::Sidekick.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Xodium.Platform.Android.Resource.Integer.config_tooltipAnimTime = global::Sidekick.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Xodium.Platform.Android.Resource.Integer.design_snackbar_text_max_lines = global::Sidekick.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Xodium.Platform.Android.Resource.Integer.design_tab_indicator_anim_duration_ms = global::Sidekick.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Xodium.Platform.Android.Resource.Integer.google_play_services_version = global::Sidekick.Droid.Resource.Integer.google_play_services_version;
+			global::Xodium.Platform.Android.Resource.Integer.hide_password_duration = global::Sidekick.Droid.Resource.Integer.hide_password_duration;
+			global::Xodium.Platform.Android.Resource.Integer.mtrl_btn_anim_delay_ms = global::Sidekick.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Xodium.Platform.Android.Resource.Integer.mtrl_btn_anim_duration_ms = global::Sidekick.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Xodium.Platform.Android.Resource.Integer.mtrl_chip_anim_duration = global::Sidekick.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::Xodium.Platform.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::Sidekick.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Xodium.Platform.Android.Resource.Integer.show_password_duration = global::Sidekick.Droid.Resource.Integer.show_password_duration;
+			global::Xodium.Platform.Android.Resource.Integer.status_bar_notification_info_maxnum = global::Sidekick.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xodium.Platform.Android.Resource.Interpolator.mtrl_fast_out_linear_in = global::Sidekick.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Xodium.Platform.Android.Resource.Interpolator.mtrl_fast_out_slow_in = global::Sidekick.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Xodium.Platform.Android.Resource.Interpolator.mtrl_linear = global::Sidekick.Droid.Resource.Interpolator.mtrl_linear;
+			global::Xodium.Platform.Android.Resource.Interpolator.mtrl_linear_out_slow_in = global::Sidekick.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Xodium.Platform.Android.Resource.Layout.abc_action_bar_title_item = global::Sidekick.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Xodium.Platform.Android.Resource.Layout.abc_action_bar_up_container = global::Sidekick.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Xodium.Platform.Android.Resource.Layout.abc_action_menu_item_layout = global::Sidekick.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Xodium.Platform.Android.Resource.Layout.abc_action_menu_layout = global::Sidekick.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Xodium.Platform.Android.Resource.Layout.abc_action_mode_bar = global::Sidekick.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Xodium.Platform.Android.Resource.Layout.abc_action_mode_close_item_material = global::Sidekick.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Xodium.Platform.Android.Resource.Layout.abc_activity_chooser_view = global::Sidekick.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Xodium.Platform.Android.Resource.Layout.abc_activity_chooser_view_list_item = global::Sidekick.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Xodium.Platform.Android.Resource.Layout.abc_alert_dialog_button_bar_material = global::Sidekick.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Xodium.Platform.Android.Resource.Layout.abc_alert_dialog_material = global::Sidekick.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Xodium.Platform.Android.Resource.Layout.abc_alert_dialog_title_material = global::Sidekick.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Xodium.Platform.Android.Resource.Layout.abc_cascading_menu_item_layout = global::Sidekick.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Xodium.Platform.Android.Resource.Layout.abc_dialog_title_material = global::Sidekick.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Xodium.Platform.Android.Resource.Layout.abc_expanded_menu_layout = global::Sidekick.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Xodium.Platform.Android.Resource.Layout.abc_list_menu_item_checkbox = global::Sidekick.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Xodium.Platform.Android.Resource.Layout.abc_list_menu_item_icon = global::Sidekick.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Xodium.Platform.Android.Resource.Layout.abc_list_menu_item_layout = global::Sidekick.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Xodium.Platform.Android.Resource.Layout.abc_list_menu_item_radio = global::Sidekick.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Xodium.Platform.Android.Resource.Layout.abc_popup_menu_header_item_layout = global::Sidekick.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Xodium.Platform.Android.Resource.Layout.abc_popup_menu_item_layout = global::Sidekick.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Xodium.Platform.Android.Resource.Layout.abc_screen_content_include = global::Sidekick.Droid.Resource.Layout.abc_screen_content_include;
+			global::Xodium.Platform.Android.Resource.Layout.abc_screen_simple = global::Sidekick.Droid.Resource.Layout.abc_screen_simple;
+			global::Xodium.Platform.Android.Resource.Layout.abc_screen_simple_overlay_action_mode = global::Sidekick.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Xodium.Platform.Android.Resource.Layout.abc_screen_toolbar = global::Sidekick.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Xodium.Platform.Android.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Sidekick.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Xodium.Platform.Android.Resource.Layout.abc_search_view = global::Sidekick.Droid.Resource.Layout.abc_search_view;
+			global::Xodium.Platform.Android.Resource.Layout.abc_select_dialog_material = global::Sidekick.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Xodium.Platform.Android.Resource.Layout.abc_tooltip = global::Sidekick.Droid.Resource.Layout.abc_tooltip;
+			global::Xodium.Platform.Android.Resource.Layout.BottomTabLayout = global::Sidekick.Droid.Resource.Layout.BottomTabLayout;
+			global::Xodium.Platform.Android.Resource.Layout.browser_actions_context_menu_page = global::Sidekick.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Xodium.Platform.Android.Resource.Layout.browser_actions_context_menu_row = global::Sidekick.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Xodium.Platform.Android.Resource.Layout.design_bottom_navigation_item = global::Sidekick.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Xodium.Platform.Android.Resource.Layout.design_bottom_sheet_dialog = global::Sidekick.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Xodium.Platform.Android.Resource.Layout.design_layout_snackbar = global::Sidekick.Droid.Resource.Layout.design_layout_snackbar;
+			global::Xodium.Platform.Android.Resource.Layout.design_layout_snackbar_include = global::Sidekick.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Xodium.Platform.Android.Resource.Layout.design_layout_tab_icon = global::Sidekick.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Xodium.Platform.Android.Resource.Layout.design_layout_tab_text = global::Sidekick.Droid.Resource.Layout.design_layout_tab_text;
+			global::Xodium.Platform.Android.Resource.Layout.design_menu_item_action_area = global::Sidekick.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Xodium.Platform.Android.Resource.Layout.design_navigation_item = global::Sidekick.Droid.Resource.Layout.design_navigation_item;
+			global::Xodium.Platform.Android.Resource.Layout.design_navigation_item_header = global::Sidekick.Droid.Resource.Layout.design_navigation_item_header;
+			global::Xodium.Platform.Android.Resource.Layout.design_navigation_item_separator = global::Sidekick.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Xodium.Platform.Android.Resource.Layout.design_navigation_item_subheader = global::Sidekick.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Xodium.Platform.Android.Resource.Layout.design_navigation_menu = global::Sidekick.Droid.Resource.Layout.design_navigation_menu;
+			global::Xodium.Platform.Android.Resource.Layout.design_navigation_menu_item = global::Sidekick.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Xodium.Platform.Android.Resource.Layout.design_text_input_password_icon = global::Sidekick.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xodium.Platform.Android.Resource.Layout.FlyoutContent = global::Sidekick.Droid.Resource.Layout.FlyoutContent;
+			global::Xodium.Platform.Android.Resource.Layout.mtrl_layout_snackbar = global::Sidekick.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::Xodium.Platform.Android.Resource.Layout.mtrl_layout_snackbar_include = global::Sidekick.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Xodium.Platform.Android.Resource.Layout.notification_action = global::Sidekick.Droid.Resource.Layout.notification_action;
+			global::Xodium.Platform.Android.Resource.Layout.notification_action_tombstone = global::Sidekick.Droid.Resource.Layout.notification_action_tombstone;
+			global::Xodium.Platform.Android.Resource.Layout.notification_media_action = global::Sidekick.Droid.Resource.Layout.notification_media_action;
+			global::Xodium.Platform.Android.Resource.Layout.notification_media_cancel_action = global::Sidekick.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_big_media = global::Sidekick.Droid.Resource.Layout.notification_template_big_media;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_big_media_custom = global::Sidekick.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_big_media_narrow = global::Sidekick.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_big_media_narrow_custom = global::Sidekick.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_custom_big = global::Sidekick.Droid.Resource.Layout.notification_template_custom_big;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_icon_group = global::Sidekick.Droid.Resource.Layout.notification_template_icon_group;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_lines_media = global::Sidekick.Droid.Resource.Layout.notification_template_lines_media;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_media = global::Sidekick.Droid.Resource.Layout.notification_template_media;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_media_custom = global::Sidekick.Droid.Resource.Layout.notification_template_media_custom;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_part_chronometer = global::Sidekick.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Xodium.Platform.Android.Resource.Layout.notification_template_part_time = global::Sidekick.Droid.Resource.Layout.notification_template_part_time;
+			global::Xodium.Platform.Android.Resource.Layout.RootLayout = global::Sidekick.Droid.Resource.Layout.RootLayout;
+			global::Xodium.Platform.Android.Resource.Layout.select_dialog_item_material = global::Sidekick.Droid.Resource.Layout.select_dialog_item_material;
+			global::Xodium.Platform.Android.Resource.Layout.select_dialog_multichoice_material = global::Sidekick.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Xodium.Platform.Android.Resource.Layout.select_dialog_singlechoice_material = global::Sidekick.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Xodium.Platform.Android.Resource.Layout.ShellContent = global::Sidekick.Droid.Resource.Layout.ShellContent;
+			global::Xodium.Platform.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::Sidekick.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xodium.Platform.Android.Resource.String.abc_action_bar_home_description = global::Sidekick.Droid.Resource.String.abc_action_bar_home_description;
+			global::Xodium.Platform.Android.Resource.String.abc_action_bar_up_description = global::Sidekick.Droid.Resource.String.abc_action_bar_up_description;
+			global::Xodium.Platform.Android.Resource.String.abc_action_menu_overflow_description = global::Sidekick.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Xodium.Platform.Android.Resource.String.abc_action_mode_done = global::Sidekick.Droid.Resource.String.abc_action_mode_done;
+			global::Xodium.Platform.Android.Resource.String.abc_activitychooserview_choose_application = global::Sidekick.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Xodium.Platform.Android.Resource.String.abc_activity_chooser_view_see_all = global::Sidekick.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Xodium.Platform.Android.Resource.String.abc_capital_off = global::Sidekick.Droid.Resource.String.abc_capital_off;
+			global::Xodium.Platform.Android.Resource.String.abc_capital_on = global::Sidekick.Droid.Resource.String.abc_capital_on;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_body_1_material = global::Sidekick.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_body_2_material = global::Sidekick.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_button_material = global::Sidekick.Droid.Resource.String.abc_font_family_button_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_caption_material = global::Sidekick.Droid.Resource.String.abc_font_family_caption_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_display_1_material = global::Sidekick.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_display_2_material = global::Sidekick.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_display_3_material = global::Sidekick.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_display_4_material = global::Sidekick.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_headline_material = global::Sidekick.Droid.Resource.String.abc_font_family_headline_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_menu_material = global::Sidekick.Droid.Resource.String.abc_font_family_menu_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_subhead_material = global::Sidekick.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Xodium.Platform.Android.Resource.String.abc_font_family_title_material = global::Sidekick.Droid.Resource.String.abc_font_family_title_material;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_alt_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_ctrl_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_delete_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_enter_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_function_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_meta_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_shift_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_space_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_menu_sym_shortcut_label = global::Sidekick.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_prepend_shortcut_label = global::Sidekick.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::Xodium.Platform.Android.Resource.String.abc_searchview_description_clear = global::Sidekick.Droid.Resource.String.abc_searchview_description_clear;
+			global::Xodium.Platform.Android.Resource.String.abc_searchview_description_query = global::Sidekick.Droid.Resource.String.abc_searchview_description_query;
+			global::Xodium.Platform.Android.Resource.String.abc_searchview_description_search = global::Sidekick.Droid.Resource.String.abc_searchview_description_search;
+			global::Xodium.Platform.Android.Resource.String.abc_searchview_description_submit = global::Sidekick.Droid.Resource.String.abc_searchview_description_submit;
+			global::Xodium.Platform.Android.Resource.String.abc_searchview_description_voice = global::Sidekick.Droid.Resource.String.abc_searchview_description_voice;
+			global::Xodium.Platform.Android.Resource.String.abc_search_hint = global::Sidekick.Droid.Resource.String.abc_search_hint;
+			global::Xodium.Platform.Android.Resource.String.abc_shareactionprovider_share_with = global::Sidekick.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Xodium.Platform.Android.Resource.String.abc_shareactionprovider_share_with_application = global::Sidekick.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Xodium.Platform.Android.Resource.String.abc_toolbar_collapse_description = global::Sidekick.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Xodium.Platform.Android.Resource.String.appbar_scrolling_view_behavior = global::Sidekick.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Xodium.Platform.Android.Resource.String.app_name = global::Sidekick.Droid.Resource.String.app_name;
+			global::Xodium.Platform.Android.Resource.String.bottom_sheet_behavior = global::Sidekick.Droid.Resource.String.bottom_sheet_behavior;
+			global::Xodium.Platform.Android.Resource.String.character_counter_content_description = global::Sidekick.Droid.Resource.String.character_counter_content_description;
+			global::Xodium.Platform.Android.Resource.String.character_counter_pattern = global::Sidekick.Droid.Resource.String.character_counter_pattern;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_enable_button = global::Sidekick.Droid.Resource.String.common_google_play_services_enable_button;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_enable_text = global::Sidekick.Droid.Resource.String.common_google_play_services_enable_text;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_enable_title = global::Sidekick.Droid.Resource.String.common_google_play_services_enable_title;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_install_button = global::Sidekick.Droid.Resource.String.common_google_play_services_install_button;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_install_text = global::Sidekick.Droid.Resource.String.common_google_play_services_install_text;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_install_title = global::Sidekick.Droid.Resource.String.common_google_play_services_install_title;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_notification_channel_name = global::Sidekick.Droid.Resource.String.common_google_play_services_notification_channel_name;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_notification_ticker = global::Sidekick.Droid.Resource.String.common_google_play_services_notification_ticker;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_unknown_issue = global::Sidekick.Droid.Resource.String.common_google_play_services_unknown_issue;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_unsupported_text = global::Sidekick.Droid.Resource.String.common_google_play_services_unsupported_text;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_update_button = global::Sidekick.Droid.Resource.String.common_google_play_services_update_button;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_update_text = global::Sidekick.Droid.Resource.String.common_google_play_services_update_text;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_update_title = global::Sidekick.Droid.Resource.String.common_google_play_services_update_title;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_updating_text = global::Sidekick.Droid.Resource.String.common_google_play_services_updating_text;
+			global::Xodium.Platform.Android.Resource.String.common_google_play_services_wear_update_text = global::Sidekick.Droid.Resource.String.common_google_play_services_wear_update_text;
+			global::Xodium.Platform.Android.Resource.String.common_open_on_phone = global::Sidekick.Droid.Resource.String.common_open_on_phone;
+			global::Xodium.Platform.Android.Resource.String.common_signin_button_text = global::Sidekick.Droid.Resource.String.common_signin_button_text;
+			global::Xodium.Platform.Android.Resource.String.common_signin_button_text_long = global::Sidekick.Droid.Resource.String.common_signin_button_text_long;
+			global::Xodium.Platform.Android.Resource.String.fab_transformation_scrim_behavior = global::Sidekick.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::Xodium.Platform.Android.Resource.String.fab_transformation_sheet_behavior = global::Sidekick.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Xodium.Platform.Android.Resource.String.hello = global::Sidekick.Droid.Resource.String.hello;
+			global::Xodium.Platform.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::Sidekick.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Xodium.Platform.Android.Resource.String.mtrl_chip_close_icon_content_description = global::Sidekick.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xodium.Platform.Android.Resource.String.password_toggle_content_description = global::Sidekick.Droid.Resource.String.password_toggle_content_description;
+			global::Xodium.Platform.Android.Resource.String.path_password_eye = global::Sidekick.Droid.Resource.String.path_password_eye;
+			global::Xodium.Platform.Android.Resource.String.path_password_eye_mask_strike_through = global::Sidekick.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Xodium.Platform.Android.Resource.String.path_password_eye_mask_visible = global::Sidekick.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Xodium.Platform.Android.Resource.String.path_password_strike_through = global::Sidekick.Droid.Resource.String.path_password_strike_through;
+			global::Xodium.Platform.Android.Resource.String.search_menu_title = global::Sidekick.Droid.Resource.String.search_menu_title;
+			global::Xodium.Platform.Android.Resource.String.status_bar_notification_info_overflow = global::Sidekick.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Xodium.Platform.Android.Resource.Style.AlertDialog_AppCompat = global::Sidekick.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.AlertDialog_AppCompat_Light = global::Sidekick.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Animation_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::Sidekick.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Xodium.Platform.Android.Resource.Style.Animation_AppCompat_Tooltip = global::Sidekick.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Xodium.Platform.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::Sidekick.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_AlertDialog_AppCompat = global::Sidekick.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Sidekick.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Xodium.Platform.Android.Resource.Style.Base_Animation_AppCompat_Tooltip = global::Sidekick.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Xodium.Platform.Android.Resource.Style.Base_CardView = global::Sidekick.Droid.Resource.Style.Base_CardView;
+			global::Xodium.Platform.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Sidekick.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Sidekick.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Button = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Large = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Small = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Sidekick.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_AppCompat = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Xodium.Platform.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::Sidekick.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_Theme_MaterialComponents = global::Sidekick.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::Sidekick.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::Sidekick.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::Sidekick.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::Sidekick.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Sidekick.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::Sidekick.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V21_Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Sidekick.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V22_Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_V23_Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_V26_Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_V26_Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::Sidekick.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Xodium.Platform.Android.Resource.Style.Base_V28_Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_V28_Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::Sidekick.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Sidekick.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Sidekick.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Xodium.Platform.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::Sidekick.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionButton = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActionMode = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Button = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Button_Small = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_EditText = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ImageButton = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ListView = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_RatingBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_SearchView = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_SeekBar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Sidekick.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_Design_TabLayout = global::Sidekick.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_MaterialComponents_Chip = global::Sidekick.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::Sidekick.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Xodium.Platform.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::Sidekick.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Xodium.Platform.Android.Resource.Style.CardView = global::Sidekick.Droid.Resource.Style.CardView;
+			global::Xodium.Platform.Android.Resource.Style.CardView_Dark = global::Sidekick.Droid.Resource.Style.CardView_Dark;
+			global::Xodium.Platform.Android.Resource.Style.CardView_Light = global::Sidekick.Droid.Resource.Style.CardView_Light;
+			global::Xodium.Platform.Android.Resource.Style.Platform_AppCompat = global::Sidekick.Droid.Resource.Style.Platform_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Platform_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Platform_MaterialComponents = global::Sidekick.Droid.Resource.Style.Platform_MaterialComponents;
+			global::Xodium.Platform.Android.Resource.Style.Platform_MaterialComponents_Dialog = global::Sidekick.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Platform_MaterialComponents_Light = global::Sidekick.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::Xodium.Platform.Android.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::Sidekick.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Sidekick.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Sidekick.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Xodium.Platform.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Platform_V21_AppCompat = global::Sidekick.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Platform_V21_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Platform_V25_AppCompat = global::Sidekick.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Platform_V25_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Platform_Widget_AppCompat_Spinner = global::Sidekick.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::Sidekick.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Xodium.Platform.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Sidekick.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Xodium.Platform.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Sidekick.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Xodium.Platform.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Sidekick.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Body1 = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Body2 = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Button = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Caption = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Display1 = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Display2 = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Display3 = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Display4 = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Headline = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Large = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Medium = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Menu = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Small = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Subhead = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Title = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Tooltip = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Sidekick.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Sidekick.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_Counter = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_Error = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_HelperText = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_Hint = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Design_Tab = global::Sidekick.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Button = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Caption = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Chip = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Overline = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_MaterialComponents_Tab = global::Sidekick.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Sidekick.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Sidekick.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xodium.Platform.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Sidekick.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_AppCompat = global::Sidekick.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Sidekick.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Sidekick.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::Sidekick.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::Sidekick.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::Sidekick.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Xodium.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Sidekick.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat = global::Sidekick.Droid.Resource.Style.Theme_AppCompat;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_CompactMenu = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DayNight = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Dialog = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Light = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Light_Dialog = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_AppCompat_NoActionBar = global::Sidekick.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_Design = global::Sidekick.Droid.Resource.Style.Theme_Design;
+			global::Xodium.Platform.Android.Resource.Style.Theme_Design_BottomSheetDialog = global::Sidekick.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_Design_Light = global::Sidekick.Droid.Resource.Style.Theme_Design_Light;
+			global::Xodium.Platform.Android.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Sidekick.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_Design_Light_NoActionBar = global::Sidekick.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_Design_NoActionBar = global::Sidekick.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Bridge = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_CompactMenu = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Dialog = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_NoActionBar = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::Sidekick.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionButton = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActionMode = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ActivityChooserView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Button = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ButtonBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Button_Borderless = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Button_Colored = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Button_Small = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_EditText = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ImageButton = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionButton = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_SearchView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ListMenuView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ListPopupWindow = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ListView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ListView_DropDown = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ListView_Menu = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_PopupMenu = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_PopupWindow = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ProgressBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_RatingBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_RatingBar_Small = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_SearchView = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_SeekBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Spinner = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Toolbar = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Sidekick.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::Sidekick.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Compat_NotificationActionText = global::Sidekick.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_AppBarLayout = global::Sidekick.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_BottomNavigationView = global::Sidekick.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_BottomSheet_Modal = global::Sidekick.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_CollapsingToolbar = global::Sidekick.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_FloatingActionButton = global::Sidekick.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_NavigationView = global::Sidekick.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Sidekick.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_Snackbar = global::Sidekick.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_TabLayout = global::Sidekick.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Design_TextInputLayout = global::Sidekick.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_Icon = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_CardView = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_ChipGroup = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Chip_Action = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_NavigationView = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Snackbar = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TabLayout = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Xodium.Platform.Android.Resource.Style.Widget_MaterialComponents_Toolbar = global::Sidekick.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Xodium.Platform.Android.Resource.Style.Widget_Support_CoordinatorLayout = global::Sidekick.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar = global::Sidekick.Droid.Resource.Styleable.ActionBar;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBarLayout = global::Sidekick.Droid.Resource.Styleable.ActionBarLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Sidekick.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_background = global::Sidekick.Droid.Resource.Styleable.ActionBar_background;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_backgroundSplit = global::Sidekick.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_backgroundStacked = global::Sidekick.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_contentInsetEnd = global::Sidekick.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::Sidekick.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_contentInsetLeft = global::Sidekick.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_contentInsetRight = global::Sidekick.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_contentInsetStart = global::Sidekick.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::Sidekick.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_customNavigationLayout = global::Sidekick.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_displayOptions = global::Sidekick.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_divider = global::Sidekick.Droid.Resource.Styleable.ActionBar_divider;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_elevation = global::Sidekick.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_height = global::Sidekick.Droid.Resource.Styleable.ActionBar_height;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_hideOnContentScroll = global::Sidekick.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_homeAsUpIndicator = global::Sidekick.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_homeLayout = global::Sidekick.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_icon = global::Sidekick.Droid.Resource.Styleable.ActionBar_icon;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::Sidekick.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_itemPadding = global::Sidekick.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_logo = global::Sidekick.Droid.Resource.Styleable.ActionBar_logo;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_navigationMode = global::Sidekick.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_popupTheme = global::Sidekick.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_progressBarPadding = global::Sidekick.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_progressBarStyle = global::Sidekick.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_subtitle = global::Sidekick.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_subtitleTextStyle = global::Sidekick.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_title = global::Sidekick.Droid.Resource.Styleable.ActionBar_title;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionBar_titleTextStyle = global::Sidekick.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMenuItemView = global::Sidekick.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMenuItemView_android_minWidth = global::Sidekick.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMenuView = global::Sidekick.Droid.Resource.Styleable.ActionMenuView;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMode = global::Sidekick.Droid.Resource.Styleable.ActionMode;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMode_background = global::Sidekick.Droid.Resource.Styleable.ActionMode_background;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMode_backgroundSplit = global::Sidekick.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMode_closeItemLayout = global::Sidekick.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMode_height = global::Sidekick.Droid.Resource.Styleable.ActionMode_height;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMode_subtitleTextStyle = global::Sidekick.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.ActionMode_titleTextStyle = global::Sidekick.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.ActivityChooserView = global::Sidekick.Droid.Resource.Styleable.ActivityChooserView;
+			global::Xodium.Platform.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::Sidekick.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Sidekick.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog = global::Sidekick.Droid.Resource.Styleable.AlertDialog;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_android_layout = global::Sidekick.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_buttonIconDimen = global::Sidekick.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Sidekick.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_listItemLayout = global::Sidekick.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_listLayout = global::Sidekick.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Sidekick.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_showTitle = global::Sidekick.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Xodium.Platform.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Sidekick.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableCompat = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableItem = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableTransition = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Xodium.Platform.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::Sidekick.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout = global::Sidekick.Droid.Resource.Styleable.AppBarLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayoutStates = global::Sidekick.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::Sidekick.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::Sidekick.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayoutStates_state_liftable = global::Sidekick.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayoutStates_state_lifted = global::Sidekick.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_android_background = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_elevation = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_expanded = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_Layout = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Xodium.Platform.Android.Resource.Styleable.AppBarLayout_liftOnScroll = global::Sidekick.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatImageView = global::Sidekick.Droid.Resource.Styleable.AppCompatImageView;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatImageView_android_src = global::Sidekick.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatImageView_srcCompat = global::Sidekick.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatImageView_tint = global::Sidekick.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatImageView_tintMode = global::Sidekick.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatSeekBar = global::Sidekick.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatSeekBar_android_thumb = global::Sidekick.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatSeekBar_tickMark = global::Sidekick.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::Sidekick.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::Sidekick.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::Sidekick.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_lineHeight = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::Sidekick.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarSize = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarTheme = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_buttonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_checkboxStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorAccent = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorError = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorPrimary = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_controlBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_dialogTheme = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_dividerVertical = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_editTextBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_editTextColor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_editTextStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_searchViewStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_seekBarStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_spinnerStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_switchStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowActionBar = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Xodium.Platform.Android.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Sidekick.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomAppBar = global::Sidekick.Droid.Resource.Styleable.BottomAppBar;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomAppBar_backgroundTint = global::Sidekick.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::Sidekick.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomAppBar_fabCradleMargin = global::Sidekick.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::Sidekick.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::Sidekick.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomAppBar_hideOnScroll = global::Sidekick.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_elevation = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_itemBackground = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_itemIconSize = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_itemIconTint = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_itemTextColor = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomNavigationView_menu = global::Sidekick.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout = global::Sidekick.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::Sidekick.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::Sidekick.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::Sidekick.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::Sidekick.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Xodium.Platform.Android.Resource.Styleable.ButtonBarLayout = global::Sidekick.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ButtonBarLayout_allowStacking = global::Sidekick.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView = global::Sidekick.Droid.Resource.Styleable.CardView;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_android_minHeight = global::Sidekick.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_android_minWidth = global::Sidekick.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_cardBackgroundColor = global::Sidekick.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_cardCornerRadius = global::Sidekick.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_cardElevation = global::Sidekick.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_cardMaxElevation = global::Sidekick.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_cardPreventCornerOverlap = global::Sidekick.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_cardUseCompatPadding = global::Sidekick.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_contentPadding = global::Sidekick.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_contentPaddingBottom = global::Sidekick.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_contentPaddingLeft = global::Sidekick.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_contentPaddingRight = global::Sidekick.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Xodium.Platform.Android.Resource.Styleable.CardView_contentPaddingTop = global::Sidekick.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip = global::Sidekick.Droid.Resource.Styleable.Chip;
+			global::Xodium.Platform.Android.Resource.Styleable.ChipGroup = global::Sidekick.Droid.Resource.Styleable.ChipGroup;
+			global::Xodium.Platform.Android.Resource.Styleable.ChipGroup_checkedChip = global::Sidekick.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::Xodium.Platform.Android.Resource.Styleable.ChipGroup_chipSpacing = global::Sidekick.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Xodium.Platform.Android.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::Sidekick.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Xodium.Platform.Android.Resource.Styleable.ChipGroup_chipSpacingVertical = global::Sidekick.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Xodium.Platform.Android.Resource.Styleable.ChipGroup_singleLine = global::Sidekick.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::Xodium.Platform.Android.Resource.Styleable.ChipGroup_singleSelection = global::Sidekick.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_android_checkable = global::Sidekick.Droid.Resource.Styleable.Chip_android_checkable;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_android_ellipsize = global::Sidekick.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_android_maxWidth = global::Sidekick.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_android_text = global::Sidekick.Droid.Resource.Styleable.Chip_android_text;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_android_textAppearance = global::Sidekick.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_checkedIcon = global::Sidekick.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_checkedIconEnabled = global::Sidekick.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_checkedIconVisible = global::Sidekick.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipBackgroundColor = global::Sidekick.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipCornerRadius = global::Sidekick.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipEndPadding = global::Sidekick.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipIcon = global::Sidekick.Droid.Resource.Styleable.Chip_chipIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipIconEnabled = global::Sidekick.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipIconSize = global::Sidekick.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipIconTint = global::Sidekick.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipIconVisible = global::Sidekick.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipMinHeight = global::Sidekick.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipStartPadding = global::Sidekick.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipStrokeColor = global::Sidekick.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_chipStrokeWidth = global::Sidekick.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_closeIcon = global::Sidekick.Droid.Resource.Styleable.Chip_closeIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_closeIconEnabled = global::Sidekick.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_closeIconEndPadding = global::Sidekick.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_closeIconSize = global::Sidekick.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_closeIconStartPadding = global::Sidekick.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_closeIconTint = global::Sidekick.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_closeIconVisible = global::Sidekick.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_hideMotionSpec = global::Sidekick.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_iconEndPadding = global::Sidekick.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_iconStartPadding = global::Sidekick.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_rippleColor = global::Sidekick.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_showMotionSpec = global::Sidekick.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_textEndPadding = global::Sidekick.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.Chip_textStartPadding = global::Sidekick.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_Layout = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_title = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Sidekick.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Xodium.Platform.Android.Resource.Styleable.ColorStateListItem = global::Sidekick.Droid.Resource.Styleable.ColorStateListItem;
+			global::Xodium.Platform.Android.Resource.Styleable.ColorStateListItem_alpha = global::Sidekick.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Xodium.Platform.Android.Resource.Styleable.ColorStateListItem_android_alpha = global::Sidekick.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Xodium.Platform.Android.Resource.Styleable.ColorStateListItem_android_color = global::Sidekick.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Xodium.Platform.Android.Resource.Styleable.CompoundButton = global::Sidekick.Droid.Resource.Styleable.CompoundButton;
+			global::Xodium.Platform.Android.Resource.Styleable.CompoundButton_android_button = global::Sidekick.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xodium.Platform.Android.Resource.Styleable.CompoundButton_buttonTint = global::Sidekick.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Xodium.Platform.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::Sidekick.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_keylines = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Xodium.Platform.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Sidekick.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.DesignTheme = global::Sidekick.Droid.Resource.Styleable.DesignTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Sidekick.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Sidekick.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_barLength = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_color = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_drawableSize = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_spinBars = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Xodium.Platform.Android.Resource.Styleable.DrawerArrowToggle_thickness = global::Sidekick.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_backgroundTint = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_borderWidth = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_elevation = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_fabCustomSize = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_fabSize = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_maxImageSize = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_rippleColor = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_showMotionSpec = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Xodium.Platform.Android.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Sidekick.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.FlowLayout = global::Sidekick.Droid.Resource.Styleable.FlowLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.FlowLayout_itemSpacing = global::Sidekick.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Xodium.Platform.Android.Resource.Styleable.FlowLayout_lineSpacing = global::Sidekick.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamily = global::Sidekick.Droid.Resource.Styleable.FontFamily;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_android_font = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_font = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamilyFont_ttcIndex = global::Sidekick.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::Sidekick.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::Sidekick.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Sidekick.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Sidekick.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::Sidekick.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xodium.Platform.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::Sidekick.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Xodium.Platform.Android.Resource.Styleable.ForegroundLinearLayout = global::Sidekick.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Sidekick.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Xodium.Platform.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Sidekick.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Sidekick.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor = global::Sidekick.Droid.Resource.Styleable.GradientColor;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColorItem = global::Sidekick.Droid.Resource.Styleable.GradientColorItem;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColorItem_android_color = global::Sidekick.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColorItem_android_offset = global::Sidekick.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_centerColor = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_centerX = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_centerY = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_endColor = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_endX = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_endY = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_gradientRadius = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_startColor = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_startX = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_startY = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_tileMode = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Xodium.Platform.Android.Resource.Styleable.GradientColor_android_type = global::Sidekick.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_android_gravity = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_android_orientation = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_divider = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_Layout = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Xodium.Platform.Android.Resource.Styleable.LinearLayoutCompat_showDividers = global::Sidekick.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Xodium.Platform.Android.Resource.Styleable.ListPopupWindow = global::Sidekick.Droid.Resource.Styleable.ListPopupWindow;
+			global::Xodium.Platform.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Sidekick.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Xodium.Platform.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Sidekick.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Xodium.Platform.Android.Resource.Styleable.LoadingImageView = global::Sidekick.Droid.Resource.Styleable.LoadingImageView;
+			global::Xodium.Platform.Android.Resource.Styleable.LoadingImageView_circleCrop = global::Sidekick.Droid.Resource.Styleable.LoadingImageView_circleCrop;
+			global::Xodium.Platform.Android.Resource.Styleable.LoadingImageView_imageAspectRatio = global::Sidekick.Droid.Resource.Styleable.LoadingImageView_imageAspectRatio;
+			global::Xodium.Platform.Android.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust = global::Sidekick.Droid.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton = global::Sidekick.Droid.Resource.Styleable.MaterialButton;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_android_insetBottom = global::Sidekick.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_android_insetLeft = global::Sidekick.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_android_insetRight = global::Sidekick.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_android_insetTop = global::Sidekick.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_backgroundTint = global::Sidekick.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_backgroundTintMode = global::Sidekick.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_cornerRadius = global::Sidekick.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_icon = global::Sidekick.Droid.Resource.Styleable.MaterialButton_icon;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_iconGravity = global::Sidekick.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_iconPadding = global::Sidekick.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_iconSize = global::Sidekick.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_iconTint = global::Sidekick.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_iconTintMode = global::Sidekick.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_rippleColor = global::Sidekick.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_strokeColor = global::Sidekick.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialButton_strokeWidth = global::Sidekick.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialCardView = global::Sidekick.Droid.Resource.Styleable.MaterialCardView;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialCardView_strokeColor = global::Sidekick.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialCardView_strokeWidth = global::Sidekick.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::Xodium.Platform.Android.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::Sidekick.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuGroup = global::Sidekick.Droid.Resource.Styleable.MenuGroup;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Sidekick.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuGroup_android_enabled = global::Sidekick.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuGroup_android_id = global::Sidekick.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuGroup_android_menuCategory = global::Sidekick.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuGroup_android_orderInCategory = global::Sidekick.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuGroup_android_visible = global::Sidekick.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem = global::Sidekick.Droid.Resource.Styleable.MenuItem;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_actionLayout = global::Sidekick.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_actionProviderClass = global::Sidekick.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_actionViewClass = global::Sidekick.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_alphabeticModifiers = global::Sidekick.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_checkable = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_checked = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_enabled = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_icon = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_id = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_menuCategory = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_numericShortcut = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_onClick = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_orderInCategory = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_title = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_titleCondensed = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_android_visible = global::Sidekick.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_contentDescription = global::Sidekick.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_iconTint = global::Sidekick.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_iconTintMode = global::Sidekick.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_numericModifiers = global::Sidekick.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_showAsAction = global::Sidekick.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuItem_tooltipText = global::Sidekick.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView = global::Sidekick.Droid.Resource.Styleable.MenuView;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_android_headerBackground = global::Sidekick.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_android_horizontalDivider = global::Sidekick.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_android_itemBackground = global::Sidekick.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::Sidekick.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_android_itemTextAppearance = global::Sidekick.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_android_verticalDivider = global::Sidekick.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Sidekick.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_preserveIconSpacing = global::Sidekick.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Xodium.Platform.Android.Resource.Styleable.MenuView_subMenuArrow = global::Sidekick.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView = global::Sidekick.Droid.Resource.Styleable.NavigationView;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_android_background = global::Sidekick.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Sidekick.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_android_maxWidth = global::Sidekick.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_elevation = global::Sidekick.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_headerLayout = global::Sidekick.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_itemBackground = global::Sidekick.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_itemHorizontalPadding = global::Sidekick.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_itemIconPadding = global::Sidekick.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_itemIconTint = global::Sidekick.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_itemTextAppearance = global::Sidekick.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_itemTextColor = global::Sidekick.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.NavigationView_menu = global::Sidekick.Droid.Resource.Styleable.NavigationView_menu;
+			global::Xodium.Platform.Android.Resource.Styleable.PopupWindow = global::Sidekick.Droid.Resource.Styleable.PopupWindow;
+			global::Xodium.Platform.Android.Resource.Styleable.PopupWindowBackgroundState = global::Sidekick.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Xodium.Platform.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Sidekick.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Xodium.Platform.Android.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::Sidekick.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.PopupWindow_android_popupBackground = global::Sidekick.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.PopupWindow_overlapAnchor = global::Sidekick.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Xodium.Platform.Android.Resource.Styleable.RecycleListView = global::Sidekick.Droid.Resource.Styleable.RecycleListView;
+			global::Xodium.Platform.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::Sidekick.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Xodium.Platform.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::Sidekick.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView = global::Sidekick.Droid.Resource.Styleable.RecyclerView;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Sidekick.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_android_orientation = global::Sidekick.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::Sidekick.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::Sidekick.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::Sidekick.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::Sidekick.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::Sidekick.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_layoutManager = global::Sidekick.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_reverseLayout = global::Sidekick.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_spanCount = global::Sidekick.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Xodium.Platform.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::Sidekick.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.ScrimInsetsFrameLayout = global::Sidekick.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Sidekick.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Xodium.Platform.Android.Resource.Styleable.ScrollingViewBehavior_Layout = global::Sidekick.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Xodium.Platform.Android.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::Sidekick.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView = global::Sidekick.Droid.Resource.Styleable.SearchView;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_android_focusable = global::Sidekick.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_android_imeOptions = global::Sidekick.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_android_inputType = global::Sidekick.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_android_maxWidth = global::Sidekick.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_closeIcon = global::Sidekick.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_commitIcon = global::Sidekick.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_defaultQueryHint = global::Sidekick.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_goIcon = global::Sidekick.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_iconifiedByDefault = global::Sidekick.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_layout = global::Sidekick.Droid.Resource.Styleable.SearchView_layout;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_queryBackground = global::Sidekick.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_queryHint = global::Sidekick.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_searchHintIcon = global::Sidekick.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_searchIcon = global::Sidekick.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_submitBackground = global::Sidekick.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_suggestionRowLayout = global::Sidekick.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.SearchView_voiceIcon = global::Sidekick.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.SignInButton = global::Sidekick.Droid.Resource.Styleable.SignInButton;
+			global::Xodium.Platform.Android.Resource.Styleable.SignInButton_buttonSize = global::Sidekick.Droid.Resource.Styleable.SignInButton_buttonSize;
+			global::Xodium.Platform.Android.Resource.Styleable.SignInButton_colorScheme = global::Sidekick.Droid.Resource.Styleable.SignInButton_colorScheme;
+			global::Xodium.Platform.Android.Resource.Styleable.SignInButton_scopeUris = global::Sidekick.Droid.Resource.Styleable.SignInButton_scopeUris;
+			global::Xodium.Platform.Android.Resource.Styleable.Snackbar = global::Sidekick.Droid.Resource.Styleable.Snackbar;
+			global::Xodium.Platform.Android.Resource.Styleable.SnackbarLayout = global::Sidekick.Droid.Resource.Styleable.SnackbarLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Sidekick.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.SnackbarLayout_elevation = global::Sidekick.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Xodium.Platform.Android.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Sidekick.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.Snackbar_snackbarButtonStyle = global::Sidekick.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.Snackbar_snackbarStyle = global::Sidekick.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.Spinner = global::Sidekick.Droid.Resource.Styleable.Spinner;
+			global::Xodium.Platform.Android.Resource.Styleable.Spinner_android_dropDownWidth = global::Sidekick.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.Spinner_android_entries = global::Sidekick.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Xodium.Platform.Android.Resource.Styleable.Spinner_android_popupBackground = global::Sidekick.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.Spinner_android_prompt = global::Sidekick.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Xodium.Platform.Android.Resource.Styleable.Spinner_popupTheme = global::Sidekick.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawable = global::Sidekick.Droid.Resource.Styleable.StateListDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawableItem = global::Sidekick.Droid.Resource.Styleable.StateListDrawableItem;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawableItem_android_drawable = global::Sidekick.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawable_android_constantSize = global::Sidekick.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawable_android_dither = global::Sidekick.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::Sidekick.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::Sidekick.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawable_android_variablePadding = global::Sidekick.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Xodium.Platform.Android.Resource.Styleable.StateListDrawable_android_visible = global::Sidekick.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat = global::Sidekick.Droid.Resource.Styleable.SwitchCompat;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_android_textOff = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_android_textOn = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_android_thumb = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_showText = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_splitTrack = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_switchMinWidth = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_switchPadding = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_switchTextAppearance = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_thumbTextPadding = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_thumbTint = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_thumbTintMode = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_track = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_trackTint = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Xodium.Platform.Android.Resource.Styleable.SwitchCompat_trackTintMode = global::Sidekick.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.TabItem = global::Sidekick.Droid.Resource.Styleable.TabItem;
+			global::Xodium.Platform.Android.Resource.Styleable.TabItem_android_icon = global::Sidekick.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Xodium.Platform.Android.Resource.Styleable.TabItem_android_layout = global::Sidekick.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Xodium.Platform.Android.Resource.Styleable.TabItem_android_text = global::Sidekick.Droid.Resource.Styleable.TabItem_android_text;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout = global::Sidekick.Droid.Resource.Styleable.TabLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabBackground = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabContentStart = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabGravity = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIconTint = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIconTintMode = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIndicator = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIndicatorColor = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIndicatorGravity = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabInlineLabel = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabMaxWidth = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabMinWidth = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabMode = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabPadding = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabPaddingBottom = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabPaddingEnd = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabPaddingStart = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabPaddingTop = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabRippleColor = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabTextAppearance = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabTextColor = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TabLayout_tabUnboundedRipple = global::Sidekick.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance = global::Sidekick.Droid.Resource.Styleable.TextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_fontFamily = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_shadowColor = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_shadowDx = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_shadowDy = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_shadowRadius = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_textColor = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_textSize = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_textStyle = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_android_typeface = global::Sidekick.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_fontFamily = global::Sidekick.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xodium.Platform.Android.Resource.Styleable.TextAppearance_textAllCaps = global::Sidekick.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout = global::Sidekick.Droid.Resource.Styleable.TextInputLayout;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_android_hint = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_android_textColorHint = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxStrokeColor = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_counterEnabled = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_counterMaxLength = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_errorEnabled = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_helperText = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_helperTextEnabled = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_hintEnabled = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_passwordToggleTint = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Xodium.Platform.Android.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::Sidekick.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.ThemeEnforcement = global::Sidekick.Droid.Resource.Styleable.ThemeEnforcement;
+			global::Xodium.Platform.Android.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::Sidekick.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::Sidekick.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::Sidekick.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar = global::Sidekick.Droid.Resource.Styleable.Toolbar;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_android_gravity = global::Sidekick.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_android_minHeight = global::Sidekick.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_buttonGravity = global::Sidekick.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_collapseContentDescription = global::Sidekick.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_collapseIcon = global::Sidekick.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_contentInsetEnd = global::Sidekick.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::Sidekick.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_contentInsetLeft = global::Sidekick.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_contentInsetRight = global::Sidekick.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_contentInsetStart = global::Sidekick.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::Sidekick.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_logo = global::Sidekick.Droid.Resource.Styleable.Toolbar_logo;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_logoDescription = global::Sidekick.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::Sidekick.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::Sidekick.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_navigationIcon = global::Sidekick.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_popupTheme = global::Sidekick.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_subtitle = global::Sidekick.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_subtitleTextAppearance = global::Sidekick.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_subtitleTextColor = global::Sidekick.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_title = global::Sidekick.Droid.Resource.Styleable.Toolbar_title;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleMargin = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleMarginBottom = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleMarginEnd = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleMargins = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleMarginStart = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleMarginTop = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleTextAppearance = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Xodium.Platform.Android.Resource.Styleable.Toolbar_titleTextColor = global::Sidekick.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Xodium.Platform.Android.Resource.Styleable.View = global::Sidekick.Droid.Resource.Styleable.View;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewBackgroundHelper = global::Sidekick.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewBackgroundHelper_android_background = global::Sidekick.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Sidekick.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Sidekick.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewStubCompat = global::Sidekick.Droid.Resource.Styleable.ViewStubCompat;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewStubCompat_android_id = global::Sidekick.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Sidekick.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Xodium.Platform.Android.Resource.Styleable.ViewStubCompat_android_layout = global::Sidekick.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Xodium.Platform.Android.Resource.Styleable.View_android_focusable = global::Sidekick.Droid.Resource.Styleable.View_android_focusable;
+			global::Xodium.Platform.Android.Resource.Styleable.View_android_theme = global::Sidekick.Droid.Resource.Styleable.View_android_theme;
+			global::Xodium.Platform.Android.Resource.Styleable.View_paddingEnd = global::Sidekick.Droid.Resource.Styleable.View_paddingEnd;
+			global::Xodium.Platform.Android.Resource.Styleable.View_paddingStart = global::Sidekick.Droid.Resource.Styleable.View_paddingStart;
+			global::Xodium.Platform.Android.Resource.Styleable.View_theme = global::Sidekick.Droid.Resource.Styleable.View_theme;
 		}
 		
 		public partial class Animation
@@ -3144,1225 +5793,1243 @@ namespace Sidekick.Droid
 			public const int buttonPanelSideLayout = 2130903123;
 			
 			// aapt resource value: 0x7F030054
-			public const int buttonStyle = 2130903124;
+			public const int buttonSize = 2130903124;
 			
 			// aapt resource value: 0x7F030055
-			public const int buttonStyleSmall = 2130903125;
+			public const int buttonStyle = 2130903125;
 			
 			// aapt resource value: 0x7F030056
-			public const int buttonTint = 2130903126;
+			public const int buttonStyleSmall = 2130903126;
 			
 			// aapt resource value: 0x7F030057
-			public const int buttonTintMode = 2130903127;
+			public const int buttonTint = 2130903127;
 			
 			// aapt resource value: 0x7F030058
-			public const int cardBackgroundColor = 2130903128;
+			public const int buttonTintMode = 2130903128;
 			
 			// aapt resource value: 0x7F030059
-			public const int cardCornerRadius = 2130903129;
+			public const int cardBackgroundColor = 2130903129;
 			
 			// aapt resource value: 0x7F03005A
-			public const int cardElevation = 2130903130;
+			public const int cardCornerRadius = 2130903130;
 			
 			// aapt resource value: 0x7F03005B
-			public const int cardMaxElevation = 2130903131;
+			public const int cardElevation = 2130903131;
 			
 			// aapt resource value: 0x7F03005C
-			public const int cardPreventCornerOverlap = 2130903132;
+			public const int cardMaxElevation = 2130903132;
 			
 			// aapt resource value: 0x7F03005D
-			public const int cardUseCompatPadding = 2130903133;
+			public const int cardPreventCornerOverlap = 2130903133;
 			
 			// aapt resource value: 0x7F03005E
-			public const int cardViewStyle = 2130903134;
+			public const int cardUseCompatPadding = 2130903134;
 			
 			// aapt resource value: 0x7F03005F
-			public const int checkboxStyle = 2130903135;
+			public const int cardViewStyle = 2130903135;
 			
 			// aapt resource value: 0x7F030060
-			public const int checkedChip = 2130903136;
+			public const int checkboxStyle = 2130903136;
 			
 			// aapt resource value: 0x7F030061
-			public const int checkedIcon = 2130903137;
+			public const int checkedChip = 2130903137;
 			
 			// aapt resource value: 0x7F030062
-			public const int checkedIconEnabled = 2130903138;
+			public const int checkedIcon = 2130903138;
 			
 			// aapt resource value: 0x7F030063
-			public const int checkedIconVisible = 2130903139;
+			public const int checkedIconEnabled = 2130903139;
 			
 			// aapt resource value: 0x7F030064
-			public const int checkedTextViewStyle = 2130903140;
+			public const int checkedIconVisible = 2130903140;
 			
 			// aapt resource value: 0x7F030065
-			public const int chipBackgroundColor = 2130903141;
+			public const int checkedTextViewStyle = 2130903141;
 			
 			// aapt resource value: 0x7F030066
-			public const int chipCornerRadius = 2130903142;
+			public const int chipBackgroundColor = 2130903142;
 			
 			// aapt resource value: 0x7F030067
-			public const int chipEndPadding = 2130903143;
+			public const int chipCornerRadius = 2130903143;
 			
 			// aapt resource value: 0x7F030068
-			public const int chipGroupStyle = 2130903144;
+			public const int chipEndPadding = 2130903144;
 			
 			// aapt resource value: 0x7F030069
-			public const int chipIcon = 2130903145;
+			public const int chipGroupStyle = 2130903145;
 			
 			// aapt resource value: 0x7F03006A
-			public const int chipIconEnabled = 2130903146;
+			public const int chipIcon = 2130903146;
 			
 			// aapt resource value: 0x7F03006B
-			public const int chipIconSize = 2130903147;
+			public const int chipIconEnabled = 2130903147;
 			
 			// aapt resource value: 0x7F03006C
-			public const int chipIconTint = 2130903148;
+			public const int chipIconSize = 2130903148;
 			
 			// aapt resource value: 0x7F03006D
-			public const int chipIconVisible = 2130903149;
+			public const int chipIconTint = 2130903149;
 			
 			// aapt resource value: 0x7F03006E
-			public const int chipMinHeight = 2130903150;
+			public const int chipIconVisible = 2130903150;
 			
 			// aapt resource value: 0x7F03006F
-			public const int chipSpacing = 2130903151;
+			public const int chipMinHeight = 2130903151;
 			
 			// aapt resource value: 0x7F030070
-			public const int chipSpacingHorizontal = 2130903152;
+			public const int chipSpacing = 2130903152;
 			
 			// aapt resource value: 0x7F030071
-			public const int chipSpacingVertical = 2130903153;
+			public const int chipSpacingHorizontal = 2130903153;
 			
 			// aapt resource value: 0x7F030072
-			public const int chipStandaloneStyle = 2130903154;
+			public const int chipSpacingVertical = 2130903154;
 			
 			// aapt resource value: 0x7F030073
-			public const int chipStartPadding = 2130903155;
+			public const int chipStandaloneStyle = 2130903155;
 			
 			// aapt resource value: 0x7F030074
-			public const int chipStrokeColor = 2130903156;
+			public const int chipStartPadding = 2130903156;
 			
 			// aapt resource value: 0x7F030075
-			public const int chipStrokeWidth = 2130903157;
+			public const int chipStrokeColor = 2130903157;
 			
 			// aapt resource value: 0x7F030076
-			public const int chipStyle = 2130903158;
+			public const int chipStrokeWidth = 2130903158;
 			
 			// aapt resource value: 0x7F030077
-			public const int closeIcon = 2130903159;
+			public const int chipStyle = 2130903159;
 			
 			// aapt resource value: 0x7F030078
-			public const int closeIconEnabled = 2130903160;
+			public const int circleCrop = 2130903160;
 			
 			// aapt resource value: 0x7F030079
-			public const int closeIconEndPadding = 2130903161;
+			public const int closeIcon = 2130903161;
 			
 			// aapt resource value: 0x7F03007A
-			public const int closeIconSize = 2130903162;
+			public const int closeIconEnabled = 2130903162;
 			
 			// aapt resource value: 0x7F03007B
-			public const int closeIconStartPadding = 2130903163;
+			public const int closeIconEndPadding = 2130903163;
 			
 			// aapt resource value: 0x7F03007C
-			public const int closeIconTint = 2130903164;
+			public const int closeIconSize = 2130903164;
 			
 			// aapt resource value: 0x7F03007D
-			public const int closeIconVisible = 2130903165;
+			public const int closeIconStartPadding = 2130903165;
 			
 			// aapt resource value: 0x7F03007E
-			public const int closeItemLayout = 2130903166;
+			public const int closeIconTint = 2130903166;
 			
 			// aapt resource value: 0x7F03007F
-			public const int collapseContentDescription = 2130903167;
-			
-			// aapt resource value: 0x7F030081
-			public const int collapsedTitleGravity = 2130903169;
-			
-			// aapt resource value: 0x7F030082
-			public const int collapsedTitleTextAppearance = 2130903170;
+			public const int closeIconVisible = 2130903167;
 			
 			// aapt resource value: 0x7F030080
-			public const int collapseIcon = 2130903168;
+			public const int closeItemLayout = 2130903168;
+			
+			// aapt resource value: 0x7F030081
+			public const int collapseContentDescription = 2130903169;
 			
 			// aapt resource value: 0x7F030083
-			public const int color = 2130903171;
+			public const int collapsedTitleGravity = 2130903171;
 			
 			// aapt resource value: 0x7F030084
-			public const int colorAccent = 2130903172;
+			public const int collapsedTitleTextAppearance = 2130903172;
+			
+			// aapt resource value: 0x7F030082
+			public const int collapseIcon = 2130903170;
 			
 			// aapt resource value: 0x7F030085
-			public const int colorBackgroundFloating = 2130903173;
+			public const int color = 2130903173;
 			
 			// aapt resource value: 0x7F030086
-			public const int colorButtonNormal = 2130903174;
+			public const int colorAccent = 2130903174;
 			
 			// aapt resource value: 0x7F030087
-			public const int colorControlActivated = 2130903175;
+			public const int colorBackgroundFloating = 2130903175;
 			
 			// aapt resource value: 0x7F030088
-			public const int colorControlHighlight = 2130903176;
+			public const int colorButtonNormal = 2130903176;
 			
 			// aapt resource value: 0x7F030089
-			public const int colorControlNormal = 2130903177;
+			public const int colorControlActivated = 2130903177;
 			
 			// aapt resource value: 0x7F03008A
-			public const int colorError = 2130903178;
+			public const int colorControlHighlight = 2130903178;
 			
 			// aapt resource value: 0x7F03008B
-			public const int colorPrimary = 2130903179;
+			public const int colorControlNormal = 2130903179;
 			
 			// aapt resource value: 0x7F03008C
-			public const int colorPrimaryDark = 2130903180;
+			public const int colorError = 2130903180;
 			
 			// aapt resource value: 0x7F03008D
-			public const int colorSecondary = 2130903181;
+			public const int colorPrimary = 2130903181;
 			
 			// aapt resource value: 0x7F03008E
-			public const int colorSwitchThumbNormal = 2130903182;
+			public const int colorPrimaryDark = 2130903182;
 			
 			// aapt resource value: 0x7F03008F
-			public const int commitIcon = 2130903183;
+			public const int colorScheme = 2130903183;
 			
 			// aapt resource value: 0x7F030090
-			public const int contentDescription = 2130903184;
+			public const int colorSecondary = 2130903184;
 			
 			// aapt resource value: 0x7F030091
-			public const int contentInsetEnd = 2130903185;
+			public const int colorSwitchThumbNormal = 2130903185;
 			
 			// aapt resource value: 0x7F030092
-			public const int contentInsetEndWithActions = 2130903186;
+			public const int commitIcon = 2130903186;
 			
 			// aapt resource value: 0x7F030093
-			public const int contentInsetLeft = 2130903187;
+			public const int contentDescription = 2130903187;
 			
 			// aapt resource value: 0x7F030094
-			public const int contentInsetRight = 2130903188;
+			public const int contentInsetEnd = 2130903188;
 			
 			// aapt resource value: 0x7F030095
-			public const int contentInsetStart = 2130903189;
+			public const int contentInsetEndWithActions = 2130903189;
 			
 			// aapt resource value: 0x7F030096
-			public const int contentInsetStartWithNavigation = 2130903190;
+			public const int contentInsetLeft = 2130903190;
 			
 			// aapt resource value: 0x7F030097
-			public const int contentPadding = 2130903191;
+			public const int contentInsetRight = 2130903191;
 			
 			// aapt resource value: 0x7F030098
-			public const int contentPaddingBottom = 2130903192;
+			public const int contentInsetStart = 2130903192;
 			
 			// aapt resource value: 0x7F030099
-			public const int contentPaddingLeft = 2130903193;
+			public const int contentInsetStartWithNavigation = 2130903193;
 			
 			// aapt resource value: 0x7F03009A
-			public const int contentPaddingRight = 2130903194;
+			public const int contentPadding = 2130903194;
 			
 			// aapt resource value: 0x7F03009B
-			public const int contentPaddingTop = 2130903195;
+			public const int contentPaddingBottom = 2130903195;
 			
 			// aapt resource value: 0x7F03009C
-			public const int contentScrim = 2130903196;
+			public const int contentPaddingLeft = 2130903196;
 			
 			// aapt resource value: 0x7F03009D
-			public const int controlBackground = 2130903197;
+			public const int contentPaddingRight = 2130903197;
 			
 			// aapt resource value: 0x7F03009E
-			public const int coordinatorLayoutStyle = 2130903198;
+			public const int contentPaddingTop = 2130903198;
 			
 			// aapt resource value: 0x7F03009F
-			public const int cornerRadius = 2130903199;
+			public const int contentScrim = 2130903199;
 			
 			// aapt resource value: 0x7F0300A0
-			public const int counterEnabled = 2130903200;
+			public const int controlBackground = 2130903200;
 			
 			// aapt resource value: 0x7F0300A1
-			public const int counterMaxLength = 2130903201;
+			public const int coordinatorLayoutStyle = 2130903201;
 			
 			// aapt resource value: 0x7F0300A2
-			public const int counterOverflowTextAppearance = 2130903202;
+			public const int cornerRadius = 2130903202;
 			
 			// aapt resource value: 0x7F0300A3
-			public const int counterTextAppearance = 2130903203;
+			public const int counterEnabled = 2130903203;
 			
 			// aapt resource value: 0x7F0300A4
-			public const int customNavigationLayout = 2130903204;
+			public const int counterMaxLength = 2130903204;
 			
 			// aapt resource value: 0x7F0300A5
-			public const int defaultQueryHint = 2130903205;
+			public const int counterOverflowTextAppearance = 2130903205;
 			
 			// aapt resource value: 0x7F0300A6
-			public const int dialogCornerRadius = 2130903206;
+			public const int counterTextAppearance = 2130903206;
 			
 			// aapt resource value: 0x7F0300A7
-			public const int dialogPreferredPadding = 2130903207;
+			public const int customNavigationLayout = 2130903207;
 			
 			// aapt resource value: 0x7F0300A8
-			public const int dialogTheme = 2130903208;
+			public const int defaultQueryHint = 2130903208;
 			
 			// aapt resource value: 0x7F0300A9
-			public const int displayOptions = 2130903209;
+			public const int dialogCornerRadius = 2130903209;
 			
 			// aapt resource value: 0x7F0300AA
-			public const int divider = 2130903210;
+			public const int dialogPreferredPadding = 2130903210;
 			
 			// aapt resource value: 0x7F0300AB
-			public const int dividerHorizontal = 2130903211;
+			public const int dialogTheme = 2130903211;
 			
 			// aapt resource value: 0x7F0300AC
-			public const int dividerPadding = 2130903212;
+			public const int displayOptions = 2130903212;
 			
 			// aapt resource value: 0x7F0300AD
-			public const int dividerVertical = 2130903213;
+			public const int divider = 2130903213;
 			
 			// aapt resource value: 0x7F0300AE
-			public const int drawableSize = 2130903214;
+			public const int dividerHorizontal = 2130903214;
 			
 			// aapt resource value: 0x7F0300AF
-			public const int drawerArrowStyle = 2130903215;
-			
-			// aapt resource value: 0x7F0300B1
-			public const int dropdownListPreferredItemHeight = 2130903217;
+			public const int dividerPadding = 2130903215;
 			
 			// aapt resource value: 0x7F0300B0
-			public const int dropDownListViewStyle = 2130903216;
+			public const int dividerVertical = 2130903216;
+			
+			// aapt resource value: 0x7F0300B1
+			public const int drawableSize = 2130903217;
 			
 			// aapt resource value: 0x7F0300B2
-			public const int editTextBackground = 2130903218;
-			
-			// aapt resource value: 0x7F0300B3
-			public const int editTextColor = 2130903219;
+			public const int drawerArrowStyle = 2130903218;
 			
 			// aapt resource value: 0x7F0300B4
-			public const int editTextStyle = 2130903220;
+			public const int dropdownListPreferredItemHeight = 2130903220;
+			
+			// aapt resource value: 0x7F0300B3
+			public const int dropDownListViewStyle = 2130903219;
 			
 			// aapt resource value: 0x7F0300B5
-			public const int elevation = 2130903221;
+			public const int editTextBackground = 2130903221;
 			
 			// aapt resource value: 0x7F0300B6
-			public const int enforceMaterialTheme = 2130903222;
+			public const int editTextColor = 2130903222;
 			
 			// aapt resource value: 0x7F0300B7
-			public const int enforceTextAppearance = 2130903223;
+			public const int editTextStyle = 2130903223;
 			
 			// aapt resource value: 0x7F0300B8
-			public const int errorEnabled = 2130903224;
+			public const int elevation = 2130903224;
 			
 			// aapt resource value: 0x7F0300B9
-			public const int errorTextAppearance = 2130903225;
+			public const int enforceMaterialTheme = 2130903225;
 			
 			// aapt resource value: 0x7F0300BA
-			public const int expandActivityOverflowButtonDrawable = 2130903226;
+			public const int enforceTextAppearance = 2130903226;
 			
 			// aapt resource value: 0x7F0300BB
-			public const int expanded = 2130903227;
+			public const int errorEnabled = 2130903227;
 			
 			// aapt resource value: 0x7F0300BC
-			public const int expandedTitleGravity = 2130903228;
+			public const int errorTextAppearance = 2130903228;
 			
 			// aapt resource value: 0x7F0300BD
-			public const int expandedTitleMargin = 2130903229;
+			public const int expandActivityOverflowButtonDrawable = 2130903229;
 			
 			// aapt resource value: 0x7F0300BE
-			public const int expandedTitleMarginBottom = 2130903230;
+			public const int expanded = 2130903230;
 			
 			// aapt resource value: 0x7F0300BF
-			public const int expandedTitleMarginEnd = 2130903231;
+			public const int expandedTitleGravity = 2130903231;
 			
 			// aapt resource value: 0x7F0300C0
-			public const int expandedTitleMarginStart = 2130903232;
+			public const int expandedTitleMargin = 2130903232;
 			
 			// aapt resource value: 0x7F0300C1
-			public const int expandedTitleMarginTop = 2130903233;
+			public const int expandedTitleMarginBottom = 2130903233;
 			
 			// aapt resource value: 0x7F0300C2
-			public const int expandedTitleTextAppearance = 2130903234;
+			public const int expandedTitleMarginEnd = 2130903234;
 			
 			// aapt resource value: 0x7F0300C3
-			public const int externalRouteEnabledDrawable = 2130903235;
+			public const int expandedTitleMarginStart = 2130903235;
 			
 			// aapt resource value: 0x7F0300C4
-			public const int fabAlignmentMode = 2130903236;
+			public const int expandedTitleMarginTop = 2130903236;
 			
 			// aapt resource value: 0x7F0300C5
-			public const int fabCradleMargin = 2130903237;
+			public const int expandedTitleTextAppearance = 2130903237;
 			
 			// aapt resource value: 0x7F0300C6
-			public const int fabCradleRoundedCornerRadius = 2130903238;
+			public const int externalRouteEnabledDrawable = 2130903238;
 			
 			// aapt resource value: 0x7F0300C7
-			public const int fabCradleVerticalOffset = 2130903239;
+			public const int fabAlignmentMode = 2130903239;
 			
 			// aapt resource value: 0x7F0300C8
-			public const int fabCustomSize = 2130903240;
+			public const int fabCradleMargin = 2130903240;
 			
 			// aapt resource value: 0x7F0300C9
-			public const int fabSize = 2130903241;
+			public const int fabCradleRoundedCornerRadius = 2130903241;
 			
 			// aapt resource value: 0x7F0300CA
-			public const int fastScrollEnabled = 2130903242;
+			public const int fabCradleVerticalOffset = 2130903242;
 			
 			// aapt resource value: 0x7F0300CB
-			public const int fastScrollHorizontalThumbDrawable = 2130903243;
+			public const int fabCustomSize = 2130903243;
 			
 			// aapt resource value: 0x7F0300CC
-			public const int fastScrollHorizontalTrackDrawable = 2130903244;
+			public const int fabSize = 2130903244;
 			
 			// aapt resource value: 0x7F0300CD
-			public const int fastScrollVerticalThumbDrawable = 2130903245;
+			public const int fastScrollEnabled = 2130903245;
 			
 			// aapt resource value: 0x7F0300CE
-			public const int fastScrollVerticalTrackDrawable = 2130903246;
+			public const int fastScrollHorizontalThumbDrawable = 2130903246;
 			
 			// aapt resource value: 0x7F0300CF
-			public const int firstBaselineToTopHeight = 2130903247;
+			public const int fastScrollHorizontalTrackDrawable = 2130903247;
 			
 			// aapt resource value: 0x7F0300D0
-			public const int floatingActionButtonStyle = 2130903248;
+			public const int fastScrollVerticalThumbDrawable = 2130903248;
 			
 			// aapt resource value: 0x7F0300D1
-			public const int font = 2130903249;
+			public const int fastScrollVerticalTrackDrawable = 2130903249;
 			
 			// aapt resource value: 0x7F0300D2
-			public const int fontFamily = 2130903250;
+			public const int firstBaselineToTopHeight = 2130903250;
 			
 			// aapt resource value: 0x7F0300D3
-			public const int fontProviderAuthority = 2130903251;
+			public const int floatingActionButtonStyle = 2130903251;
 			
 			// aapt resource value: 0x7F0300D4
-			public const int fontProviderCerts = 2130903252;
+			public const int font = 2130903252;
 			
 			// aapt resource value: 0x7F0300D5
-			public const int fontProviderFetchStrategy = 2130903253;
+			public const int fontFamily = 2130903253;
 			
 			// aapt resource value: 0x7F0300D6
-			public const int fontProviderFetchTimeout = 2130903254;
+			public const int fontProviderAuthority = 2130903254;
 			
 			// aapt resource value: 0x7F0300D7
-			public const int fontProviderPackage = 2130903255;
+			public const int fontProviderCerts = 2130903255;
 			
 			// aapt resource value: 0x7F0300D8
-			public const int fontProviderQuery = 2130903256;
+			public const int fontProviderFetchStrategy = 2130903256;
 			
 			// aapt resource value: 0x7F0300D9
-			public const int fontStyle = 2130903257;
+			public const int fontProviderFetchTimeout = 2130903257;
 			
 			// aapt resource value: 0x7F0300DA
-			public const int fontVariationSettings = 2130903258;
+			public const int fontProviderPackage = 2130903258;
 			
 			// aapt resource value: 0x7F0300DB
-			public const int fontWeight = 2130903259;
+			public const int fontProviderQuery = 2130903259;
 			
 			// aapt resource value: 0x7F0300DC
-			public const int foregroundInsidePadding = 2130903260;
+			public const int fontStyle = 2130903260;
 			
 			// aapt resource value: 0x7F0300DD
-			public const int gapBetweenBars = 2130903261;
+			public const int fontVariationSettings = 2130903261;
 			
 			// aapt resource value: 0x7F0300DE
-			public const int goIcon = 2130903262;
+			public const int fontWeight = 2130903262;
 			
 			// aapt resource value: 0x7F0300DF
-			public const int headerLayout = 2130903263;
+			public const int foregroundInsidePadding = 2130903263;
 			
 			// aapt resource value: 0x7F0300E0
-			public const int height = 2130903264;
+			public const int gapBetweenBars = 2130903264;
 			
 			// aapt resource value: 0x7F0300E1
-			public const int helperText = 2130903265;
+			public const int goIcon = 2130903265;
 			
 			// aapt resource value: 0x7F0300E2
-			public const int helperTextEnabled = 2130903266;
+			public const int headerLayout = 2130903266;
 			
 			// aapt resource value: 0x7F0300E3
-			public const int helperTextTextAppearance = 2130903267;
+			public const int height = 2130903267;
 			
 			// aapt resource value: 0x7F0300E4
-			public const int hideMotionSpec = 2130903268;
+			public const int helperText = 2130903268;
 			
 			// aapt resource value: 0x7F0300E5
-			public const int hideOnContentScroll = 2130903269;
+			public const int helperTextEnabled = 2130903269;
 			
 			// aapt resource value: 0x7F0300E6
-			public const int hideOnScroll = 2130903270;
+			public const int helperTextTextAppearance = 2130903270;
 			
 			// aapt resource value: 0x7F0300E7
-			public const int hintAnimationEnabled = 2130903271;
+			public const int hideMotionSpec = 2130903271;
 			
 			// aapt resource value: 0x7F0300E8
-			public const int hintEnabled = 2130903272;
+			public const int hideOnContentScroll = 2130903272;
 			
 			// aapt resource value: 0x7F0300E9
-			public const int hintTextAppearance = 2130903273;
+			public const int hideOnScroll = 2130903273;
 			
 			// aapt resource value: 0x7F0300EA
-			public const int homeAsUpIndicator = 2130903274;
+			public const int hintAnimationEnabled = 2130903274;
 			
 			// aapt resource value: 0x7F0300EB
-			public const int homeLayout = 2130903275;
+			public const int hintEnabled = 2130903275;
 			
 			// aapt resource value: 0x7F0300EC
-			public const int hoveredFocusedTranslationZ = 2130903276;
+			public const int hintTextAppearance = 2130903276;
 			
 			// aapt resource value: 0x7F0300ED
-			public const int icon = 2130903277;
+			public const int homeAsUpIndicator = 2130903277;
 			
 			// aapt resource value: 0x7F0300EE
-			public const int iconEndPadding = 2130903278;
+			public const int homeLayout = 2130903278;
 			
 			// aapt resource value: 0x7F0300EF
-			public const int iconGravity = 2130903279;
-			
-			// aapt resource value: 0x7F0300F5
-			public const int iconifiedByDefault = 2130903285;
+			public const int hoveredFocusedTranslationZ = 2130903279;
 			
 			// aapt resource value: 0x7F0300F0
-			public const int iconPadding = 2130903280;
+			public const int icon = 2130903280;
 			
 			// aapt resource value: 0x7F0300F1
-			public const int iconSize = 2130903281;
+			public const int iconEndPadding = 2130903281;
 			
 			// aapt resource value: 0x7F0300F2
-			public const int iconStartPadding = 2130903282;
-			
-			// aapt resource value: 0x7F0300F3
-			public const int iconTint = 2130903283;
-			
-			// aapt resource value: 0x7F0300F4
-			public const int iconTintMode = 2130903284;
-			
-			// aapt resource value: 0x7F0300F6
-			public const int imageButtonStyle = 2130903286;
-			
-			// aapt resource value: 0x7F0300F7
-			public const int indeterminateProgressStyle = 2130903287;
+			public const int iconGravity = 2130903282;
 			
 			// aapt resource value: 0x7F0300F8
-			public const int initialActivityCount = 2130903288;
+			public const int iconifiedByDefault = 2130903288;
+			
+			// aapt resource value: 0x7F0300F3
+			public const int iconPadding = 2130903283;
+			
+			// aapt resource value: 0x7F0300F4
+			public const int iconSize = 2130903284;
+			
+			// aapt resource value: 0x7F0300F5
+			public const int iconStartPadding = 2130903285;
+			
+			// aapt resource value: 0x7F0300F6
+			public const int iconTint = 2130903286;
+			
+			// aapt resource value: 0x7F0300F7
+			public const int iconTintMode = 2130903287;
 			
 			// aapt resource value: 0x7F0300F9
-			public const int insetForeground = 2130903289;
+			public const int imageAspectRatio = 2130903289;
 			
 			// aapt resource value: 0x7F0300FA
-			public const int isLightTheme = 2130903290;
+			public const int imageAspectRatioAdjust = 2130903290;
 			
 			// aapt resource value: 0x7F0300FB
-			public const int itemBackground = 2130903291;
+			public const int imageButtonStyle = 2130903291;
 			
 			// aapt resource value: 0x7F0300FC
-			public const int itemHorizontalPadding = 2130903292;
+			public const int indeterminateProgressStyle = 2130903292;
 			
 			// aapt resource value: 0x7F0300FD
-			public const int itemHorizontalTranslationEnabled = 2130903293;
+			public const int initialActivityCount = 2130903293;
 			
 			// aapt resource value: 0x7F0300FE
-			public const int itemIconPadding = 2130903294;
+			public const int insetForeground = 2130903294;
 			
 			// aapt resource value: 0x7F0300FF
-			public const int itemIconSize = 2130903295;
+			public const int isLightTheme = 2130903295;
 			
 			// aapt resource value: 0x7F030100
-			public const int itemIconTint = 2130903296;
+			public const int itemBackground = 2130903296;
 			
 			// aapt resource value: 0x7F030101
-			public const int itemPadding = 2130903297;
+			public const int itemHorizontalPadding = 2130903297;
 			
 			// aapt resource value: 0x7F030102
-			public const int itemSpacing = 2130903298;
+			public const int itemHorizontalTranslationEnabled = 2130903298;
 			
 			// aapt resource value: 0x7F030103
-			public const int itemTextAppearance = 2130903299;
+			public const int itemIconPadding = 2130903299;
 			
 			// aapt resource value: 0x7F030104
-			public const int itemTextAppearanceActive = 2130903300;
+			public const int itemIconSize = 2130903300;
 			
 			// aapt resource value: 0x7F030105
-			public const int itemTextAppearanceInactive = 2130903301;
+			public const int itemIconTint = 2130903301;
 			
 			// aapt resource value: 0x7F030106
-			public const int itemTextColor = 2130903302;
+			public const int itemPadding = 2130903302;
 			
 			// aapt resource value: 0x7F030107
-			public const int keylines = 2130903303;
+			public const int itemSpacing = 2130903303;
 			
 			// aapt resource value: 0x7F030108
-			public const int labelVisibilityMode = 2130903304;
+			public const int itemTextAppearance = 2130903304;
 			
 			// aapt resource value: 0x7F030109
-			public const int lastBaselineToBottomHeight = 2130903305;
+			public const int itemTextAppearanceActive = 2130903305;
 			
 			// aapt resource value: 0x7F03010A
-			public const int layout = 2130903306;
+			public const int itemTextAppearanceInactive = 2130903306;
 			
 			// aapt resource value: 0x7F03010B
-			public const int layoutManager = 2130903307;
+			public const int itemTextColor = 2130903307;
 			
 			// aapt resource value: 0x7F03010C
-			public const int layout_anchor = 2130903308;
+			public const int keylines = 2130903308;
 			
 			// aapt resource value: 0x7F03010D
-			public const int layout_anchorGravity = 2130903309;
+			public const int labelVisibilityMode = 2130903309;
 			
 			// aapt resource value: 0x7F03010E
-			public const int layout_behavior = 2130903310;
+			public const int lastBaselineToBottomHeight = 2130903310;
 			
 			// aapt resource value: 0x7F03010F
-			public const int layout_collapseMode = 2130903311;
+			public const int layout = 2130903311;
 			
 			// aapt resource value: 0x7F030110
-			public const int layout_collapseParallaxMultiplier = 2130903312;
+			public const int layoutManager = 2130903312;
 			
 			// aapt resource value: 0x7F030111
-			public const int layout_dodgeInsetEdges = 2130903313;
+			public const int layout_anchor = 2130903313;
 			
 			// aapt resource value: 0x7F030112
-			public const int layout_insetEdge = 2130903314;
+			public const int layout_anchorGravity = 2130903314;
 			
 			// aapt resource value: 0x7F030113
-			public const int layout_keyline = 2130903315;
+			public const int layout_behavior = 2130903315;
 			
 			// aapt resource value: 0x7F030114
-			public const int layout_scrollFlags = 2130903316;
+			public const int layout_collapseMode = 2130903316;
 			
 			// aapt resource value: 0x7F030115
-			public const int layout_scrollInterpolator = 2130903317;
+			public const int layout_collapseParallaxMultiplier = 2130903317;
 			
 			// aapt resource value: 0x7F030116
-			public const int liftOnScroll = 2130903318;
+			public const int layout_dodgeInsetEdges = 2130903318;
 			
 			// aapt resource value: 0x7F030117
-			public const int lineHeight = 2130903319;
+			public const int layout_insetEdge = 2130903319;
 			
 			// aapt resource value: 0x7F030118
-			public const int lineSpacing = 2130903320;
+			public const int layout_keyline = 2130903320;
 			
 			// aapt resource value: 0x7F030119
-			public const int listChoiceBackgroundIndicator = 2130903321;
+			public const int layout_scrollFlags = 2130903321;
 			
 			// aapt resource value: 0x7F03011A
-			public const int listDividerAlertDialog = 2130903322;
+			public const int layout_scrollInterpolator = 2130903322;
 			
 			// aapt resource value: 0x7F03011B
-			public const int listItemLayout = 2130903323;
+			public const int liftOnScroll = 2130903323;
 			
 			// aapt resource value: 0x7F03011C
-			public const int listLayout = 2130903324;
+			public const int lineHeight = 2130903324;
 			
 			// aapt resource value: 0x7F03011D
-			public const int listMenuViewStyle = 2130903325;
+			public const int lineSpacing = 2130903325;
 			
 			// aapt resource value: 0x7F03011E
-			public const int listPopupWindowStyle = 2130903326;
+			public const int listChoiceBackgroundIndicator = 2130903326;
 			
 			// aapt resource value: 0x7F03011F
-			public const int listPreferredItemHeight = 2130903327;
+			public const int listDividerAlertDialog = 2130903327;
 			
 			// aapt resource value: 0x7F030120
-			public const int listPreferredItemHeightLarge = 2130903328;
+			public const int listItemLayout = 2130903328;
 			
 			// aapt resource value: 0x7F030121
-			public const int listPreferredItemHeightSmall = 2130903329;
+			public const int listLayout = 2130903329;
 			
 			// aapt resource value: 0x7F030122
-			public const int listPreferredItemPaddingLeft = 2130903330;
+			public const int listMenuViewStyle = 2130903330;
 			
 			// aapt resource value: 0x7F030123
-			public const int listPreferredItemPaddingRight = 2130903331;
+			public const int listPopupWindowStyle = 2130903331;
 			
 			// aapt resource value: 0x7F030124
-			public const int logo = 2130903332;
+			public const int listPreferredItemHeight = 2130903332;
 			
 			// aapt resource value: 0x7F030125
-			public const int logoDescription = 2130903333;
+			public const int listPreferredItemHeightLarge = 2130903333;
 			
 			// aapt resource value: 0x7F030126
-			public const int materialButtonStyle = 2130903334;
+			public const int listPreferredItemHeightSmall = 2130903334;
 			
 			// aapt resource value: 0x7F030127
-			public const int materialCardViewStyle = 2130903335;
+			public const int listPreferredItemPaddingLeft = 2130903335;
 			
 			// aapt resource value: 0x7F030128
-			public const int maxActionInlineWidth = 2130903336;
+			public const int listPreferredItemPaddingRight = 2130903336;
 			
 			// aapt resource value: 0x7F030129
-			public const int maxButtonHeight = 2130903337;
+			public const int logo = 2130903337;
 			
 			// aapt resource value: 0x7F03012A
-			public const int maxImageSize = 2130903338;
+			public const int logoDescription = 2130903338;
 			
 			// aapt resource value: 0x7F03012B
-			public const int measureWithLargestChild = 2130903339;
+			public const int materialButtonStyle = 2130903339;
 			
 			// aapt resource value: 0x7F03012C
-			public const int mediaRouteAudioTrackDrawable = 2130903340;
+			public const int materialCardViewStyle = 2130903340;
 			
 			// aapt resource value: 0x7F03012D
-			public const int mediaRouteButtonStyle = 2130903341;
+			public const int maxActionInlineWidth = 2130903341;
 			
 			// aapt resource value: 0x7F03012E
-			public const int mediaRouteButtonTint = 2130903342;
+			public const int maxButtonHeight = 2130903342;
 			
 			// aapt resource value: 0x7F03012F
-			public const int mediaRouteCloseDrawable = 2130903343;
+			public const int maxImageSize = 2130903343;
 			
 			// aapt resource value: 0x7F030130
-			public const int mediaRouteControlPanelThemeOverlay = 2130903344;
+			public const int measureWithLargestChild = 2130903344;
 			
 			// aapt resource value: 0x7F030131
-			public const int mediaRouteDefaultIconDrawable = 2130903345;
+			public const int mediaRouteAudioTrackDrawable = 2130903345;
 			
 			// aapt resource value: 0x7F030132
-			public const int mediaRoutePauseDrawable = 2130903346;
+			public const int mediaRouteButtonStyle = 2130903346;
 			
 			// aapt resource value: 0x7F030133
-			public const int mediaRoutePlayDrawable = 2130903347;
+			public const int mediaRouteButtonTint = 2130903347;
 			
 			// aapt resource value: 0x7F030134
-			public const int mediaRouteSpeakerGroupIconDrawable = 2130903348;
+			public const int mediaRouteCloseDrawable = 2130903348;
 			
 			// aapt resource value: 0x7F030135
-			public const int mediaRouteSpeakerIconDrawable = 2130903349;
+			public const int mediaRouteControlPanelThemeOverlay = 2130903349;
 			
 			// aapt resource value: 0x7F030136
-			public const int mediaRouteStopDrawable = 2130903350;
+			public const int mediaRouteDefaultIconDrawable = 2130903350;
 			
 			// aapt resource value: 0x7F030137
-			public const int mediaRouteTheme = 2130903351;
+			public const int mediaRoutePauseDrawable = 2130903351;
 			
 			// aapt resource value: 0x7F030138
-			public const int mediaRouteTvIconDrawable = 2130903352;
+			public const int mediaRoutePlayDrawable = 2130903352;
 			
 			// aapt resource value: 0x7F030139
-			public const int menu = 2130903353;
+			public const int mediaRouteSpeakerGroupIconDrawable = 2130903353;
 			
 			// aapt resource value: 0x7F03013A
-			public const int multiChoiceItemLayout = 2130903354;
+			public const int mediaRouteSpeakerIconDrawable = 2130903354;
 			
 			// aapt resource value: 0x7F03013B
-			public const int navigationContentDescription = 2130903355;
+			public const int mediaRouteStopDrawable = 2130903355;
 			
 			// aapt resource value: 0x7F03013C
-			public const int navigationIcon = 2130903356;
+			public const int mediaRouteTheme = 2130903356;
 			
 			// aapt resource value: 0x7F03013D
-			public const int navigationMode = 2130903357;
+			public const int mediaRouteTvIconDrawable = 2130903357;
 			
 			// aapt resource value: 0x7F03013E
-			public const int navigationViewStyle = 2130903358;
+			public const int menu = 2130903358;
 			
 			// aapt resource value: 0x7F03013F
-			public const int numericModifiers = 2130903359;
+			public const int multiChoiceItemLayout = 2130903359;
 			
 			// aapt resource value: 0x7F030140
-			public const int overlapAnchor = 2130903360;
+			public const int navigationContentDescription = 2130903360;
 			
 			// aapt resource value: 0x7F030141
-			public const int paddingBottomNoButtons = 2130903361;
+			public const int navigationIcon = 2130903361;
 			
 			// aapt resource value: 0x7F030142
-			public const int paddingEnd = 2130903362;
+			public const int navigationMode = 2130903362;
 			
 			// aapt resource value: 0x7F030143
-			public const int paddingStart = 2130903363;
+			public const int navigationViewStyle = 2130903363;
 			
 			// aapt resource value: 0x7F030144
-			public const int paddingTopNoTitle = 2130903364;
+			public const int numericModifiers = 2130903364;
 			
 			// aapt resource value: 0x7F030145
-			public const int panelBackground = 2130903365;
+			public const int overlapAnchor = 2130903365;
 			
 			// aapt resource value: 0x7F030146
-			public const int panelMenuListTheme = 2130903366;
+			public const int paddingBottomNoButtons = 2130903366;
 			
 			// aapt resource value: 0x7F030147
-			public const int panelMenuListWidth = 2130903367;
+			public const int paddingEnd = 2130903367;
 			
 			// aapt resource value: 0x7F030148
-			public const int passwordToggleContentDescription = 2130903368;
+			public const int paddingStart = 2130903368;
 			
 			// aapt resource value: 0x7F030149
-			public const int passwordToggleDrawable = 2130903369;
+			public const int paddingTopNoTitle = 2130903369;
 			
 			// aapt resource value: 0x7F03014A
-			public const int passwordToggleEnabled = 2130903370;
+			public const int panelBackground = 2130903370;
 			
 			// aapt resource value: 0x7F03014B
-			public const int passwordToggleTint = 2130903371;
+			public const int panelMenuListTheme = 2130903371;
 			
 			// aapt resource value: 0x7F03014C
-			public const int passwordToggleTintMode = 2130903372;
+			public const int panelMenuListWidth = 2130903372;
 			
 			// aapt resource value: 0x7F03014D
-			public const int popupMenuStyle = 2130903373;
+			public const int passwordToggleContentDescription = 2130903373;
 			
 			// aapt resource value: 0x7F03014E
-			public const int popupTheme = 2130903374;
+			public const int passwordToggleDrawable = 2130903374;
 			
 			// aapt resource value: 0x7F03014F
-			public const int popupWindowStyle = 2130903375;
+			public const int passwordToggleEnabled = 2130903375;
 			
 			// aapt resource value: 0x7F030150
-			public const int preserveIconSpacing = 2130903376;
+			public const int passwordToggleTint = 2130903376;
 			
 			// aapt resource value: 0x7F030151
-			public const int pressedTranslationZ = 2130903377;
+			public const int passwordToggleTintMode = 2130903377;
 			
 			// aapt resource value: 0x7F030152
-			public const int progressBarPadding = 2130903378;
+			public const int popupMenuStyle = 2130903378;
 			
 			// aapt resource value: 0x7F030153
-			public const int progressBarStyle = 2130903379;
+			public const int popupTheme = 2130903379;
 			
 			// aapt resource value: 0x7F030154
-			public const int queryBackground = 2130903380;
+			public const int popupWindowStyle = 2130903380;
 			
 			// aapt resource value: 0x7F030155
-			public const int queryHint = 2130903381;
+			public const int preserveIconSpacing = 2130903381;
 			
 			// aapt resource value: 0x7F030156
-			public const int radioButtonStyle = 2130903382;
+			public const int pressedTranslationZ = 2130903382;
 			
 			// aapt resource value: 0x7F030157
-			public const int ratingBarStyle = 2130903383;
+			public const int progressBarPadding = 2130903383;
 			
 			// aapt resource value: 0x7F030158
-			public const int ratingBarStyleIndicator = 2130903384;
+			public const int progressBarStyle = 2130903384;
 			
 			// aapt resource value: 0x7F030159
-			public const int ratingBarStyleSmall = 2130903385;
+			public const int queryBackground = 2130903385;
 			
 			// aapt resource value: 0x7F03015A
-			public const int reverseLayout = 2130903386;
+			public const int queryHint = 2130903386;
 			
 			// aapt resource value: 0x7F03015B
-			public const int rippleColor = 2130903387;
+			public const int radioButtonStyle = 2130903387;
 			
 			// aapt resource value: 0x7F03015C
-			public const int scrimAnimationDuration = 2130903388;
+			public const int ratingBarStyle = 2130903388;
 			
 			// aapt resource value: 0x7F03015D
-			public const int scrimBackground = 2130903389;
+			public const int ratingBarStyleIndicator = 2130903389;
 			
 			// aapt resource value: 0x7F03015E
-			public const int scrimVisibleHeightTrigger = 2130903390;
+			public const int ratingBarStyleSmall = 2130903390;
 			
 			// aapt resource value: 0x7F03015F
-			public const int searchHintIcon = 2130903391;
+			public const int reverseLayout = 2130903391;
 			
 			// aapt resource value: 0x7F030160
-			public const int searchIcon = 2130903392;
+			public const int rippleColor = 2130903392;
 			
 			// aapt resource value: 0x7F030161
-			public const int searchViewStyle = 2130903393;
+			public const int scopeUris = 2130903393;
 			
 			// aapt resource value: 0x7F030162
-			public const int seekBarStyle = 2130903394;
+			public const int scrimAnimationDuration = 2130903394;
 			
 			// aapt resource value: 0x7F030163
-			public const int selectableItemBackground = 2130903395;
+			public const int scrimBackground = 2130903395;
 			
 			// aapt resource value: 0x7F030164
-			public const int selectableItemBackgroundBorderless = 2130903396;
+			public const int scrimVisibleHeightTrigger = 2130903396;
 			
 			// aapt resource value: 0x7F030165
-			public const int showAsAction = 2130903397;
+			public const int searchHintIcon = 2130903397;
 			
 			// aapt resource value: 0x7F030166
-			public const int showDividers = 2130903398;
+			public const int searchIcon = 2130903398;
 			
 			// aapt resource value: 0x7F030167
-			public const int showMotionSpec = 2130903399;
+			public const int searchViewStyle = 2130903399;
 			
 			// aapt resource value: 0x7F030168
-			public const int showText = 2130903400;
+			public const int seekBarStyle = 2130903400;
 			
 			// aapt resource value: 0x7F030169
-			public const int showTitle = 2130903401;
+			public const int selectableItemBackground = 2130903401;
 			
 			// aapt resource value: 0x7F03016A
-			public const int singleChoiceItemLayout = 2130903402;
+			public const int selectableItemBackgroundBorderless = 2130903402;
 			
 			// aapt resource value: 0x7F03016B
-			public const int singleLine = 2130903403;
+			public const int showAsAction = 2130903403;
 			
 			// aapt resource value: 0x7F03016C
-			public const int singleSelection = 2130903404;
+			public const int showDividers = 2130903404;
 			
 			// aapt resource value: 0x7F03016D
-			public const int snackbarButtonStyle = 2130903405;
+			public const int showMotionSpec = 2130903405;
 			
 			// aapt resource value: 0x7F03016E
-			public const int snackbarStyle = 2130903406;
+			public const int showText = 2130903406;
 			
 			// aapt resource value: 0x7F03016F
-			public const int spanCount = 2130903407;
+			public const int showTitle = 2130903407;
 			
 			// aapt resource value: 0x7F030170
-			public const int spinBars = 2130903408;
+			public const int singleChoiceItemLayout = 2130903408;
 			
 			// aapt resource value: 0x7F030171
-			public const int spinnerDropDownItemStyle = 2130903409;
+			public const int singleLine = 2130903409;
 			
 			// aapt resource value: 0x7F030172
-			public const int spinnerStyle = 2130903410;
+			public const int singleSelection = 2130903410;
 			
 			// aapt resource value: 0x7F030173
-			public const int splitTrack = 2130903411;
+			public const int snackbarButtonStyle = 2130903411;
 			
 			// aapt resource value: 0x7F030174
-			public const int srcCompat = 2130903412;
+			public const int snackbarStyle = 2130903412;
 			
 			// aapt resource value: 0x7F030175
-			public const int stackFromEnd = 2130903413;
+			public const int spanCount = 2130903413;
 			
 			// aapt resource value: 0x7F030176
-			public const int state_above_anchor = 2130903414;
+			public const int spinBars = 2130903414;
 			
 			// aapt resource value: 0x7F030177
-			public const int state_collapsed = 2130903415;
+			public const int spinnerDropDownItemStyle = 2130903415;
 			
 			// aapt resource value: 0x7F030178
-			public const int state_collapsible = 2130903416;
+			public const int spinnerStyle = 2130903416;
 			
 			// aapt resource value: 0x7F030179
-			public const int state_liftable = 2130903417;
+			public const int splitTrack = 2130903417;
 			
 			// aapt resource value: 0x7F03017A
-			public const int state_lifted = 2130903418;
+			public const int srcCompat = 2130903418;
 			
 			// aapt resource value: 0x7F03017B
-			public const int statusBarBackground = 2130903419;
+			public const int stackFromEnd = 2130903419;
 			
 			// aapt resource value: 0x7F03017C
-			public const int statusBarScrim = 2130903420;
+			public const int state_above_anchor = 2130903420;
 			
 			// aapt resource value: 0x7F03017D
-			public const int strokeColor = 2130903421;
+			public const int state_collapsed = 2130903421;
 			
 			// aapt resource value: 0x7F03017E
-			public const int strokeWidth = 2130903422;
+			public const int state_collapsible = 2130903422;
 			
 			// aapt resource value: 0x7F03017F
-			public const int subMenuArrow = 2130903423;
+			public const int state_liftable = 2130903423;
 			
 			// aapt resource value: 0x7F030180
-			public const int submitBackground = 2130903424;
+			public const int state_lifted = 2130903424;
 			
 			// aapt resource value: 0x7F030181
-			public const int subtitle = 2130903425;
+			public const int statusBarBackground = 2130903425;
 			
 			// aapt resource value: 0x7F030182
-			public const int subtitleTextAppearance = 2130903426;
+			public const int statusBarScrim = 2130903426;
 			
 			// aapt resource value: 0x7F030183
-			public const int subtitleTextColor = 2130903427;
+			public const int strokeColor = 2130903427;
 			
 			// aapt resource value: 0x7F030184
-			public const int subtitleTextStyle = 2130903428;
+			public const int strokeWidth = 2130903428;
 			
 			// aapt resource value: 0x7F030185
-			public const int suggestionRowLayout = 2130903429;
+			public const int subMenuArrow = 2130903429;
 			
 			// aapt resource value: 0x7F030186
-			public const int switchMinWidth = 2130903430;
+			public const int submitBackground = 2130903430;
 			
 			// aapt resource value: 0x7F030187
-			public const int switchPadding = 2130903431;
+			public const int subtitle = 2130903431;
 			
 			// aapt resource value: 0x7F030188
-			public const int switchStyle = 2130903432;
+			public const int subtitleTextAppearance = 2130903432;
 			
 			// aapt resource value: 0x7F030189
-			public const int switchTextAppearance = 2130903433;
+			public const int subtitleTextColor = 2130903433;
 			
 			// aapt resource value: 0x7F03018A
-			public const int tabBackground = 2130903434;
+			public const int subtitleTextStyle = 2130903434;
 			
 			// aapt resource value: 0x7F03018B
-			public const int tabContentStart = 2130903435;
+			public const int suggestionRowLayout = 2130903435;
 			
 			// aapt resource value: 0x7F03018C
-			public const int tabGravity = 2130903436;
+			public const int switchMinWidth = 2130903436;
 			
 			// aapt resource value: 0x7F03018D
-			public const int tabIconTint = 2130903437;
+			public const int switchPadding = 2130903437;
 			
 			// aapt resource value: 0x7F03018E
-			public const int tabIconTintMode = 2130903438;
+			public const int switchStyle = 2130903438;
 			
 			// aapt resource value: 0x7F03018F
-			public const int tabIndicator = 2130903439;
+			public const int switchTextAppearance = 2130903439;
 			
 			// aapt resource value: 0x7F030190
-			public const int tabIndicatorAnimationDuration = 2130903440;
+			public const int tabBackground = 2130903440;
 			
 			// aapt resource value: 0x7F030191
-			public const int tabIndicatorColor = 2130903441;
+			public const int tabContentStart = 2130903441;
 			
 			// aapt resource value: 0x7F030192
-			public const int tabIndicatorFullWidth = 2130903442;
+			public const int tabGravity = 2130903442;
 			
 			// aapt resource value: 0x7F030193
-			public const int tabIndicatorGravity = 2130903443;
+			public const int tabIconTint = 2130903443;
 			
 			// aapt resource value: 0x7F030194
-			public const int tabIndicatorHeight = 2130903444;
+			public const int tabIconTintMode = 2130903444;
 			
 			// aapt resource value: 0x7F030195
-			public const int tabInlineLabel = 2130903445;
+			public const int tabIndicator = 2130903445;
 			
 			// aapt resource value: 0x7F030196
-			public const int tabMaxWidth = 2130903446;
+			public const int tabIndicatorAnimationDuration = 2130903446;
 			
 			// aapt resource value: 0x7F030197
-			public const int tabMinWidth = 2130903447;
+			public const int tabIndicatorColor = 2130903447;
 			
 			// aapt resource value: 0x7F030198
-			public const int tabMode = 2130903448;
+			public const int tabIndicatorFullWidth = 2130903448;
 			
 			// aapt resource value: 0x7F030199
-			public const int tabPadding = 2130903449;
+			public const int tabIndicatorGravity = 2130903449;
 			
 			// aapt resource value: 0x7F03019A
-			public const int tabPaddingBottom = 2130903450;
+			public const int tabIndicatorHeight = 2130903450;
 			
 			// aapt resource value: 0x7F03019B
-			public const int tabPaddingEnd = 2130903451;
+			public const int tabInlineLabel = 2130903451;
 			
 			// aapt resource value: 0x7F03019C
-			public const int tabPaddingStart = 2130903452;
+			public const int tabMaxWidth = 2130903452;
 			
 			// aapt resource value: 0x7F03019D
-			public const int tabPaddingTop = 2130903453;
+			public const int tabMinWidth = 2130903453;
 			
 			// aapt resource value: 0x7F03019E
-			public const int tabRippleColor = 2130903454;
+			public const int tabMode = 2130903454;
 			
 			// aapt resource value: 0x7F03019F
-			public const int tabSelectedTextColor = 2130903455;
+			public const int tabPadding = 2130903455;
 			
 			// aapt resource value: 0x7F0301A0
-			public const int tabStyle = 2130903456;
+			public const int tabPaddingBottom = 2130903456;
 			
 			// aapt resource value: 0x7F0301A1
-			public const int tabTextAppearance = 2130903457;
+			public const int tabPaddingEnd = 2130903457;
 			
 			// aapt resource value: 0x7F0301A2
-			public const int tabTextColor = 2130903458;
+			public const int tabPaddingStart = 2130903458;
 			
 			// aapt resource value: 0x7F0301A3
-			public const int tabUnboundedRipple = 2130903459;
+			public const int tabPaddingTop = 2130903459;
 			
 			// aapt resource value: 0x7F0301A4
-			public const int textAllCaps = 2130903460;
+			public const int tabRippleColor = 2130903460;
 			
 			// aapt resource value: 0x7F0301A5
-			public const int textAppearanceBody1 = 2130903461;
+			public const int tabSelectedTextColor = 2130903461;
 			
 			// aapt resource value: 0x7F0301A6
-			public const int textAppearanceBody2 = 2130903462;
+			public const int tabStyle = 2130903462;
 			
 			// aapt resource value: 0x7F0301A7
-			public const int textAppearanceButton = 2130903463;
+			public const int tabTextAppearance = 2130903463;
 			
 			// aapt resource value: 0x7F0301A8
-			public const int textAppearanceCaption = 2130903464;
+			public const int tabTextColor = 2130903464;
 			
 			// aapt resource value: 0x7F0301A9
-			public const int textAppearanceHeadline1 = 2130903465;
+			public const int tabUnboundedRipple = 2130903465;
 			
 			// aapt resource value: 0x7F0301AA
-			public const int textAppearanceHeadline2 = 2130903466;
+			public const int textAllCaps = 2130903466;
 			
 			// aapt resource value: 0x7F0301AB
-			public const int textAppearanceHeadline3 = 2130903467;
+			public const int textAppearanceBody1 = 2130903467;
 			
 			// aapt resource value: 0x7F0301AC
-			public const int textAppearanceHeadline4 = 2130903468;
+			public const int textAppearanceBody2 = 2130903468;
 			
 			// aapt resource value: 0x7F0301AD
-			public const int textAppearanceHeadline5 = 2130903469;
+			public const int textAppearanceButton = 2130903469;
 			
 			// aapt resource value: 0x7F0301AE
-			public const int textAppearanceHeadline6 = 2130903470;
+			public const int textAppearanceCaption = 2130903470;
 			
 			// aapt resource value: 0x7F0301AF
-			public const int textAppearanceLargePopupMenu = 2130903471;
+			public const int textAppearanceHeadline1 = 2130903471;
 			
 			// aapt resource value: 0x7F0301B0
-			public const int textAppearanceListItem = 2130903472;
+			public const int textAppearanceHeadline2 = 2130903472;
 			
 			// aapt resource value: 0x7F0301B1
-			public const int textAppearanceListItemSecondary = 2130903473;
+			public const int textAppearanceHeadline3 = 2130903473;
 			
 			// aapt resource value: 0x7F0301B2
-			public const int textAppearanceListItemSmall = 2130903474;
+			public const int textAppearanceHeadline4 = 2130903474;
 			
 			// aapt resource value: 0x7F0301B3
-			public const int textAppearanceOverline = 2130903475;
+			public const int textAppearanceHeadline5 = 2130903475;
 			
 			// aapt resource value: 0x7F0301B4
-			public const int textAppearancePopupMenuHeader = 2130903476;
+			public const int textAppearanceHeadline6 = 2130903476;
 			
 			// aapt resource value: 0x7F0301B5
-			public const int textAppearanceSearchResultSubtitle = 2130903477;
+			public const int textAppearanceLargePopupMenu = 2130903477;
 			
 			// aapt resource value: 0x7F0301B6
-			public const int textAppearanceSearchResultTitle = 2130903478;
+			public const int textAppearanceListItem = 2130903478;
 			
 			// aapt resource value: 0x7F0301B7
-			public const int textAppearanceSmallPopupMenu = 2130903479;
+			public const int textAppearanceListItemSecondary = 2130903479;
 			
 			// aapt resource value: 0x7F0301B8
-			public const int textAppearanceSubtitle1 = 2130903480;
+			public const int textAppearanceListItemSmall = 2130903480;
 			
 			// aapt resource value: 0x7F0301B9
-			public const int textAppearanceSubtitle2 = 2130903481;
+			public const int textAppearanceOverline = 2130903481;
 			
 			// aapt resource value: 0x7F0301BA
-			public const int textColorAlertDialogListItem = 2130903482;
+			public const int textAppearancePopupMenuHeader = 2130903482;
 			
 			// aapt resource value: 0x7F0301BB
-			public const int textColorSearchUrl = 2130903483;
+			public const int textAppearanceSearchResultSubtitle = 2130903483;
 			
 			// aapt resource value: 0x7F0301BC
-			public const int textEndPadding = 2130903484;
+			public const int textAppearanceSearchResultTitle = 2130903484;
 			
 			// aapt resource value: 0x7F0301BD
-			public const int textInputStyle = 2130903485;
+			public const int textAppearanceSmallPopupMenu = 2130903485;
 			
 			// aapt resource value: 0x7F0301BE
-			public const int textStartPadding = 2130903486;
+			public const int textAppearanceSubtitle1 = 2130903486;
 			
 			// aapt resource value: 0x7F0301BF
-			public const int theme = 2130903487;
+			public const int textAppearanceSubtitle2 = 2130903487;
 			
 			// aapt resource value: 0x7F0301C0
-			public const int thickness = 2130903488;
+			public const int textColorAlertDialogListItem = 2130903488;
 			
 			// aapt resource value: 0x7F0301C1
-			public const int thumbTextPadding = 2130903489;
+			public const int textColorSearchUrl = 2130903489;
 			
 			// aapt resource value: 0x7F0301C2
-			public const int thumbTint = 2130903490;
+			public const int textEndPadding = 2130903490;
 			
 			// aapt resource value: 0x7F0301C3
-			public const int thumbTintMode = 2130903491;
+			public const int textInputStyle = 2130903491;
 			
 			// aapt resource value: 0x7F0301C4
-			public const int tickMark = 2130903492;
+			public const int textStartPadding = 2130903492;
 			
 			// aapt resource value: 0x7F0301C5
-			public const int tickMarkTint = 2130903493;
+			public const int theme = 2130903493;
 			
 			// aapt resource value: 0x7F0301C6
-			public const int tickMarkTintMode = 2130903494;
+			public const int thickness = 2130903494;
 			
 			// aapt resource value: 0x7F0301C7
-			public const int tint = 2130903495;
+			public const int thumbTextPadding = 2130903495;
 			
 			// aapt resource value: 0x7F0301C8
-			public const int tintMode = 2130903496;
+			public const int thumbTint = 2130903496;
 			
 			// aapt resource value: 0x7F0301C9
-			public const int title = 2130903497;
+			public const int thumbTintMode = 2130903497;
 			
 			// aapt resource value: 0x7F0301CA
-			public const int titleEnabled = 2130903498;
+			public const int tickMark = 2130903498;
 			
 			// aapt resource value: 0x7F0301CB
-			public const int titleMargin = 2130903499;
+			public const int tickMarkTint = 2130903499;
 			
 			// aapt resource value: 0x7F0301CC
-			public const int titleMarginBottom = 2130903500;
+			public const int tickMarkTintMode = 2130903500;
 			
 			// aapt resource value: 0x7F0301CD
-			public const int titleMarginEnd = 2130903501;
-			
-			// aapt resource value: 0x7F0301D0
-			public const int titleMargins = 2130903504;
+			public const int tint = 2130903501;
 			
 			// aapt resource value: 0x7F0301CE
-			public const int titleMarginStart = 2130903502;
+			public const int tintMode = 2130903502;
 			
 			// aapt resource value: 0x7F0301CF
-			public const int titleMarginTop = 2130903503;
+			public const int title = 2130903503;
+			
+			// aapt resource value: 0x7F0301D0
+			public const int titleEnabled = 2130903504;
 			
 			// aapt resource value: 0x7F0301D1
-			public const int titleTextAppearance = 2130903505;
+			public const int titleMargin = 2130903505;
 			
 			// aapt resource value: 0x7F0301D2
-			public const int titleTextColor = 2130903506;
+			public const int titleMarginBottom = 2130903506;
 			
 			// aapt resource value: 0x7F0301D3
-			public const int titleTextStyle = 2130903507;
-			
-			// aapt resource value: 0x7F0301D4
-			public const int toolbarId = 2130903508;
-			
-			// aapt resource value: 0x7F0301D5
-			public const int toolbarNavigationButtonStyle = 2130903509;
+			public const int titleMarginEnd = 2130903507;
 			
 			// aapt resource value: 0x7F0301D6
-			public const int toolbarStyle = 2130903510;
+			public const int titleMargins = 2130903510;
+			
+			// aapt resource value: 0x7F0301D4
+			public const int titleMarginStart = 2130903508;
+			
+			// aapt resource value: 0x7F0301D5
+			public const int titleMarginTop = 2130903509;
 			
 			// aapt resource value: 0x7F0301D7
-			public const int tooltipForegroundColor = 2130903511;
+			public const int titleTextAppearance = 2130903511;
 			
 			// aapt resource value: 0x7F0301D8
-			public const int tooltipFrameBackground = 2130903512;
+			public const int titleTextColor = 2130903512;
 			
 			// aapt resource value: 0x7F0301D9
-			public const int tooltipText = 2130903513;
+			public const int titleTextStyle = 2130903513;
 			
 			// aapt resource value: 0x7F0301DA
-			public const int track = 2130903514;
+			public const int toolbarId = 2130903514;
 			
 			// aapt resource value: 0x7F0301DB
-			public const int trackTint = 2130903515;
+			public const int toolbarNavigationButtonStyle = 2130903515;
 			
 			// aapt resource value: 0x7F0301DC
-			public const int trackTintMode = 2130903516;
+			public const int toolbarStyle = 2130903516;
 			
 			// aapt resource value: 0x7F0301DD
-			public const int ttcIndex = 2130903517;
+			public const int tooltipForegroundColor = 2130903517;
 			
 			// aapt resource value: 0x7F0301DE
-			public const int useCompatPadding = 2130903518;
+			public const int tooltipFrameBackground = 2130903518;
 			
 			// aapt resource value: 0x7F0301DF
-			public const int viewInflaterClass = 2130903519;
+			public const int tooltipText = 2130903519;
 			
 			// aapt resource value: 0x7F0301E0
-			public const int voiceIcon = 2130903520;
+			public const int track = 2130903520;
 			
 			// aapt resource value: 0x7F0301E1
-			public const int windowActionBar = 2130903521;
+			public const int trackTint = 2130903521;
 			
 			// aapt resource value: 0x7F0301E2
-			public const int windowActionBarOverlay = 2130903522;
+			public const int trackTintMode = 2130903522;
 			
 			// aapt resource value: 0x7F0301E3
-			public const int windowActionModeOverlay = 2130903523;
+			public const int ttcIndex = 2130903523;
 			
 			// aapt resource value: 0x7F0301E4
-			public const int windowFixedHeightMajor = 2130903524;
+			public const int useCompatPadding = 2130903524;
 			
 			// aapt resource value: 0x7F0301E5
-			public const int windowFixedHeightMinor = 2130903525;
+			public const int viewInflaterClass = 2130903525;
 			
 			// aapt resource value: 0x7F0301E6
-			public const int windowFixedWidthMajor = 2130903526;
+			public const int voiceIcon = 2130903526;
 			
 			// aapt resource value: 0x7F0301E7
-			public const int windowFixedWidthMinor = 2130903527;
+			public const int windowActionBar = 2130903527;
 			
 			// aapt resource value: 0x7F0301E8
-			public const int windowMinWidthMajor = 2130903528;
+			public const int windowActionBarOverlay = 2130903528;
 			
 			// aapt resource value: 0x7F0301E9
-			public const int windowMinWidthMinor = 2130903529;
+			public const int windowActionModeOverlay = 2130903529;
 			
 			// aapt resource value: 0x7F0301EA
-			public const int windowNoTitle = 2130903530;
+			public const int windowFixedHeightMajor = 2130903530;
+			
+			// aapt resource value: 0x7F0301EB
+			public const int windowFixedHeightMinor = 2130903531;
+			
+			// aapt resource value: 0x7F0301EC
+			public const int windowFixedWidthMajor = 2130903532;
+			
+			// aapt resource value: 0x7F0301ED
+			public const int windowFixedWidthMinor = 2130903533;
+			
+			// aapt resource value: 0x7F0301EE
+			public const int windowMinWidthMajor = 2130903534;
+			
+			// aapt resource value: 0x7F0301EF
+			public const int windowMinWidthMinor = 2130903535;
+			
+			// aapt resource value: 0x7F0301F0
+			public const int windowNoTitle = 2130903536;
 			
 			static Attribute()
 			{
@@ -4550,265 +7217,298 @@ namespace Sidekick.Droid
 			public const int colorPrimaryDark = 2131034160;
 			
 			// aapt resource value: 0x7F050031
-			public const int design_bottom_navigation_shadow_color = 2131034161;
+			public const int common_google_signin_btn_text_dark = 2131034161;
 			
 			// aapt resource value: 0x7F050032
-			public const int design_default_color_primary = 2131034162;
+			public const int common_google_signin_btn_text_dark_default = 2131034162;
 			
 			// aapt resource value: 0x7F050033
-			public const int design_default_color_primary_dark = 2131034163;
+			public const int common_google_signin_btn_text_dark_disabled = 2131034163;
 			
 			// aapt resource value: 0x7F050034
-			public const int design_error = 2131034164;
+			public const int common_google_signin_btn_text_dark_focused = 2131034164;
 			
 			// aapt resource value: 0x7F050035
-			public const int design_fab_shadow_end_color = 2131034165;
+			public const int common_google_signin_btn_text_dark_pressed = 2131034165;
 			
 			// aapt resource value: 0x7F050036
-			public const int design_fab_shadow_mid_color = 2131034166;
+			public const int common_google_signin_btn_text_light = 2131034166;
 			
 			// aapt resource value: 0x7F050037
-			public const int design_fab_shadow_start_color = 2131034167;
+			public const int common_google_signin_btn_text_light_default = 2131034167;
 			
 			// aapt resource value: 0x7F050038
-			public const int design_fab_stroke_end_inner_color = 2131034168;
+			public const int common_google_signin_btn_text_light_disabled = 2131034168;
 			
 			// aapt resource value: 0x7F050039
-			public const int design_fab_stroke_end_outer_color = 2131034169;
+			public const int common_google_signin_btn_text_light_focused = 2131034169;
 			
 			// aapt resource value: 0x7F05003A
-			public const int design_fab_stroke_top_inner_color = 2131034170;
+			public const int common_google_signin_btn_text_light_pressed = 2131034170;
 			
 			// aapt resource value: 0x7F05003B
-			public const int design_fab_stroke_top_outer_color = 2131034171;
+			public const int common_google_signin_btn_tint = 2131034171;
 			
 			// aapt resource value: 0x7F05003C
-			public const int design_snackbar_background_color = 2131034172;
+			public const int design_bottom_navigation_shadow_color = 2131034172;
 			
 			// aapt resource value: 0x7F05003D
-			public const int design_tint_password_toggle = 2131034173;
+			public const int design_default_color_primary = 2131034173;
 			
 			// aapt resource value: 0x7F05003E
-			public const int dim_foreground_disabled_material_dark = 2131034174;
+			public const int design_default_color_primary_dark = 2131034174;
 			
 			// aapt resource value: 0x7F05003F
-			public const int dim_foreground_disabled_material_light = 2131034175;
+			public const int design_error = 2131034175;
 			
 			// aapt resource value: 0x7F050040
-			public const int dim_foreground_material_dark = 2131034176;
+			public const int design_fab_shadow_end_color = 2131034176;
 			
 			// aapt resource value: 0x7F050041
-			public const int dim_foreground_material_light = 2131034177;
+			public const int design_fab_shadow_mid_color = 2131034177;
 			
 			// aapt resource value: 0x7F050042
-			public const int error_color_material_dark = 2131034178;
+			public const int design_fab_shadow_start_color = 2131034178;
 			
 			// aapt resource value: 0x7F050043
-			public const int error_color_material_light = 2131034179;
+			public const int design_fab_stroke_end_inner_color = 2131034179;
 			
 			// aapt resource value: 0x7F050044
-			public const int foreground_material_dark = 2131034180;
+			public const int design_fab_stroke_end_outer_color = 2131034180;
 			
 			// aapt resource value: 0x7F050045
-			public const int foreground_material_light = 2131034181;
+			public const int design_fab_stroke_top_inner_color = 2131034181;
 			
 			// aapt resource value: 0x7F050046
-			public const int highlighted_text_material_dark = 2131034182;
+			public const int design_fab_stroke_top_outer_color = 2131034182;
 			
 			// aapt resource value: 0x7F050047
-			public const int highlighted_text_material_light = 2131034183;
+			public const int design_snackbar_background_color = 2131034183;
 			
 			// aapt resource value: 0x7F050048
-			public const int launcher_background = 2131034184;
+			public const int design_tint_password_toggle = 2131034184;
 			
 			// aapt resource value: 0x7F050049
-			public const int material_blue_grey_800 = 2131034185;
+			public const int dim_foreground_disabled_material_dark = 2131034185;
 			
 			// aapt resource value: 0x7F05004A
-			public const int material_blue_grey_900 = 2131034186;
+			public const int dim_foreground_disabled_material_light = 2131034186;
 			
 			// aapt resource value: 0x7F05004B
-			public const int material_blue_grey_950 = 2131034187;
+			public const int dim_foreground_material_dark = 2131034187;
 			
 			// aapt resource value: 0x7F05004C
-			public const int material_deep_teal_200 = 2131034188;
+			public const int dim_foreground_material_light = 2131034188;
 			
 			// aapt resource value: 0x7F05004D
-			public const int material_deep_teal_500 = 2131034189;
+			public const int error_color_material_dark = 2131034189;
 			
 			// aapt resource value: 0x7F05004E
-			public const int material_grey_100 = 2131034190;
+			public const int error_color_material_light = 2131034190;
 			
 			// aapt resource value: 0x7F05004F
-			public const int material_grey_300 = 2131034191;
+			public const int foreground_material_dark = 2131034191;
 			
 			// aapt resource value: 0x7F050050
-			public const int material_grey_50 = 2131034192;
+			public const int foreground_material_light = 2131034192;
 			
 			// aapt resource value: 0x7F050051
-			public const int material_grey_600 = 2131034193;
+			public const int highlighted_text_material_dark = 2131034193;
 			
 			// aapt resource value: 0x7F050052
-			public const int material_grey_800 = 2131034194;
+			public const int highlighted_text_material_light = 2131034194;
 			
 			// aapt resource value: 0x7F050053
-			public const int material_grey_850 = 2131034195;
+			public const int launcher_background = 2131034195;
 			
 			// aapt resource value: 0x7F050054
-			public const int material_grey_900 = 2131034196;
+			public const int material_blue_grey_800 = 2131034196;
 			
 			// aapt resource value: 0x7F050055
-			public const int mtrl_bottom_nav_colored_item_tint = 2131034197;
+			public const int material_blue_grey_900 = 2131034197;
 			
 			// aapt resource value: 0x7F050056
-			public const int mtrl_bottom_nav_item_tint = 2131034198;
+			public const int material_blue_grey_950 = 2131034198;
 			
 			// aapt resource value: 0x7F050057
-			public const int mtrl_btn_bg_color_disabled = 2131034199;
+			public const int material_deep_teal_200 = 2131034199;
 			
 			// aapt resource value: 0x7F050058
-			public const int mtrl_btn_bg_color_selector = 2131034200;
+			public const int material_deep_teal_500 = 2131034200;
 			
 			// aapt resource value: 0x7F050059
-			public const int mtrl_btn_ripple_color = 2131034201;
+			public const int material_grey_100 = 2131034201;
 			
 			// aapt resource value: 0x7F05005A
-			public const int mtrl_btn_stroke_color_selector = 2131034202;
+			public const int material_grey_300 = 2131034202;
 			
 			// aapt resource value: 0x7F05005B
-			public const int mtrl_btn_text_btn_ripple_color = 2131034203;
+			public const int material_grey_50 = 2131034203;
 			
 			// aapt resource value: 0x7F05005C
-			public const int mtrl_btn_text_color_disabled = 2131034204;
+			public const int material_grey_600 = 2131034204;
 			
 			// aapt resource value: 0x7F05005D
-			public const int mtrl_btn_text_color_selector = 2131034205;
+			public const int material_grey_800 = 2131034205;
 			
 			// aapt resource value: 0x7F05005E
-			public const int mtrl_btn_transparent_bg_color = 2131034206;
+			public const int material_grey_850 = 2131034206;
 			
 			// aapt resource value: 0x7F05005F
-			public const int mtrl_chip_background_color = 2131034207;
+			public const int material_grey_900 = 2131034207;
 			
 			// aapt resource value: 0x7F050060
-			public const int mtrl_chip_close_icon_tint = 2131034208;
+			public const int mtrl_bottom_nav_colored_item_tint = 2131034208;
 			
 			// aapt resource value: 0x7F050061
-			public const int mtrl_chip_ripple_color = 2131034209;
+			public const int mtrl_bottom_nav_item_tint = 2131034209;
 			
 			// aapt resource value: 0x7F050062
-			public const int mtrl_chip_text_color = 2131034210;
+			public const int mtrl_btn_bg_color_disabled = 2131034210;
 			
 			// aapt resource value: 0x7F050063
-			public const int mtrl_fab_ripple_color = 2131034211;
+			public const int mtrl_btn_bg_color_selector = 2131034211;
 			
 			// aapt resource value: 0x7F050064
-			public const int mtrl_scrim_color = 2131034212;
+			public const int mtrl_btn_ripple_color = 2131034212;
 			
 			// aapt resource value: 0x7F050065
-			public const int mtrl_tabs_colored_ripple_color = 2131034213;
+			public const int mtrl_btn_stroke_color_selector = 2131034213;
 			
 			// aapt resource value: 0x7F050066
-			public const int mtrl_tabs_icon_color_selector = 2131034214;
+			public const int mtrl_btn_text_btn_ripple_color = 2131034214;
 			
 			// aapt resource value: 0x7F050067
-			public const int mtrl_tabs_icon_color_selector_colored = 2131034215;
+			public const int mtrl_btn_text_color_disabled = 2131034215;
 			
 			// aapt resource value: 0x7F050068
-			public const int mtrl_tabs_legacy_text_color_selector = 2131034216;
+			public const int mtrl_btn_text_color_selector = 2131034216;
 			
 			// aapt resource value: 0x7F050069
-			public const int mtrl_tabs_ripple_color = 2131034217;
-			
-			// aapt resource value: 0x7F05006B
-			public const int mtrl_textinput_default_box_stroke_color = 2131034219;
-			
-			// aapt resource value: 0x7F05006C
-			public const int mtrl_textinput_disabled_color = 2131034220;
-			
-			// aapt resource value: 0x7F05006D
-			public const int mtrl_textinput_filled_box_default_background_color = 2131034221;
-			
-			// aapt resource value: 0x7F05006E
-			public const int mtrl_textinput_hovered_box_stroke_color = 2131034222;
+			public const int mtrl_btn_transparent_bg_color = 2131034217;
 			
 			// aapt resource value: 0x7F05006A
-			public const int mtrl_text_btn_text_color_selector = 2131034218;
+			public const int mtrl_chip_background_color = 2131034218;
+			
+			// aapt resource value: 0x7F05006B
+			public const int mtrl_chip_close_icon_tint = 2131034219;
+			
+			// aapt resource value: 0x7F05006C
+			public const int mtrl_chip_ripple_color = 2131034220;
+			
+			// aapt resource value: 0x7F05006D
+			public const int mtrl_chip_text_color = 2131034221;
+			
+			// aapt resource value: 0x7F05006E
+			public const int mtrl_fab_ripple_color = 2131034222;
 			
 			// aapt resource value: 0x7F05006F
-			public const int notification_action_color_filter = 2131034223;
+			public const int mtrl_scrim_color = 2131034223;
 			
 			// aapt resource value: 0x7F050070
-			public const int notification_icon_bg_color = 2131034224;
+			public const int mtrl_tabs_colored_ripple_color = 2131034224;
 			
 			// aapt resource value: 0x7F050071
-			public const int notification_material_background_media_default_color = 2131034225;
+			public const int mtrl_tabs_icon_color_selector = 2131034225;
 			
 			// aapt resource value: 0x7F050072
-			public const int primary_dark_material_dark = 2131034226;
+			public const int mtrl_tabs_icon_color_selector_colored = 2131034226;
 			
 			// aapt resource value: 0x7F050073
-			public const int primary_dark_material_light = 2131034227;
+			public const int mtrl_tabs_legacy_text_color_selector = 2131034227;
 			
 			// aapt resource value: 0x7F050074
-			public const int primary_material_dark = 2131034228;
-			
-			// aapt resource value: 0x7F050075
-			public const int primary_material_light = 2131034229;
+			public const int mtrl_tabs_ripple_color = 2131034228;
 			
 			// aapt resource value: 0x7F050076
-			public const int primary_text_default_material_dark = 2131034230;
+			public const int mtrl_textinput_default_box_stroke_color = 2131034230;
 			
 			// aapt resource value: 0x7F050077
-			public const int primary_text_default_material_light = 2131034231;
+			public const int mtrl_textinput_disabled_color = 2131034231;
 			
 			// aapt resource value: 0x7F050078
-			public const int primary_text_disabled_material_dark = 2131034232;
+			public const int mtrl_textinput_filled_box_default_background_color = 2131034232;
 			
 			// aapt resource value: 0x7F050079
-			public const int primary_text_disabled_material_light = 2131034233;
+			public const int mtrl_textinput_hovered_box_stroke_color = 2131034233;
+			
+			// aapt resource value: 0x7F050075
+			public const int mtrl_text_btn_text_color_selector = 2131034229;
 			
 			// aapt resource value: 0x7F05007A
-			public const int ripple_material_dark = 2131034234;
+			public const int notification_action_color_filter = 2131034234;
 			
 			// aapt resource value: 0x7F05007B
-			public const int ripple_material_light = 2131034235;
+			public const int notification_icon_bg_color = 2131034235;
 			
 			// aapt resource value: 0x7F05007C
-			public const int secondary_text_default_material_dark = 2131034236;
+			public const int notification_material_background_media_default_color = 2131034236;
 			
 			// aapt resource value: 0x7F05007D
-			public const int secondary_text_default_material_light = 2131034237;
+			public const int primary_dark_material_dark = 2131034237;
 			
 			// aapt resource value: 0x7F05007E
-			public const int secondary_text_disabled_material_dark = 2131034238;
+			public const int primary_dark_material_light = 2131034238;
 			
 			// aapt resource value: 0x7F05007F
-			public const int secondary_text_disabled_material_light = 2131034239;
+			public const int primary_material_dark = 2131034239;
 			
 			// aapt resource value: 0x7F050080
-			public const int switch_thumb_disabled_material_dark = 2131034240;
+			public const int primary_material_light = 2131034240;
 			
 			// aapt resource value: 0x7F050081
-			public const int switch_thumb_disabled_material_light = 2131034241;
+			public const int primary_text_default_material_dark = 2131034241;
 			
 			// aapt resource value: 0x7F050082
-			public const int switch_thumb_material_dark = 2131034242;
+			public const int primary_text_default_material_light = 2131034242;
 			
 			// aapt resource value: 0x7F050083
-			public const int switch_thumb_material_light = 2131034243;
+			public const int primary_text_disabled_material_dark = 2131034243;
 			
 			// aapt resource value: 0x7F050084
-			public const int switch_thumb_normal_material_dark = 2131034244;
+			public const int primary_text_disabled_material_light = 2131034244;
 			
 			// aapt resource value: 0x7F050085
-			public const int switch_thumb_normal_material_light = 2131034245;
+			public const int ripple_material_dark = 2131034245;
 			
 			// aapt resource value: 0x7F050086
-			public const int tooltip_background_dark = 2131034246;
+			public const int ripple_material_light = 2131034246;
 			
 			// aapt resource value: 0x7F050087
-			public const int tooltip_background_light = 2131034247;
+			public const int secondary_text_default_material_dark = 2131034247;
+			
+			// aapt resource value: 0x7F050088
+			public const int secondary_text_default_material_light = 2131034248;
+			
+			// aapt resource value: 0x7F050089
+			public const int secondary_text_disabled_material_dark = 2131034249;
+			
+			// aapt resource value: 0x7F05008A
+			public const int secondary_text_disabled_material_light = 2131034250;
+			
+			// aapt resource value: 0x7F05008B
+			public const int switch_thumb_disabled_material_dark = 2131034251;
+			
+			// aapt resource value: 0x7F05008C
+			public const int switch_thumb_disabled_material_light = 2131034252;
+			
+			// aapt resource value: 0x7F05008D
+			public const int switch_thumb_material_dark = 2131034253;
+			
+			// aapt resource value: 0x7F05008E
+			public const int switch_thumb_material_light = 2131034254;
+			
+			// aapt resource value: 0x7F05008F
+			public const int switch_thumb_normal_material_dark = 2131034255;
+			
+			// aapt resource value: 0x7F050090
+			public const int switch_thumb_normal_material_light = 2131034256;
+			
+			// aapt resource value: 0x7F050091
+			public const int tooltip_background_dark = 2131034257;
+			
+			// aapt resource value: 0x7F050092
+			public const int tooltip_background_light = 2131034258;
 			
 			static Color()
 			{
@@ -5776,673 +8476,736 @@ namespace Sidekick.Droid
 			public const int avd_show_password = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int design_bottom_navigation_item_background = 2131165276;
+			public const int common_full_open_on_phone = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int design_fab_background = 2131165277;
+			public const int common_google_signin_btn_icon_dark = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int design_ic_visibility = 2131165278;
+			public const int common_google_signin_btn_icon_dark_focused = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int design_ic_visibility_off = 2131165279;
+			public const int common_google_signin_btn_icon_dark_normal = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int design_password_eye = 2131165280;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int design_snackbar_background = 2131165281;
+			public const int common_google_signin_btn_icon_disabled = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int ic_audiotrack_dark = 2131165282;
+			public const int common_google_signin_btn_icon_light = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int ic_audiotrack_light = 2131165283;
+			public const int common_google_signin_btn_icon_light_focused = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int ic_dialog_close_dark = 2131165284;
+			public const int common_google_signin_btn_icon_light_normal = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int ic_dialog_close_light = 2131165285;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int ic_group_collapse_00 = 2131165286;
+			public const int common_google_signin_btn_text_dark = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int ic_group_collapse_01 = 2131165287;
+			public const int common_google_signin_btn_text_dark_focused = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int ic_group_collapse_02 = 2131165288;
+			public const int common_google_signin_btn_text_dark_normal = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int ic_group_collapse_03 = 2131165289;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int ic_group_collapse_04 = 2131165290;
+			public const int common_google_signin_btn_text_disabled = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int ic_group_collapse_05 = 2131165291;
+			public const int common_google_signin_btn_text_light = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int ic_group_collapse_06 = 2131165292;
+			public const int common_google_signin_btn_text_light_focused = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int ic_group_collapse_07 = 2131165293;
+			public const int common_google_signin_btn_text_light_normal = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int ic_group_collapse_08 = 2131165294;
+			public const int common_google_signin_btn_text_light_normal_background = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int ic_group_collapse_09 = 2131165295;
+			public const int design_bottom_navigation_item_background = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int ic_group_collapse_10 = 2131165296;
+			public const int design_fab_background = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int ic_group_collapse_11 = 2131165297;
+			public const int design_ic_visibility = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int ic_group_collapse_12 = 2131165298;
+			public const int design_ic_visibility_off = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int ic_group_collapse_13 = 2131165299;
+			public const int design_password_eye = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int ic_group_collapse_14 = 2131165300;
+			public const int design_snackbar_background = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int ic_group_collapse_15 = 2131165301;
+			public const int googleg_disabled_color_18 = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int ic_group_expand_00 = 2131165302;
+			public const int googleg_standard_color_18 = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int ic_group_expand_01 = 2131165303;
+			public const int ic_audiotrack_dark = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int ic_group_expand_02 = 2131165304;
+			public const int ic_audiotrack_light = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int ic_group_expand_03 = 2131165305;
+			public const int ic_dialog_close_dark = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int ic_group_expand_04 = 2131165306;
+			public const int ic_dialog_close_light = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int ic_group_expand_05 = 2131165307;
+			public const int ic_group_collapse_00 = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int ic_group_expand_06 = 2131165308;
+			public const int ic_group_collapse_01 = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int ic_group_expand_07 = 2131165309;
+			public const int ic_group_collapse_02 = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int ic_group_expand_08 = 2131165310;
+			public const int ic_group_collapse_03 = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int ic_group_expand_09 = 2131165311;
+			public const int ic_group_collapse_04 = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int ic_group_expand_10 = 2131165312;
+			public const int ic_group_collapse_05 = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int ic_group_expand_11 = 2131165313;
+			public const int ic_group_collapse_06 = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int ic_group_expand_12 = 2131165314;
+			public const int ic_group_collapse_07 = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int ic_group_expand_13 = 2131165315;
+			public const int ic_group_collapse_08 = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int ic_group_expand_14 = 2131165316;
+			public const int ic_group_collapse_09 = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int ic_group_expand_15 = 2131165317;
+			public const int ic_group_collapse_10 = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int ic_media_pause_dark = 2131165318;
+			public const int ic_group_collapse_11 = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int ic_media_pause_light = 2131165319;
+			public const int ic_group_collapse_12 = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int ic_media_play_dark = 2131165320;
+			public const int ic_group_collapse_13 = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int ic_media_play_light = 2131165321;
+			public const int ic_group_collapse_14 = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int ic_media_stop_dark = 2131165322;
+			public const int ic_group_collapse_15 = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int ic_media_stop_light = 2131165323;
+			public const int ic_group_expand_00 = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int ic_mr_button_connected_00_dark = 2131165324;
+			public const int ic_group_expand_01 = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int ic_mr_button_connected_00_light = 2131165325;
+			public const int ic_group_expand_02 = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int ic_mr_button_connected_01_dark = 2131165326;
+			public const int ic_group_expand_03 = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int ic_mr_button_connected_01_light = 2131165327;
+			public const int ic_group_expand_04 = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int ic_mr_button_connected_02_dark = 2131165328;
+			public const int ic_group_expand_05 = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int ic_mr_button_connected_02_light = 2131165329;
+			public const int ic_group_expand_06 = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int ic_mr_button_connected_03_dark = 2131165330;
+			public const int ic_group_expand_07 = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int ic_mr_button_connected_03_light = 2131165331;
+			public const int ic_group_expand_08 = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int ic_mr_button_connected_04_dark = 2131165332;
+			public const int ic_group_expand_09 = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int ic_mr_button_connected_04_light = 2131165333;
+			public const int ic_group_expand_10 = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int ic_mr_button_connected_05_dark = 2131165334;
+			public const int ic_group_expand_11 = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int ic_mr_button_connected_05_light = 2131165335;
+			public const int ic_group_expand_12 = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int ic_mr_button_connected_06_dark = 2131165336;
+			public const int ic_group_expand_13 = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int ic_mr_button_connected_06_light = 2131165337;
+			public const int ic_group_expand_14 = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int ic_mr_button_connected_07_dark = 2131165338;
+			public const int ic_group_expand_15 = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int ic_mr_button_connected_07_light = 2131165339;
+			public const int ic_media_pause_dark = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int ic_mr_button_connected_08_dark = 2131165340;
+			public const int ic_media_pause_light = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int ic_mr_button_connected_08_light = 2131165341;
+			public const int ic_media_play_dark = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int ic_mr_button_connected_09_dark = 2131165342;
+			public const int ic_media_play_light = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int ic_mr_button_connected_09_light = 2131165343;
+			public const int ic_media_stop_dark = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int ic_mr_button_connected_10_dark = 2131165344;
+			public const int ic_media_stop_light = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int ic_mr_button_connected_10_light = 2131165345;
+			public const int ic_mr_button_connected_00_dark = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int ic_mr_button_connected_11_dark = 2131165346;
+			public const int ic_mr_button_connected_00_light = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int ic_mr_button_connected_11_light = 2131165347;
+			public const int ic_mr_button_connected_01_dark = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int ic_mr_button_connected_12_dark = 2131165348;
+			public const int ic_mr_button_connected_01_light = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int ic_mr_button_connected_12_light = 2131165349;
+			public const int ic_mr_button_connected_02_dark = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int ic_mr_button_connected_13_dark = 2131165350;
+			public const int ic_mr_button_connected_02_light = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int ic_mr_button_connected_13_light = 2131165351;
+			public const int ic_mr_button_connected_03_dark = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int ic_mr_button_connected_14_dark = 2131165352;
+			public const int ic_mr_button_connected_03_light = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int ic_mr_button_connected_14_light = 2131165353;
+			public const int ic_mr_button_connected_04_dark = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int ic_mr_button_connected_15_dark = 2131165354;
+			public const int ic_mr_button_connected_04_light = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int ic_mr_button_connected_15_light = 2131165355;
+			public const int ic_mr_button_connected_05_dark = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int ic_mr_button_connected_16_dark = 2131165356;
+			public const int ic_mr_button_connected_05_light = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int ic_mr_button_connected_16_light = 2131165357;
+			public const int ic_mr_button_connected_06_dark = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int ic_mr_button_connected_17_dark = 2131165358;
+			public const int ic_mr_button_connected_06_light = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int ic_mr_button_connected_17_light = 2131165359;
+			public const int ic_mr_button_connected_07_dark = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int ic_mr_button_connected_18_dark = 2131165360;
+			public const int ic_mr_button_connected_07_light = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int ic_mr_button_connected_18_light = 2131165361;
+			public const int ic_mr_button_connected_08_dark = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int ic_mr_button_connected_19_dark = 2131165362;
+			public const int ic_mr_button_connected_08_light = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int ic_mr_button_connected_19_light = 2131165363;
+			public const int ic_mr_button_connected_09_dark = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int ic_mr_button_connected_20_dark = 2131165364;
+			public const int ic_mr_button_connected_09_light = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int ic_mr_button_connected_20_light = 2131165365;
+			public const int ic_mr_button_connected_10_dark = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int ic_mr_button_connected_21_dark = 2131165366;
+			public const int ic_mr_button_connected_10_light = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int ic_mr_button_connected_21_light = 2131165367;
+			public const int ic_mr_button_connected_11_dark = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int ic_mr_button_connected_22_dark = 2131165368;
+			public const int ic_mr_button_connected_11_light = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int ic_mr_button_connected_22_light = 2131165369;
+			public const int ic_mr_button_connected_12_dark = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int ic_mr_button_connected_23_dark = 2131165370;
+			public const int ic_mr_button_connected_12_light = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int ic_mr_button_connected_23_light = 2131165371;
+			public const int ic_mr_button_connected_13_dark = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int ic_mr_button_connected_24_dark = 2131165372;
+			public const int ic_mr_button_connected_13_light = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int ic_mr_button_connected_24_light = 2131165373;
+			public const int ic_mr_button_connected_14_dark = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int ic_mr_button_connected_25_dark = 2131165374;
+			public const int ic_mr_button_connected_14_light = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int ic_mr_button_connected_25_light = 2131165375;
+			public const int ic_mr_button_connected_15_dark = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int ic_mr_button_connected_26_dark = 2131165376;
+			public const int ic_mr_button_connected_15_light = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int ic_mr_button_connected_26_light = 2131165377;
+			public const int ic_mr_button_connected_16_dark = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int ic_mr_button_connected_27_dark = 2131165378;
+			public const int ic_mr_button_connected_16_light = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int ic_mr_button_connected_27_light = 2131165379;
+			public const int ic_mr_button_connected_17_dark = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int ic_mr_button_connected_28_dark = 2131165380;
+			public const int ic_mr_button_connected_17_light = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int ic_mr_button_connected_28_light = 2131165381;
+			public const int ic_mr_button_connected_18_dark = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int ic_mr_button_connected_29_dark = 2131165382;
+			public const int ic_mr_button_connected_18_light = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int ic_mr_button_connected_29_light = 2131165383;
+			public const int ic_mr_button_connected_19_dark = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int ic_mr_button_connected_30_dark = 2131165384;
+			public const int ic_mr_button_connected_19_light = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int ic_mr_button_connected_30_light = 2131165385;
+			public const int ic_mr_button_connected_20_dark = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int ic_mr_button_connecting_00_dark = 2131165386;
+			public const int ic_mr_button_connected_20_light = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int ic_mr_button_connecting_00_light = 2131165387;
+			public const int ic_mr_button_connected_21_dark = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int ic_mr_button_connecting_01_dark = 2131165388;
+			public const int ic_mr_button_connected_21_light = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int ic_mr_button_connecting_01_light = 2131165389;
+			public const int ic_mr_button_connected_22_dark = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int ic_mr_button_connecting_02_dark = 2131165390;
+			public const int ic_mr_button_connected_22_light = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int ic_mr_button_connecting_02_light = 2131165391;
+			public const int ic_mr_button_connected_23_dark = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int ic_mr_button_connecting_03_dark = 2131165392;
+			public const int ic_mr_button_connected_23_light = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int ic_mr_button_connecting_03_light = 2131165393;
+			public const int ic_mr_button_connected_24_dark = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int ic_mr_button_connecting_04_dark = 2131165394;
+			public const int ic_mr_button_connected_24_light = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int ic_mr_button_connecting_04_light = 2131165395;
+			public const int ic_mr_button_connected_25_dark = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int ic_mr_button_connecting_05_dark = 2131165396;
+			public const int ic_mr_button_connected_25_light = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int ic_mr_button_connecting_05_light = 2131165397;
+			public const int ic_mr_button_connected_26_dark = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int ic_mr_button_connecting_06_dark = 2131165398;
+			public const int ic_mr_button_connected_26_light = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int ic_mr_button_connecting_06_light = 2131165399;
+			public const int ic_mr_button_connected_27_dark = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int ic_mr_button_connecting_07_dark = 2131165400;
+			public const int ic_mr_button_connected_27_light = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int ic_mr_button_connecting_07_light = 2131165401;
+			public const int ic_mr_button_connected_28_dark = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int ic_mr_button_connecting_08_dark = 2131165402;
+			public const int ic_mr_button_connected_28_light = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int ic_mr_button_connecting_08_light = 2131165403;
+			public const int ic_mr_button_connected_29_dark = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int ic_mr_button_connecting_09_dark = 2131165404;
+			public const int ic_mr_button_connected_29_light = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int ic_mr_button_connecting_09_light = 2131165405;
+			public const int ic_mr_button_connected_30_dark = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int ic_mr_button_connecting_10_dark = 2131165406;
+			public const int ic_mr_button_connected_30_light = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int ic_mr_button_connecting_10_light = 2131165407;
+			public const int ic_mr_button_connecting_00_dark = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int ic_mr_button_connecting_11_dark = 2131165408;
+			public const int ic_mr_button_connecting_00_light = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int ic_mr_button_connecting_11_light = 2131165409;
+			public const int ic_mr_button_connecting_01_dark = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int ic_mr_button_connecting_12_dark = 2131165410;
+			public const int ic_mr_button_connecting_01_light = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int ic_mr_button_connecting_12_light = 2131165411;
+			public const int ic_mr_button_connecting_02_dark = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int ic_mr_button_connecting_13_dark = 2131165412;
+			public const int ic_mr_button_connecting_02_light = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int ic_mr_button_connecting_13_light = 2131165413;
+			public const int ic_mr_button_connecting_03_dark = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int ic_mr_button_connecting_14_dark = 2131165414;
+			public const int ic_mr_button_connecting_03_light = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int ic_mr_button_connecting_14_light = 2131165415;
+			public const int ic_mr_button_connecting_04_dark = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int ic_mr_button_connecting_15_dark = 2131165416;
+			public const int ic_mr_button_connecting_04_light = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int ic_mr_button_connecting_15_light = 2131165417;
+			public const int ic_mr_button_connecting_05_dark = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int ic_mr_button_connecting_16_dark = 2131165418;
+			public const int ic_mr_button_connecting_05_light = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int ic_mr_button_connecting_16_light = 2131165419;
+			public const int ic_mr_button_connecting_06_dark = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int ic_mr_button_connecting_17_dark = 2131165420;
+			public const int ic_mr_button_connecting_06_light = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int ic_mr_button_connecting_17_light = 2131165421;
+			public const int ic_mr_button_connecting_07_dark = 2131165421;
 			
 			// aapt resource value: 0x7F0700EE
-			public const int ic_mr_button_connecting_18_dark = 2131165422;
+			public const int ic_mr_button_connecting_07_light = 2131165422;
 			
 			// aapt resource value: 0x7F0700EF
-			public const int ic_mr_button_connecting_18_light = 2131165423;
+			public const int ic_mr_button_connecting_08_dark = 2131165423;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int ic_mr_button_connecting_19_dark = 2131165424;
+			public const int ic_mr_button_connecting_08_light = 2131165424;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int ic_mr_button_connecting_19_light = 2131165425;
+			public const int ic_mr_button_connecting_09_dark = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int ic_mr_button_connecting_20_dark = 2131165426;
+			public const int ic_mr_button_connecting_09_light = 2131165426;
 			
 			// aapt resource value: 0x7F0700F3
-			public const int ic_mr_button_connecting_20_light = 2131165427;
+			public const int ic_mr_button_connecting_10_dark = 2131165427;
 			
 			// aapt resource value: 0x7F0700F4
-			public const int ic_mr_button_connecting_21_dark = 2131165428;
+			public const int ic_mr_button_connecting_10_light = 2131165428;
 			
 			// aapt resource value: 0x7F0700F5
-			public const int ic_mr_button_connecting_21_light = 2131165429;
+			public const int ic_mr_button_connecting_11_dark = 2131165429;
 			
 			// aapt resource value: 0x7F0700F6
-			public const int ic_mr_button_connecting_22_dark = 2131165430;
+			public const int ic_mr_button_connecting_11_light = 2131165430;
 			
 			// aapt resource value: 0x7F0700F7
-			public const int ic_mr_button_connecting_22_light = 2131165431;
+			public const int ic_mr_button_connecting_12_dark = 2131165431;
 			
 			// aapt resource value: 0x7F0700F8
-			public const int ic_mr_button_connecting_23_dark = 2131165432;
+			public const int ic_mr_button_connecting_12_light = 2131165432;
 			
 			// aapt resource value: 0x7F0700F9
-			public const int ic_mr_button_connecting_23_light = 2131165433;
+			public const int ic_mr_button_connecting_13_dark = 2131165433;
 			
 			// aapt resource value: 0x7F0700FA
-			public const int ic_mr_button_connecting_24_dark = 2131165434;
+			public const int ic_mr_button_connecting_13_light = 2131165434;
 			
 			// aapt resource value: 0x7F0700FB
-			public const int ic_mr_button_connecting_24_light = 2131165435;
+			public const int ic_mr_button_connecting_14_dark = 2131165435;
 			
 			// aapt resource value: 0x7F0700FC
-			public const int ic_mr_button_connecting_25_dark = 2131165436;
+			public const int ic_mr_button_connecting_14_light = 2131165436;
 			
 			// aapt resource value: 0x7F0700FD
-			public const int ic_mr_button_connecting_25_light = 2131165437;
+			public const int ic_mr_button_connecting_15_dark = 2131165437;
 			
 			// aapt resource value: 0x7F0700FE
-			public const int ic_mr_button_connecting_26_dark = 2131165438;
+			public const int ic_mr_button_connecting_15_light = 2131165438;
 			
 			// aapt resource value: 0x7F0700FF
-			public const int ic_mr_button_connecting_26_light = 2131165439;
+			public const int ic_mr_button_connecting_16_dark = 2131165439;
 			
 			// aapt resource value: 0x7F070100
-			public const int ic_mr_button_connecting_27_dark = 2131165440;
+			public const int ic_mr_button_connecting_16_light = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int ic_mr_button_connecting_27_light = 2131165441;
+			public const int ic_mr_button_connecting_17_dark = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int ic_mr_button_connecting_28_dark = 2131165442;
+			public const int ic_mr_button_connecting_17_light = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int ic_mr_button_connecting_28_light = 2131165443;
+			public const int ic_mr_button_connecting_18_dark = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int ic_mr_button_connecting_29_dark = 2131165444;
+			public const int ic_mr_button_connecting_18_light = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int ic_mr_button_connecting_29_light = 2131165445;
+			public const int ic_mr_button_connecting_19_dark = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int ic_mr_button_connecting_30_dark = 2131165446;
+			public const int ic_mr_button_connecting_19_light = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int ic_mr_button_connecting_30_light = 2131165447;
+			public const int ic_mr_button_connecting_20_dark = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int ic_mr_button_disabled_dark = 2131165448;
+			public const int ic_mr_button_connecting_20_light = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int ic_mr_button_disabled_light = 2131165449;
+			public const int ic_mr_button_connecting_21_dark = 2131165449;
 			
 			// aapt resource value: 0x7F07010A
-			public const int ic_mr_button_disconnected_dark = 2131165450;
+			public const int ic_mr_button_connecting_21_light = 2131165450;
 			
 			// aapt resource value: 0x7F07010B
-			public const int ic_mr_button_disconnected_light = 2131165451;
+			public const int ic_mr_button_connecting_22_dark = 2131165451;
 			
 			// aapt resource value: 0x7F07010C
-			public const int ic_mr_button_grey = 2131165452;
+			public const int ic_mr_button_connecting_22_light = 2131165452;
 			
 			// aapt resource value: 0x7F07010D
-			public const int ic_mtrl_chip_checked_black = 2131165453;
+			public const int ic_mr_button_connecting_23_dark = 2131165453;
 			
 			// aapt resource value: 0x7F07010E
-			public const int ic_mtrl_chip_checked_circle = 2131165454;
+			public const int ic_mr_button_connecting_23_light = 2131165454;
 			
 			// aapt resource value: 0x7F07010F
-			public const int ic_mtrl_chip_close_circle = 2131165455;
+			public const int ic_mr_button_connecting_24_dark = 2131165455;
 			
 			// aapt resource value: 0x7F070110
-			public const int ic_vol_type_speaker_dark = 2131165456;
+			public const int ic_mr_button_connecting_24_light = 2131165456;
 			
 			// aapt resource value: 0x7F070111
-			public const int ic_vol_type_speaker_group_dark = 2131165457;
+			public const int ic_mr_button_connecting_25_dark = 2131165457;
 			
 			// aapt resource value: 0x7F070112
-			public const int ic_vol_type_speaker_group_light = 2131165458;
+			public const int ic_mr_button_connecting_25_light = 2131165458;
 			
 			// aapt resource value: 0x7F070113
-			public const int ic_vol_type_speaker_light = 2131165459;
+			public const int ic_mr_button_connecting_26_dark = 2131165459;
 			
 			// aapt resource value: 0x7F070114
-			public const int ic_vol_type_tv_dark = 2131165460;
+			public const int ic_mr_button_connecting_26_light = 2131165460;
 			
 			// aapt resource value: 0x7F070115
-			public const int ic_vol_type_tv_light = 2131165461;
+			public const int ic_mr_button_connecting_27_dark = 2131165461;
 			
 			// aapt resource value: 0x7F070116
-			public const int mr_button_connected_dark = 2131165462;
+			public const int ic_mr_button_connecting_27_light = 2131165462;
 			
 			// aapt resource value: 0x7F070117
-			public const int mr_button_connected_light = 2131165463;
+			public const int ic_mr_button_connecting_28_dark = 2131165463;
 			
 			// aapt resource value: 0x7F070118
-			public const int mr_button_connecting_dark = 2131165464;
+			public const int ic_mr_button_connecting_28_light = 2131165464;
 			
 			// aapt resource value: 0x7F070119
-			public const int mr_button_connecting_light = 2131165465;
+			public const int ic_mr_button_connecting_29_dark = 2131165465;
 			
 			// aapt resource value: 0x7F07011A
-			public const int mr_button_dark = 2131165466;
+			public const int ic_mr_button_connecting_29_light = 2131165466;
 			
 			// aapt resource value: 0x7F07011B
-			public const int mr_button_light = 2131165467;
+			public const int ic_mr_button_connecting_30_dark = 2131165467;
 			
 			// aapt resource value: 0x7F07011C
-			public const int mr_dialog_close_dark = 2131165468;
+			public const int ic_mr_button_connecting_30_light = 2131165468;
 			
 			// aapt resource value: 0x7F07011D
-			public const int mr_dialog_close_light = 2131165469;
+			public const int ic_mr_button_disabled_dark = 2131165469;
 			
 			// aapt resource value: 0x7F07011E
-			public const int mr_dialog_material_background_dark = 2131165470;
+			public const int ic_mr_button_disabled_light = 2131165470;
 			
 			// aapt resource value: 0x7F07011F
-			public const int mr_dialog_material_background_light = 2131165471;
+			public const int ic_mr_button_disconnected_dark = 2131165471;
 			
 			// aapt resource value: 0x7F070120
-			public const int mr_group_collapse = 2131165472;
+			public const int ic_mr_button_disconnected_light = 2131165472;
 			
 			// aapt resource value: 0x7F070121
-			public const int mr_group_expand = 2131165473;
+			public const int ic_mr_button_grey = 2131165473;
 			
 			// aapt resource value: 0x7F070122
-			public const int mr_media_pause_dark = 2131165474;
+			public const int ic_mtrl_chip_checked_black = 2131165474;
 			
 			// aapt resource value: 0x7F070123
-			public const int mr_media_pause_light = 2131165475;
+			public const int ic_mtrl_chip_checked_circle = 2131165475;
 			
 			// aapt resource value: 0x7F070124
-			public const int mr_media_play_dark = 2131165476;
+			public const int ic_mtrl_chip_close_circle = 2131165476;
 			
 			// aapt resource value: 0x7F070125
-			public const int mr_media_play_light = 2131165477;
+			public const int ic_vol_type_speaker_dark = 2131165477;
 			
 			// aapt resource value: 0x7F070126
-			public const int mr_media_stop_dark = 2131165478;
+			public const int ic_vol_type_speaker_group_dark = 2131165478;
 			
 			// aapt resource value: 0x7F070127
-			public const int mr_media_stop_light = 2131165479;
+			public const int ic_vol_type_speaker_group_light = 2131165479;
 			
 			// aapt resource value: 0x7F070128
-			public const int mr_vol_type_audiotrack_dark = 2131165480;
+			public const int ic_vol_type_speaker_light = 2131165480;
 			
 			// aapt resource value: 0x7F070129
-			public const int mr_vol_type_audiotrack_light = 2131165481;
+			public const int ic_vol_type_tv_dark = 2131165481;
 			
 			// aapt resource value: 0x7F07012A
-			public const int mtrl_snackbar_background = 2131165482;
+			public const int ic_vol_type_tv_light = 2131165482;
 			
 			// aapt resource value: 0x7F07012B
-			public const int mtrl_tabs_default_indicator = 2131165483;
+			public const int mr_button_connected_dark = 2131165483;
 			
 			// aapt resource value: 0x7F07012C
-			public const int navigation_empty_icon = 2131165484;
+			public const int mr_button_connected_light = 2131165484;
 			
 			// aapt resource value: 0x7F07012D
-			public const int notification_action_background = 2131165485;
+			public const int mr_button_connecting_dark = 2131165485;
 			
 			// aapt resource value: 0x7F07012E
-			public const int notification_bg = 2131165486;
+			public const int mr_button_connecting_light = 2131165486;
 			
 			// aapt resource value: 0x7F07012F
-			public const int notification_bg_low = 2131165487;
+			public const int mr_button_dark = 2131165487;
 			
 			// aapt resource value: 0x7F070130
-			public const int notification_bg_low_normal = 2131165488;
+			public const int mr_button_light = 2131165488;
 			
 			// aapt resource value: 0x7F070131
-			public const int notification_bg_low_pressed = 2131165489;
+			public const int mr_dialog_close_dark = 2131165489;
 			
 			// aapt resource value: 0x7F070132
-			public const int notification_bg_normal = 2131165490;
+			public const int mr_dialog_close_light = 2131165490;
 			
 			// aapt resource value: 0x7F070133
-			public const int notification_bg_normal_pressed = 2131165491;
+			public const int mr_dialog_material_background_dark = 2131165491;
 			
 			// aapt resource value: 0x7F070134
-			public const int notification_icon_background = 2131165492;
+			public const int mr_dialog_material_background_light = 2131165492;
 			
 			// aapt resource value: 0x7F070135
-			public const int notification_template_icon_bg = 2131165493;
+			public const int mr_group_collapse = 2131165493;
 			
 			// aapt resource value: 0x7F070136
-			public const int notification_template_icon_low_bg = 2131165494;
+			public const int mr_group_expand = 2131165494;
 			
 			// aapt resource value: 0x7F070137
-			public const int notification_tile_bg = 2131165495;
+			public const int mr_media_pause_dark = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int notify_panel_notification_icon_bg = 2131165496;
+			public const int mr_media_pause_light = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int tooltip_frame_dark = 2131165497;
+			public const int mr_media_play_dark = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int tooltip_frame_light = 2131165498;
+			public const int mr_media_play_light = 2131165498;
+			
+			// aapt resource value: 0x7F07013B
+			public const int mr_media_stop_dark = 2131165499;
+			
+			// aapt resource value: 0x7F07013C
+			public const int mr_media_stop_light = 2131165500;
+			
+			// aapt resource value: 0x7F07013D
+			public const int mr_vol_type_audiotrack_dark = 2131165501;
+			
+			// aapt resource value: 0x7F07013E
+			public const int mr_vol_type_audiotrack_light = 2131165502;
+			
+			// aapt resource value: 0x7F07013F
+			public const int mtrl_snackbar_background = 2131165503;
+			
+			// aapt resource value: 0x7F070140
+			public const int mtrl_tabs_default_indicator = 2131165504;
+			
+			// aapt resource value: 0x7F070141
+			public const int navigation_empty_icon = 2131165505;
+			
+			// aapt resource value: 0x7F070142
+			public const int notification_action_background = 2131165506;
+			
+			// aapt resource value: 0x7F070143
+			public const int notification_bg = 2131165507;
+			
+			// aapt resource value: 0x7F070144
+			public const int notification_bg_low = 2131165508;
+			
+			// aapt resource value: 0x7F070145
+			public const int notification_bg_low_normal = 2131165509;
+			
+			// aapt resource value: 0x7F070146
+			public const int notification_bg_low_pressed = 2131165510;
+			
+			// aapt resource value: 0x7F070147
+			public const int notification_bg_normal = 2131165511;
+			
+			// aapt resource value: 0x7F070148
+			public const int notification_bg_normal_pressed = 2131165512;
+			
+			// aapt resource value: 0x7F070149
+			public const int notification_icon_background = 2131165513;
+			
+			// aapt resource value: 0x7F07014A
+			public const int notification_template_icon_bg = 2131165514;
+			
+			// aapt resource value: 0x7F07014B
+			public const int notification_template_icon_low_bg = 2131165515;
+			
+			// aapt resource value: 0x7F07014C
+			public const int notification_tile_bg = 2131165516;
+			
+			// aapt resource value: 0x7F07014D
+			public const int notify_panel_notification_icon_bg = 2131165517;
+			
+			// aapt resource value: 0x7F07014E
+			public const int tooltip_frame_dark = 2131165518;
+			
+			// aapt resource value: 0x7F07014F
+			public const int tooltip_frame_light = 2131165519;
 			
 			static Drawable()
 			{
@@ -6521,706 +9284,727 @@ namespace Sidekick.Droid
 			public const int add = 2131230746;
 			
 			// aapt resource value: 0x7F08001B
-			public const int alertTitle = 2131230747;
+			public const int adjust_height = 2131230747;
 			
 			// aapt resource value: 0x7F08001C
-			public const int all = 2131230748;
+			public const int adjust_width = 2131230748;
+			
+			// aapt resource value: 0x7F08001D
+			public const int alertTitle = 2131230749;
+			
+			// aapt resource value: 0x7F08001E
+			public const int all = 2131230750;
 			
 			// aapt resource value: 0x7F080000
 			public const int ALT = 2131230720;
 			
-			// aapt resource value: 0x7F08001D
-			public const int always = 2131230749;
-			
-			// aapt resource value: 0x7F08001E
-			public const int async = 2131230750;
-			
 			// aapt resource value: 0x7F08001F
-			public const int auto = 2131230751;
+			public const int always = 2131230751;
 			
 			// aapt resource value: 0x7F080020
-			public const int beginning = 2131230752;
+			public const int async = 2131230752;
 			
 			// aapt resource value: 0x7F080021
-			public const int blocking = 2131230753;
+			public const int auto = 2131230753;
 			
 			// aapt resource value: 0x7F080022
-			public const int bottom = 2131230754;
+			public const int beginning = 2131230754;
 			
 			// aapt resource value: 0x7F080023
-			public const int bottomtab_navarea = 2131230755;
+			public const int blocking = 2131230755;
 			
 			// aapt resource value: 0x7F080024
-			public const int bottomtab_tabbar = 2131230756;
+			public const int bottom = 2131230756;
 			
 			// aapt resource value: 0x7F080025
-			public const int browser_actions_header_text = 2131230757;
-			
-			// aapt resource value: 0x7F080028
-			public const int browser_actions_menu_items = 2131230760;
+			public const int bottomtab_navarea = 2131230757;
 			
 			// aapt resource value: 0x7F080026
-			public const int browser_actions_menu_item_icon = 2131230758;
+			public const int bottomtab_tabbar = 2131230758;
 			
 			// aapt resource value: 0x7F080027
-			public const int browser_actions_menu_item_text = 2131230759;
-			
-			// aapt resource value: 0x7F080029
-			public const int browser_actions_menu_view = 2131230761;
+			public const int browser_actions_header_text = 2131230759;
 			
 			// aapt resource value: 0x7F08002A
-			public const int buttonPanel = 2131230762;
+			public const int browser_actions_menu_items = 2131230762;
+			
+			// aapt resource value: 0x7F080028
+			public const int browser_actions_menu_item_icon = 2131230760;
+			
+			// aapt resource value: 0x7F080029
+			public const int browser_actions_menu_item_text = 2131230761;
 			
 			// aapt resource value: 0x7F08002B
-			public const int cancel_action = 2131230763;
+			public const int browser_actions_menu_view = 2131230763;
 			
 			// aapt resource value: 0x7F08002C
-			public const int center = 2131230764;
+			public const int buttonPanel = 2131230764;
 			
 			// aapt resource value: 0x7F08002D
-			public const int center_horizontal = 2131230765;
+			public const int cancel_action = 2131230765;
 			
 			// aapt resource value: 0x7F08002E
-			public const int center_vertical = 2131230766;
+			public const int center = 2131230766;
 			
 			// aapt resource value: 0x7F08002F
-			public const int checkbox = 2131230767;
+			public const int center_horizontal = 2131230767;
 			
 			// aapt resource value: 0x7F080030
-			public const int chronometer = 2131230768;
+			public const int center_vertical = 2131230768;
 			
 			// aapt resource value: 0x7F080031
-			public const int clip_horizontal = 2131230769;
+			public const int checkbox = 2131230769;
 			
 			// aapt resource value: 0x7F080032
-			public const int clip_vertical = 2131230770;
+			public const int chronometer = 2131230770;
 			
 			// aapt resource value: 0x7F080033
-			public const int collapseActionView = 2131230771;
+			public const int clip_horizontal = 2131230771;
 			
 			// aapt resource value: 0x7F080034
-			public const int container = 2131230772;
+			public const int clip_vertical = 2131230772;
 			
 			// aapt resource value: 0x7F080035
-			public const int content = 2131230773;
+			public const int collapseActionView = 2131230773;
 			
 			// aapt resource value: 0x7F080036
-			public const int contentPanel = 2131230774;
+			public const int container = 2131230774;
 			
 			// aapt resource value: 0x7F080037
-			public const int coordinator = 2131230775;
+			public const int content = 2131230775;
+			
+			// aapt resource value: 0x7F080038
+			public const int contentPanel = 2131230776;
+			
+			// aapt resource value: 0x7F080039
+			public const int coordinator = 2131230777;
 			
 			// aapt resource value: 0x7F080001
 			public const int CTRL = 2131230721;
 			
-			// aapt resource value: 0x7F080038
-			public const int custom = 2131230776;
-			
-			// aapt resource value: 0x7F080039
-			public const int customPanel = 2131230777;
-			
 			// aapt resource value: 0x7F08003A
-			public const int decor_content_parent = 2131230778;
+			public const int custom = 2131230778;
 			
 			// aapt resource value: 0x7F08003B
-			public const int default_activity_button = 2131230779;
+			public const int customPanel = 2131230779;
 			
 			// aapt resource value: 0x7F08003C
-			public const int design_bottom_sheet = 2131230780;
+			public const int dark = 2131230780;
 			
 			// aapt resource value: 0x7F08003D
-			public const int design_menu_item_action_area = 2131230781;
+			public const int decor_content_parent = 2131230781;
 			
 			// aapt resource value: 0x7F08003E
-			public const int design_menu_item_action_area_stub = 2131230782;
+			public const int default_activity_button = 2131230782;
 			
 			// aapt resource value: 0x7F08003F
-			public const int design_menu_item_text = 2131230783;
+			public const int design_bottom_sheet = 2131230783;
 			
 			// aapt resource value: 0x7F080040
-			public const int design_navigation_view = 2131230784;
+			public const int design_menu_item_action_area = 2131230784;
 			
 			// aapt resource value: 0x7F080041
-			public const int disableHome = 2131230785;
+			public const int design_menu_item_action_area_stub = 2131230785;
 			
 			// aapt resource value: 0x7F080042
-			public const int edit_query = 2131230786;
+			public const int design_menu_item_text = 2131230786;
 			
 			// aapt resource value: 0x7F080043
-			public const int end = 2131230787;
+			public const int design_navigation_view = 2131230787;
 			
 			// aapt resource value: 0x7F080044
-			public const int end_padder = 2131230788;
+			public const int disableHome = 2131230788;
 			
 			// aapt resource value: 0x7F080045
-			public const int enterAlways = 2131230789;
+			public const int edit_query = 2131230789;
 			
 			// aapt resource value: 0x7F080046
-			public const int enterAlwaysCollapsed = 2131230790;
+			public const int end = 2131230790;
 			
 			// aapt resource value: 0x7F080047
-			public const int exitUntilCollapsed = 2131230791;
-			
-			// aapt resource value: 0x7F080049
-			public const int expanded_menu = 2131230793;
+			public const int end_padder = 2131230791;
 			
 			// aapt resource value: 0x7F080048
-			public const int expand_activities_button = 2131230792;
+			public const int enterAlways = 2131230792;
+			
+			// aapt resource value: 0x7F080049
+			public const int enterAlwaysCollapsed = 2131230793;
 			
 			// aapt resource value: 0x7F08004A
-			public const int fill = 2131230794;
-			
-			// aapt resource value: 0x7F08004D
-			public const int filled = 2131230797;
-			
-			// aapt resource value: 0x7F08004B
-			public const int fill_horizontal = 2131230795;
+			public const int exitUntilCollapsed = 2131230794;
 			
 			// aapt resource value: 0x7F08004C
-			public const int fill_vertical = 2131230796;
+			public const int expanded_menu = 2131230796;
 			
-			// aapt resource value: 0x7F08004E
-			public const int @fixed = 2131230798;
+			// aapt resource value: 0x7F08004B
+			public const int expand_activities_button = 2131230795;
 			
-			// aapt resource value: 0x7F08004F
-			public const int flyoutcontent_appbar = 2131230799;
+			// aapt resource value: 0x7F08004D
+			public const int fill = 2131230797;
 			
 			// aapt resource value: 0x7F080050
-			public const int flyoutcontent_recycler = 2131230800;
+			public const int filled = 2131230800;
+			
+			// aapt resource value: 0x7F08004E
+			public const int fill_horizontal = 2131230798;
+			
+			// aapt resource value: 0x7F08004F
+			public const int fill_vertical = 2131230799;
 			
 			// aapt resource value: 0x7F080051
-			public const int forever = 2131230801;
+			public const int @fixed = 2131230801;
+			
+			// aapt resource value: 0x7F080052
+			public const int flyoutcontent_appbar = 2131230802;
+			
+			// aapt resource value: 0x7F080053
+			public const int flyoutcontent_recycler = 2131230803;
+			
+			// aapt resource value: 0x7F080054
+			public const int forever = 2131230804;
 			
 			// aapt resource value: 0x7F080002
 			public const int FUNCTION = 2131230722;
 			
-			// aapt resource value: 0x7F080052
-			public const int ghost_view = 2131230802;
-			
-			// aapt resource value: 0x7F080053
-			public const int group_divider = 2131230803;
-			
-			// aapt resource value: 0x7F080054
-			public const int home = 2131230804;
-			
 			// aapt resource value: 0x7F080055
-			public const int homeAsUp = 2131230805;
+			public const int ghost_view = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int icon = 2131230806;
+			public const int group_divider = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int icon_group = 2131230807;
+			public const int home = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int ifRoom = 2131230808;
+			public const int homeAsUp = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int image = 2131230809;
+			public const int icon = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int info = 2131230810;
+			public const int icon_group = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int italic = 2131230811;
+			public const int icon_only = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int item_touch_helper_previous_elevation = 2131230812;
+			public const int ifRoom = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int labeled = 2131230813;
+			public const int image = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int largeLabel = 2131230814;
+			public const int info = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
-			public const int left = 2131230815;
+			public const int italic = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int line1 = 2131230816;
+			public const int item_touch_helper_previous_elevation = 2131230816;
 			
 			// aapt resource value: 0x7F080061
-			public const int line3 = 2131230817;
+			public const int labeled = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int listMode = 2131230818;
+			public const int largeLabel = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int list_item = 2131230819;
+			public const int left = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int main_appbar = 2131230820;
+			public const int light = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int main_scrollview = 2131230821;
+			public const int line1 = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int main_tablayout = 2131230822;
+			public const int line3 = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int main_toolbar = 2131230823;
+			public const int listMode = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int masked = 2131230824;
+			public const int list_item = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int media_actions = 2131230825;
+			public const int main_appbar = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int message = 2131230826;
+			public const int main_scrollview = 2131230826;
+			
+			// aapt resource value: 0x7F08006B
+			public const int main_tablayout = 2131230827;
+			
+			// aapt resource value: 0x7F08006C
+			public const int main_toolbar = 2131230828;
+			
+			// aapt resource value: 0x7F08006D
+			public const int masked = 2131230829;
+			
+			// aapt resource value: 0x7F08006E
+			public const int media_actions = 2131230830;
+			
+			// aapt resource value: 0x7F08006F
+			public const int message = 2131230831;
 			
 			// aapt resource value: 0x7F080003
 			public const int META = 2131230723;
 			
-			// aapt resource value: 0x7F08006B
-			public const int middle = 2131230827;
-			
-			// aapt resource value: 0x7F08006C
-			public const int mini = 2131230828;
-			
-			// aapt resource value: 0x7F08006D
-			public const int mr_art = 2131230829;
-			
-			// aapt resource value: 0x7F08006E
-			public const int mr_cast_checkbox = 2131230830;
-			
-			// aapt resource value: 0x7F08006F
-			public const int mr_cast_close_button = 2131230831;
-			
 			// aapt resource value: 0x7F080070
-			public const int mr_cast_group_icon = 2131230832;
+			public const int middle = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int mr_cast_group_name = 2131230833;
+			public const int mini = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int mr_cast_list = 2131230834;
+			public const int mr_art = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int mr_cast_meta = 2131230835;
+			public const int mr_cast_checkbox = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int mr_cast_meta_art = 2131230836;
+			public const int mr_cast_close_button = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int mr_cast_meta_subtitle = 2131230837;
+			public const int mr_cast_group_icon = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int mr_cast_meta_title = 2131230838;
+			public const int mr_cast_group_name = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int mr_cast_route_icon = 2131230839;
+			public const int mr_cast_list = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int mr_cast_route_name = 2131230840;
+			public const int mr_cast_meta = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int mr_cast_stop_button = 2131230841;
+			public const int mr_cast_meta_art = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int mr_cast_volume_layout = 2131230842;
+			public const int mr_cast_meta_subtitle = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int mr_cast_volume_slider = 2131230843;
+			public const int mr_cast_meta_title = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int mr_chooser_list = 2131230844;
+			public const int mr_cast_route_icon = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int mr_chooser_route_desc = 2131230845;
+			public const int mr_cast_route_name = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int mr_chooser_route_icon = 2131230846;
+			public const int mr_cast_stop_button = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int mr_chooser_route_name = 2131230847;
+			public const int mr_cast_volume_layout = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int mr_chooser_title = 2131230848;
+			public const int mr_cast_volume_slider = 2131230848;
 			
 			// aapt resource value: 0x7F080081
-			public const int mr_close = 2131230849;
+			public const int mr_chooser_list = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int mr_control_divider = 2131230850;
+			public const int mr_chooser_route_desc = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int mr_control_playback_ctrl = 2131230851;
+			public const int mr_chooser_route_icon = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int mr_control_subtitle = 2131230852;
+			public const int mr_chooser_route_name = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int mr_control_title = 2131230853;
+			public const int mr_chooser_title = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int mr_control_title_container = 2131230854;
+			public const int mr_close = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int mr_custom_control = 2131230855;
+			public const int mr_control_divider = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int mr_default_control = 2131230856;
+			public const int mr_control_playback_ctrl = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int mr_dialog_area = 2131230857;
+			public const int mr_control_subtitle = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int mr_dialog_header_name = 2131230858;
+			public const int mr_control_title = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int mr_expandable_area = 2131230859;
+			public const int mr_control_title_container = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int mr_group_expand_collapse = 2131230860;
+			public const int mr_custom_control = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int mr_group_volume_route_name = 2131230861;
+			public const int mr_default_control = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int mr_group_volume_slider = 2131230862;
+			public const int mr_dialog_area = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int mr_media_main_control = 2131230863;
+			public const int mr_dialog_header_name = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int mr_name = 2131230864;
+			public const int mr_expandable_area = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int mr_picker_close_button = 2131230865;
+			public const int mr_group_expand_collapse = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int mr_picker_list = 2131230866;
+			public const int mr_group_volume_route_name = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int mr_picker_route_icon = 2131230867;
+			public const int mr_group_volume_slider = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int mr_picker_route_name = 2131230868;
+			public const int mr_media_main_control = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int mr_playback_control = 2131230869;
+			public const int mr_name = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int mr_title_bar = 2131230870;
+			public const int mr_picker_close_button = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int mr_volume_control = 2131230871;
+			public const int mr_picker_list = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int mr_volume_group_list = 2131230872;
+			public const int mr_picker_route_icon = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int mr_volume_item_icon = 2131230873;
+			public const int mr_picker_route_name = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int mr_volume_slider = 2131230874;
+			public const int mr_playback_control = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int mtrl_child_content_container = 2131230875;
+			public const int mr_title_bar = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int mtrl_internal_children_alpha_tag = 2131230876;
+			public const int mr_volume_control = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int multiply = 2131230877;
+			public const int mr_volume_group_list = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int navigation_header_container = 2131230878;
+			public const int mr_volume_item_icon = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int never = 2131230879;
+			public const int mr_volume_slider = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int none = 2131230880;
+			public const int mtrl_child_content_container = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int normal = 2131230881;
+			public const int mtrl_internal_children_alpha_tag = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int notification_background = 2131230882;
+			public const int multiply = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int notification_main_column = 2131230883;
+			public const int navigation_header_container = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int notification_main_column_container = 2131230884;
+			public const int never = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int outline = 2131230885;
+			public const int none = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int parallax = 2131230886;
+			public const int normal = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int parentPanel = 2131230887;
+			public const int notification_background = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int parent_matrix = 2131230888;
+			public const int notification_main_column = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int pin = 2131230889;
+			public const int notification_main_column_container = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int progress_circular = 2131230890;
+			public const int outline = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int progress_horizontal = 2131230891;
+			public const int parallax = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int radio = 2131230892;
+			public const int parentPanel = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int right = 2131230893;
+			public const int parent_matrix = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int right_icon = 2131230894;
+			public const int pin = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int right_side = 2131230895;
+			public const int progress_circular = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int save_image_matrix = 2131230896;
+			public const int progress_horizontal = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int save_non_transition_alpha = 2131230897;
+			public const int radio = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int save_scale_type = 2131230898;
+			public const int right = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int screen = 2131230899;
+			public const int right_icon = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int scroll = 2131230900;
-			
-			// aapt resource value: 0x7F0800B8
-			public const int scrollable = 2131230904;
+			public const int right_side = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int scrollIndicatorDown = 2131230901;
+			public const int save_image_matrix = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int scrollIndicatorUp = 2131230902;
+			public const int save_non_transition_alpha = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int scrollView = 2131230903;
+			public const int save_scale_type = 2131230903;
+			
+			// aapt resource value: 0x7F0800B8
+			public const int screen = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int search_badge = 2131230905;
-			
-			// aapt resource value: 0x7F0800BA
-			public const int search_bar = 2131230906;
-			
-			// aapt resource value: 0x7F0800BB
-			public const int search_button = 2131230907;
-			
-			// aapt resource value: 0x7F0800BC
-			public const int search_close_btn = 2131230908;
+			public const int scroll = 2131230905;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int search_edit_frame = 2131230909;
+			public const int scrollable = 2131230909;
+			
+			// aapt resource value: 0x7F0800BA
+			public const int scrollIndicatorDown = 2131230906;
+			
+			// aapt resource value: 0x7F0800BB
+			public const int scrollIndicatorUp = 2131230907;
+			
+			// aapt resource value: 0x7F0800BC
+			public const int scrollView = 2131230908;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int search_go_btn = 2131230910;
+			public const int search_badge = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int search_mag_icon = 2131230911;
+			public const int search_bar = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int search_plate = 2131230912;
+			public const int search_button = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int search_src_text = 2131230913;
+			public const int search_close_btn = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int search_voice_btn = 2131230914;
-			
-			// aapt resource value: 0x7F0800C4
-			public const int selected = 2131230916;
+			public const int search_edit_frame = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int select_dialog_listview = 2131230915;
+			public const int search_go_btn = 2131230915;
+			
+			// aapt resource value: 0x7F0800C4
+			public const int search_mag_icon = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int shellcontent_appbar = 2131230917;
+			public const int search_plate = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int shellcontent_scrollview = 2131230918;
+			public const int search_src_text = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int shellcontent_toolbar = 2131230919;
+			public const int search_voice_btn = 2131230919;
+			
+			// aapt resource value: 0x7F0800C9
+			public const int selected = 2131230921;
+			
+			// aapt resource value: 0x7F0800C8
+			public const int select_dialog_listview = 2131230920;
+			
+			// aapt resource value: 0x7F0800CA
+			public const int shellcontent_appbar = 2131230922;
+			
+			// aapt resource value: 0x7F0800CB
+			public const int shellcontent_scrollview = 2131230923;
+			
+			// aapt resource value: 0x7F0800CC
+			public const int shellcontent_toolbar = 2131230924;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
 			
-			// aapt resource value: 0x7F0800C8
-			public const int shortcut = 2131230920;
-			
-			// aapt resource value: 0x7F0800C9
-			public const int showCustom = 2131230921;
-			
-			// aapt resource value: 0x7F0800CA
-			public const int showHome = 2131230922;
-			
-			// aapt resource value: 0x7F0800CB
-			public const int showTitle = 2131230923;
-			
-			// aapt resource value: 0x7F0800CC
-			public const int sliding_tabs = 2131230924;
-			
 			// aapt resource value: 0x7F0800CD
-			public const int smallLabel = 2131230925;
+			public const int shortcut = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int snackbar_action = 2131230926;
+			public const int showCustom = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int snackbar_text = 2131230927;
+			public const int showHome = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int snap = 2131230928;
+			public const int showTitle = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int snapMargins = 2131230929;
+			public const int sliding_tabs = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int spacer = 2131230930;
+			public const int smallLabel = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int split_action_bar = 2131230931;
+			public const int snackbar_action = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int src_atop = 2131230932;
+			public const int snackbar_text = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int src_in = 2131230933;
+			public const int snap = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int src_over = 2131230934;
+			public const int snapMargins = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int start = 2131230935;
+			public const int spacer = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int status_bar_latest_event_content = 2131230936;
+			public const int split_action_bar = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int stretch = 2131230937;
+			public const int src_atop = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int submenuarrow = 2131230938;
+			public const int src_in = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int submit_area = 2131230939;
+			public const int src_over = 2131230939;
+			
+			// aapt resource value: 0x7F0800DC
+			public const int standard = 2131230940;
+			
+			// aapt resource value: 0x7F0800DD
+			public const int start = 2131230941;
+			
+			// aapt resource value: 0x7F0800DE
+			public const int status_bar_latest_event_content = 2131230942;
+			
+			// aapt resource value: 0x7F0800DF
+			public const int stretch = 2131230943;
+			
+			// aapt resource value: 0x7F0800E0
+			public const int submenuarrow = 2131230944;
+			
+			// aapt resource value: 0x7F0800E1
+			public const int submit_area = 2131230945;
 			
 			// aapt resource value: 0x7F080005
 			public const int SYM = 2131230725;
 			
-			// aapt resource value: 0x7F0800DC
-			public const int tabMode = 2131230940;
-			
-			// aapt resource value: 0x7F0800DD
-			public const int tag_transition_group = 2131230941;
-			
-			// aapt resource value: 0x7F0800DE
-			public const int tag_unhandled_key_event_manager = 2131230942;
-			
-			// aapt resource value: 0x7F0800DF
-			public const int tag_unhandled_key_listeners = 2131230943;
-			
-			// aapt resource value: 0x7F0800E0
-			public const int text = 2131230944;
-			
-			// aapt resource value: 0x7F0800E1
-			public const int text2 = 2131230945;
-			
-			// aapt resource value: 0x7F0800E6
-			public const int textinput_counter = 2131230950;
-			
-			// aapt resource value: 0x7F0800E7
-			public const int textinput_error = 2131230951;
-			
-			// aapt resource value: 0x7F0800E8
-			public const int textinput_helper_text = 2131230952;
-			
 			// aapt resource value: 0x7F0800E2
-			public const int textSpacerNoButtons = 2131230946;
+			public const int tabMode = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int textSpacerNoTitle = 2131230947;
+			public const int tag_transition_group = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int textStart = 2131230948;
+			public const int tag_unhandled_key_event_manager = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int text_input_password_toggle = 2131230949;
+			public const int tag_unhandled_key_listeners = 2131230949;
 			
-			// aapt resource value: 0x7F0800E9
-			public const int time = 2131230953;
+			// aapt resource value: 0x7F0800E6
+			public const int text = 2131230950;
 			
-			// aapt resource value: 0x7F0800EA
-			public const int title = 2131230954;
-			
-			// aapt resource value: 0x7F0800EB
-			public const int titleDividerNoCustom = 2131230955;
+			// aapt resource value: 0x7F0800E7
+			public const int text2 = 2131230951;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int title_template = 2131230956;
+			public const int textinput_counter = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int toolbar = 2131230957;
+			public const int textinput_error = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int top = 2131230958;
+			public const int textinput_helper_text = 2131230958;
+			
+			// aapt resource value: 0x7F0800E8
+			public const int textSpacerNoButtons = 2131230952;
+			
+			// aapt resource value: 0x7F0800E9
+			public const int textSpacerNoTitle = 2131230953;
+			
+			// aapt resource value: 0x7F0800EA
+			public const int textStart = 2131230954;
+			
+			// aapt resource value: 0x7F0800EB
+			public const int text_input_password_toggle = 2131230955;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int topPanel = 2131230959;
+			public const int time = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int touch_outside = 2131230960;
+			public const int title = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int transition_current_scene = 2131230961;
+			public const int titleDividerNoCustom = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int transition_layout_save = 2131230962;
+			public const int title_template = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int transition_position = 2131230963;
+			public const int toolbar = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int transition_scene_layoutid_cache = 2131230964;
+			public const int top = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int transition_transform = 2131230965;
+			public const int topPanel = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int uniform = 2131230966;
+			public const int touch_outside = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int unlabeled = 2131230967;
+			public const int transition_current_scene = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int up = 2131230968;
+			public const int transition_layout_save = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int useLogo = 2131230969;
+			public const int transition_position = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int view_offset_helper = 2131230970;
+			public const int transition_scene_layoutid_cache = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int visible = 2131230971;
+			public const int transition_transform = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int volume_item_container = 2131230972;
+			public const int uniform = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int withText = 2131230973;
+			public const int unlabeled = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int wrap_content = 2131230974;
+			public const int up = 2131230974;
+			
+			// aapt resource value: 0x7F0800FF
+			public const int useLogo = 2131230975;
+			
+			// aapt resource value: 0x7F080100
+			public const int view_offset_helper = 2131230976;
+			
+			// aapt resource value: 0x7F080101
+			public const int visible = 2131230977;
+			
+			// aapt resource value: 0x7F080102
+			public const int volume_item_container = 2131230978;
+			
+			// aapt resource value: 0x7F080103
+			public const int wide = 2131230979;
+			
+			// aapt resource value: 0x7F080104
+			public const int withText = 2131230980;
+			
+			// aapt resource value: 0x7F080105
+			public const int wrap_content = 2131230981;
 			
 			static Id()
 			{
@@ -7260,37 +10044,40 @@ namespace Sidekick.Droid
 			public const int design_tab_indicator_anim_duration_ms = 2131296263;
 			
 			// aapt resource value: 0x7F090008
-			public const int hide_password_duration = 2131296264;
+			public const int google_play_services_version = 2131296264;
 			
 			// aapt resource value: 0x7F090009
-			public const int mr_controller_volume_group_list_animation_duration_ms = 2131296265;
+			public const int hide_password_duration = 2131296265;
 			
 			// aapt resource value: 0x7F09000A
-			public const int mr_controller_volume_group_list_fade_in_duration_ms = 2131296266;
+			public const int mr_controller_volume_group_list_animation_duration_ms = 2131296266;
 			
 			// aapt resource value: 0x7F09000B
-			public const int mr_controller_volume_group_list_fade_out_duration_ms = 2131296267;
+			public const int mr_controller_volume_group_list_fade_in_duration_ms = 2131296267;
 			
 			// aapt resource value: 0x7F09000C
-			public const int mr_update_routes_delay_ms = 2131296268;
+			public const int mr_controller_volume_group_list_fade_out_duration_ms = 2131296268;
 			
 			// aapt resource value: 0x7F09000D
-			public const int mtrl_btn_anim_delay_ms = 2131296269;
+			public const int mr_update_routes_delay_ms = 2131296269;
 			
 			// aapt resource value: 0x7F09000E
-			public const int mtrl_btn_anim_duration_ms = 2131296270;
+			public const int mtrl_btn_anim_delay_ms = 2131296270;
 			
 			// aapt resource value: 0x7F09000F
-			public const int mtrl_chip_anim_duration = 2131296271;
+			public const int mtrl_btn_anim_duration_ms = 2131296271;
 			
 			// aapt resource value: 0x7F090010
-			public const int mtrl_tab_indicator_anim_duration_ms = 2131296272;
+			public const int mtrl_chip_anim_duration = 2131296272;
 			
 			// aapt resource value: 0x7F090011
-			public const int show_password_duration = 2131296273;
+			public const int mtrl_tab_indicator_anim_duration_ms = 2131296273;
 			
 			// aapt resource value: 0x7F090012
-			public const int status_bar_notification_info_maxnum = 2131296274;
+			public const int show_password_duration = 2131296274;
+			
+			// aapt resource value: 0x7F090013
+			public const int status_bar_notification_info_maxnum = 2131296275;
 			
 			static Integer()
 			{
@@ -7743,122 +10530,182 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x7F0D0026
 			public const int abc_toolbar_collapse_description = 2131558438;
 			
-			// aapt resource value: 0x7F0D0027
-			public const int appbar_scrolling_view_behavior = 2131558439;
-			
 			// aapt resource value: 0x7F0D0028
-			public const int bottom_sheet_behavior = 2131558440;
+			public const int appbar_scrolling_view_behavior = 2131558440;
+			
+			// aapt resource value: 0x7F0D0027
+			public const int app_name = 2131558439;
 			
 			// aapt resource value: 0x7F0D0029
-			public const int character_counter_content_description = 2131558441;
+			public const int bottom_sheet_behavior = 2131558441;
 			
 			// aapt resource value: 0x7F0D002A
-			public const int character_counter_pattern = 2131558442;
+			public const int character_counter_content_description = 2131558442;
 			
 			// aapt resource value: 0x7F0D002B
-			public const int fab_transformation_scrim_behavior = 2131558443;
+			public const int character_counter_pattern = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int fab_transformation_sheet_behavior = 2131558444;
+			public const int common_google_play_services_enable_button = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int hide_bottom_view_on_scroll_behavior = 2131558445;
+			public const int common_google_play_services_enable_text = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int mr_button_content_description = 2131558446;
+			public const int common_google_play_services_enable_title = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int mr_cast_button_connected = 2131558447;
+			public const int common_google_play_services_install_button = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int mr_cast_button_connecting = 2131558448;
+			public const int common_google_play_services_install_text = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int mr_cast_button_disconnected = 2131558449;
+			public const int common_google_play_services_install_title = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int mr_cast_dialog_title_view_placeholder = 2131558450;
+			public const int common_google_play_services_notification_channel_name = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int mr_chooser_searching = 2131558451;
+			public const int common_google_play_services_notification_ticker = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int mr_chooser_title = 2131558452;
+			public const int common_google_play_services_unknown_issue = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int mr_controller_album_art = 2131558453;
+			public const int common_google_play_services_unsupported_text = 2131558453;
 			
 			// aapt resource value: 0x7F0D0036
-			public const int mr_controller_casting_screen = 2131558454;
+			public const int common_google_play_services_update_button = 2131558454;
 			
 			// aapt resource value: 0x7F0D0037
-			public const int mr_controller_close_description = 2131558455;
+			public const int common_google_play_services_update_text = 2131558455;
 			
 			// aapt resource value: 0x7F0D0038
-			public const int mr_controller_collapse_group = 2131558456;
+			public const int common_google_play_services_update_title = 2131558456;
 			
 			// aapt resource value: 0x7F0D0039
-			public const int mr_controller_disconnect = 2131558457;
+			public const int common_google_play_services_updating_text = 2131558457;
 			
 			// aapt resource value: 0x7F0D003A
-			public const int mr_controller_expand_group = 2131558458;
+			public const int common_google_play_services_wear_update_text = 2131558458;
 			
 			// aapt resource value: 0x7F0D003B
-			public const int mr_controller_no_info_available = 2131558459;
+			public const int common_open_on_phone = 2131558459;
 			
 			// aapt resource value: 0x7F0D003C
-			public const int mr_controller_no_media_selected = 2131558460;
+			public const int common_signin_button_text = 2131558460;
 			
 			// aapt resource value: 0x7F0D003D
-			public const int mr_controller_pause = 2131558461;
+			public const int common_signin_button_text_long = 2131558461;
 			
 			// aapt resource value: 0x7F0D003E
-			public const int mr_controller_play = 2131558462;
+			public const int fab_transformation_scrim_behavior = 2131558462;
 			
 			// aapt resource value: 0x7F0D003F
-			public const int mr_controller_stop = 2131558463;
+			public const int fab_transformation_sheet_behavior = 2131558463;
 			
 			// aapt resource value: 0x7F0D0040
-			public const int mr_controller_stop_casting = 2131558464;
+			public const int hello = 2131558464;
 			
 			// aapt resource value: 0x7F0D0041
-			public const int mr_controller_volume_slider = 2131558465;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558465;
 			
 			// aapt resource value: 0x7F0D0042
-			public const int mr_dialog_device_header = 2131558466;
+			public const int mr_button_content_description = 2131558466;
 			
 			// aapt resource value: 0x7F0D0043
-			public const int mr_dialog_route_header = 2131558467;
+			public const int mr_cast_button_connected = 2131558467;
 			
 			// aapt resource value: 0x7F0D0044
-			public const int mr_system_route_name = 2131558468;
+			public const int mr_cast_button_connecting = 2131558468;
 			
 			// aapt resource value: 0x7F0D0045
-			public const int mr_user_route_category_name = 2131558469;
+			public const int mr_cast_button_disconnected = 2131558469;
 			
 			// aapt resource value: 0x7F0D0046
-			public const int mtrl_chip_close_icon_content_description = 2131558470;
+			public const int mr_cast_dialog_title_view_placeholder = 2131558470;
 			
 			// aapt resource value: 0x7F0D0047
-			public const int password_toggle_content_description = 2131558471;
+			public const int mr_chooser_searching = 2131558471;
 			
 			// aapt resource value: 0x7F0D0048
-			public const int path_password_eye = 2131558472;
+			public const int mr_chooser_title = 2131558472;
 			
 			// aapt resource value: 0x7F0D0049
-			public const int path_password_eye_mask_strike_through = 2131558473;
+			public const int mr_controller_album_art = 2131558473;
 			
 			// aapt resource value: 0x7F0D004A
-			public const int path_password_eye_mask_visible = 2131558474;
+			public const int mr_controller_casting_screen = 2131558474;
 			
 			// aapt resource value: 0x7F0D004B
-			public const int path_password_strike_through = 2131558475;
+			public const int mr_controller_close_description = 2131558475;
 			
 			// aapt resource value: 0x7F0D004C
-			public const int search_menu_title = 2131558476;
+			public const int mr_controller_collapse_group = 2131558476;
 			
 			// aapt resource value: 0x7F0D004D
-			public const int status_bar_notification_info_overflow = 2131558477;
+			public const int mr_controller_disconnect = 2131558477;
+			
+			// aapt resource value: 0x7F0D004E
+			public const int mr_controller_expand_group = 2131558478;
+			
+			// aapt resource value: 0x7F0D004F
+			public const int mr_controller_no_info_available = 2131558479;
+			
+			// aapt resource value: 0x7F0D0050
+			public const int mr_controller_no_media_selected = 2131558480;
+			
+			// aapt resource value: 0x7F0D0051
+			public const int mr_controller_pause = 2131558481;
+			
+			// aapt resource value: 0x7F0D0052
+			public const int mr_controller_play = 2131558482;
+			
+			// aapt resource value: 0x7F0D0053
+			public const int mr_controller_stop = 2131558483;
+			
+			// aapt resource value: 0x7F0D0054
+			public const int mr_controller_stop_casting = 2131558484;
+			
+			// aapt resource value: 0x7F0D0055
+			public const int mr_controller_volume_slider = 2131558485;
+			
+			// aapt resource value: 0x7F0D0056
+			public const int mr_dialog_device_header = 2131558486;
+			
+			// aapt resource value: 0x7F0D0057
+			public const int mr_dialog_route_header = 2131558487;
+			
+			// aapt resource value: 0x7F0D0058
+			public const int mr_system_route_name = 2131558488;
+			
+			// aapt resource value: 0x7F0D0059
+			public const int mr_user_route_category_name = 2131558489;
+			
+			// aapt resource value: 0x7F0D005A
+			public const int mtrl_chip_close_icon_content_description = 2131558490;
+			
+			// aapt resource value: 0x7F0D005B
+			public const int password_toggle_content_description = 2131558491;
+			
+			// aapt resource value: 0x7F0D005C
+			public const int path_password_eye = 2131558492;
+			
+			// aapt resource value: 0x7F0D005D
+			public const int path_password_eye_mask_strike_through = 2131558493;
+			
+			// aapt resource value: 0x7F0D005E
+			public const int path_password_eye_mask_visible = 2131558494;
+			
+			// aapt resource value: 0x7F0D005F
+			public const int path_password_strike_through = 2131558495;
+			
+			// aapt resource value: 0x7F0D0060
+			public const int search_menu_title = 2131558496;
+			
+			// aapt resource value: 0x7F0D0061
+			public const int status_bar_notification_info_overflow = 2131558497;
 			
 			static String()
 			{
@@ -9428,37 +12275,37 @@ namespace Sidekick.Droid
 		public partial class Styleable
 		{
 			
-			// aapt resource value: { 0x7F030031,0x7F030032,0x7F030033,0x7F030091,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F0300A4,0x7F0300A9,0x7F0300AA,0x7F0300B5,0x7F0300E0,0x7F0300E5,0x7F0300EA,0x7F0300EB,0x7F0300ED,0x7F0300F7,0x7F030101,0x7F030124,0x7F03013D,0x7F03014E,0x7F030152,0x7F030153,0x7F030181,0x7F030184,0x7F0301C9,0x7F0301D3 }
+			// aapt resource value: { 0x7F030031,0x7F030032,0x7F030033,0x7F030094,0x7F030095,0x7F030096,0x7F030097,0x7F030098,0x7F030099,0x7F0300A7,0x7F0300AC,0x7F0300AD,0x7F0300B8,0x7F0300E3,0x7F0300E8,0x7F0300ED,0x7F0300EE,0x7F0300F0,0x7F0300FC,0x7F030106,0x7F030129,0x7F030142,0x7F030153,0x7F030157,0x7F030158,0x7F030187,0x7F03018A,0x7F0301CF,0x7F0301D9 }
 			public static int[] ActionBar = new int[] {
 					2130903089,
 					2130903090,
 					2130903091,
-					2130903185,
-					2130903186,
-					2130903187,
 					2130903188,
 					2130903189,
 					2130903190,
-					2130903204,
-					2130903209,
-					2130903210,
-					2130903221,
-					2130903264,
-					2130903269,
-					2130903274,
-					2130903275,
+					2130903191,
+					2130903192,
+					2130903193,
+					2130903207,
+					2130903212,
+					2130903213,
+					2130903224,
+					2130903267,
+					2130903272,
 					2130903277,
-					2130903287,
-					2130903297,
-					2130903332,
-					2130903357,
-					2130903374,
-					2130903378,
+					2130903278,
+					2130903280,
+					2130903292,
+					2130903302,
+					2130903337,
+					2130903362,
 					2130903379,
-					2130903425,
-					2130903428,
-					2130903497,
-					2130903507};
+					2130903383,
+					2130903384,
+					2130903431,
+					2130903434,
+					2130903503,
+					2130903513};
 			
 			// aapt resource value: { 0x10100B3 }
 			public static int[] ActionBarLayout = new int[] {
@@ -9565,14 +12412,14 @@ namespace Sidekick.Droid
 			public static int[] ActionMenuView = new int[] {
 					-1};
 			
-			// aapt resource value: { 0x7F030031,0x7F030032,0x7F03007E,0x7F0300E0,0x7F030184,0x7F0301D3 }
+			// aapt resource value: { 0x7F030031,0x7F030032,0x7F030080,0x7F0300E3,0x7F03018A,0x7F0301D9 }
 			public static int[] ActionMode = new int[] {
 					2130903089,
 					2130903090,
-					2130903166,
-					2130903264,
-					2130903428,
-					2130903507};
+					2130903168,
+					2130903267,
+					2130903434,
+					2130903513};
 			
 			// aapt resource value: 0x0
 			public const int ActionMode_background = 0;
@@ -9592,10 +12439,10 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x5
 			public const int ActionMode_titleTextStyle = 5;
 			
-			// aapt resource value: { 0x7F0300BA,0x7F0300F8 }
+			// aapt resource value: { 0x7F0300BD,0x7F0300FD }
 			public static int[] ActivityChooserView = new int[] {
-					2130903226,
-					2130903288};
+					2130903229,
+					2130903293};
 			
 			// aapt resource value: 0x0
 			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 0;
@@ -9603,16 +12450,16 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int ActivityChooserView_initialActivityCount = 1;
 			
-			// aapt resource value: { 0x10100F2,0x7F030052,0x7F030053,0x7F03011B,0x7F03011C,0x7F03013A,0x7F030169,0x7F03016A }
+			// aapt resource value: { 0x10100F2,0x7F030052,0x7F030053,0x7F030120,0x7F030121,0x7F03013F,0x7F03016F,0x7F030170 }
 			public static int[] AlertDialog = new int[] {
 					16842994,
 					2130903122,
 					2130903123,
-					2130903323,
-					2130903324,
-					2130903354,
-					2130903401,
-					2130903402};
+					2130903328,
+					2130903329,
+					2130903359,
+					2130903407,
+					2130903408};
 			
 			// aapt resource value: 0x0
 			public const int AlertDialog_android_layout = 0;
@@ -9695,21 +12542,21 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int AnimatedStateListDrawableTransition_android_toId = 1;
 			
-			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F0300B5,0x7F0300BB,0x7F030116 }
+			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F0300B8,0x7F0300BE,0x7F03011B }
 			public static int[] AppBarLayout = new int[] {
 					16842964,
 					16843919,
 					16844096,
-					2130903221,
-					2130903227,
-					2130903318};
+					2130903224,
+					2130903230,
+					2130903323};
 			
-			// aapt resource value: { 0x7F030177,0x7F030178,0x7F030179,0x7F03017A }
+			// aapt resource value: { 0x7F03017D,0x7F03017E,0x7F03017F,0x7F030180 }
 			public static int[] AppBarLayoutStates = new int[] {
-					2130903415,
-					2130903416,
-					2130903417,
-					2130903418};
+					2130903421,
+					2130903422,
+					2130903423,
+					2130903424};
 			
 			// aapt resource value: 0x0
 			public const int AppBarLayoutStates_state_collapsed = 0;
@@ -9738,10 +12585,10 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x4
 			public const int AppBarLayout_expanded = 4;
 			
-			// aapt resource value: { 0x7F030114,0x7F030115 }
+			// aapt resource value: { 0x7F030119,0x7F03011A }
 			public static int[] AppBarLayout_Layout = new int[] {
-					2130903316,
-					2130903317};
+					2130903321,
+					2130903322};
 			
 			// aapt resource value: 0x0
 			public const int AppBarLayout_Layout_layout_scrollFlags = 0;
@@ -9752,12 +12599,12 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x5
 			public const int AppBarLayout_liftOnScroll = 5;
 			
-			// aapt resource value: { 0x1010119,0x7F030174,0x7F0301C7,0x7F0301C8 }
+			// aapt resource value: { 0x1010119,0x7F03017A,0x7F0301CD,0x7F0301CE }
 			public static int[] AppCompatImageView = new int[] {
 					16843033,
-					2130903412,
-					2130903495,
-					2130903496};
+					2130903418,
+					2130903501,
+					2130903502};
 			
 			// aapt resource value: 0x0
 			public const int AppCompatImageView_android_src = 0;
@@ -9771,12 +12618,12 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x3
 			public const int AppCompatImageView_tintMode = 3;
 			
-			// aapt resource value: { 0x1010142,0x7F0301C4,0x7F0301C5,0x7F0301C6 }
+			// aapt resource value: { 0x1010142,0x7F0301CA,0x7F0301CB,0x7F0301CC }
 			public static int[] AppCompatSeekBar = new int[] {
 					16843074,
-					2130903492,
-					2130903493,
-					2130903494};
+					2130903498,
+					2130903499,
+					2130903500};
 			
 			// aapt resource value: 0x0
 			public const int AppCompatSeekBar_android_thumb = 0;
@@ -9821,7 +12668,7 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x0
 			public const int AppCompatTextHelper_android_textAppearance = 0;
 			
-			// aapt resource value: { 0x1010034,0x7F03002C,0x7F03002D,0x7F03002E,0x7F03002F,0x7F030030,0x7F0300CF,0x7F0300D2,0x7F030109,0x7F030117,0x7F0301A4 }
+			// aapt resource value: { 0x1010034,0x7F03002C,0x7F03002D,0x7F03002E,0x7F03002F,0x7F030030,0x7F0300D2,0x7F0300D5,0x7F03010E,0x7F03011C,0x7F0301AA }
 			public static int[] AppCompatTextView = new int[] {
 					16842804,
 					2130903084,
@@ -9829,11 +12676,11 @@ namespace Sidekick.Droid
 					2130903086,
 					2130903087,
 					2130903088,
-					2130903247,
 					2130903250,
-					2130903305,
-					2130903319,
-					2130903460};
+					2130903253,
+					2130903310,
+					2130903324,
+					2130903466};
 			
 			// aapt resource value: 0x0
 			public const int AppCompatTextView_android_textAppearance = 0;
@@ -9868,7 +12715,7 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x10
 			public const int AppCompatTextView_textAllCaps = 16;
 			
-			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F03002B,0x7F03003E,0x7F03004C,0x7F03004D,0x7F03004E,0x7F03004F,0x7F030050,0x7F030054,0x7F030055,0x7F03005F,0x7F030064,0x7F030084,0x7F030085,0x7F030086,0x7F030087,0x7F030088,0x7F030089,0x7F03008A,0x7F03008B,0x7F03008C,0x7F03008E,0x7F03009D,0x7F0300A6,0x7F0300A7,0x7F0300A8,0x7F0300AB,0x7F0300AD,0x7F0300B0,0x7F0300B1,0x7F0300B2,0x7F0300B3,0x7F0300B4,0x7F0300EA,0x7F0300F6,0x7F030119,0x7F03011A,0x7F03011D,0x7F03011E,0x7F03011F,0x7F030120,0x7F030121,0x7F030122,0x7F030123,0x7F030145,0x7F030146,0x7F030147,0x7F03014D,0x7F03014F,0x7F030156,0x7F030157,0x7F030158,0x7F030159,0x7F030161,0x7F030162,0x7F030163,0x7F030164,0x7F030171,0x7F030172,0x7F030188,0x7F0301AF,0x7F0301B0,0x7F0301B1,0x7F0301B2,0x7F0301B4,0x7F0301B5,0x7F0301B6,0x7F0301B7,0x7F0301BA,0x7F0301BB,0x7F0301D5,0x7F0301D6,0x7F0301D7,0x7F0301D8,0x7F0301DF,0x7F0301E1,0x7F0301E2,0x7F0301E3,0x7F0301E4,0x7F0301E5,0x7F0301E6,0x7F0301E7,0x7F0301E8,0x7F0301E9,0x7F0301EA }
+			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F03002B,0x7F03003E,0x7F03004C,0x7F03004D,0x7F03004E,0x7F03004F,0x7F030050,0x7F030055,0x7F030056,0x7F030060,0x7F030065,0x7F030086,0x7F030087,0x7F030088,0x7F030089,0x7F03008A,0x7F03008B,0x7F03008C,0x7F03008D,0x7F03008E,0x7F030091,0x7F0300A0,0x7F0300A9,0x7F0300AA,0x7F0300AB,0x7F0300AE,0x7F0300B0,0x7F0300B3,0x7F0300B4,0x7F0300B5,0x7F0300B6,0x7F0300B7,0x7F0300ED,0x7F0300FB,0x7F03011E,0x7F03011F,0x7F030122,0x7F030123,0x7F030124,0x7F030125,0x7F030126,0x7F030127,0x7F030128,0x7F03014A,0x7F03014B,0x7F03014C,0x7F030152,0x7F030154,0x7F03015B,0x7F03015C,0x7F03015D,0x7F03015E,0x7F030167,0x7F030168,0x7F030169,0x7F03016A,0x7F030177,0x7F030178,0x7F03018E,0x7F0301B5,0x7F0301B6,0x7F0301B7,0x7F0301B8,0x7F0301BA,0x7F0301BB,0x7F0301BC,0x7F0301BD,0x7F0301C0,0x7F0301C1,0x7F0301DB,0x7F0301DC,0x7F0301DD,0x7F0301DE,0x7F0301E5,0x7F0301E7,0x7F0301E8,0x7F0301E9,0x7F0301EA,0x7F0301EB,0x7F0301EC,0x7F0301ED,0x7F0301EE,0x7F0301EF,0x7F0301F0 }
 			public static int[] AppCompatTheme = new int[] {
 					16842839,
 					16842926,
@@ -9914,12 +12761,10 @@ namespace Sidekick.Droid
 					2130903118,
 					2130903119,
 					2130903120,
-					2130903124,
 					2130903125,
-					2130903135,
-					2130903140,
-					2130903172,
-					2130903173,
+					2130903126,
+					2130903136,
+					2130903141,
 					2130903174,
 					2130903175,
 					2130903176,
@@ -9927,70 +12772,72 @@ namespace Sidekick.Droid
 					2130903178,
 					2130903179,
 					2130903180,
+					2130903181,
 					2130903182,
-					2130903197,
-					2130903206,
-					2130903207,
-					2130903208,
+					2130903185,
+					2130903200,
+					2130903209,
+					2130903210,
 					2130903211,
-					2130903213,
+					2130903214,
 					2130903216,
-					2130903217,
-					2130903218,
 					2130903219,
 					2130903220,
-					2130903274,
-					2130903286,
-					2130903321,
-					2130903322,
-					2130903325,
+					2130903221,
+					2130903222,
+					2130903223,
+					2130903277,
+					2130903291,
 					2130903326,
 					2130903327,
-					2130903328,
-					2130903329,
 					2130903330,
 					2130903331,
-					2130903365,
-					2130903366,
-					2130903367,
-					2130903373,
-					2130903375,
-					2130903382,
-					2130903383,
-					2130903384,
-					2130903385,
-					2130903393,
-					2130903394,
-					2130903395,
-					2130903396,
-					2130903409,
-					2130903410,
-					2130903432,
-					2130903471,
-					2130903472,
-					2130903473,
-					2130903474,
-					2130903476,
+					2130903332,
+					2130903333,
+					2130903334,
+					2130903335,
+					2130903336,
+					2130903370,
+					2130903371,
+					2130903372,
+					2130903378,
+					2130903380,
+					2130903387,
+					2130903388,
+					2130903389,
+					2130903390,
+					2130903399,
+					2130903400,
+					2130903401,
+					2130903402,
+					2130903415,
+					2130903416,
+					2130903438,
 					2130903477,
 					2130903478,
 					2130903479,
+					2130903480,
 					2130903482,
 					2130903483,
-					2130903509,
-					2130903510,
-					2130903511,
-					2130903512,
-					2130903519,
-					2130903521,
-					2130903522,
-					2130903523,
-					2130903524,
+					2130903484,
+					2130903485,
+					2130903488,
+					2130903489,
+					2130903515,
+					2130903516,
+					2130903517,
+					2130903518,
 					2130903525,
-					2130903526,
 					2130903527,
 					2130903528,
 					2130903529,
-					2130903530};
+					2130903530,
+					2130903531,
+					2130903532,
+					2130903533,
+					2130903534,
+					2130903535,
+					2130903536};
 			
 			// aapt resource value: 0x2
 			public const int AppCompatTheme_actionBarDivider = 2;
@@ -10355,14 +13202,14 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x120
 			public const int AppCompatTheme_windowNoTitle = 288;
 			
-			// aapt resource value: { 0x7F030034,0x7F0300C4,0x7F0300C5,0x7F0300C6,0x7F0300C7,0x7F0300E6 }
+			// aapt resource value: { 0x7F030034,0x7F0300C7,0x7F0300C8,0x7F0300C9,0x7F0300CA,0x7F0300E9 }
 			public static int[] BottomAppBar = new int[] {
 					2130903092,
-					2130903236,
-					2130903237,
-					2130903238,
 					2130903239,
-					2130903270};
+					2130903240,
+					2130903241,
+					2130903242,
+					2130903273};
 			
 			// aapt resource value: 0x0
 			public const int BottomAppBar_backgroundTint = 0;
@@ -10382,18 +13229,18 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x5
 			public const int BottomAppBar_hideOnScroll = 5;
 			
-			// aapt resource value: { 0x7F0300B5,0x7F0300FB,0x7F0300FD,0x7F0300FF,0x7F030100,0x7F030104,0x7F030105,0x7F030106,0x7F030108,0x7F030139 }
+			// aapt resource value: { 0x7F0300B8,0x7F030100,0x7F030102,0x7F030104,0x7F030105,0x7F030109,0x7F03010A,0x7F03010B,0x7F03010D,0x7F03013E }
 			public static int[] BottomNavigationView = new int[] {
-					2130903221,
-					2130903291,
-					2130903293,
-					2130903295,
+					2130903224,
 					2130903296,
+					2130903298,
 					2130903300,
 					2130903301,
-					2130903302,
-					2130903304,
-					2130903353};
+					2130903305,
+					2130903306,
+					2130903307,
+					2130903309,
+					2130903358};
 			
 			// aapt resource value: 0x0
 			public const int BottomNavigationView_elevation = 0;
@@ -10451,21 +13298,21 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x0
 			public const int ButtonBarLayout_allowStacking = 0;
 			
-			// aapt resource value: { 0x101013F,0x1010140,0x7F030058,0x7F030059,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F030097,0x7F030098,0x7F030099,0x7F03009A,0x7F03009B }
+			// aapt resource value: { 0x101013F,0x1010140,0x7F030059,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F03005E,0x7F03009A,0x7F03009B,0x7F03009C,0x7F03009D,0x7F03009E }
 			public static int[] CardView = new int[] {
 					16843071,
 					16843072,
-					2130903128,
 					2130903129,
 					2130903130,
 					2130903131,
 					2130903132,
 					2130903133,
-					2130903191,
-					2130903192,
-					2130903193,
+					2130903134,
 					2130903194,
-					2130903195};
+					2130903195,
+					2130903196,
+					2130903197,
+					2130903198};
 			
 			// aapt resource value: 0x1
 			public const int CardView_android_minHeight = 1;
@@ -10506,51 +13353,51 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x12
 			public const int CardView_contentPaddingTop = 18;
 			
-			// aapt resource value: { 0x1010034,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F030061,0x7F030062,0x7F030063,0x7F030065,0x7F030066,0x7F030067,0x7F030069,0x7F03006A,0x7F03006B,0x7F03006C,0x7F03006D,0x7F03006E,0x7F030073,0x7F030074,0x7F030075,0x7F030077,0x7F030078,0x7F030079,0x7F03007A,0x7F03007B,0x7F03007C,0x7F03007D,0x7F0300E4,0x7F0300EE,0x7F0300F2,0x7F03015B,0x7F030167,0x7F0301BC,0x7F0301BE }
+			// aapt resource value: { 0x1010034,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F030062,0x7F030063,0x7F030064,0x7F030066,0x7F030067,0x7F030068,0x7F03006A,0x7F03006B,0x7F03006C,0x7F03006D,0x7F03006E,0x7F03006F,0x7F030074,0x7F030075,0x7F030076,0x7F030079,0x7F03007A,0x7F03007B,0x7F03007C,0x7F03007D,0x7F03007E,0x7F03007F,0x7F0300E7,0x7F0300F1,0x7F0300F5,0x7F030160,0x7F03016D,0x7F0301C2,0x7F0301C4 }
 			public static int[] Chip = new int[] {
 					16842804,
 					16842923,
 					16843039,
 					16843087,
 					16843237,
-					2130903137,
 					2130903138,
 					2130903139,
-					2130903141,
+					2130903140,
 					2130903142,
 					2130903143,
-					2130903145,
+					2130903144,
 					2130903146,
 					2130903147,
 					2130903148,
 					2130903149,
 					2130903150,
-					2130903155,
+					2130903151,
 					2130903156,
 					2130903157,
-					2130903159,
-					2130903160,
+					2130903158,
 					2130903161,
 					2130903162,
 					2130903163,
 					2130903164,
 					2130903165,
-					2130903268,
-					2130903278,
-					2130903282,
-					2130903387,
-					2130903399,
-					2130903484,
-					2130903486};
+					2130903166,
+					2130903167,
+					2130903271,
+					2130903281,
+					2130903285,
+					2130903392,
+					2130903405,
+					2130903490,
+					2130903492};
 			
-			// aapt resource value: { 0x7F030060,0x7F03006F,0x7F030070,0x7F030071,0x7F03016B,0x7F03016C }
+			// aapt resource value: { 0x7F030061,0x7F030070,0x7F030071,0x7F030072,0x7F030171,0x7F030172 }
 			public static int[] ChipGroup = new int[] {
-					2130903136,
-					2130903151,
+					2130903137,
 					2130903152,
 					2130903153,
-					2130903403,
-					2130903404};
+					2130903154,
+					2130903409,
+					2130903410};
 			
 			// aapt resource value: 0x0
 			public const int ChipGroup_checkedChip = 0;
@@ -10672,24 +13519,24 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x33
 			public const int Chip_textStartPadding = 51;
 			
-			// aapt resource value: { 0x7F030081,0x7F030082,0x7F03009C,0x7F0300BC,0x7F0300BD,0x7F0300BE,0x7F0300BF,0x7F0300C0,0x7F0300C1,0x7F0300C2,0x7F03015C,0x7F03015E,0x7F03017C,0x7F0301C9,0x7F0301CA,0x7F0301D4 }
+			// aapt resource value: { 0x7F030083,0x7F030084,0x7F03009F,0x7F0300BF,0x7F0300C0,0x7F0300C1,0x7F0300C2,0x7F0300C3,0x7F0300C4,0x7F0300C5,0x7F030162,0x7F030164,0x7F030182,0x7F0301CF,0x7F0301D0,0x7F0301DA }
 			public static int[] CollapsingToolbarLayout = new int[] {
-					2130903169,
-					2130903170,
-					2130903196,
-					2130903228,
-					2130903229,
-					2130903230,
+					2130903171,
+					2130903172,
+					2130903199,
 					2130903231,
 					2130903232,
 					2130903233,
 					2130903234,
-					2130903388,
-					2130903390,
-					2130903420,
-					2130903497,
-					2130903498,
-					2130903508};
+					2130903235,
+					2130903236,
+					2130903237,
+					2130903394,
+					2130903396,
+					2130903426,
+					2130903503,
+					2130903504,
+					2130903514};
 			
 			// aapt resource value: 0x0
 			public const int CollapsingToolbarLayout_collapsedTitleGravity = 0;
@@ -10721,10 +13568,10 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x9
 			public const int CollapsingToolbarLayout_expandedTitleTextAppearance = 9;
 			
-			// aapt resource value: { 0x7F03010F,0x7F030110 }
+			// aapt resource value: { 0x7F030114,0x7F030115 }
 			public static int[] CollapsingToolbarLayout_Layout = new int[] {
-					2130903311,
-					2130903312};
+					2130903316,
+					2130903317};
 			
 			// aapt resource value: 0x0
 			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 0;
@@ -10765,11 +13612,11 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x0
 			public const int ColorStateListItem_android_color = 0;
 			
-			// aapt resource value: { 0x1010107,0x7F030056,0x7F030057 }
+			// aapt resource value: { 0x1010107,0x7F030057,0x7F030058 }
 			public static int[] CompoundButton = new int[] {
 					16843015,
-					2130903126,
-					2130903127};
+					2130903127,
+					2130903128};
 			
 			// aapt resource value: 0x0
 			public const int CompoundButton_android_button = 0;
@@ -10780,23 +13627,23 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x2
 			public const int CompoundButton_buttonTintMode = 2;
 			
-			// aapt resource value: { 0x7F030107,0x7F03017B }
+			// aapt resource value: { 0x7F03010C,0x7F030181 }
 			public static int[] CoordinatorLayout = new int[] {
-					2130903303,
-					2130903419};
+					2130903308,
+					2130903425};
 			
 			// aapt resource value: 0x0
 			public const int CoordinatorLayout_keylines = 0;
 			
-			// aapt resource value: { 0x10100B3,0x7F03010C,0x7F03010D,0x7F03010E,0x7F030111,0x7F030112,0x7F030113 }
+			// aapt resource value: { 0x10100B3,0x7F030111,0x7F030112,0x7F030113,0x7F030116,0x7F030117,0x7F030118 }
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
-					2130903308,
-					2130903309,
-					2130903310,
 					2130903313,
 					2130903314,
-					2130903315};
+					2130903315,
+					2130903318,
+					2130903319,
+					2130903320};
 			
 			// aapt resource value: 0x0
 			public const int CoordinatorLayout_Layout_android_layout_gravity = 0;
@@ -10833,16 +13680,16 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int DesignTheme_bottomSheetStyle = 1;
 			
-			// aapt resource value: { 0x7F030029,0x7F03002A,0x7F030036,0x7F030083,0x7F0300AE,0x7F0300DD,0x7F030170,0x7F0301C0 }
+			// aapt resource value: { 0x7F030029,0x7F03002A,0x7F030036,0x7F030085,0x7F0300B1,0x7F0300E0,0x7F030176,0x7F0301C6 }
 			public static int[] DrawerArrowToggle = new int[] {
 					2130903081,
 					2130903082,
 					2130903094,
-					2130903171,
-					2130903214,
-					2130903261,
-					2130903408,
-					2130903488};
+					2130903173,
+					2130903217,
+					2130903264,
+					2130903414,
+					2130903494};
 			
 			// aapt resource value: 0x0
 			public const int DrawerArrowToggle_arrowHeadLength = 0;
@@ -10868,21 +13715,21 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x7
 			public const int DrawerArrowToggle_thickness = 7;
 			
-			// aapt resource value: { 0x7F030034,0x7F030035,0x7F03003D,0x7F0300B5,0x7F0300C8,0x7F0300C9,0x7F0300E4,0x7F0300EC,0x7F03012A,0x7F030151,0x7F03015B,0x7F030167,0x7F0301DE }
+			// aapt resource value: { 0x7F030034,0x7F030035,0x7F03003D,0x7F0300B8,0x7F0300CB,0x7F0300CC,0x7F0300E7,0x7F0300EF,0x7F03012F,0x7F030156,0x7F030160,0x7F03016D,0x7F0301E4 }
 			public static int[] FloatingActionButton = new int[] {
 					2130903092,
 					2130903093,
 					2130903101,
-					2130903221,
-					2130903240,
-					2130903241,
-					2130903268,
-					2130903276,
-					2130903338,
-					2130903377,
-					2130903387,
-					2130903399,
-					2130903518};
+					2130903224,
+					2130903243,
+					2130903244,
+					2130903271,
+					2130903279,
+					2130903343,
+					2130903382,
+					2130903392,
+					2130903405,
+					2130903524};
 			
 			// aapt resource value: 0x0
 			public const int FloatingActionButton_backgroundTint = 0;
@@ -10930,10 +13777,10 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x12
 			public const int FloatingActionButton_useCompatPadding = 18;
 			
-			// aapt resource value: { 0x7F030102,0x7F030118 }
+			// aapt resource value: { 0x7F030107,0x7F03011D }
 			public static int[] FlowLayout = new int[] {
-					2130903298,
-					2130903320};
+					2130903303,
+					2130903325};
 			
 			// aapt resource value: 0x0
 			public const int FlowLayout_itemSpacing = 0;
@@ -10941,27 +13788,27 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int FlowLayout_lineSpacing = 1;
 			
-			// aapt resource value: { 0x7F0300D3,0x7F0300D4,0x7F0300D5,0x7F0300D6,0x7F0300D7,0x7F0300D8 }
+			// aapt resource value: { 0x7F0300D6,0x7F0300D7,0x7F0300D8,0x7F0300D9,0x7F0300DA,0x7F0300DB }
 			public static int[] FontFamily = new int[] {
-					2130903251,
-					2130903252,
-					2130903253,
 					2130903254,
 					2130903255,
-					2130903256};
+					2130903256,
+					2130903257,
+					2130903258,
+					2130903259};
 			
-			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F0300D1,0x7F0300D9,0x7F0300DA,0x7F0300DB,0x7F0301DD }
+			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F0300D4,0x7F0300DC,0x7F0300DD,0x7F0300DE,0x7F0301E3 }
 			public static int[] FontFamilyFont = new int[] {
 					16844082,
 					16844083,
 					16844095,
 					16844143,
 					16844144,
-					2130903249,
-					2130903257,
-					2130903258,
-					2130903259,
-					2130903517};
+					2130903252,
+					2130903260,
+					2130903261,
+					2130903262,
+					2130903523};
 			
 			// aapt resource value: 0x0
 			public const int FontFamilyFont_android_font = 0;
@@ -11011,11 +13858,11 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x5
 			public const int FontFamily_fontProviderQuery = 5;
 			
-			// aapt resource value: { 0x1010109,0x1010200,0x7F0300DC }
+			// aapt resource value: { 0x1010109,0x1010200,0x7F0300DF }
 			public static int[] ForegroundLinearLayout = new int[] {
 					16843017,
 					16843264,
-					2130903260};
+					2130903263};
 			
 			// aapt resource value: 0x0
 			public const int ForegroundLinearLayout_android_foreground = 0;
@@ -11088,17 +13935,17 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x2
 			public const int GradientColor_android_type = 2;
 			
-			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300AA,0x7F0300AC,0x7F03012B,0x7F030166 }
+			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300AD,0x7F0300AF,0x7F030130,0x7F03016C }
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
 					16842948,
 					16843046,
 					16843047,
 					16843048,
-					2130903210,
-					2130903212,
-					2130903339,
-					2130903398};
+					2130903213,
+					2130903215,
+					2130903344,
+					2130903404};
 			
 			// aapt resource value: 0x2
 			public const int LinearLayoutCompat_android_baselineAligned = 2;
@@ -11157,7 +14004,22 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
 			
-			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F030034,0x7F030035,0x7F03009F,0x7F0300ED,0x7F0300EF,0x7F0300F0,0x7F0300F1,0x7F0300F3,0x7F0300F4,0x7F03015B,0x7F03017D,0x7F03017E }
+			// aapt resource value: { 0x7F030078,0x7F0300F9,0x7F0300FA }
+			public static int[] LoadingImageView = new int[] {
+					2130903160,
+					2130903289,
+					2130903290};
+			
+			// aapt resource value: 0x0
+			public const int LoadingImageView_circleCrop = 0;
+			
+			// aapt resource value: 0x1
+			public const int LoadingImageView_imageAspectRatio = 1;
+			
+			// aapt resource value: 0x2
+			public const int LoadingImageView_imageAspectRatioAdjust = 2;
+			
+			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F030034,0x7F030035,0x7F0300A2,0x7F0300F0,0x7F0300F2,0x7F0300F3,0x7F0300F4,0x7F0300F6,0x7F0300F7,0x7F030160,0x7F030183,0x7F030184 }
 			public static int[] MaterialButton = new int[] {
 					16843191,
 					16843192,
@@ -11165,16 +14027,16 @@ namespace Sidekick.Droid
 					16843194,
 					2130903092,
 					2130903093,
-					2130903199,
-					2130903277,
-					2130903279,
+					2130903202,
 					2130903280,
-					2130903281,
+					2130903282,
 					2130903283,
 					2130903284,
-					2130903387,
-					2130903421,
-					2130903422};
+					2130903286,
+					2130903287,
+					2130903392,
+					2130903427,
+					2130903428};
 			
 			// aapt resource value: 0x3
 			public const int MaterialButton_android_insetBottom = 3;
@@ -11224,10 +14086,10 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x15
 			public const int MaterialButton_strokeWidth = 21;
 			
-			// aapt resource value: { 0x7F03017D,0x7F03017E }
+			// aapt resource value: { 0x7F030183,0x7F030184 }
 			public static int[] MaterialCardView = new int[] {
-					2130903421,
-					2130903422};
+					2130903427,
+					2130903428};
 			
 			// aapt resource value: 0x0
 			public const int MaterialCardView_strokeColor = 0;
@@ -11235,40 +14097,40 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int MaterialCardView_strokeWidth = 1;
 			
-			// aapt resource value: { 0x7F030041,0x7F030042,0x7F030068,0x7F030072,0x7F030076,0x7F030084,0x7F030085,0x7F03008B,0x7F03008C,0x7F03008D,0x7F0300B4,0x7F0300D0,0x7F030126,0x7F030127,0x7F03013E,0x7F03015D,0x7F03016D,0x7F0301A0,0x7F0301A5,0x7F0301A6,0x7F0301A7,0x7F0301A8,0x7F0301A9,0x7F0301AA,0x7F0301AB,0x7F0301AC,0x7F0301AD,0x7F0301AE,0x7F0301B3,0x7F0301B8,0x7F0301B9,0x7F0301BD }
+			// aapt resource value: { 0x7F030041,0x7F030042,0x7F030069,0x7F030073,0x7F030077,0x7F030086,0x7F030087,0x7F03008D,0x7F03008E,0x7F030090,0x7F0300B7,0x7F0300D3,0x7F03012B,0x7F03012C,0x7F030143,0x7F030163,0x7F030173,0x7F0301A6,0x7F0301AB,0x7F0301AC,0x7F0301AD,0x7F0301AE,0x7F0301AF,0x7F0301B0,0x7F0301B1,0x7F0301B2,0x7F0301B3,0x7F0301B4,0x7F0301B9,0x7F0301BE,0x7F0301BF,0x7F0301C3 }
 			public static int[] MaterialComponentsTheme = new int[] {
 					2130903105,
 					2130903106,
-					2130903144,
-					2130903154,
-					2130903158,
-					2130903172,
-					2130903173,
-					2130903179,
-					2130903180,
+					2130903145,
+					2130903155,
+					2130903159,
+					2130903174,
+					2130903175,
 					2130903181,
-					2130903220,
-					2130903248,
-					2130903334,
-					2130903335,
-					2130903358,
-					2130903389,
-					2130903405,
-					2130903456,
-					2130903461,
+					2130903182,
+					2130903184,
+					2130903223,
+					2130903251,
+					2130903339,
+					2130903340,
+					2130903363,
+					2130903395,
+					2130903411,
 					2130903462,
-					2130903463,
-					2130903464,
-					2130903465,
-					2130903466,
 					2130903467,
 					2130903468,
 					2130903469,
 					2130903470,
+					2130903471,
+					2130903472,
+					2130903473,
+					2130903474,
 					2130903475,
-					2130903480,
+					2130903476,
 					2130903481,
-					2130903485};
+					2130903486,
+					2130903487,
+					2130903491};
 			
 			// aapt resource value: 0x0
 			public const int MaterialComponentsTheme_bottomSheetDialogTheme = 0;
@@ -11366,12 +14228,12 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x31
 			public const int MaterialComponentsTheme_textInputStyle = 49;
 			
-			// aapt resource value: { 0x101013F,0x1010140,0x7F0300C3,0x7F03012E }
+			// aapt resource value: { 0x101013F,0x1010140,0x7F0300C6,0x7F030133 }
 			public static int[] MediaRouteButton = new int[] {
 					16843071,
 					16843072,
-					2130903235,
-					2130903342};
+					2130903238,
+					2130903347};
 			
 			// aapt resource value: 0x1
 			public const int MediaRouteButton_android_minHeight = 1;
@@ -11412,7 +14274,7 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x2
 			public const int MenuGroup_android_visible = 2;
 			
-			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030020,0x7F030028,0x7F030090,0x7F0300F3,0x7F0300F4,0x7F03013F,0x7F030165,0x7F0301D9 }
+			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030020,0x7F030028,0x7F030093,0x7F0300F6,0x7F0300F7,0x7F030144,0x7F03016B,0x7F0301DF }
 			public static int[] MenuItem = new int[] {
 					16842754,
 					16842766,
@@ -11431,12 +14293,12 @@ namespace Sidekick.Droid
 					2130903071,
 					2130903072,
 					2130903080,
-					2130903184,
-					2130903283,
-					2130903284,
-					2130903359,
-					2130903397,
-					2130903513};
+					2130903187,
+					2130903286,
+					2130903287,
+					2130903364,
+					2130903403,
+					2130903519};
 			
 			// aapt resource value: 0x13
 			public const int MenuItem_actionLayout = 19;
@@ -11507,7 +14369,7 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x22
 			public const int MenuItem_tooltipText = 34;
 			
-			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030150,0x7F03017F }
+			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030155,0x7F030185 }
 			public static int[] MenuView = new int[] {
 					16842926,
 					16843052,
@@ -11516,8 +14378,8 @@ namespace Sidekick.Droid
 					16843055,
 					16843056,
 					16843057,
-					2130903376,
-					2130903423};
+					2130903381,
+					2130903429};
 			
 			// aapt resource value: 0x4
 			public const int MenuView_android_headerBackground = 4;
@@ -11546,20 +14408,20 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x8
 			public const int MenuView_subMenuArrow = 8;
 			
-			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F0300B5,0x7F0300DF,0x7F0300FB,0x7F0300FC,0x7F0300FE,0x7F030100,0x7F030103,0x7F030106,0x7F030139 }
+			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F0300B8,0x7F0300E2,0x7F030100,0x7F030101,0x7F030103,0x7F030105,0x7F030108,0x7F03010B,0x7F03013E }
 			public static int[] NavigationView = new int[] {
 					16842964,
 					16842973,
 					16843039,
-					2130903221,
-					2130903263,
-					2130903291,
-					2130903292,
-					2130903294,
+					2130903224,
+					2130903266,
 					2130903296,
+					2130903297,
 					2130903299,
-					2130903302,
-					2130903353};
+					2130903301,
+					2130903304,
+					2130903307,
+					2130903358};
 			
 			// aapt resource value: 0x0
 			public const int NavigationView_android_background = 0;
@@ -11597,15 +14459,15 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x11
 			public const int NavigationView_menu = 17;
 			
-			// aapt resource value: { 0x1010176,0x10102C9,0x7F030140 }
+			// aapt resource value: { 0x1010176,0x10102C9,0x7F030145 }
 			public static int[] PopupWindow = new int[] {
 					16843126,
 					16843465,
-					2130903360};
+					2130903365};
 			
-			// aapt resource value: { 0x7F030176 }
+			// aapt resource value: { 0x7F03017C }
 			public static int[] PopupWindowBackgroundState = new int[] {
-					2130903414};
+					2130903420};
 			
 			// aapt resource value: 0x0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
@@ -11619,10 +14481,10 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x2
 			public const int PopupWindow_overlapAnchor = 2;
 			
-			// aapt resource value: { 0x7F030141,0x7F030144 }
+			// aapt resource value: { 0x7F030146,0x7F030149 }
 			public static int[] RecycleListView = new int[] {
-					2130903361,
-					2130903364};
+					2130903366,
+					2130903369};
 			
 			// aapt resource value: 0x0
 			public const int RecycleListView_paddingBottomNoButtons = 0;
@@ -11630,19 +14492,19 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int RecycleListView_paddingTopNoTitle = 1;
 			
-			// aapt resource value: { 0x10100C4,0x10100F1,0x7F0300CA,0x7F0300CB,0x7F0300CC,0x7F0300CD,0x7F0300CE,0x7F03010B,0x7F03015A,0x7F03016F,0x7F030175 }
+			// aapt resource value: { 0x10100C4,0x10100F1,0x7F0300CD,0x7F0300CE,0x7F0300CF,0x7F0300D0,0x7F0300D1,0x7F030110,0x7F03015F,0x7F030175,0x7F03017B }
 			public static int[] RecyclerView = new int[] {
 					16842948,
 					16842993,
-					2130903242,
-					2130903243,
-					2130903244,
 					2130903245,
 					2130903246,
-					2130903307,
-					2130903386,
-					2130903407,
-					2130903413};
+					2130903247,
+					2130903248,
+					2130903249,
+					2130903312,
+					2130903391,
+					2130903413,
+					2130903419};
 			
 			// aapt resource value: 0x1
 			public const int RecyclerView_android_descendantFocusability = 1;
@@ -11677,9 +14539,9 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x10
 			public const int RecyclerView_stackFromEnd = 16;
 			
-			// aapt resource value: { 0x7F0300F9 }
+			// aapt resource value: { 0x7F0300FE }
 			public static int[] ScrimInsetsFrameLayout = new int[] {
-					2130903289};
+					2130903294};
 			
 			// aapt resource value: 0x0
 			public const int ScrimInsetsFrameLayout_insetForeground = 0;
@@ -11691,25 +14553,25 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x0
 			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
 			
-			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F030077,0x7F03008F,0x7F0300A5,0x7F0300DE,0x7F0300F5,0x7F03010A,0x7F030154,0x7F030155,0x7F03015F,0x7F030160,0x7F030180,0x7F030185,0x7F0301E0 }
+			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F030079,0x7F030092,0x7F0300A8,0x7F0300E1,0x7F0300F8,0x7F03010F,0x7F030159,0x7F03015A,0x7F030165,0x7F030166,0x7F030186,0x7F03018B,0x7F0301E6 }
 			public static int[] SearchView = new int[] {
 					16842970,
 					16843039,
 					16843296,
 					16843364,
-					2130903159,
-					2130903183,
-					2130903205,
-					2130903262,
-					2130903285,
-					2130903306,
-					2130903380,
-					2130903381,
-					2130903391,
-					2130903392,
-					2130903424,
-					2130903429,
-					2130903520};
+					2130903161,
+					2130903186,
+					2130903208,
+					2130903265,
+					2130903288,
+					2130903311,
+					2130903385,
+					2130903386,
+					2130903397,
+					2130903398,
+					2130903430,
+					2130903435,
+					2130903526};
 			
 			// aapt resource value: 0x0
 			public const int SearchView_android_focusable = 0;
@@ -11762,16 +14624,31 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x16
 			public const int SearchView_voiceIcon = 22;
 			
-			// aapt resource value: { 0x7F03016D,0x7F03016E }
-			public static int[] Snackbar = new int[] {
-					2130903405,
-					2130903406};
+			// aapt resource value: { 0x7F030054,0x7F03008F,0x7F030161 }
+			public static int[] SignInButton = new int[] {
+					2130903124,
+					2130903183,
+					2130903393};
 			
-			// aapt resource value: { 0x101011F,0x7F0300B5,0x7F030128 }
+			// aapt resource value: 0x0
+			public const int SignInButton_buttonSize = 0;
+			
+			// aapt resource value: 0x1
+			public const int SignInButton_colorScheme = 1;
+			
+			// aapt resource value: 0x2
+			public const int SignInButton_scopeUris = 2;
+			
+			// aapt resource value: { 0x7F030173,0x7F030174 }
+			public static int[] Snackbar = new int[] {
+					2130903411,
+					2130903412};
+			
+			// aapt resource value: { 0x101011F,0x7F0300B8,0x7F03012D }
 			public static int[] SnackbarLayout = new int[] {
 					16843039,
-					2130903221,
-					2130903336};
+					2130903224,
+					2130903341};
 			
 			// aapt resource value: 0x0
 			public const int SnackbarLayout_android_maxWidth = 0;
@@ -11788,13 +14665,13 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int Snackbar_snackbarStyle = 1;
 			
-			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F03014E }
+			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F030153 }
 			public static int[] Spinner = new int[] {
 					16842930,
 					16843126,
 					16843131,
 					16843362,
-					2130903374};
+					2130903379};
 			
 			// aapt resource value: 0x3
 			public const int Spinner_android_dropDownWidth = 3;
@@ -11845,22 +14722,22 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x1
 			public const int StateListDrawable_android_visible = 1;
 			
-			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F030168,0x7F030173,0x7F030186,0x7F030187,0x7F030189,0x7F0301C1,0x7F0301C2,0x7F0301C3,0x7F0301DA,0x7F0301DB,0x7F0301DC }
+			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F03016E,0x7F030179,0x7F03018C,0x7F03018D,0x7F03018F,0x7F0301C7,0x7F0301C8,0x7F0301C9,0x7F0301E0,0x7F0301E1,0x7F0301E2 }
 			public static int[] SwitchCompat = new int[] {
 					16843044,
 					16843045,
 					16843074,
-					2130903400,
-					2130903411,
-					2130903430,
-					2130903431,
-					2130903433,
-					2130903489,
-					2130903490,
-					2130903491,
-					2130903514,
-					2130903515,
-					2130903516};
+					2130903406,
+					2130903417,
+					2130903436,
+					2130903437,
+					2130903439,
+					2130903495,
+					2130903496,
+					2130903497,
+					2130903520,
+					2130903521,
+					2130903522};
 			
 			// aapt resource value: 0x1
 			public const int SwitchCompat_android_textOff = 1;
@@ -11919,14 +14796,8 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x2
 			public const int TabItem_android_text = 2;
 			
-			// aapt resource value: { 0x7F03018A,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030198,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03019E,0x7F03019F,0x7F0301A1,0x7F0301A2,0x7F0301A3 }
+			// aapt resource value: { 0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030198,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03019E,0x7F03019F,0x7F0301A0,0x7F0301A1,0x7F0301A2,0x7F0301A3,0x7F0301A4,0x7F0301A5,0x7F0301A7,0x7F0301A8,0x7F0301A9 }
 			public static int[] TabLayout = new int[] {
-					2130903434,
-					2130903435,
-					2130903436,
-					2130903437,
-					2130903438,
-					2130903439,
 					2130903440,
 					2130903441,
 					2130903442,
@@ -11943,9 +14814,15 @@ namespace Sidekick.Droid
 					2130903453,
 					2130903454,
 					2130903455,
+					2130903456,
 					2130903457,
 					2130903458,
-					2130903459};
+					2130903459,
+					2130903460,
+					2130903461,
+					2130903463,
+					2130903464,
+					2130903465};
 			
 			// aapt resource value: 0x0
 			public const int TabLayout_tabBackground = 0;
@@ -12022,7 +14899,7 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x24
 			public const int TabLayout_tabUnboundedRipple = 36;
 			
-			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F0300D2,0x7F0301A4 }
+			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F0300D5,0x7F0301AA }
 			public static int[] TextAppearance = new int[] {
 					16842901,
 					16842902,
@@ -12035,8 +14912,8 @@ namespace Sidekick.Droid
 					16843107,
 					16843108,
 					16843692,
-					2130903250,
-					2130903460};
+					2130903253,
+					2130903466};
 			
 			// aapt resource value: 0x10
 			public const int TextAppearance_android_fontFamily = 16;
@@ -12077,7 +14954,7 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x12
 			public const int TextAppearance_textAllCaps = 18;
 			
-			// aapt resource value: { 0x101009A,0x1010150,0x7F030043,0x7F030044,0x7F030045,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004B,0x7F0300A0,0x7F0300A1,0x7F0300A2,0x7F0300A3,0x7F0300B8,0x7F0300B9,0x7F0300E1,0x7F0300E2,0x7F0300E3,0x7F0300E7,0x7F0300E8,0x7F0300E9,0x7F030148,0x7F030149,0x7F03014A,0x7F03014B,0x7F03014C }
+			// aapt resource value: { 0x101009A,0x1010150,0x7F030043,0x7F030044,0x7F030045,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004B,0x7F0300A3,0x7F0300A4,0x7F0300A5,0x7F0300A6,0x7F0300BB,0x7F0300BC,0x7F0300E4,0x7F0300E5,0x7F0300E6,0x7F0300EA,0x7F0300EB,0x7F0300EC,0x7F03014D,0x7F03014E,0x7F03014F,0x7F030150,0x7F030151 }
 			public static int[] TextInputLayout = new int[] {
 					16842906,
 					16843088,
@@ -12090,23 +14967,23 @@ namespace Sidekick.Droid
 					2130903113,
 					2130903114,
 					2130903115,
-					2130903200,
-					2130903201,
-					2130903202,
 					2130903203,
-					2130903224,
-					2130903225,
-					2130903265,
-					2130903266,
-					2130903267,
-					2130903271,
-					2130903272,
-					2130903273,
-					2130903368,
-					2130903369,
-					2130903370,
-					2130903371,
-					2130903372};
+					2130903204,
+					2130903205,
+					2130903206,
+					2130903227,
+					2130903228,
+					2130903268,
+					2130903269,
+					2130903270,
+					2130903274,
+					2130903275,
+					2130903276,
+					2130903373,
+					2130903374,
+					2130903375,
+					2130903376,
+					2130903377};
 			
 			// aapt resource value: 0x1
 			public const int TextInputLayout_android_hint = 1;
@@ -12192,11 +15069,11 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x27
 			public const int TextInputLayout_passwordToggleTintMode = 39;
 			
-			// aapt resource value: { 0x1010034,0x7F0300B6,0x7F0300B7 }
+			// aapt resource value: { 0x1010034,0x7F0300B9,0x7F0300BA }
 			public static int[] ThemeEnforcement = new int[] {
 					16842804,
-					2130903222,
-					2130903223};
+					2130903225,
+					2130903226};
 			
 			// aapt resource value: 0x0
 			public const int ThemeEnforcement_android_textAppearance = 0;
@@ -12207,37 +15084,37 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x2
 			public const int ThemeEnforcement_enforceTextAppearance = 2;
 			
-			// aapt resource value: { 0x10100AF,0x1010140,0x7F030051,0x7F03007F,0x7F030080,0x7F030091,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F030124,0x7F030125,0x7F030129,0x7F03013B,0x7F03013C,0x7F03014E,0x7F030181,0x7F030182,0x7F030183,0x7F0301C9,0x7F0301CB,0x7F0301CC,0x7F0301CD,0x7F0301CE,0x7F0301CF,0x7F0301D0,0x7F0301D1,0x7F0301D2 }
+			// aapt resource value: { 0x10100AF,0x1010140,0x7F030051,0x7F030081,0x7F030082,0x7F030094,0x7F030095,0x7F030096,0x7F030097,0x7F030098,0x7F030099,0x7F030129,0x7F03012A,0x7F03012E,0x7F030140,0x7F030141,0x7F030153,0x7F030187,0x7F030188,0x7F030189,0x7F0301CF,0x7F0301D1,0x7F0301D2,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F0301D6,0x7F0301D7,0x7F0301D8 }
 			public static int[] Toolbar = new int[] {
 					16842927,
 					16843072,
 					2130903121,
-					2130903167,
-					2130903168,
-					2130903185,
-					2130903186,
-					2130903187,
+					2130903169,
+					2130903170,
 					2130903188,
 					2130903189,
 					2130903190,
-					2130903332,
-					2130903333,
+					2130903191,
+					2130903192,
+					2130903193,
 					2130903337,
-					2130903355,
-					2130903356,
-					2130903374,
-					2130903425,
-					2130903426,
-					2130903427,
-					2130903497,
-					2130903499,
-					2130903500,
-					2130903501,
-					2130903502,
+					2130903338,
+					2130903342,
+					2130903360,
+					2130903361,
+					2130903379,
+					2130903431,
+					2130903432,
+					2130903433,
 					2130903503,
-					2130903504,
 					2130903505,
-					2130903506};
+					2130903506,
+					2130903507,
+					2130903508,
+					2130903509,
+					2130903510,
+					2130903511,
+					2130903512};
 			
 			// aapt resource value: 0x0
 			public const int Toolbar_android_gravity = 0;
@@ -12326,13 +15203,13 @@ namespace Sidekick.Droid
 			// aapt resource value: 0x28
 			public const int Toolbar_titleTextColor = 40;
 			
-			// aapt resource value: { 0x1010000,0x10100DA,0x7F030142,0x7F030143,0x7F0301BF }
+			// aapt resource value: { 0x1010000,0x10100DA,0x7F030147,0x7F030148,0x7F0301C5 }
 			public static int[] View = new int[] {
 					16842752,
 					16842970,
-					2130903362,
-					2130903363,
-					2130903487};
+					2130903367,
+					2130903368,
+					2130903493};
 			
 			// aapt resource value: { 0x10100D4,0x7F030034,0x7F030035 }
 			public static int[] ViewBackgroundHelper = new int[] {

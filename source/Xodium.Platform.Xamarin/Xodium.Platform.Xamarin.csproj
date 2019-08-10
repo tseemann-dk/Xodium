@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Plugin.Share" Version="7.1.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
     <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
@@ -21,6 +22,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+    <ProjectReference Include="..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\PopupView.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

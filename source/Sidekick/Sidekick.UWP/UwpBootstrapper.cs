@@ -1,4 +1,8 @@
-﻿using Sidekick.Models;
+﻿using System;
+using Sidekick.Models;
+using Xodium.Injection;
+using Xodium.Mvvm;
+using Xodium.Platform.Uwp;
 
 namespace Sidekick.UWP
 {
@@ -8,5 +12,8 @@ namespace Sidekick.UWP
             : base(storeProvider)
         {
         }
+
+        protected override IExecutionEnvironment GetExecutionEnvironment(Func<IDependencyResolver> resolver)
+            => new UwpExecutionEnvironment(resolver);
     }
 }

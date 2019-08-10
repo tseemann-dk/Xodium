@@ -170,6 +170,10 @@
       <Project>{6417c355-2592-4649-8713-6287d35aa4a7}</Project>
       <Name>Xodium.Mvvm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Platform.Uwp\Xodium.Platform.Uwp.csproj">
+      <Project>{B0F0F075-9339-4B23-8395-D32C83C5CAE9}</Project>
+      <Name>Xodium.Platform.Uwp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj">
       <Project>{53e482dd-18df-4a9d-9b6c-3e9986be986e}</Project>
       <Name>Xodium.Productivity.Content</Name>

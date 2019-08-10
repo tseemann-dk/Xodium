@@ -24,8 +24,8 @@
     <ProjectReference Include="..\..\Xodium.Core\Xodium.Core.csproj" />
     <ProjectReference Include="..\..\Xodium.Injection.MicrosoftExtensions\Xodium.Injection.MicrosoftExtensions.csproj" />
     <ProjectReference Include="..\..\Xodium.Mvvm.ReactiveUI\Xodium.Mvvm.ReactiveUI.csproj" />
-    <ProjectReference Include="..\..\Xodium.Mvvm.Xamarin\Xodium.Mvvm.Xamarin.csproj" />
     <ProjectReference Include="..\..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+    <ProjectReference Include="..\..\Xodium.Platform.Xamarin\Xodium.Platform.Xamarin.csproj" />
     <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj" />
     <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj" />
   </ItemGroup>

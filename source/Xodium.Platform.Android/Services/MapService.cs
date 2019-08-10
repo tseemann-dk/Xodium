@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xodium.Geography;
 using Xodium.Services;
+using Xodium.Utilities;
 
 namespace Xodium.Platform.Android.Services
 {

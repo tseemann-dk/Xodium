@@ -6,7 +6,7 @@ using Sidekick.Samples;
 using Xodium.Flow;
 using Xodium.Injection;
 using Xodium.Mvvm;
-using Xodium.Mvvm.Xamarin;
+using Xodium.Platform.Xamarin;
 using Xodium.Redux;
 
 namespace Sidekick
@@ -25,7 +25,7 @@ namespace Sidekick
         public IStore<AppState> Store { get; private set; }
 
         protected override IExecutionEnvironment GetExecutionEnvironment(Func<IDependencyResolver> resolver)
-            => new ExecutionEnvironment(resolver);
+            => new XamarinExecutionEnvironment(resolver);
 
         protected override void RegisterServices(IDependencyRegistry registry)
         {

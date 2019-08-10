@@ -27,7 +27,7 @@
             </Grid>
 
             <ScrollView Grid.Row="1" HorizontalScrollBarVisibility="Always">
-                <Editor x:Name="StateView" IsReadOnly="True"/>
+                <Editor x:Name="AppStateView" IsReadOnly="True"/>
             </ScrollView>
         </Grid>
     </Grid>

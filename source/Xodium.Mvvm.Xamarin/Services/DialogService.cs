@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xodium.Mvvm;
 
 namespace Xodium.Mvvm.Xamarin.Services
 {

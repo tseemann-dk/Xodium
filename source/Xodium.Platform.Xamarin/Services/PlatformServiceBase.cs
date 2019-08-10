@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xodium.Services;
 
-namespace Xodium.Mvvm.Xamarin.Services
+namespace Xodium.Platform.Xamarin.Services
 {
     public abstract class PlatformServiceBase : IPlatformService
     {

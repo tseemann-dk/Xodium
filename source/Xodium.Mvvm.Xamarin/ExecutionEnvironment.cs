@@ -1,5 +1,7 @@
 ﻿using System;
 using Xodium.Injection;
+using Xodium.Platform.Xamarin.Services;
+using Xodium.Services;
 
 namespace Xodium.Mvvm.Xamarin
 {
@@ -15,6 +17,8 @@ namespace Xodium.Mvvm.Xamarin
             // TODO: 
             // Register Xamarin common services here and register platform-specific services 
             // in derived environment classes, i.e. AndroidExecutionEnvironment and iOSExecutionEnvironment 
+
+            registry.RegisterInstance<ISynchronizerService>(new SynchronizerService());
         }
     }
 }

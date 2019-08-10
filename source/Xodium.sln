@@ -43,9 +43,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Productivity", "Productivit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xodium.Injection.UnityContainer", "Xodium.Injection.UnityContainer\Xodium.Injection.UnityContainer.csproj", "{3B8FAE11-D333-4FB9-B5A6-4E0614BAD6AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xodium.Productivity.Microsoft365", "Xodium.Productivity.Microsoft365\Xodium.Productivity.Microsoft365.csproj", "{27B37FCE-7A57-4307-BF23-E5445DAA1570}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xodium.Productivity.Microsoft365", "Xodium.Productivity.Microsoft365\Xodium.Productivity.Microsoft365.csproj", "{27B37FCE-7A57-4307-BF23-E5445DAA1570}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xodium.Productivity", "Xodium.Productivity\Xodium.Productivity.csproj", "{197FCEB2-A016-47F3-AC46-960A09EB1B20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xodium.Productivity", "Xodium.Productivity\Xodium.Productivity.csproj", "{197FCEB2-A016-47F3-AC46-960A09EB1B20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xodium.Platform.Android", "Xodium.Platform.Android\Xodium.Platform.Android.csproj", "{81E3F05B-97CB-4D76-8027-B2AE01857EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xodium.Platform.iOS", "Xodium.Platform.iOS\Xodium.Platform.iOS.csproj", "{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +277,30 @@ Global
 		{197FCEB2-A016-47F3-AC46-960A09EB1B20}.Release|iPhone.Build.0 = Release|Any CPU
 		{197FCEB2-A016-47F3-AC46-960A09EB1B20}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{197FCEB2-A016-47F3-AC46-960A09EB1B20}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Release|iPhone.Build.0 = Release|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Release|iPhone.Build.0 = Release|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -296,6 +324,8 @@ Global
 		{3B8FAE11-D333-4FB9-B5A6-4E0614BAD6AB} = {BE187748-F9EA-432C-A6B7-92C5D4DF9914}
 		{27B37FCE-7A57-4307-BF23-E5445DAA1570} = {1C0AAFCC-0D6A-4DE2-8AEE-818A6CE92AEA}
 		{197FCEB2-A016-47F3-AC46-960A09EB1B20} = {1C0AAFCC-0D6A-4DE2-8AEE-818A6CE92AEA}
+		{81E3F05B-97CB-4D76-8027-B2AE01857EAC} = {EEC3D50F-62A2-4DDC-BEFC-97169B7387E2}
+		{8E2B1665-3B73-4299-BB1F-FA8E62A5DB63} = {EEC3D50F-62A2-4DDC-BEFC-97169B7387E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5066866-C565-400F-9042-5E1B84754886}

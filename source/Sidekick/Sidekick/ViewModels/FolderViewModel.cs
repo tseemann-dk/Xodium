@@ -11,6 +11,7 @@ using Xodium.Mvvm;
 using Xodium.Mvvm.ReactiveUI;
 using Xodium.Productivity.Content.Models;
 using System.Reactive.Linq;
+using System.Threading;
 
 namespace Sidekick.ViewModels
 {
@@ -27,30 +28,39 @@ namespace Sidekick.ViewModels
             Nodes = new ObservableCollection<NodeListItemViewModel>();
 
             var focusedNodeChanges = this
-                .WhenAnyValue(x => x.FocusedNode, x => x.CurrentFolder);
+                .WhenAnyValue(x => x.FocusedNode);
 
-            var isAtRoot = this
-                .WhenAnyValue(x => x.CurrentArchive, x => x.CurrentFolder)
-                .Select(x => x.Item1?.Content == x.Item2);
+            var currentFolderChanges = this
+                .WhenAnyValue(x => x.CurrentFolder);
 
-            var isNotAtRoot = isAtRoot
-                .Select(x => !x);
+            var currentFolderOrCurrentArchiveChanges = this
+                .WhenAnyValue(x => x.CurrentFolder, x => x.CurrentArchive, 
+                (folder, archive) => (folder, archive));
 
-            var hasCurrentFolder = this
-                .WhenAnyValue(x => x.CurrentFolder)
-                .Select(x => x != null);
+            var currentFolderOrFocusedNodeChanges = this
+                .WhenAnyValue(x => x.CurrentFolder, x => x.FocusedNode, 
+                (folder, node) => (folder, node));
 
             var hasFocusedNode = focusedNodeChanges
                 .Select(x => x != null);
 
+            var isAtRoot = currentFolderOrCurrentArchiveChanges
+                .Select(x => x.folder == x.archive?.Content);
+
+            var isNotAtRoot = isAtRoot
+                .Select(x => !x);
+
+            var hasCurrentFolder = currentFolderChanges
+                .Select(x => x != null);
+
             var focusedNodeIsFolder = focusedNodeChanges
-                .Select(x => x.Item1?.Model is Folder);
+                .Select(x => x?.Model is Folder);
 
-            var focusedNodeIsNotFirst = focusedNodeChanges
-                .Select(x => !(x.Item1?.IsFirstNodeIn(x.Item2) ?? false));
+            var focusedNodeIsNotFirst = currentFolderOrFocusedNodeChanges
+                .Select(x => !(x.node?.IsFirstNodeIn(x.folder) ?? true));
 
-            var focusedNodeIsNotLast = focusedNodeChanges
-                .Select(x => !(x.Item1?.IsLastNodeIn(x.Item2) ?? false));
+            var focusedNodeIsNotLast = currentFolderOrFocusedNodeChanges
+                .Select(x => !(x.node?.IsLastNodeIn(x.folder) ?? true));
 
             AddNewFolderCommand = ReactiveCommand.Create(() => AddNewFolder());
             AddNewShortcutCommand = ReactiveCommand.Create(() => AddNewShortcut());
@@ -73,11 +83,7 @@ namespace Sidekick.ViewModels
                     .Select(CreateNodeItemViewModel)
                     .ToList();
 
-                // TODO: 
-                // Invoke on UI thread via injected platform-specific dispatcher
-                // in order to keep VM layer independent of Xamarin Forms
-
-                Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
+                ExecutionEnvironment.SynchronizerService.BeginInvokeOnMainThread(() =>
                 {
                     Title = CurrentFolder.Text;
 
@@ -86,6 +92,8 @@ namespace Sidekick.ViewModels
                         (x, y) => x.Id == y.Id,
                         (x, y) => x.IsSameNode(y),
                         CreateNodeItemViewModel);
+
+                    Thread.Sleep(200);
 
                     FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
                 });
@@ -136,9 +144,7 @@ namespace Sidekick.ViewModels
 
         public void FocusNode(NodeListItemViewModel node)
         {
-            if (node == FocusedNode) return;
-
-            //if (node == null || node.Id == FocusedNode?.Id) return;
+            if (node?.Id == FocusedNode?.Id) return;
 
             this.DispatchAction(new FocusNodeAction(node?.Id));
         }

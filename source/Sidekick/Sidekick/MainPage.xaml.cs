@@ -26,22 +26,26 @@ namespace Sidekick
             var environment = Startup.ExecutionEnvironment;
             var store = environment.GetService<IStore<AppState>>();
 
-            DebuggerView.IsVisible = isDebugging;
+            DebuggerView.IsVisible = isDebugging && environment.PlatformService.PlatformType == Xodium.Services.PlatformTypes.UWP;
             TimeMachineSection.BindingContext = store as TimeMachineStore<AppState>;
 
-            var archiveChanges = store
-                .ObserveState()
+            var appStateChanges = store.ObserveState();
+
+            var archiveStateChanges = appStateChanges
                 .Select(state => state.CurrentArchive)
                 .DistinctUntilChanged();
 
-            var vm = new FolderViewModel(archiveChanges, environment);
+            var vm = new FolderViewModel(archiveStateChanges, environment);
 
-            archiveChanges.Subscribe(archiveState =>
-            {
-                StateView.Text = JsonConvert.SerializeObject(archiveState, Formatting.Indented);    
-            });
+            appStateChanges.Subscribe(appState => UpdateStateView(appState));
+            UpdateStateView(store.GetState());
 
             Workspace.Children.Add(new FolderView(vm));
+        }
+
+        private void UpdateStateView(AppState appState)
+        {
+            AppStateView.Text = JsonConvert.SerializeObject(appState, Formatting.Indented);
         }
     }
 }

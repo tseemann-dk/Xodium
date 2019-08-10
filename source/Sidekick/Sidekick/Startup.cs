@@ -10,10 +10,16 @@ namespace Sidekick
 {
     public static class Startup
     {
+        private static IDependencyResolver dependencyResolver;
         private static readonly Lazy<IExecutionEnvironment> executionEnvironment =
             new Lazy<IExecutionEnvironment>(() => DependencyResolver.Resolve<IExecutionEnvironment>());
 
-        public static IDependencyResolver DependencyResolver { get; private set; }
+        public static IDependencyResolver DependencyResolver
+        {
+            get => dependencyResolver ?? throw new InvalidOperationException("Startup.Init() has not been called");
+            private set => dependencyResolver = value;
+        }
+
         public static IExecutionEnvironment ExecutionEnvironment => executionEnvironment.Value;
 
         public static void Init(Bootstrapper bootstrapper)

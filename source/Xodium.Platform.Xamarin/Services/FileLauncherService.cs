@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xodium.Services;
 
-namespace Xodium.Mvvm.Xamarin.Services
+namespace Xodium.Platform.Xamarin.Services
 {
     public class FileLauncherService : FileLauncherServiceBase
     {

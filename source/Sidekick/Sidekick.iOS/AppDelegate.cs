@@ -8,11 +8,10 @@ namespace Sidekick.iOS
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
+            Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
+            Xamarin.Forms.Forms.Init();
 
-            var bootstrapper = new iOSBootstrapper();
-            Startup.Init(bootstrapper);
-
+            Startup.Init(new iOSBootstrapper());
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Xamarin.Essentials;
 using Xodium.Injection;
 using Xodium.Injection.MicrosoftHosting;
 using Xodium.Mvvm;
@@ -34,7 +35,7 @@ namespace Sidekick
 
         private static void ConfigureHost(IConfigurationBuilder builder)
         {
-            //builder.AddCommandLine(new string[] { $"ContentRoot={FileSystem.AppDataDirectory}" });
+            builder.AddCommandLine(new string[] { $"ContentRoot={FileSystem.AppDataDirectory}" });
         }
 
         private static void ConfigureServices(HostBuilderContext context, IServiceCollection services, Bootstrapper bootstrapper)

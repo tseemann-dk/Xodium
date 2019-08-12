@@ -1,5 +1,6 @@
 ﻿using ReactiveUI;
 using Sidekick.Models;
+using Sidekick.Resources;
 using System;
 using System.Reactive;
 using Xodium.Mvvm;
@@ -17,6 +18,8 @@ namespace Sidekick.ViewModels
 
         public string Id => Model.Id;
         public string DisplayNumber => Model.ReferenceNumber;
+        public string Glyph => IsFolder ? MaterialDesignIcon.Folder : MaterialDesignIcon.File;
+        public bool IsFolder => Model is IFolder;
         public string Text => Model.Text;
         public double Value => Model.Value;
 

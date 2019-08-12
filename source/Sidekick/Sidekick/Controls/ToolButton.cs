@@ -1,0 +1,35 @@
+﻿using Sidekick.Resources;
+using Xamarin.Forms;
+
+namespace Sidekick.Controls
+{
+    public class ToolButton : Button
+    {
+        private readonly FontImageSource imageSource;
+
+        public ToolButton()
+        {
+            ImageSource = imageSource = new FontImageSource
+            {
+                FontFamily = ResourceResolver.MaterialFontFamily,
+                Size = 24,
+                Color = Color.Black
+            };
+        }
+
+        public static BindableProperty GlyphProperty = BindableProperty.Create(
+            nameof(Glyph), typeof(string), typeof(ToolButton), null,
+            propertyChanged: (bindable, oldValue, newValue) => ((ToolButton)bindable).OnGlyphChanged());
+
+        public string Glyph
+        {
+            get => GetValue(GlyphProperty) as string;
+            set => SetValue(GlyphProperty, value);
+        }
+
+        private void OnGlyphChanged()
+        {
+            imageSource.Glyph = Glyph;
+        }
+    }
+}

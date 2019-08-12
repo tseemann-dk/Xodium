@@ -11,7 +11,6 @@ using Xodium.Mvvm;
 using Xodium.Mvvm.ReactiveUI;
 using Xodium.Productivity.Content.Models;
 using System.Reactive.Linq;
-using System.Threading;
 
 namespace Sidekick.ViewModels
 {
@@ -71,31 +70,34 @@ namespace Sidekick.ViewModels
             MoveNodeDownCommand = ReactiveCommand.Create(() => MoveFocusedNodeDown(), focusedNodeIsNotLast);
             MoveNodeUpCommand = ReactiveCommand.Create(() => MoveFocusedNodeUp(), focusedNodeIsNotFirst);
 
-            Model.Subscribe(state =>
-            {
-                CurrentArchive = state.Document;
+            Model.Subscribe(state => ApplyState(state));
+        }
 
-                CurrentFolder = state.Document.Content
-                    .FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
+        private void ApplyState(ArchiveState state)
+        {
+            CurrentArchive = state.Document;
 
-                var newNodes = CurrentFolder.Nodes
-                    .OfType<IArchiveNode>()
-                    .Select(CreateNodeItemViewModel)
-                    .ToList();
+            CurrentFolder = state.Document.Content
+                .FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
 
-                ExecutionEnvironment.SynchronizerService.BeginInvokeOnMainThread(() =>
-                {
-                    Title = CurrentFolder.Text;
+            var newNodes = CurrentFolder.Nodes
+                .OfType<IArchiveNode>()
+                .Select(CreateNodeItemViewModel)
+                .ToList();
 
-                    Nodes.MorphTo(
-                        CurrentFolder.Nodes.OfType<IArchiveNode>().ToArray(),
-                        (x, y) => x.Id == y.Id,
-                        (x, y) => x.IsSameNode(y),
-                        CreateNodeItemViewModel);
+            Title = CurrentFolder.Text;
 
-                    FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
-                });
-            });
+            Nodes.MorphTo(
+                CurrentFolder.Nodes.OfType<IArchiveNode>().ToArray(),
+                (x, y) => x.Id == y.Id,
+                (x, y) => x.IsSameNode(y),
+                CreateNodeItemViewModel);
+
+            FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
+
+            //ExecutionEnvironment.SynchronizerService.BeginInvokeOnMainThread(() =>
+            //{
+            //});
         }
 
         public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }

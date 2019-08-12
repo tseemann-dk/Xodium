@@ -37,13 +37,13 @@ namespace Sidekick
 
             var vm = new FolderViewModel(archiveStateChanges, environment);
 
-            appStateChanges.Subscribe(appState => UpdateStateView(appState));
-            UpdateStateView(store.GetState());
+            appStateChanges.Subscribe(appState => UpdateAppStateView(appState));
+            UpdateAppStateView(store.GetState());
 
             Workspace.Children.Add(new FolderView(vm));
         }
 
-        private void UpdateStateView(AppState appState)
+        private void UpdateAppStateView(AppState appState)
         {
             AppStateView.Text = JsonConvert.SerializeObject(appState, Formatting.Indented);
         }

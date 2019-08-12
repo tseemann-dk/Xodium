@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Sidekick.Resources;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Sidekick.Views
@@ -9,6 +10,10 @@ namespace Sidekick.Views
         public NodeListItemView()
         {
             InitializeComponent();
+
+            ImageSource.FontFamily = ResourceResolver.MaterialFontFamily;
+            ImageSource.Size = 32;
+            ImageSource.Color = Color.Black;
         }
     }
 }

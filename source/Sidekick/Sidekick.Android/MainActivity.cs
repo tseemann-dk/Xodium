@@ -15,8 +15,9 @@ namespace Sidekick.Droid
 
             base.OnCreate(savedInstanceState);
 
+            Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
+            Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             var bootstrapper = new AndroidBootstrapper(this);
             Startup.Init(bootstrapper);

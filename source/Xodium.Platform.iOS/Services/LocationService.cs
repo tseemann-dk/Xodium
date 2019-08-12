@@ -21,7 +21,7 @@ namespace Xodium.Platform.iOS.Services
         }
     }
 
-    internal class LocationListener : ILocationListener
+    public class LocationListener : ILocationListener
     {
         private readonly LocationListenerSettings settings;
 
@@ -43,6 +43,11 @@ namespace Xodium.Platform.iOS.Services
         public Task Stop()
         {
             return Task.CompletedTask;
+        }
+
+        protected void OnPositionChanged()
+        {
+            PositionChanged?.Invoke(this, new PositionChangedEventArgs(TrackedPosition.Empty));
         }
     }
 }

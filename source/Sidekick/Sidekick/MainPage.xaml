@@ -26,9 +26,7 @@
                 <win:TimeMachine TimeMachineStore="{Binding}"/>
             </Grid>
 
-            <ScrollView Grid.Row="1" HorizontalScrollBarVisibility="Always">
-                <Editor x:Name="AppStateView" IsReadOnly="True"/>
-            </ScrollView>
+            <Editor x:Name="AppStateView" Grid.Row="1" IsReadOnly="True"/>
         </Grid>
     </Grid>
 

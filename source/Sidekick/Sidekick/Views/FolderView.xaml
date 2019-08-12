@@ -5,15 +5,27 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:views="clr-namespace:Sidekick.Views"
+    xmlns:controls="clr-namespace:Sidekick.Controls"
     mc:Ignorable="d"
     x:Class="Sidekick.Views.FolderView">
 
-    <StackLayout Orientation="Vertical">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-        <Label FontSize="Large" x:Name="TitleLabel"/>
+        <Label 
+            x:Name="TitleLabel"
+            Grid.Row="0" 
+            FontSize="Large"/>
 
-        <ListView 
+        <!--<ListView 
             x:Name="NodeListView"
+            Grid.Row="1"
+            RowHeight="32"
+            ItemTapped="NodeListView_ItemTapped"
             ItemSelected="NodeListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -22,50 +34,41 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>       
-        </ListView>
+        </ListView>-->
 
-        <!--<CollectionView 
+        <!--
+        SelectedItem="{Binding FocusedNode, Mode=TwoWay}"
+        SelectionChanged="NodeCollectionView_SelectionChanged"
+        -->
+        <CollectionView 
             x:Name="NodeCollectionView"
-            SelectedItem="{Binding FocusedNode}"
-            SelectionMode="Single"
-            SelectionChanged="NodeCollectionView_SelectionChanged">
+            Grid.Row="1"
+            SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <views:NodeListItemView/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>-->
+        </CollectionView>
 
-        <StackLayout Orientation="Horizontal" Margin="4">
-            <Button 
-                x:Name="AddShortcutButton"
-                Text="Add Shortcut"/>
-            <Button 
-                x:Name="AddFolderButton"
-                Text="Add Folder"/>
-            <Button 
-                x:Name="EditButton"
-                Text="Edit"/>
-            <Button 
-                x:Name="DeleteButton"
-                Text="Delete"/>
-            <Button 
-                x:Name="MoveDownButton"
-                Text="Move Down"/>
-            <Button 
-                x:Name="MoveUpButton"
-                Text="Move Up"/>
-            <Button 
-                x:Name="EnterFolderButton"
-                Text="Enter Folder"/>
-            <Button 
-                x:Name="ExitFolderButton"
-                Text="Exit Folder"/>
-            <Button 
-                x:Name="ChangeTitleButton"
-                Text="Change Title"/>
+        <StackLayout Grid.Row="2" Orientation="Vertical" Margin="4" Spacing="4">
+
+            <StackLayout Orientation="Horizontal">
+                <controls:ToolButton x:Name="GoBackButton" Text="Back"/>
+                <controls:ToolButton x:Name="GoForwardButton" Text="Forward"/>
+                <controls:ToolButton x:Name="MoveDownButton" Text="Move"/>
+                <controls:ToolButton x:Name="MoveUpButton" Text="Move"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <controls:ToolButton x:Name="AddShortcutButton" Text="Shortcut"/>
+                <controls:ToolButton x:Name="AddFolderButton" Text="Folder"/>
+                <controls:ToolButton x:Name="RenameButton" Text="Edit"/>
+                <controls:ToolButton x:Name="DeleteButton" Text="Delete"/>
+            </StackLayout>
+            
         </StackLayout>
         
-    </StackLayout>
+    </Grid>
     
 </views:FolderViewBase>

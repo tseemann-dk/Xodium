@@ -80,24 +80,15 @@ namespace Sidekick.ViewModels
             CurrentFolder = state.Document.Content
                 .FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
 
-            var newNodes = CurrentFolder.Nodes
-                .OfType<IArchiveNode>()
-                .Select(CreateNodeItemViewModel)
-                .ToList();
-
-            Title = CurrentFolder.Text;
+            Title = CurrentFolder?.Text;
 
             Nodes.MorphTo(
-                CurrentFolder.Nodes.OfType<IArchiveNode>().ToArray(),
+                CurrentFolder?.Nodes.OfType<IArchiveNode>().ToArray() ?? new IArchiveNode[0],
                 (x, y) => x.Id == y.Id,
                 (x, y) => x.IsSameNode(y),
                 CreateNodeItemViewModel);
 
             FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
-
-            //ExecutionEnvironment.SynchronizerService.BeginInvokeOnMainThread(() =>
-            //{
-            //});
         }
 
         public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }

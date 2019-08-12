@@ -4,6 +4,7 @@ namespace Sidekick.Models
 {
     public interface IShortcut : IArchiveNode
     {
-        [JsonIgnore] IElement Target { get; }
+        string ElementNumber { get; }
+        [JsonIgnore] IElement Element { get; }
     }
 }

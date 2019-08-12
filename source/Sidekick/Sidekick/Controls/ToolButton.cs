@@ -15,6 +15,9 @@ namespace Sidekick.Controls
                 Size = 24,
                 Color = Color.Black
             };
+
+            Padding = new Thickness(4);
+            Margin = Device.RuntimePlatform == Device.UWP ? new Thickness(4) : new Thickness(0);
         }
 
         public static BindableProperty GlyphProperty = BindableProperty.Create(

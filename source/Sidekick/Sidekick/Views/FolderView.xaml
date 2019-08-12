@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     x:Class="Sidekick.Views.FolderView">
 
-    <Grid>
+    <Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -51,21 +51,35 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <StackLayout Grid.Row="2" Orientation="Vertical" Margin="4" Spacing="4">
+        <StackLayout Grid.Row="2" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
 
-            <StackLayout Orientation="Horizontal">
-                <controls:ToolButton x:Name="GoBackButton" Text="Back"/>
-                <controls:ToolButton x:Name="GoForwardButton" Text="Forward"/>
-                <controls:ToolButton x:Name="MoveDownButton" Text="Move"/>
-                <controls:ToolButton x:Name="MoveUpButton" Text="Move"/>
-            </StackLayout>
+            <Grid Margin="0" Padding="0" ColumnSpacing="0"><!--BackgroundColor="LightBlue">-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <controls:ToolButton Grid.Column="0" x:Name="GoBackButton" Text="Back"/>
+                <controls:ToolButton Grid.Column="1" x:Name="GoForwardButton" Text="Enter"/>
+                <controls:ToolButton Grid.Column="2" x:Name="MoveDownButton" Text="Move"/>
+                <controls:ToolButton Grid.Column="3" x:Name="MoveUpButton" Text="Move"/>
+            </Grid>
 
-            <StackLayout Orientation="Horizontal">
-                <controls:ToolButton x:Name="AddShortcutButton" Text="Shortcut"/>
-                <controls:ToolButton x:Name="AddFolderButton" Text="Folder"/>
-                <controls:ToolButton x:Name="RenameButton" Text="Edit"/>
-                <controls:ToolButton x:Name="DeleteButton" Text="Delete"/>
-            </StackLayout>
+            <Grid Margin="0" Padding="0" ColumnSpacing="0"><!--BackgroundColor="LightGreen">-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <controls:ToolButton Grid.Column="0" x:Name="AddShortcutButton" Text="File"/>
+                <controls:ToolButton Grid.Column="1" x:Name="AddFolderButton" Text="Folder"/>
+                <controls:ToolButton Grid.Column="2" x:Name="RenameButton" Text="Edit"/>
+                <controls:ToolButton Grid.Column="3" x:Name="DeleteButton" Text="Delete"/>
+            </Grid>
             
         </StackLayout>
         

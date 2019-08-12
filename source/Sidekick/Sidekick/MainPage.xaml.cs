@@ -19,14 +19,17 @@ namespace Sidekick
     {
         public MainPage()
         {
-            var isDebugging = System.Diagnostics.Debugger.IsAttached;
-
             InitializeComponent();
 
             var environment = Startup.ExecutionEnvironment;
             var store = environment.GetService<IStore<AppState>>();
 
-            DebuggerView.IsVisible = isDebugging && environment.PlatformService.PlatformType == Xodium.Services.PlatformTypes.UWP;
+            var isDebugging =
+                System.Diagnostics.Debugger.IsAttached &&
+                environment.PlatformService.PlatformType == Xodium.Services.PlatformTypes.UWP;
+
+            DebuggerView.IsVisible = isDebugging;
+            RightColumn.Width = isDebugging ? GridLength.Star : new GridLength(0);
             TimeMachineSection.BindingContext = store as TimeMachineStore<AppState>;
 
             var appStateChanges = store.ObserveState();

@@ -8,10 +8,10 @@
     x:Class="Sidekick.MainPage"
     ios:Page.UseSafeArea="true">
 
-    <Grid>
+    <Grid ColumnSpacing="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*" x:Name="RightColumn"/>
         </Grid.ColumnDefinitions>
 
         <Grid x:Name="Workspace" Grid.Column="0"/>
@@ -22,7 +22,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid x:Name="TimeMachineSection" Grid.Row="0">
+            <Grid x:Name="TimeMachineSection" Grid.Row="0" HorizontalOptions="FillAndExpand">
                 <win:TimeMachine TimeMachineStore="{Binding}"/>
             </Grid>
 

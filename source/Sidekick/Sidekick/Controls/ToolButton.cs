@@ -16,7 +16,7 @@ namespace Sidekick.Controls
                 Color = Color.Black
             };
 
-            Padding = new Thickness(4);
+            Padding = Device.RuntimePlatform == Device.iOS ? new Thickness(0) : new Thickness(4);
             Margin = Device.RuntimePlatform == Device.UWP ? new Thickness(4) : new Thickness(0);
         }
 

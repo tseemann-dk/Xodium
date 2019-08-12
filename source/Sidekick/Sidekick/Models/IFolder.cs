@@ -8,7 +8,7 @@ namespace Sidekick.Models
     {
         string Number { get; }
 
-        new IFolder Clone(IEnumerable<INode> nodes);
+        new IFolder WithNodes(IEnumerable<INode> nodes);
     }
 
     public static class FolderExtensions

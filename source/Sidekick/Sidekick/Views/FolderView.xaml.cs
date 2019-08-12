@@ -17,7 +17,7 @@ namespace Sidekick.Views
         {
             InitializeComponent();
 
-            AddShortcutButton.Glyph = MaterialDesignIcon.Plus;
+            AddItemButton.Glyph = MaterialDesignIcon.Plus;
             AddFolderButton.Glyph = MaterialDesignIcon.FolderPlus;
             DeleteButton.Glyph = MaterialDesignIcon.Delete;
             GoBackButton.Glyph = MaterialDesignIcon.ArrowLeftBold;
@@ -48,16 +48,22 @@ namespace Sidekick.Views
                     v => v.NodeCollectionView.SelectedItem)
                     .DisposeWith(disposables);
 
+                // Info
+                this.OneWayBind(ViewModel,
+                    vm => vm.FocusedNodeText,
+                    v => v.InfoLabel.Text)
+                    .DisposeWith(disposables);
+
                 // AddFolderButton
                 this.BindCommand(ViewModel, 
                     vm => vm.AddNewFolderCommand, 
                     v => v.AddFolderButton)
                     .DisposeWith(disposables);
 
-                // AddShortcutButton
+                // AddItemButton
                 this.BindCommand(ViewModel,
-                    vm => vm.AddNewShortcutCommand,
-                    v => v.AddShortcutButton)
+                    vm => vm.AddNewItemCommand,
+                    v => v.AddItemButton)
                     .DisposeWith(disposables);
 
                 // RenameButton

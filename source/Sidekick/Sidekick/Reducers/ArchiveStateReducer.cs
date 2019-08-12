@@ -9,11 +9,13 @@ namespace Sidekick.Reducers
     {
         public static ArchiveState Execute(ArchiveState state, object action)
         {
-            var archive = state.Document;
+            IArchive archive = state.Document;
+            IFolder newFolder = null;
+            IElement newElement = null;
+
             var currentFolderId = state.CurrentFolderId;
             var focusedNodeId = state.FocusedNodeId;
             var currentFolder = state.Document.Content.FindNode<IFolder>(x => x.Id == state.CurrentFolderId);
-            IFolder newFolder = null;
 
             switch (action)
             {
@@ -39,6 +41,10 @@ namespace Sidekick.Reducers
                     newFolder = FolderTransformer.ChangeTitle(
                         currentFolder, 
                         a.Payload.NewTitle);
+                    break;
+
+                case AddElementAction a:
+                    newElement = a.Payload.Element;
                     break;
 
                 case AddFolderAction a:
@@ -82,13 +88,18 @@ namespace Sidekick.Reducers
             if (newFolder != null)
             {
                 archive = currentFolder.Id == archive.Content.Id
-                    ? state.Document.Clone(newFolder) as Archive
+                    ? state.Document.WithContent(newFolder) as Archive
                     : state.Document.ReplaceNode(currentFolder, newFolder) as Archive;
+            }
+
+            if (newElement != null)
+            {
+                archive = archive.AddElement(newElement);
             }
 
             return new ArchiveState
             {
-                Document = archive,
+                Document = archive as Archive,
                 CurrentFolderId = currentFolderId,
                 FocusedNodeId = focusedNodeId
             };

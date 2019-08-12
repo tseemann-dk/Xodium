@@ -1,7 +1,9 @@
-﻿namespace Sidekick.Models
+﻿using Newtonsoft.Json;
+
+namespace Sidekick.Models
 {
     public interface IShortcut : IArchiveNode
     {
-        IElement Target { get; }
+        [JsonIgnore] IElement Target { get; }
     }
 }

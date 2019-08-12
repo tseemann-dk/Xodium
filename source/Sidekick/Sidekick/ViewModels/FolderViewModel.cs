@@ -20,6 +20,7 @@ namespace Sidekick.ViewModels
         private IFolder currentFolder;
         private IArchive currentArchive;
         private NodeListItemViewModel focusedNode;
+        private readonly ObservableAsPropertyHelper<string> focusedNodeText;
 
         public FolderViewModel(IObservable<ArchiveState> model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
@@ -62,13 +63,17 @@ namespace Sidekick.ViewModels
                 .Select(x => !(x.node?.IsLastNodeIn(x.folder) ?? true));
 
             AddNewFolderCommand = ReactiveCommand.Create(() => AddNewFolder());
-            AddNewShortcutCommand = ReactiveCommand.Create(() => AddNewShortcut());
+            AddNewItemCommand = ReactiveCommand.Create(() => AddNewItem());
             ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle(), hasCurrentFolder);
             DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode(), hasFocusedNode);
             EnterFolderCommand = ReactiveCommand.Create(() => EnterFocusedFolder(), focusedNodeIsFolder);
             ExitFolderCommand = ReactiveCommand.Create(() => ExitFolder(), isNotAtRoot);
             MoveNodeDownCommand = ReactiveCommand.Create(() => MoveFocusedNodeDown(), focusedNodeIsNotLast);
             MoveNodeUpCommand = ReactiveCommand.Create(() => MoveFocusedNodeUp(), focusedNodeIsNotFirst);
+
+            focusedNodeText = this.WhenAnyValue(x => x.FocusedNode)
+                .Select(x => x?.Text)
+                .ToProperty(this, x => x.FocusedNodeText);
 
             Model.Subscribe(state => ApplyState(state));
         }
@@ -92,7 +97,7 @@ namespace Sidekick.ViewModels
         }
 
         public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }
-        public ReactiveCommand<Unit, Unit> AddNewShortcutCommand { get; }
+        public ReactiveCommand<Unit, Unit> AddNewItemCommand { get; }
         public ReactiveCommand<Unit, Unit> ChangeTitleCommand { get; }
         public ReactiveCommand<Unit, Unit> DeleteNodeCommand { get; }
         public ReactiveCommand<Unit, Unit> EnterFolderCommand { get; }
@@ -124,6 +129,8 @@ namespace Sidekick.ViewModels
             set => this.RaiseAndSetIfChanged(ref focusedNode, value);
         }
 
+        public string FocusedNodeText => focusedNodeText.Value;
+
         public ObservableCollection<NodeListItemViewModel> Nodes { get; }
 
         public void EnterFolder(NodeListItemViewModel node)
@@ -148,11 +155,12 @@ namespace Sidekick.ViewModels
             this.DispatchAction(new AddFolderAction(CurrentFolder.Id, $"F{number}", text, 1, FocusedNode?.Id));
         }
 
-        private void AddNewShortcut()
+        private void AddNewItem()
         {
             var number = this.GetAppState().Global.NextElementNumber;
-            var element = new Element(number.ToString(), $"Shortcut {number}", 10);
+            var element = new Element(number.ToString(), $"Element {number}", 10);
 
+            this.DispatchAction(new AddElementAction(element));
             this.DispatchAction(new AddShortcutAction(CurrentFolder.Id, element, 1, insertAfterNodeId: FocusedNode?.Id));
         }
 

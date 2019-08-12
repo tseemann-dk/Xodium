@@ -37,10 +37,10 @@ namespace Sidekick.Models
         [ExcludeFromCodeCoverage]
         private string DebuggerDisplay => $"{Text}";
 
-        public IFolder Clone(IEnumerable<INode> nodes) 
+        public IFolder WithNodes(IEnumerable<INode> nodes) 
             => new Folder(Id, Number, Text, Quantity, nodes);
 
-        IContainer IContainer.Clone(IEnumerable<INode> nodes) => Clone(nodes);
-        INode INode.Clone() => Clone(Nodes);
+        IContainer IContainer.WithNodes(IEnumerable<INode> nodes) => WithNodes(nodes);
+        INode INode.Clone() => WithNodes(Nodes);
     }
 }

@@ -14,6 +14,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Label 
@@ -51,9 +52,14 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <StackLayout Grid.Row="2" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
+        <Label 
+            x:Name="InfoLabel"
+            Grid.Row="2" 
+            FontSize="Small"/>
 
-            <Grid Margin="0" Padding="0" ColumnSpacing="0"><!--BackgroundColor="LightBlue">-->
+        <StackLayout Grid.Row="3" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
+
+            <Grid Margin="0" Padding="0" ColumnSpacing="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -67,7 +73,7 @@
                 <controls:ToolButton Grid.Column="3" x:Name="MoveUpButton" Text="Move"/>
             </Grid>
 
-            <Grid Margin="0" Padding="0" ColumnSpacing="0"><!--BackgroundColor="LightGreen">-->
+            <Grid Margin="0" Padding="0" ColumnSpacing="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -75,7 +81,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <controls:ToolButton Grid.Column="0" x:Name="AddShortcutButton" Text="File"/>
+                <controls:ToolButton Grid.Column="0" x:Name="AddItemButton" Text="Item"/>
                 <controls:ToolButton Grid.Column="1" x:Name="AddFolderButton" Text="Folder"/>
                 <controls:ToolButton Grid.Column="2" x:Name="RenameButton" Text="Edit"/>
                 <controls:ToolButton Grid.Column="3" x:Name="DeleteButton" Text="Delete"/>

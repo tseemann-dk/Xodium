@@ -6,7 +6,7 @@ namespace Xodium.Productivity.Content.Models
 {
     public interface IContainer : IBranch
     {
-        IContainer Clone(IEnumerable<INode> nodes);
+        IContainer WithNodes(IEnumerable<INode> nodes);
     }
 
     public static class ContainerExtensions
@@ -24,7 +24,7 @@ namespace Xodium.Productivity.Content.Models
 
         public static T AddNodes<T>(this T self, IEnumerable<INode> nodes)
             where T : class, IContainer 
-            => self.Clone(self.Nodes.Concat(nodes)) as T;
+            => self.WithNodes(self.Nodes.Concat(nodes)) as T;
 
         public static T AddNodesAt<T>(this T self, IContainer parent, IEnumerable<INode> nodes)
             where T : class, IContainer
@@ -50,7 +50,7 @@ namespace Xodium.Productivity.Content.Models
         {
             var newNodes = self.Nodes.ToList();
             newNodes.InsertRange(index, nodes);
-            return self.Clone(newNodes) as T;
+            return self.WithNodes(newNodes) as T;
         }
 
         public static T InsertNodesAt<T>(this T self, IContainer parent, int index, IEnumerable<INode> nodes)
@@ -85,7 +85,7 @@ namespace Xodium.Productivity.Content.Models
         {
             var nodes = self.Nodes.ToList();
             nodes.Remove(oldNode);
-            return self.Clone(nodes) as T;
+            return self.WithNodes(nodes) as T;
         }
 
         public static T RemoveNodeAt<T>(this T self, IContainer parent, INode oldNode)
@@ -104,7 +104,7 @@ namespace Xodium.Productivity.Content.Models
         {
             var nodes = self.Nodes.ToList();
             nodes.RemoveAll(x => oldNodes.Contains(x));
-            return self.Clone(nodes) as T;
+            return self.WithNodes(nodes) as T;
         }
 
         public static T ReplaceNode<T>(this T self, INode oldNode, INode newNode)
@@ -135,7 +135,7 @@ namespace Xodium.Productivity.Content.Models
             nodes.Insert(index, newNode);
             nodes.Remove(oldNode);
 
-            return self.Clone(nodes) as T;
+            return self.WithNodes(nodes) as T;
         }
 
         public static T ReplaceNodeAt<T>(this T self, IContainer parent, INode oldNode, INode newNode)
@@ -165,7 +165,7 @@ namespace Xodium.Productivity.Content.Models
             nodes[index1] = node2;
             nodes[index2] = node1;
 
-            return self.Clone(nodes) as T;
+            return self.WithNodes(nodes) as T;
         }
 
         public static bool TryAddNodes<T>(this T self, IContainer parent, IEnumerable<INode> nodes, out T result)

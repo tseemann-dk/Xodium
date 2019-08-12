@@ -20,9 +20,9 @@ namespace Xodium.Productivity.Tests.Content
         public string Id { get; }
         public IReadOnlyList<INode> Nodes { get; }
 
-        public IContainer Clone(IEnumerable<INode> nodes) 
+        public IContainer WithNodes(IEnumerable<INode> nodes) 
             => new SampleContainer(Id, nodes);
 
-        public INode Clone() => Clone(Nodes);
+        public INode Clone() => WithNodes(Nodes);
     }
 }

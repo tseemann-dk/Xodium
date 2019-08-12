@@ -46,7 +46,7 @@ namespace Xodium.Productivity.Tests.Content
         public void Clone_ShouldCreateExactCopy()
         {
             var container = treeBuilder.CreateContainer("A");
-            var copy = container.Clone(container.Nodes);
+            var copy = container.Clone() as IContainer;
 
             copy.Should().NotBeNull();
             copy.Should().NotBe(container);

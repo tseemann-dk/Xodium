@@ -28,12 +28,19 @@ namespace Sidekick.Samples
 
         private static Archive BuildSampleArchive()
         {
+            var elements = new[]
+            {
+                new Element("1", "Element 1", 10),
+                new Element("2", "Element 2", 20)
+            };
+
             return new Archive("archive-1", "A1",
                 new Folder("folder-1", "F1", "Folder 1", 1, new[]
                 {
-                    new Shortcut(new Element("1", "Shortcut 1", 10), 1),
-                    new Shortcut(new Element("2", "Shortcut 2", 20), 1)
-                })
+                    new Shortcut(elements[0], 1),
+                    new Shortcut(elements[1], 1)
+                }),
+                elements
             );
         }
     }

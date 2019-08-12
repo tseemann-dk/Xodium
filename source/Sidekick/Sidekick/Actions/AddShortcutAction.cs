@@ -8,14 +8,14 @@ namespace Sidekick.Actions
     {
         public AddShortcutAction(
             string parentFolderId, 
-            IElement target, 
+            IElement element, 
             double quantity, 
             string text = null, 
             double? value = null, 
             string insertAfterNodeId = null)
             : base(typeof(AddShortcutAction).FullName, new Properties(
                 parentFolderId, 
-                target, 
+                element, 
                 quantity, 
                 text, 
                 value, 
@@ -28,14 +28,14 @@ namespace Sidekick.Actions
         {
             public Properties(
                 string folderId,
-                IElement target, 
+                IElement element, 
                 double quantity, 
                 string text, 
                 double? value, 
                 string insertAfterNodeId)
             {
                 ParentFolderId = folderId ?? throw new ArgumentNullException(nameof(folderId));
-                Target = target;
+                Element = element;
                 Quantity = quantity;
                 Text = text;
                 Value = value;
@@ -43,7 +43,7 @@ namespace Sidekick.Actions
             }
 
             public string ParentFolderId;
-            public IElement Target;
+            public IElement Element;
             public double Quantity;
             public string Text;
             public double? Value;

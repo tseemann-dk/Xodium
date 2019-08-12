@@ -59,7 +59,7 @@ namespace Sidekick.Reducers
                 case AddShortcutAction a:
                     (newFolder, focusedNodeId) = FolderTransformer.AddShortcut(
                         currentFolder, 
-                        a.Payload.Target, 
+                        a.Payload.Element, 
                         a.Payload.Quantity, 
                         a.Payload.Text, 
                         a.Payload.Value, 

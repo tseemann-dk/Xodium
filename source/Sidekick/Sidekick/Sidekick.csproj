@@ -31,4 +31,13 @@
     <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj" />
     <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\Shopper\Views\ShoppingGroupView.xaml.cs">
+      <DependentUpon>ShoppingGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Shopper\Views\ShoppingNodeListItemView.xaml.cs">
+      <DependentUpon>ShoppingNodeListItemView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

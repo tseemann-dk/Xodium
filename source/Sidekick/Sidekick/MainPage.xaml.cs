@@ -1,15 +1,14 @@
-﻿
-using System;
+﻿using System;
 using System.Reactive.Linq;
-using Sidekick.Models;
-using Sidekick.ViewModels;
-using Sidekick.Views;
+using Newtonsoft.Json;
 using Redux;
 using Redux.DevTools;
 using Redux.Reactive;
+using Sidekick.State;
+using Sidekick.Features.Shopper.ViewModels;
+using Sidekick.Features.Shopper.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Newtonsoft.Json;
 
 namespace Sidekick
 {
@@ -34,16 +33,16 @@ namespace Sidekick
 
             var appStateChanges = store.ObserveState();
 
-            var archiveStateChanges = appStateChanges
-                .Select(state => state.CurrentArchive)
+            var shoppingSessionChanges = appStateChanges
+                .Select(state => state.CurrentShoppingSession)
                 .DistinctUntilChanged();
 
-            var vm = new FolderViewModel(archiveStateChanges, environment);
+            var vm = new ShoppingGroupViewModel(shoppingSessionChanges, environment);
 
             appStateChanges.Subscribe(appState => UpdateAppStateView(appState));
             UpdateAppStateView(store.GetState());
 
-            Workspace.Children.Add(new FolderView(vm));
+            Workspace.Children.Add(new ShoppingGroupView(vm));
         }
 
         private void UpdateAppStateView(AppState appState)

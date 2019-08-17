@@ -2,7 +2,7 @@
 using Redux;
 using Redux.DevTools;
 using Redux.DevTools.Universal;
-using Sidekick.Models;
+using Sidekick.State;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;

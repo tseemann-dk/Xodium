@@ -1,5 +1,5 @@
 ﻿using Redux;
-using Sidekick.Models;
+using Sidekick.State;
 using Xodium.Mvvm;
 
 namespace Sidekick.Extensions

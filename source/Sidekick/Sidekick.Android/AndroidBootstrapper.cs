@@ -1,6 +1,6 @@
 ﻿using System;
 using Android.Content;
-using Sidekick.Models;
+using Sidekick.State;
 using Xodium.Injection;
 using Xodium.Mvvm;
 using Xodium.Platform.Android;

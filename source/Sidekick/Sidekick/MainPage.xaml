@@ -2,7 +2,6 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:Sidekick.Views"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
     xmlns:win="clr-namespace:Redux.DevTools.Universal;assembly=Redux.DevTools.Universal;targetPlatform=Windows"
     x:Class="Sidekick.MainPage"

@@ -1,8 +1,6 @@
 ﻿using System;
 using Redux;
-using Sidekick.Models;
-using Sidekick.Reducers;
-using Sidekick.Samples;
+using Sidekick.State;
 using Xodium.Flow;
 using Xodium.Injection;
 using Xodium.Mvvm;
@@ -36,7 +34,7 @@ namespace Sidekick
 
         private void RegisterStore(IDependencyRegistry registry)
         {
-            Store = storeProvider(AppStateReducer.Execute, SampleDataGenerator.BuildSampleAppState());
+            Store = storeProvider(AppStateReducer.Execute, AppStateGenerator.GenerateAppState());
 
             registry.RegisterInstance(Store);
             registry.RegisterInstance<IActionDispatcher>(new ReduxDispatcher<AppState>(Store));

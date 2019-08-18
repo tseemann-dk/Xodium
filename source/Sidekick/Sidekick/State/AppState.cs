@@ -16,5 +16,6 @@ namespace Sidekick.State
 
         public AppState WithGlobal(GlobalState global) => new AppState(global, ShoppingSession);
         public AppState WithShoppingSession(ShoppingSession shoppingSession) => new AppState(Global, shoppingSession);
+        public AppState WithShoppingList(ShoppingList shoppingList) => WithShoppingSession(ShoppingSession.WithShoppingList(shoppingList));
     }
 }

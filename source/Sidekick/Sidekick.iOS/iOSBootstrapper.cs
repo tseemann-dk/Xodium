@@ -1,5 +1,5 @@
 ﻿using System;
-using Sidekick.Models;
+using Sidekick.State;
 using Xodium.Injection;
 using Xodium.Mvvm;
 using Xodium.Platform.iOS;

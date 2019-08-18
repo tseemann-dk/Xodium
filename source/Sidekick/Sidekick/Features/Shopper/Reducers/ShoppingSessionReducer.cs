@@ -1,5 +1,4 @@
 ﻿using Sidekick.Features.Shopper.Actions;
-using Sidekick.Features.Shopper.Models;
 using Sidekick.State;
 using Xodium.Productivity.Content.Models;
 
@@ -9,28 +8,39 @@ namespace Sidekick.Features.Shopper.Reducers
     {
         public static AppState Execute(AppState state, object action)
         {
-            var session = state.ShoppingSession;
-            var shoppingList = session.ShoppingList;
-            var currentGroupId = session.CurrentGroupId;
-            var currentGroup = shoppingList.Content.FindNode<IShoppingGroup>(x => x.Id == currentGroupId);
-
-            AppState newShoppingSession(ShoppingSession s) => state.WithShoppingSession(s);
-
             switch (action)
             {
                 case EnterGroupAction a:
-                    return newShoppingSession(session.WithCurrentGroupId(a.Payload.GroupId));
+                    return EnterGroup(state, a);
 
-                case ExitGroupAction a:
-                    var parentGroupId = currentGroup?.GetParent(shoppingList.Content)?.Id;
-                    if (parentGroupId == null) break;
-                    return newShoppingSession(session.WithCurrentGroupId(parentGroupId, currentGroupId));
+                case ExitGroupAction _:
+                    return ExitGroup(state);
 
                 case FocusNodeAction a:
-                    return newShoppingSession(session.WithFocusedNodeId(a.Payload.NodeId));
+                    return FocusNode(state, a);
             }
 
             return state;
         }
+
+        private static AppState EnterGroup(AppState state, EnterGroupAction action) =>
+            state.WithShoppingSession(state.ShoppingSession
+                .WithCurrentGroupId(action.Payload.GroupId));
+
+        private static AppState ExitGroup(AppState state)
+        {
+            var currentGroup = state.ShoppingSession.GetCurrentGroup();
+            var parentGroupId = currentGroup?.GetParent(state.ShoppingSession.ShoppingList.Content)?.Id;
+
+            if (parentGroupId == null) 
+                return state;
+            
+            return state.WithShoppingSession(state.ShoppingSession
+                .WithCurrentGroupId(parentGroupId, state.ShoppingSession.CurrentGroupId));
+        }
+
+        private static AppState FocusNode(AppState state, FocusNodeAction action) =>
+            state.WithShoppingSession(state.ShoppingSession
+                .WithFocusedNodeId(action.Payload.NodeId));
     }
 }

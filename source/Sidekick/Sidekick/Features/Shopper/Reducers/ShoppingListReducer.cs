@@ -9,50 +9,71 @@ namespace Sidekick.Features.Shopper.Reducers
     {
         public static AppState Execute(AppState state, object action)
         {
-            var session = state.ShoppingSession;
-            var shoppingList = session.ShoppingList;
-            var currentGroupId = session.CurrentGroupId;
-            var currentGroup = shoppingList.Content.FindNode<IShoppingGroup>(x => x.Id == currentGroupId);
-
-            AppState newShoppingSession(ShoppingSession s) => state.WithShoppingSession(s);
-            AppState newShoppingList(ShoppingList l) => newShoppingSession(session.WithShoppingList(l));
-
             switch (action)
             {
                 case ChangeGroupTitleAction a:
-                    return newShoppingList(shoppingList.ChangeGroupTitle(currentGroup, a.Payload.NewTitle));
+                    return ChangeGroupTitle(state, a);
 
                 case AddComponentAction a:
-                    return newShoppingList(shoppingList.AddComponent(a.Payload.Component));
+                    return AddComponent(state, a);
 
                 case AddGroupAction a:
-                    return newShoppingSession(session
-                        .WithShoppingList(shoppingList.AddNode(currentGroup, a.Payload.Group, a.Payload.InsertAfterNodeId))
-                        .WithFocusedNodeId(a.Payload.Group.Id)
-                    );
+                    return AddGroup(state, a);
 
                 case AddShoppingItemAction a:
-                    return newShoppingSession(session
-                        .WithShoppingList(shoppingList.AddNode(currentGroup, a.Payload.Item, a.Payload.InsertAfterNodeId))
-                        .WithFocusedNodeId(a.Payload.Item.Id)
-                    );
+                    return AddItem(state, a);
 
                 case DeleteNodeAction a:
-                    var node = currentGroup.GetChildNode(a.Payload.NodeId) as IShoppingNode;
-                    var neighborId = (currentGroup.GetNextNode(node) ?? currentGroup.GetPreviousNode(node))?.Id;
-                    return newShoppingSession(session
-                        .WithShoppingList(shoppingList.DeleteNode(currentGroup, node))
-                        .WithFocusedNodeId(neighborId)
-                    );
+                    return DeleteNode(state, a);
 
                 case MoveNodeDownAction a:
-                    return newShoppingList(shoppingList.MoveNodeDown(currentGroup, a.Payload.NodeId));
+                    return MoveNodeDown(state, a);
 
                 case MoveNodeUpAction a:
-                    return newShoppingList(shoppingList.MoveNodeUp(currentGroup, a.Payload.NodeId));
+                    return MoveNodeUp(state, a);
             }
 
             return state;
         }
+
+        private static AppState AddComponent(AppState state, AddComponentAction action) =>
+            state.WithShoppingList(state.ShoppingSession.ShoppingList
+                .AddComponent(action.Payload.Component));
+
+        private static AppState AddGroup(AppState state, AddGroupAction action) =>
+            state.WithShoppingSession(state.ShoppingSession
+                .WithShoppingList(state.ShoppingSession.ShoppingList
+                    .AddNode(state.ShoppingSession.GetCurrentGroup(), action.Payload.Group, action.Payload.InsertAfterNodeId))
+                .WithFocusedNodeId(action.Payload.Group.Id));
+
+        private static AppState AddItem(AppState state, AddShoppingItemAction action) =>
+            state.WithShoppingSession(state.ShoppingSession
+                .WithShoppingList(state.ShoppingSession.ShoppingList
+                    .AddNode(state.ShoppingSession.GetCurrentGroup(), action.Payload.Item, action.Payload.InsertAfterNodeId))
+                .WithFocusedNodeId(action.Payload.Item.Id));
+
+        private static AppState ChangeGroupTitle(AppState state, ChangeGroupTitleAction action) => 
+            state.WithShoppingList(state.ShoppingSession.ShoppingList
+                .ChangeGroupTitle(state.ShoppingSession.GetCurrentGroup(), action.Payload.NewTitle));
+
+        private static AppState DeleteNode(AppState state, DeleteNodeAction action)
+        {
+            var session = state.ShoppingSession;
+            var currentGroup = session.GetCurrentGroup();
+            var node = currentGroup.GetChildNode(action.Payload.NodeId) as IShoppingNode;
+            var neighborId = (currentGroup.GetNextNode(node) ?? currentGroup.GetPreviousNode(node))?.Id;
+
+            return state.WithShoppingSession(session
+                .WithShoppingList(session.ShoppingList.DeleteNode(currentGroup, node))
+                .WithFocusedNodeId(neighborId));
+        }
+
+        private static AppState MoveNodeDown(AppState state, MoveNodeDownAction action) =>
+            state.WithShoppingList(state.ShoppingSession.ShoppingList
+                .MoveNodeDown(state.ShoppingSession.GetCurrentGroup(), action.Payload.NodeId));
+
+        private static AppState MoveNodeUp(AppState state, MoveNodeUpAction action) =>
+            state.WithShoppingList(state.ShoppingSession.ShoppingList
+                .MoveNodeUp(state.ShoppingSession.GetCurrentGroup(), action.Payload.NodeId));
     }
 }

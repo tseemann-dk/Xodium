@@ -1,4 +1,6 @@
-﻿namespace Sidekick.Features.Shopper.Models
+﻿using Xodium.Productivity.Content.Models;
+
+namespace Sidekick.Features.Shopper.Models
 {
     public class ShoppingSession
     {
@@ -12,6 +14,8 @@
         public ShoppingList ShoppingList { get; }
         public string CurrentGroupId { get; }
         public string FocusedNodeId { get; }
+
+        public IShoppingGroup GetCurrentGroup() => ShoppingList.Content.FindNode<IShoppingGroup>(x => x.Id == CurrentGroupId);
 
         public ShoppingSession WithShoppingList(ShoppingList shoppingList) 
             => new ShoppingSession(shoppingList, CurrentGroupId, FocusedNodeId);

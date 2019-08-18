@@ -4,25 +4,21 @@ namespace Sidekick.State
 {
     public class GlobalStateReducer
     {
-        public static GlobalState Execute(GlobalState state, object action)
+        public static AppState Execute(AppState state, object action)
         {
             // TODO: Handle IncreaseGroupNumber/IncreaseComponentNumber instead
+
+            AppState newGlobalState(GlobalState global) => state.WithGlobal(global);
 
             switch (action)
             {
                 case AddGroupAction _:
-                    return new GlobalState {
-                        NextGroupNumber = state.NextGroupNumber + 1,
-                        NextComponentNumber = state.NextComponentNumber
-                    };
+                    return newGlobalState(state.Global.WithNextGroupNumber());
                 case AddShoppingItemAction _:
-                    return new GlobalState {
-                        NextGroupNumber = state.NextGroupNumber,
-                        NextComponentNumber = state.NextComponentNumber + 1
-                    };
-                default:
-                    return state;
+                    return newGlobalState(state.Global.WithNextComponentNumber());
             }
+
+            return state;
         }
     }
 }

@@ -152,16 +152,21 @@ namespace Sidekick.Features.Shopper.ViewModels
             var groupNumber = this.GetAppState().Global.NextGroupNumber;
             var title = $"Group {groupNumber}";
 
-            this.DispatchAction(new AddGroupAction(CurrentGroup.Id, $"G{groupNumber}", title, 1, FocusedNode?.Id));
+            this.DispatchAction(new AddGroupAction(
+                CurrentGroup.Id, 
+                new ShoppingGroup($"G{groupNumber}", title, 1), 
+                FocusedNode?.Id)
+            );
         }
 
         private void AddNewItem()
         {
             var componentNumber = this.GetAppState().Global.NextComponentNumber;
             var component = new Component(componentNumber.ToString(), $"Component {componentNumber}", 10);
+            var item = new ShoppingItem(component, 1);
 
             this.DispatchAction(new AddComponentAction(component));
-            this.DispatchAction(new AddShoppingItemAction(CurrentGroup.Id, component, 1, insertAfterNodeId: FocusedNode?.Id));
+            this.DispatchAction(new AddShoppingItemAction(CurrentGroup.Id, item, insertAfterNodeId: FocusedNode?.Id));
         }
 
         private void ChangeTitle()

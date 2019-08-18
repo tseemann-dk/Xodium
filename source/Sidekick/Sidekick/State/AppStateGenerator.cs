@@ -12,17 +12,12 @@ namespace Sidekick.State
 
             return new AppState
             {
-                Global = new GlobalState
-                {
-                    NextComponentNumber = 3,
-                    NextGroupNumber = 2
-                },
-                CurrentShoppingSession = new ShoppingSession
-                {
-                    ShoppingList = shoppingList,
-                    CurrentGroupId = content.Id,
-                    FocusedNodeId = content.Nodes.Last().Id
-                },
+                Global = new GlobalState(3, 2),
+                ShoppingSession = new ShoppingSession(
+                    shoppingList,
+                    content.Id,
+                    content.Nodes.Last().Id
+                ),
             };
         }
 

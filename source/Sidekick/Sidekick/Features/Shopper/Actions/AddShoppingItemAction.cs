@@ -8,17 +8,11 @@ namespace Sidekick.Features.Shopper.Actions
     {
         public AddShoppingItemAction(
             string parentGroupId, 
-            IComponent component, 
-            double quantity, 
-            string text = null, 
-            double? value = null, 
+            IShoppingItem item, 
             string insertAfterNodeId = null)
             : base(typeof(AddShoppingItemAction).FullName, new Properties(
                 parentGroupId, 
-                component, 
-                quantity, 
-                text, 
-                value, 
+                item, 
                 insertAfterNodeId
             ))
         {
@@ -28,25 +22,16 @@ namespace Sidekick.Features.Shopper.Actions
         {
             public Properties(
                 string parentGroupId,
-                IComponent component, 
-                double quantity, 
-                string text, 
-                double? value, 
+                IShoppingItem item, 
                 string insertAfterNodeId)
             {
                 ParentGroupId = parentGroupId ?? throw new ArgumentNullException(nameof(parentGroupId));
-                Component = component;
-                Quantity = quantity;
-                Text = text;
-                Value = value;
+                Item = item;
                 InsertAfterNodeId = insertAfterNodeId;
             }
 
             public string ParentGroupId;
-            public IComponent Component;
-            public double Quantity;
-            public string Text;
-            public double? Value;
+            public IShoppingItem Item;
             public string InsertAfterNodeId;
         }
     }

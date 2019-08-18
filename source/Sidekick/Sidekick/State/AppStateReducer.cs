@@ -1,16 +1,25 @@
 ﻿using Sidekick.Features.Shopper.Reducers;
+using System;
 
 namespace Sidekick.State
 {
     public class AppStateReducer
     {
+        private static readonly Func<AppState, object, AppState>[] reducers =
+        {
+            GlobalStateReducer.Execute,
+            ShoppingSessionReducer.Execute,
+            ShoppingListReducer.Execute
+        };
+
         public static AppState Execute(AppState state, object action)
         {
-            return new AppState
+            foreach (var reducer in reducers)
             {
-                Global = GlobalStateReducer.Execute(state.Global, action),
-                CurrentShoppingSession = ShoppingSessionReducer.Execute(state.CurrentShoppingSession, action)
-            };
+                state = reducer(state, action);
+            }
+
+            return state;
         }
     }
 }

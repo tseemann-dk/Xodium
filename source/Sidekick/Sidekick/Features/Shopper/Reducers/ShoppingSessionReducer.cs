@@ -1,107 +1,36 @@
 ﻿using Sidekick.Features.Shopper.Actions;
 using Sidekick.Features.Shopper.Models;
+using Sidekick.State;
 using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Features.Shopper.Reducers
 {
     public class ShoppingSessionReducer
     {
-        public static ShoppingSession Execute(ShoppingSession state, object action)
+        public static AppState Execute(AppState state, object action)
         {
-            IShoppingList shoppingList = state.ShoppingList;
-            IShoppingGroup newGroup = null;
-            IComponent newComponent = null;
+            var session = state.ShoppingSession;
+            var shoppingList = session.ShoppingList;
+            var currentGroupId = session.CurrentGroupId;
+            var currentGroup = shoppingList.Content.FindNode<IShoppingGroup>(x => x.Id == currentGroupId);
 
-            var currentGroupId = state.CurrentGroupId;
-            var focusedNodeId = state.FocusedNodeId;
-            var currentGroup = state.ShoppingList.Content.FindNode<IShoppingGroup>(x => x.Id == state.CurrentGroupId);
+            AppState newShoppingSession(ShoppingSession s) => state.WithShoppingSession(s);
 
             switch (action)
             {
                 case EnterGroupAction a:
-                    currentGroupId = a.Payload.GroupId;
-                    focusedNodeId = null;
-                    break;
+                    return newShoppingSession(session.WithCurrentGroupId(a.Payload.GroupId));
 
                 case ExitGroupAction a:
-                    var parentGroupId = currentGroup?.GetParent(state.ShoppingList.Content)?.Id;
-                    if (parentGroupId != null)
-                    {
-                        focusedNodeId = currentGroupId;
-                        currentGroupId = parentGroupId;
-                    }
-                    break;
+                    var parentGroupId = currentGroup?.GetParent(shoppingList.Content)?.Id;
+                    if (parentGroupId == null) break;
+                    return newShoppingSession(session.WithCurrentGroupId(parentGroupId, currentGroupId));
 
                 case FocusNodeAction a:
-                    focusedNodeId = a.Payload.NodeId;
-                    break;
-
-                case ChangeGroupTitleAction a:
-                    newGroup = ShoppingGroupTransformer.ChangeTitle(
-                        currentGroup, 
-                        a.Payload.NewTitle);
-                    break;
-
-                case AddComponentAction a:
-                    newComponent = a.Payload.Component;
-                    break;
-
-                case AddGroupAction a:
-                    (newGroup, focusedNodeId) = ShoppingGroupTransformer.AddGroup(
-                        currentGroup, 
-                        a.Payload.GroupNumber, 
-                        a.Payload.Text, 
-                        a.Payload.Quantity, 
-                        a.Payload.InsertAfterNodeId);
-                    break;
-
-                case AddShoppingItemAction a:
-                    (newGroup, focusedNodeId) = ShoppingGroupTransformer.AddItem(
-                        currentGroup, 
-                        a.Payload.Component, 
-                        a.Payload.Quantity, 
-                        a.Payload.Text, 
-                        a.Payload.Value, 
-                        a.Payload.InsertAfterNodeId);
-                    break;
-
-                case DeleteNodeAction a:
-                    (newGroup, focusedNodeId) = ShoppingGroupTransformer.DeleteNode(
-                        currentGroup, 
-                        a.Payload.NodeId);
-                    break;
-
-                case MoveNodeDownAction a:
-                    (newGroup, focusedNodeId) = ShoppingGroupTransformer.MoveNodeDown(
-                        currentGroup, 
-                        a.Payload.NodeId);
-                    break;
-
-                case MoveNodeUpAction a:
-                    (newGroup, focusedNodeId) = ShoppingGroupTransformer.MoveNodeUp(
-                        currentGroup, 
-                        a.Payload.NodeId);
-                    break;
+                    return newShoppingSession(session.WithFocusedNodeId(a.Payload.NodeId));
             }
 
-            if (newGroup != null)
-            {
-                shoppingList = currentGroup.Id == shoppingList.Content.Id
-                    ? state.ShoppingList.WithContent(newGroup) as ShoppingList
-                    : state.ShoppingList.ReplaceNode(currentGroup, newGroup) as ShoppingList;
-            }
-
-            if (newComponent != null)
-            {
-                shoppingList = shoppingList.AddComponent(newComponent);
-            }
-
-            return new ShoppingSession
-            {
-                ShoppingList = shoppingList as ShoppingList,
-                CurrentGroupId = currentGroupId,
-                FocusedNodeId = focusedNodeId
-            };
+            return state;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sidekick.Features.Shopper.Models;
+using System;
 using Xodium.Redux;
 
 namespace Sidekick.Features.Shopper.Actions
@@ -7,15 +8,11 @@ namespace Sidekick.Features.Shopper.Actions
     {
         public AddGroupAction(
             string parentGroupId, 
-            string groupNumber, 
-            string text, 
-            double quantity, 
+            IShoppingGroup group, 
             string insertAfterNodeId = null)
             : base(typeof(AddGroupAction).FullName, new Properties(
                 parentGroupId, 
-                groupNumber, 
-                text, 
-                quantity, 
+                group, 
                 insertAfterNodeId
             ))
         {
@@ -25,22 +22,16 @@ namespace Sidekick.Features.Shopper.Actions
         {
             public Properties(
                 string parentGroupId, 
-                string groupNumber, 
-                string text, 
-                double quantity, 
+                IShoppingGroup group, 
                 string insertAfterNodeId)
             {
                 ParentGroupId = parentGroupId ?? throw new ArgumentNullException(nameof(parentGroupId));
-                GroupNumber = groupNumber;
-                Text = text;
-                Quantity = quantity;
+                Group = group;
                 InsertAfterNodeId = insertAfterNodeId;
             }
 
             public string ParentGroupId;
-            public string GroupNumber;
-            public string Text;
-            public double Quantity;
+            public IShoppingGroup Group;
             public string InsertAfterNodeId;
         }
     }

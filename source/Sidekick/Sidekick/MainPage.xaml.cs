@@ -34,7 +34,7 @@ namespace Sidekick
             var appStateChanges = store.ObserveState();
 
             var shoppingSessionChanges = appStateChanges
-                .Select(state => state.CurrentShoppingSession)
+                .Select(state => state.ShoppingSession)
                 .DistinctUntilChanged();
 
             var vm = new ShoppingGroupViewModel(shoppingSessionChanges, environment);

@@ -43,6 +43,11 @@ namespace Xodium.Productivity.Content.Models
                 .FirstOrDefault(x => x != null);
         }
 
+        public static INode GetChildNode(this IBranch self, string nodeId)
+        {
+            return self.Nodes.FirstOrDefault(x => x.Id == nodeId) ?? throw new KeyNotFoundException($"Child node {nodeId} not found in branch {self.Id}");
+        }
+
         public static int GetIndexOfNode(this IBranch self, INode node)
         {
             int index = 0;

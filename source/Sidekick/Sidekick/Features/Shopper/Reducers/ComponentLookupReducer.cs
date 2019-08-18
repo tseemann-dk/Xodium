@@ -1,11 +1,11 @@
-﻿using Sidekick.Features.Shopper.Actions.ShopVisit;
+﻿using Sidekick.Features.Shopper.Actions.ComponentLookup;
 using Sidekick.State;
 using System;
 using System.Collections.Generic;
 
 namespace Sidekick.Features.Shopper.Reducers
 {
-    public static class ShopVisitReducer
+    public static class ComponentLookupReducer
     {
         private static readonly Dictionary<Type, Func<AppState, object, AppState>> handlers = new Dictionary<Type, Func<AppState, object, AppState>>
         {
@@ -17,7 +17,7 @@ namespace Sidekick.Features.Shopper.Reducers
 
         private static AppState ChangeSearchText(AppState state, ChangeSearchTextAction action) =>
             state.WithShoppingSession(state.ShoppingSession
-                .WithShopVisit(state.ShoppingSession.ShopVisit
+                .WithComponentLookup(state.ShoppingSession.ComponentLookup
                     .WithSearchText(action.Payload.NewSearchText)));
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Xodium.Redux;
 
-namespace Sidekick.Features.Shopper.Actions.ShopVisit
+namespace Sidekick.Features.Shopper.Actions.ComponentLookup
 {
     public class ChangeSearchTextAction : ReduxAction<ChangeSearchTextAction.Properties>
     {

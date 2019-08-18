@@ -39,10 +39,13 @@
     <Compile Update="Features\Shopper\Views\ShoppingNodeListItemView.xaml.cs">
       <DependentUpon>ShoppingNodeListItemView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Features\Shopper\Views\ComponentLookupView.xaml.cs">
+      <DependentUpon>ComponentLookupView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Features\Shopper\Views\ShopVisitView.xaml">
+    <EmbeddedResource Update="Features\Shopper\Views\ComponentLookupView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -169,10 +169,10 @@ namespace Sidekick.Features.Shopper.ViewModels
         {
             try
             {
-                var vm = new ShopVisitViewModel(
+                var vm = new ComponentLookupViewModel(
                     Model
-                        .Select(x => x.ShopVisit)
-                        .StartWith(session.ShopVisit)
+                        .Select(x => x.ComponentLookup)
+                        .StartWith(session.ComponentLookup)
                         .Where(x => x.SearchText != null)
                         .DistinctUntilChanged(), 
                     ExecutionEnvironment

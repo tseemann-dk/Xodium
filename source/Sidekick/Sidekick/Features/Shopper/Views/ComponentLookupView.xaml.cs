@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace Sidekick.Features.Shopper.Views
 {
-    public class ShopVisitViewBase : ReactiveContentView<ShopVisitViewModel> { }
+    public class ComponentLookupViewBase : ReactiveContentView<ComponentLookupViewModel> { }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ShopVisitView : ShopVisitViewBase
+    public partial class ComponentLookupView : ComponentLookupViewBase
     {
-        public ShopVisitView()
+        public ComponentLookupView()
         {
             InitializeComponent();
 

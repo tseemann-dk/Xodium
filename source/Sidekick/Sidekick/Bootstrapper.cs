@@ -42,7 +42,7 @@ namespace Sidekick
         {
             base.RegisterViews(registry);
 
-            registry.RegisterViewType<ShopVisitView, ShopVisitViewModel>();
+            registry.RegisterViewType<ComponentLookupView, ComponentLookupViewModel>();
         }
 
         private void RegisterStore(IDependencyRegistry registry)

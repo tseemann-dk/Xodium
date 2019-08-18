@@ -8,8 +8,10 @@ namespace Sidekick
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            NavigationPage = new NavigationPage(MainPage = new MainPage());
         }
+
+        public static NavigationPage NavigationPage { get; private set; }
 
         protected override void OnStart()
         {

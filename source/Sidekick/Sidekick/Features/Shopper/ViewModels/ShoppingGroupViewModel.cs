@@ -2,7 +2,9 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
+using System.Reactive.Disposables;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
 using ReactiveUI;
 using Sidekick.Extensions;
 using Sidekick.Features.Shopper.Actions.ShoppingList;
@@ -72,19 +74,21 @@ namespace Sidekick.Features.Shopper.ViewModels
             MoveNodeDownCommand = ReactiveCommand.Create(() => MoveFocusedNodeDown(), focusedNodeIsNotLast);
             MoveNodeUpCommand = ReactiveCommand.Create(() => MoveFocusedNodeUp(), focusedNodeIsNotFirst);
 
+            //AddNewItemCommand.ThrownExceptions.Subscribe(e => this.HandleException(e));
+
             focusedNodeText = this.WhenAnyValue(x => x.FocusedNode)
                 .Select(x => x?.Text)
                 .ToProperty(this, x => x.FocusedNodeText);
 
-            Model.Subscribe(session => ApplySession(session));
+            Model.Subscribe(state => ApplyState(state));
         }
 
-        private void ApplySession(ShoppingSession session)
+        private void ApplyState(ShoppingSession state)
         {
-            CurrentShoppingList = session.ShoppingList;
+            CurrentShoppingList = state.ShoppingList;
 
-            CurrentGroup = session.ShoppingList.Content
-                .FindNode<IShoppingGroup>(x => x.Id == session.CurrentGroupId);
+            CurrentGroup = state.ShoppingList.Content
+                .FindNode<IShoppingGroup>(x => x.Id == state.CurrentGroupId);
 
             Title = CurrentGroup?.Title;
 
@@ -94,11 +98,11 @@ namespace Sidekick.Features.Shopper.ViewModels
                 (x, y) => x.IsSameNode(y),
                 CreateNodeViewModel);
 
-            FocusedNode = Nodes.FirstOrDefault(x => x.Id == session.FocusedNodeId);
+            FocusedNode = Nodes.FirstOrDefault(x => x.Id == state.FocusedNodeId);
         }
 
         public ReactiveCommand<Unit, Unit> AddNewGroupCommand { get; }
-        public ReactiveCommand<Unit, Unit> AddNewItemCommand { get; }
+        public ReactiveCommand<Unit, Task<Unit>> AddNewItemCommand { get; }
         public ReactiveCommand<Unit, Unit> ChangeTitleCommand { get; }
         public ReactiveCommand<Unit, Unit> DeleteNodeCommand { get; }
         public ReactiveCommand<Unit, Unit> EnterGroupCommand { get; }
@@ -160,14 +164,28 @@ namespace Sidekick.Features.Shopper.ViewModels
             );
         }
 
-        private void AddNewItem()
+        private async Task<Unit> AddNewItem()
         {
+            try
+            {
+                var vm = new ShopVisitViewModel(Model.Select(x => x.ShopVisit).DistinctUntilChanged(), ExecutionEnvironment);
+                await this.OpenPopup(vm);
+            }
+            catch (Exception exception)
+            {
+                await this.HandleException(exception);
+            }
+
+            return Unit.Default;
+
+            /*
             var componentNumber = this.GetAppState().Global.NextComponentNumber;
             var component = new Component(ShopIdentity.Internal, componentNumber.ToString(), $"Component {componentNumber}", 10);
             var item = new ShoppingItem(component, 1);
 
             this.DispatchAction(new AddComponentAction(component));
             this.DispatchAction(new AddItemAction(CurrentGroup.Id, item, insertAfterNodeId: FocusedNode?.Id));
+            */
         }
 
         private void ChangeTitle()

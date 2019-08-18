@@ -12,12 +12,12 @@ namespace Xodium.Platform.Xamarin.Services
     public class DialogService : IDialogService
     {
         private readonly Page rootPage;
-        private readonly IViewRegistry viewRegistry;
+        private readonly Func<IViewRegistry> getViewRegistry;
 
-        public DialogService(Page rootPage, IViewRegistry viewRegistry)
+        public DialogService(Page rootPage, Func<IViewRegistry> getViewRegistry)
         {
             this.rootPage = rootPage ?? throw new ArgumentNullException(nameof(rootPage));
-            this.viewRegistry = viewRegistry ?? throw new ArgumentNullException(nameof(viewRegistry));
+            this.getViewRegistry = getViewRegistry ?? throw new ArgumentNullException(nameof(getViewRegistry));
         }
 
         public async Task<bool> DisplayAlert(string title, string message, string accept, string cancel)
@@ -47,7 +47,7 @@ namespace Xodium.Platform.Xamarin.Services
 
             var navigation = rootPage.Navigation;
 
-            if (!(viewRegistry.GetViewFor(viewModel) is View view))
+            if (!(getViewRegistry()?.GetViewFor(viewModel) is View view))
                 throw new ArgumentException("No supported view was found", nameof(viewModel));
 
             view.SetValue(Grid.RowProperty, 0);

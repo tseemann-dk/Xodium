@@ -13,16 +13,19 @@ namespace Xodium.Mvvm
             if (resolver is null)
                 throw new ArgumentNullException(nameof(resolver));
 
-            var viewRegistry = GetViewRegistry(type => resolver().Resolve(type));
+            var viewRegistry = CreateViewRegistry(type => resolver().Resolve(type));
             RegisterViews(viewRegistry);
             registry.RegisterInstance(viewRegistry);
+            ViewRegistry = viewRegistry;
 
-            var environment = GetExecutionEnvironment(resolver);
+            var environment = CreateExecutionEnvironment(resolver);
             environment.RegisterServices(registry);
             registry.RegisterInstance(environment);
 
             RegisterServices(registry);
         }
+
+        public IViewRegistry ViewRegistry { get; private set; }
 
         public void Shutdown()
         {
@@ -33,8 +36,8 @@ namespace Xodium.Mvvm
         {
         }
 
-        protected virtual IViewRegistry GetViewRegistry(Func<Type, object> resolver) => new ViewRegistry(resolver);
-        protected abstract IExecutionEnvironment GetExecutionEnvironment(Func<IDependencyResolver> resolver);
+        protected virtual IViewRegistry CreateViewRegistry(Func<Type, object> resolver) => new ViewRegistry(resolver);
+        protected abstract IExecutionEnvironment CreateExecutionEnvironment(Func<IDependencyResolver> resolver);
 
         protected virtual void RegisterServices(IDependencyRegistry registry)
         {

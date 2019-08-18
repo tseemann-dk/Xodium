@@ -17,7 +17,7 @@ namespace Sidekick.Droid
             this.context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        protected override IExecutionEnvironment GetExecutionEnvironment(Func<IDependencyResolver> resolver)
+        protected override IExecutionEnvironment CreateExecutionEnvironment(Func<IDependencyResolver> resolver)
             => new AndroidExecutionEnvironment(resolver, context);
     }
 }

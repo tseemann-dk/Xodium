@@ -10,6 +10,7 @@ namespace Sidekick.iOS
         {
             Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             Xamarin.Forms.Forms.Init();
+            Rg.Plugins.Popup.Popup.Init();
 
             Startup.Init(new iOSBootstrapper());
             LoadApplication(new App());

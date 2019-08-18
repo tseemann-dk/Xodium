@@ -27,6 +27,7 @@ namespace Sidekick.UWP
             {
                 Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
                 Xamarin.Forms.Forms.Init(e);
+                Rg.Plugins.Popup.Popup.Init();
 
                 var bootstrapper = new UwpBootstrapper((reducer, state) => isDebugging
                     ? new TimeMachineStore<AppState>(reducer, state) as IStore<AppState>

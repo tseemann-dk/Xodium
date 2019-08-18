@@ -13,7 +13,7 @@ namespace Sidekick.iOS
         {
         }
 
-        protected override IExecutionEnvironment GetExecutionEnvironment(Func<IDependencyResolver> resolver)
+        protected override IExecutionEnvironment CreateExecutionEnvironment(Func<IDependencyResolver> resolver)
             => new iOSExecutionEnvironment(resolver);
     }
 }

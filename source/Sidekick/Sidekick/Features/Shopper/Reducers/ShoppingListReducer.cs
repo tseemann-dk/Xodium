@@ -1,40 +1,27 @@
-﻿using Sidekick.Features.Shopper.Actions;
+﻿using System;
+using System.Collections.Generic;
+using Sidekick.Features.Shopper.Actions;
 using Sidekick.Features.Shopper.Models;
 using Sidekick.State;
 using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Features.Shopper.Reducers
 {
-    public class ShoppingListReducer
+    public static class ShoppingListReducer
     {
-        public static AppState Execute(AppState state, object action)
+        private static readonly Dictionary<Type, Func<AppState, object, AppState>> handlers = new Dictionary<Type, Func<AppState, object, AppState>>
         {
-            switch (action)
-            {
-                case AddComponentAction a:
-                    return AddComponent(state, a);
+            [typeof(AddComponentAction)] = (s, a) => AddComponent(s, (AddComponentAction)a),
+            [typeof(AddGroupAction)] = (s, a) => AddGroup(s, (AddGroupAction)a),
+            [typeof(AddItemAction)] = (s, a) => AddItem(s, (AddItemAction)a),
+            [typeof(ChangeGroupTitleAction)] = (s, a) => ChangeGroupTitle(s, (ChangeGroupTitleAction)a),
+            [typeof(DeleteNodeAction)] = (s, a) => DeleteNode(s, (DeleteNodeAction)a),
+            [typeof(MoveNodeDownAction)] = (s, a) => MoveNodeDown(s, (MoveNodeDownAction)a),
+            [typeof(MoveNodeUpAction)] = (s, a) => MoveNodeUp(s, (MoveNodeUpAction)a),
+        };
 
-                case AddGroupAction a:
-                    return AddGroup(state, a);
-
-                case AddItemAction a:
-                    return AddItem(state, a);
-
-                case ChangeGroupTitleAction a:
-                    return ChangeGroupTitle(state, a);
-
-                case DeleteNodeAction a:
-                    return DeleteNode(state, a);
-
-                case MoveNodeDownAction a:
-                    return MoveNodeDown(state, a);
-
-                case MoveNodeUpAction a:
-                    return MoveNodeUp(state, a);
-            }
-
-            return state;
-        }
+        public static AppState Execute(AppState state, object action) =>
+            handlers.TryGetValue(action.GetType(), out var handler) ? handler.Invoke(state, action) : state;
 
         private static AppState AddComponent(AppState state, AddComponentAction action) =>
             state.WithShoppingList(state.ShoppingSession.ShoppingList

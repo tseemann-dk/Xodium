@@ -8,14 +8,12 @@ namespace Sidekick.State
         {
             // TODO: Handle IncreaseGroupNumber/IncreaseComponentNumber instead
 
-            AppState newGlobalState(GlobalState global) => state.WithGlobal(global);
-
             switch (action)
             {
                 case AddGroupAction _:
-                    return newGlobalState(state.Global.WithNextGroupNumber());
+                    return state.WithGlobal(state.Global.WithNextGroupNumber());
                 case AddItemAction _:
-                    return newGlobalState(state.Global.WithNextComponentNumber());
+                    return state.WithGlobal(state.Global.WithNextComponentNumber());
             }
 
             return state;

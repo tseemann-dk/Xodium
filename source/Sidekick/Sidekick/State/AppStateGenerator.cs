@@ -10,15 +10,14 @@ namespace Sidekick.State
             var shoppingList = BuildSampleShoppingList();
             var content = shoppingList.Content;
 
-            return new AppState
-            {
-                Global = new GlobalState(3, 2),
-                ShoppingSession = new ShoppingSession(
+            return new AppState(
+                new GlobalState(3, 2),
+                new ShoppingSession(
                     shoppingList,
                     content.Id,
                     content.Nodes.Last().Id
-                ),
-            };
+                )
+            );
         }
 
         private static ShoppingList BuildSampleShoppingList()

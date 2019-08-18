@@ -3,7 +3,7 @@
 namespace Sidekick.State
 
 {
-    public struct AppState
+    public class AppState
     {
         public AppState(GlobalState global, ShoppingSession shoppingSession)
         {
@@ -11,8 +11,8 @@ namespace Sidekick.State
             ShoppingSession = shoppingSession;
         }
 
-        public GlobalState Global;
-        public ShoppingSession ShoppingSession;
+        public GlobalState Global { get; }
+        public ShoppingSession ShoppingSession { get; }
 
         public AppState WithGlobal(GlobalState global) => new AppState(global, ShoppingSession);
         public AppState WithShoppingSession(ShoppingSession shoppingSession) => new AppState(Global, shoppingSession);

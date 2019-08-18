@@ -1,6 +1,6 @@
 ﻿namespace Sidekick.State
 {
-    public struct GlobalState
+    public class GlobalState
     {
         public GlobalState(int nextComponentNumber, int nextGroupNumber)
         {
@@ -8,8 +8,8 @@
             NextGroupNumber = nextGroupNumber;
         }
 
-        public int NextComponentNumber;
-        public int NextGroupNumber;
+        public int NextComponentNumber { get; }
+        public int NextGroupNumber { get; }
 
         public GlobalState WithNextComponentNumber() => new GlobalState(NextComponentNumber + 1, NextGroupNumber);
         public GlobalState WithNextGroupNumber() => new GlobalState(NextComponentNumber, NextGroupNumber + 1);

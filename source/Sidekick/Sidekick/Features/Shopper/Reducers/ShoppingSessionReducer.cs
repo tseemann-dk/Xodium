@@ -1,27 +1,22 @@
-﻿using Sidekick.Features.Shopper.Actions;
+﻿using System;
+using System.Collections.Generic;
+using Sidekick.Features.Shopper.Actions;
 using Sidekick.State;
 using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Features.Shopper.Reducers
 {
-    public class ShoppingSessionReducer
+    public static class ShoppingSessionReducer
     {
-        public static AppState Execute(AppState state, object action)
+        private static readonly Dictionary<Type, Func<AppState, object, AppState>> handlers = new Dictionary<Type, Func<AppState, object, AppState>>
         {
-            switch (action)
-            {
-                case EnterGroupAction a:
-                    return EnterGroup(state, a);
+            [typeof(EnterGroupAction)] = (s, a) => EnterGroup(s, (EnterGroupAction)a),
+            [typeof(ExitGroupAction)] = (s, _) => ExitGroup(s),
+            [typeof(FocusNodeAction)] = (s, a) => FocusNode(s, (FocusNodeAction)a),
+        };
 
-                case ExitGroupAction _:
-                    return ExitGroup(state);
-
-                case FocusNodeAction a:
-                    return FocusNode(state, a);
-            }
-
-            return state;
-        }
+        public static AppState Execute(AppState state, object action) => 
+            handlers.TryGetValue(action.GetType(), out var handler) ? handler.Invoke(state, action) : state;
 
         private static AppState EnterGroup(AppState state, EnterGroupAction action) =>
             state.WithShoppingSession(state.ShoppingSession

@@ -20,15 +20,15 @@ namespace Sidekick.Features.Shopper.Models
         public IShoppingGroup GetCurrentGroup() => ShoppingList.Content.FindNode<IShoppingGroup>(x => x.Id == CurrentGroupId);
 
         public ShoppingSession WithShoppingList(ShoppingList shoppingList) 
-            => new ShoppingSession(shoppingList, CurrentGroupId, FocusedNodeId);
+            => new ShoppingSession(shoppingList, CurrentGroupId, FocusedNodeId, ShopVisit);
 
         public ShoppingSession WithShopVisit(ShopVisit shopVisit)
             => new ShoppingSession(ShoppingList, CurrentGroupId, FocusedNodeId, shopVisit);
 
         public ShoppingSession WithCurrentGroupId(string currentGroupId, string focusedNodeId = null) 
-            => new ShoppingSession(ShoppingList, currentGroupId, focusedNodeId);
+            => new ShoppingSession(ShoppingList, currentGroupId, focusedNodeId, ShopVisit);
 
         public ShoppingSession WithFocusedNodeId(string focusedNodeId) 
-            => new ShoppingSession(ShoppingList, CurrentGroupId, focusedNodeId);
+            => new ShoppingSession(ShoppingList, CurrentGroupId, focusedNodeId, ShopVisit);
     }
 }

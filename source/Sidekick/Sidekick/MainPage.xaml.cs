@@ -35,12 +35,13 @@ namespace Sidekick
 
             var shoppingSessionChanges = appStateChanges
                 .Select(state => state.ShoppingSession)
+                .StartWith(store.GetState().ShoppingSession)
                 .DistinctUntilChanged();
 
             var vm = new ShoppingGroupViewModel(shoppingSessionChanges, environment);
 
             appStateChanges.Subscribe(appState => UpdateAppStateView(appState));
-            UpdateAppStateView(store.GetState());
+            //UpdateAppStateView(store.GetState());
 
             Workspace.Children.Add(new ShoppingGroupView(vm));
         }

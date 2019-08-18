@@ -6,12 +6,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:views="clr-namespace:Sidekick.Features.Shopper.Views"
     mc:Ignorable="d"
-    x:Class="Sidekick.Features.Shopper.Views.ShopVisitView">
+    x:Class="Sidekick.Features.Shopper.Views.ShopVisitView"
+    HeightRequest="400"
+    WidthRequest="600">
 
-    <ContentView.Content>
-        <StackLayout>
-            <Label Text="Shop Visit" />
-        </StackLayout>
-    </ContentView.Content>
-    
+    <StackLayout>
+        <Entry x:Name="SearchTextEntry"/>
+        <ListView x:Name="FoundComponentsListView"/>
+    </StackLayout>
+
 </views:ShopVisitViewBase>

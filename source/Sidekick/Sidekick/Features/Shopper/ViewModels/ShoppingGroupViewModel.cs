@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive;
-using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using ReactiveUI;
@@ -19,6 +19,7 @@ namespace Sidekick.Features.Shopper.ViewModels
 {
     public class ShoppingGroupViewModel : ReactiveViewModelBase<IObservable<ShoppingSession>>
     {
+        private ShoppingSession session;
         private string title;
         private IShoppingGroup currentGroup;
         private IShoppingList currentShoppingList;
@@ -85,8 +86,8 @@ namespace Sidekick.Features.Shopper.ViewModels
 
         private void ApplyState(ShoppingSession state)
         {
+            session = state;
             CurrentShoppingList = state.ShoppingList;
-
             CurrentGroup = state.ShoppingList.Content
                 .FindNode<IShoppingGroup>(x => x.Id == state.CurrentGroupId);
 
@@ -168,7 +169,15 @@ namespace Sidekick.Features.Shopper.ViewModels
         {
             try
             {
-                var vm = new ShopVisitViewModel(Model.Select(x => x.ShopVisit).DistinctUntilChanged(), ExecutionEnvironment);
+                var vm = new ShopVisitViewModel(
+                    Model
+                        .Select(x => x.ShopVisit)
+                        .StartWith(session.ShopVisit)
+                        .Where(x => x.SearchText != null)
+                        .DistinctUntilChanged(), 
+                    ExecutionEnvironment
+                );
+
                 await this.OpenPopup(vm);
             }
             catch (Exception exception)

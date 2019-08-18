@@ -9,7 +9,8 @@ namespace Sidekick.State
         {
             GlobalStateReducer.Execute,
             ShoppingSessionReducer.Execute,
-            ShoppingListReducer.Execute
+            ShoppingListReducer.Execute,
+            ShopVisitReducer.Execute
         };
 
         public static AppState Execute(AppState state, object action)

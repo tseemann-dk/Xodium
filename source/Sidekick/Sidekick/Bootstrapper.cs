@@ -12,7 +12,7 @@ using Xodium.Redux;
 
 namespace Sidekick
 {
-    public delegate IStore<T> StoreProvider<T>(Reducer<T> reducer, T state);
+    public delegate IStore<T> StoreProvider<T>(Reducer<T> reducer, T state, Middleware<T>[] middlewares);
 
     public class Bootstrapper : BootstrapperBase
     {
@@ -20,7 +20,8 @@ namespace Sidekick
 
         public Bootstrapper(StoreProvider<AppState> storeProvider = null)
         {
-            this.storeProvider = storeProvider ?? ((reducer, state) => new Store<AppState>(reducer, state));
+            this.storeProvider = storeProvider ?? ((reducer, state, middlewares) => 
+                new Store<AppState>(reducer, state, middlewares));
         }
 
         public IStore<AppState> Store { get; private set; }
@@ -47,7 +48,10 @@ namespace Sidekick
 
         private void RegisterStore(IDependencyRegistry registry)
         {
-            Store = storeProvider(AppStateReducer.Execute, AppStateGenerator.GenerateSampleState());
+            Store = storeProvider(
+                AppStateReducer.Execute, 
+                AppStateGenerator.GenerateSampleState(), 
+                AppStateReducer.Middlewares);
 
             registry.RegisterInstance(Store);
             registry.RegisterInstance<IActionDispatcher>(new ReduxDispatcher<AppState>(Store));

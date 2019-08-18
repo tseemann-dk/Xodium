@@ -1,16 +1,23 @@
-﻿using Sidekick.Features.Shopper.Reducers;
-using System;
+﻿using System;
+using Redux;
+using Sidekick.Features.Shopper.Middleware;
+using Sidekick.Features.Shopper.Reducers;
 
 namespace Sidekick.State
 {
     public class AppStateReducer
     {
-        private static readonly Func<AppState, object, AppState>[] reducers =
+        private static readonly Reducer<AppState>[] reducers =
         {
             GlobalStateReducer.Execute,
             ShoppingSessionReducer.Execute,
             ShoppingListReducer.Execute,
             ComponentLookupReducer.Execute
+        };
+
+        public static Middleware<AppState>[] Middlewares { get; } =
+        {
+            ComponentLookupMiddleware.Execute
         };
 
         public static AppState Execute(AppState state, object action)

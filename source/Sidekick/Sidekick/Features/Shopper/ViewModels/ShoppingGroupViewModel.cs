@@ -5,7 +5,8 @@ using System.Reactive;
 using System.Reactive.Linq;
 using ReactiveUI;
 using Sidekick.Extensions;
-using Sidekick.Features.Shopper.Actions;
+using Sidekick.Features.Shopper.Actions.ShoppingList;
+using Sidekick.Features.Shopper.Actions.ShoppingSession;
 using Sidekick.Features.Shopper.Models;
 using Xodium.Collections;
 using Xodium.Mvvm;
@@ -162,7 +163,7 @@ namespace Sidekick.Features.Shopper.ViewModels
         private void AddNewItem()
         {
             var componentNumber = this.GetAppState().Global.NextComponentNumber;
-            var component = new Component(componentNumber.ToString(), $"Component {componentNumber}", 10);
+            var component = new Component(ShopIdentity.Internal, componentNumber.ToString(), $"Component {componentNumber}", 10);
             var item = new ShoppingItem(component, 1);
 
             this.DispatchAction(new AddComponentAction(component));

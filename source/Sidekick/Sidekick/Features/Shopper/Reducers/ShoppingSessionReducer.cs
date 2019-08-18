@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Sidekick.Features.Shopper.Actions;
+using Sidekick.Features.Shopper.Actions.ShoppingSession;
 using Sidekick.State;
 using Xodium.Productivity.Content.Models;
 

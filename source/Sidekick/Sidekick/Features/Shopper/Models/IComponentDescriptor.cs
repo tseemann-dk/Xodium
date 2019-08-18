@@ -1,9 +1,8 @@
 ﻿namespace Sidekick.Features.Shopper.Models
 {
-    public interface IComponent
+    public interface IComponentDescriptor
     {
-        ShopIdentity Origin { get; }
-        string ComponentNumber { get; }
+        IComponentReference Reference { get; }
         string Text { get; }
         double Price { get; }
     }

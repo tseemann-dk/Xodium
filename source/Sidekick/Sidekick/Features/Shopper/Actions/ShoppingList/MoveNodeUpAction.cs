@@ -1,12 +1,12 @@
 ﻿using System;
 using Xodium.Redux;
 
-namespace Sidekick.Features.Shopper.Actions
+namespace Sidekick.Features.Shopper.Actions.ShoppingList
 {
-    public class MoveNodeDownAction : ReduxAction<MoveNodeDownAction.Properties>
+    public class MoveNodeUpAction : ReduxAction<MoveNodeUpAction.Properties>
     {
-        public MoveNodeDownAction(string parentGroupId, string nodeId)
-            : base(typeof(MoveNodeDownAction).FullName, new Properties(parentGroupId, nodeId))
+        public MoveNodeUpAction(string parentGroupId, string nodeId)
+            : base(typeof(MoveNodeUpAction).FullName, new Properties(parentGroupId, nodeId))
         {
         }
 

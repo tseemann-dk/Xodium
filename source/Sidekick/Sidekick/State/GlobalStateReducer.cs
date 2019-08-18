@@ -1,4 +1,4 @@
-﻿using Sidekick.Features.Shopper.Actions;
+﻿using Sidekick.Features.Shopper.Actions.ShoppingList;
 
 namespace Sidekick.State
 {

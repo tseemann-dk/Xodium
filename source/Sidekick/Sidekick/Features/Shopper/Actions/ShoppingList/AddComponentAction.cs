@@ -1,7 +1,7 @@
 ﻿using Sidekick.Features.Shopper.Models;
 using Xodium.Redux;
 
-namespace Sidekick.Features.Shopper.Actions
+namespace Sidekick.Features.Shopper.Actions.ShoppingList
 {
     public class AddComponentAction : ReduxAction<AddComponentAction.Properties>
     {

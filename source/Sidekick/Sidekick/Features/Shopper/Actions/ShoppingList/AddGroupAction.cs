@@ -1,18 +1,18 @@
-﻿using System;
-using Sidekick.Features.Shopper.Models;
+﻿using Sidekick.Features.Shopper.Models;
+using System;
 using Xodium.Redux;
 
-namespace Sidekick.Features.Shopper.Actions
+namespace Sidekick.Features.Shopper.Actions.ShoppingList
 {
-    public class AddItemAction : ReduxAction<AddItemAction.Properties>
+    public class AddGroupAction : ReduxAction<AddGroupAction.Properties>
     {
-        public AddItemAction(
+        public AddGroupAction(
             string parentGroupId, 
-            IShoppingItem item, 
+            IShoppingGroup group, 
             string insertAfterNodeId = null)
-            : base(typeof(AddItemAction).FullName, new Properties(
+            : base(typeof(AddGroupAction).FullName, new Properties(
                 parentGroupId, 
-                item, 
+                group, 
                 insertAfterNodeId
             ))
         {
@@ -21,17 +21,17 @@ namespace Sidekick.Features.Shopper.Actions
         public struct Properties
         {
             public Properties(
-                string parentGroupId,
-                IShoppingItem item, 
+                string parentGroupId, 
+                IShoppingGroup group, 
                 string insertAfterNodeId)
             {
                 ParentGroupId = parentGroupId ?? throw new ArgumentNullException(nameof(parentGroupId));
-                Item = item;
+                Group = group;
                 InsertAfterNodeId = insertAfterNodeId;
             }
 
             public string ParentGroupId;
-            public IShoppingItem Item;
+            public IShoppingGroup Group;
             public string InsertAfterNodeId;
         }
     }

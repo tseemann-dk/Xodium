@@ -1,6 +1,6 @@
 ﻿using Xodium.Redux;
 
-namespace Sidekick.Features.Shopper.Actions
+namespace Sidekick.Features.Shopper.Actions.ShoppingSession
 {
     public class ExitGroupAction : ReduxAction<ExitGroupAction.Properties>
     {

@@ -11,17 +11,17 @@ namespace Sidekick.Features.Shopper.Reducers
         {
             switch (action)
             {
-                case ChangeGroupTitleAction a:
-                    return ChangeGroupTitle(state, a);
-
                 case AddComponentAction a:
                     return AddComponent(state, a);
 
                 case AddGroupAction a:
                     return AddGroup(state, a);
 
-                case AddShoppingItemAction a:
+                case AddItemAction a:
                     return AddItem(state, a);
+
+                case ChangeGroupTitleAction a:
+                    return ChangeGroupTitle(state, a);
 
                 case DeleteNodeAction a:
                     return DeleteNode(state, a);
@@ -46,7 +46,7 @@ namespace Sidekick.Features.Shopper.Reducers
                     .AddNode(state.ShoppingSession.GetCurrentGroup(), action.Payload.Group, action.Payload.InsertAfterNodeId))
                 .WithFocusedNodeId(action.Payload.Group.Id));
 
-        private static AppState AddItem(AppState state, AddShoppingItemAction action) =>
+        private static AppState AddItem(AppState state, AddItemAction action) =>
             state.WithShoppingSession(state.ShoppingSession
                 .WithShoppingList(state.ShoppingSession.ShoppingList
                     .AddNode(state.ShoppingSession.GetCurrentGroup(), action.Payload.Item, action.Payload.InsertAfterNodeId))

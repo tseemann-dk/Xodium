@@ -4,13 +4,13 @@ using Xodium.Redux;
 
 namespace Sidekick.Features.Shopper.Actions
 {
-    public class AddShoppingItemAction : ReduxAction<AddShoppingItemAction.Properties>
+    public class AddItemAction : ReduxAction<AddItemAction.Properties>
     {
-        public AddShoppingItemAction(
+        public AddItemAction(
             string parentGroupId, 
             IShoppingItem item, 
             string insertAfterNodeId = null)
-            : base(typeof(AddShoppingItemAction).FullName, new Properties(
+            : base(typeof(AddItemAction).FullName, new Properties(
                 parentGroupId, 
                 item, 
                 insertAfterNodeId

@@ -166,7 +166,7 @@ namespace Sidekick.Features.Shopper.ViewModels
             var item = new ShoppingItem(component, 1);
 
             this.DispatchAction(new AddComponentAction(component));
-            this.DispatchAction(new AddShoppingItemAction(CurrentGroup.Id, item, insertAfterNodeId: FocusedNode?.Id));
+            this.DispatchAction(new AddItemAction(CurrentGroup.Id, item, insertAfterNodeId: FocusedNode?.Id));
         }
 
         private void ChangeTitle()

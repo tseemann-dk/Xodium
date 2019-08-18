@@ -14,7 +14,7 @@ namespace Sidekick.State
             {
                 case AddGroupAction _:
                     return newGlobalState(state.Global.WithNextGroupNumber());
-                case AddShoppingItemAction _:
+                case AddItemAction _:
                     return newGlobalState(state.Global.WithNextComponentNumber());
             }
 

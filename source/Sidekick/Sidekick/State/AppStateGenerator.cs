@@ -5,18 +5,37 @@ namespace Sidekick.State
 {
     public static class AppStateGenerator
     {
-        public static AppState GenerateAppState()
+        public static AppState GenerateSampleState()
         {
-            var shoppingList = BuildSampleShoppingList();
-            var content = shoppingList.Content;
-
             return new AppState(
                 new GlobalState(3, 2),
-                new ShoppingSession(
-                    shoppingList,
-                    content.Id,
-                    content.Nodes.Last().Id
-                )
+                BuildShoppingSession(BuildSampleShoppingList())
+            );
+        }
+
+        public static AppState GenerateDefaultState()
+        {
+            return new AppState(
+                new GlobalState(),
+                BuildShoppingSession(BuildEmptyShoppingList())
+            );
+        }
+
+        private static ShoppingSession BuildShoppingSession(ShoppingList shoppingList)
+        {
+            var content = shoppingList.Content;
+
+            return new ShoppingSession(
+                shoppingList,
+                content.Id,
+                content.Nodes.FirstOrDefault()?.Id
+            );
+        }
+
+        private static ShoppingList BuildEmptyShoppingList()
+        {
+            return new ShoppingList("list-1", "L1",
+                new ShoppingGroup("group-1", "G1", "Group 1", 1)
             );
         }
 

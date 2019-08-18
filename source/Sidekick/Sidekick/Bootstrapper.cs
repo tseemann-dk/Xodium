@@ -34,7 +34,7 @@ namespace Sidekick
 
         private void RegisterStore(IDependencyRegistry registry)
         {
-            Store = storeProvider(AppStateReducer.Execute, AppStateGenerator.GenerateAppState());
+            Store = storeProvider(AppStateReducer.Execute, AppStateGenerator.GenerateSampleState());
 
             registry.RegisterInstance(Store);
             registry.RegisterInstance<IActionDispatcher>(new ReduxDispatcher<AppState>(Store));

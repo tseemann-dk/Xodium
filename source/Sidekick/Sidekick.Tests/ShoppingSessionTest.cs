@@ -15,7 +15,7 @@ namespace Sidekick.Tests
 
         public ShoppingSessionTest()
         {
-            store = new Store<AppState>(AppStateReducer.Execute, AppStateGenerator.GenerateAppState());
+            store = new Store<AppState>(AppStateReducer.Execute, AppStateGenerator.GenerateDefaultState());
         }
 
         [Fact]
@@ -36,9 +36,8 @@ namespace Sidekick.Tests
             state.ShoppingSession.GetCurrentGroup().Id.Should().Be(newGroup.Id);
         }
 
-        /*
         [Fact]
-        public void EnterGroup_WhenItemIsFocused_StaysPut()
+        public void EnterGroup_WhenItemIsFocused_Fails()
         {
             var state = store.GetState();
             var startGroup = state.ShoppingSession.GetCurrentGroup();
@@ -49,13 +48,11 @@ namespace Sidekick.Tests
             state = store.GetState();
             state.ShoppingSession.FocusedNodeId.Should().Be(newItem.Id);
 
-            // Attempt to enter the new item and verify that it was not possible
-            store.Dispatch(new EnterGroupAction(newItem.Id)); // TODO: throw
-            state = store.GetState();
-            state.ShoppingSession.GetCurrentGroup().Id.Should().Be(startGroup.Id);
+            // Attempt to enter the new item and verify failure
+            store.Invoking(x => x.Dispatch(new EnterGroupAction(newItem.Id)))
+                .Should().Throw<InvalidCastException>();
         }
-        */
-
+        
         [Fact]
         public void ExitGroup_WhenInsideChildGroup_GoesToParentGroupAndFocusesChildGroup()
         {

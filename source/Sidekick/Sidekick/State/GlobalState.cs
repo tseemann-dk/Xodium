@@ -2,6 +2,11 @@
 {
     public class GlobalState
     {
+        public GlobalState()
+            : this(1, 1)
+        {
+        }
+
         public GlobalState(int nextComponentNumber, int nextGroupNumber)
         {
             NextComponentNumber = nextComponentNumber;

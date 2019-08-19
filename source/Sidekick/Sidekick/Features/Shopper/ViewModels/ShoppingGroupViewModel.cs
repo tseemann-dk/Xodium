@@ -174,6 +174,7 @@ namespace Sidekick.Features.Shopper.ViewModels
                         .Select(x => x.ComponentLookup)
                         .StartWith(session.ComponentLookup)
                         .Where(x => x.SearchText != null)
+                        //.Do(x => Debug.WriteLine(x))
                         .DistinctUntilChanged(), 
                     ExecutionEnvironment
                 );

@@ -25,6 +25,7 @@ namespace Sidekick.Features.Shopper.ViewModels
 
         public void ChangeSearchText(string value)
         {
+            if (value == SearchText) return;
             this.DispatchAction(new ChangeSearchTextAction(value));
         }
 

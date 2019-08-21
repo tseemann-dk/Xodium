@@ -17,16 +17,16 @@ namespace Xodium.Platform.Xamarin.Views
         public static readonly BindableProperty IsButtonPanelVisibleProperty = BindableProperty.CreateAttached(
             nameof(IsButtonPanelVisible), typeof(bool), typeof(PopupView), true);
 
-        private static readonly BindableProperty OkButtonTextProperty = BindableProperty.CreateAttached(
+        public static readonly BindableProperty OkButtonTextProperty = BindableProperty.CreateAttached(
             nameof(OkButtonText), typeof(string), typeof(PopupView), default(string));
 
-        private static readonly BindableProperty OkCommandProperty = BindableProperty.CreateAttached(
+        public static readonly BindableProperty OkCommandProperty = BindableProperty.CreateAttached(
             nameof(OkCommand), typeof(ICommand), typeof(PopupView), default(ICommand));
 
-        private static readonly BindableProperty CancelButtonTextProperty = BindableProperty.CreateAttached(
+        public static readonly BindableProperty CancelButtonTextProperty = BindableProperty.CreateAttached(
             nameof(CancelButtonText), typeof(string), typeof(PopupView), default(string));
 
-        private static readonly BindableProperty CancelCommandProperty = BindableProperty.CreateAttached(
+        public static readonly BindableProperty CancelCommandProperty = BindableProperty.CreateAttached(
             nameof(CancelCommand), typeof(ICommand), typeof(PopupView), default(ICommand));
 
         public View Content

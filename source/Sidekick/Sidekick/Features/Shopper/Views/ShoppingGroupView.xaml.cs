@@ -17,11 +17,11 @@ namespace Sidekick.Features.Shopper.Views
         {
             InitializeComponent();
 
-            AddItemButton.Glyph = MaterialDesignIcon.Plus;
             AddGroupButton.Glyph = MaterialDesignIcon.FolderPlus;
             DeleteButton.Glyph = MaterialDesignIcon.Delete;
             GoBackButton.Glyph = MaterialDesignIcon.ArrowLeftBold;
             GoForwardButton.Glyph = MaterialDesignIcon.ArrowRightBold;
+            PerformLookupButton.Glyph = MaterialDesignIcon.Plus;
             MoveDownButton.Glyph = MaterialDesignIcon.ArrowDown;
             MoveUpButton.Glyph = MaterialDesignIcon.ArrowUp;
             RenameButton.Glyph = MaterialDesignIcon.RenameBox;
@@ -60,22 +60,22 @@ namespace Sidekick.Features.Shopper.Views
                     v => v.AddGroupButton)
                     .DisposeWith(disposables);
 
-                // AddItemButton
-                this.BindCommand(ViewModel,
-                    vm => vm.AddNewItemCommand,
-                    v => v.AddItemButton)
-                    .DisposeWith(disposables);
-
-                // RenameButton
-                this.BindCommand(ViewModel, 
-                    vm => vm.ChangeTitleCommand, 
-                    v => v.RenameButton)
-                    .DisposeWith(disposables);
-
-                // DeletButton
+                // DeleteButton
                 this.BindCommand(ViewModel,
                     vm => vm.DeleteNodeCommand,
                     v => v.DeleteButton)
+                    .DisposeWith(disposables);
+
+                // GoForwardButton
+                this.BindCommand(ViewModel,
+                    vm => vm.EnterGroupCommand,
+                    v => v.GoForwardButton)
+                    .DisposeWith(disposables);
+
+                // GoBackButton
+                this.BindCommand(ViewModel,
+                    vm => vm.ExitGroupCommand,
+                    v => v.GoBackButton)
                     .DisposeWith(disposables);
 
                 // MoveDownButton
@@ -90,16 +90,16 @@ namespace Sidekick.Features.Shopper.Views
                     v => v.MoveUpButton)
                     .DisposeWith(disposables);
 
-                // GoForwardButton
+                // PerformLookupButton
                 this.BindCommand(ViewModel,
-                    vm => vm.EnterGroupCommand,
-                    v => v.GoForwardButton)
+                    vm => vm.PerformLookupCommand,
+                    v => v.PerformLookupButton)
                     .DisposeWith(disposables);
 
-                // GoBackButton
+                // RenameButton
                 this.BindCommand(ViewModel,
-                    vm => vm.ExitGroupCommand,
-                    v => v.GoBackButton)
+                    vm => vm.ChangeTitleCommand,
+                    v => v.RenameButton)
                     .DisposeWith(disposables);
             });
         }

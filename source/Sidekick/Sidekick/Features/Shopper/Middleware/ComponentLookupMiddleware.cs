@@ -1,18 +1,23 @@
-﻿using System;
-using Redux;
+﻿using Redux;
 using Sidekick.State;
 
 namespace Sidekick.Features.Shopper.Middleware
 {
     public static class ComponentLookupMiddleware
     {
-        public static Func<Dispatcher, Dispatcher> Execute(IStore<AppState> store)
+        public static Middleware<AppState> CreateMiddleware()
         {
-            return dispatcher =>
+            return store => next => action =>
             {
-                // dispatcher(action)
+                if (action is Actions.ComponentLookup.CommitAction)
+                {
+                    var state = store.GetState();
 
-                return dispatcher;
+                    store.Dispatch(new Actions.ComponentLookup.ComponentPickedAction(/*state.ShoppingSession.ComponentLookup.SelectedComponent*/));
+                    store.Dispatch(new Actions.ComponentLookup.HideAction());
+                }
+
+                return next(action);
             };
         }
     }

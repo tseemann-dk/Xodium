@@ -5,8 +5,11 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:views="clr-namespace:Sidekick.Features.Shopper.Views"
+    xmlns:popup="clr-namespace:Xodium.Platform.Xamarin.Views;assembly=Xodium.Platform.Xamarin"
     mc:Ignorable="d"
     x:Class="Sidekick.Features.Shopper.Views.ComponentLookupView"
+    popup:PopupView.OkCommand="{Binding CommitCommand}"
+    popup:PopupView.CancelCommand="{Binding CancelCommand}"
     HeightRequest="400"
     WidthRequest="600">
 

@@ -30,7 +30,7 @@ namespace Sidekick.UWP
                 Rg.Plugins.Popup.Popup.Init();
 
                 var bootstrapper = new UwpBootstrapper((reducer, state, middlewares) => isDebugging
-                    ? new TimeMachineStore<AppState>(reducer, state) as IStore<AppState>
+                    ? new TimeMachineStore<AppState>(reducer, state, middlewares) as IStore<AppState>
                     : new Store<AppState>(reducer, state, middlewares));
 
                 Startup.Init(bootstrapper);

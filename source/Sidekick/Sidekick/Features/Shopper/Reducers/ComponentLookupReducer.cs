@@ -23,31 +23,37 @@ namespace Sidekick.Features.Shopper.Reducers
             handlers.TryGetValue(action.GetType(), out var handler) ? handler.Invoke(state, action) : state;
 
         private static AppState ChangeSearchText(AppState state, ChangeSearchTextAction action) =>
-            UpdateComponentLookup(state, x => x
+            ReduceComponentLookup(state, x => x
                 .WithSearchText(action.Payload.NewSearchText));
 
         private static AppState ChangeIsVisible(AppState state, bool isVisible) =>
-            UpdateComponentLookup(state, x => x
+            ReduceComponentLookup(state, x => x
                 .WithIsVisible(isVisible));
 
         private static AppState SearchCompleted(AppState state, SearchCompletedAction action) =>
-            UpdateComponentLookup(state, x => x
-                .WithFoundComponents(action.Payload.Result));
+            ReduceComponentLookup(state, x => x
+                .WithFoundComponents(action.Payload.Result)
+                .WithSearchError(null)
+                .WithIsSearching(false));
 
         private static AppState SearchFailed(AppState state, SearchFailedAction action) =>
-            UpdateComponentLookup(state, x => x
-                .WithSearchError(action.Payload.Exception.Message));
+            ReduceComponentLookup(state, x => x
+                .WithFoundComponents(null)
+                .WithSearchError(action.Payload.Exception.Message)
+                .WithIsSearching(false));
 
         private static AppState SearchStarting(AppState state) =>
-            UpdateComponentLookup(state, x => x
+            ReduceComponentLookup(state, x => x
+                .WithSearchError(null)
+                .WithFoundComponents(null)
                 .WithIsSearching(true));
 
         private static AppState SelectComponent(AppState state, SelectComponentAction action) =>
-            UpdateComponentLookup(state, x => x
+            ReduceComponentLookup(state, x => x
                 .WithSelectedComponentNumber(action.Payload.ComponentNumber));
 
-        private static AppState UpdateComponentLookup(AppState state, Func<ComponentLookup, ComponentLookup> update) =>
+        private static AppState ReduceComponentLookup(AppState state, Func<ComponentLookup, ComponentLookup> reduce) =>
             state.WithShoppingSession(state.ShoppingSession
-                .WithComponentLookup(update(state.ShoppingSession.ComponentLookup)));
+                .WithComponentLookup(reduce(state.ShoppingSession.ComponentLookup)));
     }
 }

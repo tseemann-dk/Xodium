@@ -36,7 +36,7 @@ namespace Sidekick.Features.Shopper.Models
         public IComponentDescriptor GetSelectedComponent() => SelectedComponentNumber == null ? null : FoundComponents?.FirstOrDefault(x => x.Reference.ComponentNumber == SelectedComponentNumber);
 
         public ComponentLookup WithFoundComponents(IReadOnlyCollection<IComponentDescriptor> foundComponents) => 
-            new ComponentLookup(IsVisible, false, SearchText, SearchError, foundComponents, SelectedComponentNumber); 
+            new ComponentLookup(IsVisible, IsSearching, SearchText, SearchError, foundComponents, SelectedComponentNumber); 
 
         public ComponentLookup WithIsVisible(bool isVisible) => 
             new ComponentLookup(isVisible, IsSearching, SearchText, SearchError, FoundComponents, SelectedComponentNumber); 
@@ -48,7 +48,7 @@ namespace Sidekick.Features.Shopper.Models
             new ComponentLookup(IsVisible, IsSearching, searchText, SearchError, FoundComponents, SelectedComponentNumber); 
 
         public ComponentLookup WithSearchError(string searchError) => 
-            new ComponentLookup(IsVisible, false, SearchText, searchError, null, SelectedComponentNumber); 
+            new ComponentLookup(IsVisible, IsSearching, SearchText, searchError, FoundComponents, SelectedComponentNumber); 
 
         public ComponentLookup WithSelectedComponentNumber(string selectedComponentId) => 
             new ComponentLookup(IsVisible, IsSearching, SearchText, SearchError, FoundComponents, selectedComponentId); 

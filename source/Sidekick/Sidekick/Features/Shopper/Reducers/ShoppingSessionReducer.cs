@@ -31,7 +31,7 @@ namespace Sidekick.Features.Shopper.Reducers
             if (!(node is IShoppingGroup))
                 throw new InvalidCastException($"Node {nodeId} is not a group");
 
-            return UpdateShoppingSession(state, x => x
+            return ReduceShoppingSession(state, x => x
                 .WithCurrentGroupId(nodeId));
         }
 
@@ -43,15 +43,15 @@ namespace Sidekick.Features.Shopper.Reducers
             if (parentGroupId == null) 
                 return state;
 
-            return UpdateShoppingSession(state, x => x
+            return ReduceShoppingSession(state, x => x
                 .WithCurrentGroupId(parentGroupId, state.ShoppingSession.CurrentGroupId));
         }
 
         private static AppState FocusNode(AppState state, FocusNodeAction action) =>
-            UpdateShoppingSession(state, x => x
+            ReduceShoppingSession(state, x => x
                 .WithFocusedNodeId(action.Payload.NodeId));
 
-        private static AppState UpdateShoppingSession(AppState state, Func<ShoppingSession, ShoppingSession> update) =>
-            state.WithShoppingSession(update(state.ShoppingSession));
+        private static AppState ReduceShoppingSession(AppState state, Func<ShoppingSession, ShoppingSession> reduce) =>
+            state.WithShoppingSession(reduce(state.ShoppingSession));
     }
 }

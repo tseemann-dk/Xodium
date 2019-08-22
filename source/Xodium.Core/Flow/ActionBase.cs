@@ -13,4 +13,12 @@
 
         object IAction.Payload => Payload;
     }
+
+    public abstract class ActionBase : ActionBase<object>
+    {
+        public ActionBase(string actionType) 
+            : base(actionType)
+        {
+        }
+    }
 }

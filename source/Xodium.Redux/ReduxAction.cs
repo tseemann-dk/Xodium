@@ -9,4 +9,12 @@ namespace Xodium.Redux
         {
         }
     }
+
+    public class ReduxAction : ActionBase
+    {
+        public ReduxAction(string actionType) 
+            : base(actionType)
+        {
+        }
+    }
 }

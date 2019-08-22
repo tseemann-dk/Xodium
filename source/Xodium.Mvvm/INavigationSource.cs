@@ -14,6 +14,9 @@ namespace Xodium.Mvvm
         public static void DispatchAction(this INavigationSource self, IAction action) 
             => self.ExecutionEnvironment.ActionDispatcher.Dispatch(action);
 
+        public static Task DispatchActionsAsync<T>(this INavigationSource self, ActionsCreator<T> actionsCreator) 
+            => self.ExecutionEnvironment.GetService<IActionDispatcher<T>>().DispatchAsync(actionsCreator);
+
         public static Task GoBack(this INavigationSource self) 
             => self.ExecutionEnvironment.NavigationService.GoBack();
 

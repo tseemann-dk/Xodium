@@ -14,6 +14,7 @@ namespace Sidekick.Features.Shopper.Reducers
             [typeof(SearchCompletedAction)] = (s, a) => SearchCompleted(s, (SearchCompletedAction)a),
             [typeof(SearchFailedAction)] = (s, a) => SearchFailed(s, (SearchFailedAction)a),
             [typeof(SearchStartingAction)] = (s, _) => SearchStarting(s),
+            [typeof(SelectComponentAction)] = (s, a) => SelectComponent(s, (SelectComponentAction)a),
             [typeof(ShowAction)] = (s, a) => ChangeIsVisible(s, true),
             [typeof(HideAction)] = (s, a) => ChangeIsVisible(s, false)
         };
@@ -40,6 +41,10 @@ namespace Sidekick.Features.Shopper.Reducers
         private static AppState SearchStarting(AppState state) =>
             UpdateComponentLookup(state, x => x
                 .WithIsSearching(true));
+
+        private static AppState SelectComponent(AppState state, SelectComponentAction action) =>
+            UpdateComponentLookup(state, x => x
+                .WithSelectedComponentNumber(action.Payload.ComponentNumber));
 
         private static AppState UpdateComponentLookup(AppState state, Func<ComponentLookup, ComponentLookup> update) =>
             state.WithShoppingSession(state.ShoppingSession

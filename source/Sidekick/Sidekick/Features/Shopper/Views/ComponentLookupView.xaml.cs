@@ -23,6 +23,9 @@ namespace Sidekick.Features.Shopper.Views
                 this.OneWayBind(ViewModel, vm => vm.FoundComponents, v => v.FoundComponentsListView.ItemsSource)
                     .DisposeWith(disposable);
 
+                this.OneWayBind(ViewModel, vm => vm.SelectedComponent, v => v.FoundComponentsListView.SelectedItem)
+                    .DisposeWith(disposable);
+
                 this.OneWayBind(ViewModel, vm => vm.SearchText, v => v.SearchTextEntry.Text)
                     .DisposeWith(disposable);
 
@@ -35,6 +38,11 @@ namespace Sidekick.Features.Shopper.Views
                     .Subscribe(x => ViewModel.ChangeSearchText(x), e => { })
                     .DisposeWith(disposable);
             });
+        }
+
+        private void FoundComponentsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            ViewModel.SetSelectedComponent(e.SelectedItem as ComponentDescriptorViewModel);
         }
     }
 }

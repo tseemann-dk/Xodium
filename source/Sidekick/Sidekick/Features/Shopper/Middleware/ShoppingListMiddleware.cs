@@ -15,10 +15,11 @@ namespace Sidekick.Features.Shopper.Middleware
                     var state = store.GetState();
                     var session = state.ShoppingSession;
 
-                    // TODO: Get component from action
+                    //var componentNumber = state.Global.NextComponentNumber;
+                    //var component = new Component(ShopIdentity.Internal, componentNumber.ToString(), $"Component {componentNumber}", 10);
 
-                    var componentNumber = state.Global.NextComponentNumber;
-                    var component = new Component(ShopIdentity.Internal, componentNumber.ToString(), $"Component {componentNumber}", 10);
+                    var c = a.Payload.Component;
+                    var component = new Component(c.Reference.Shop, c.Reference.ComponentNumber, c.Text, c.Price);
                     var item = new ShoppingItem(component, 1);
 
                     store.Dispatch(new Actions.ShoppingList.AddComponentAction(component));

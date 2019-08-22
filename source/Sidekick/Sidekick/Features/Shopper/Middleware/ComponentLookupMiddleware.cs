@@ -13,7 +13,7 @@ namespace Sidekick.Features.Shopper.Middleware
                 {
                     var state = store.GetState();
 
-                    store.Dispatch(new Actions.ComponentLookup.ComponentPickedAction(/*state.ShoppingSession.ComponentLookup.SelectedComponent*/));
+                    store.Dispatch(new Actions.ComponentLookup.ComponentPickedAction(state.ShoppingSession.ComponentLookup.GetSelectedComponent()));
                     store.Dispatch(new Actions.ComponentLookup.HideAction());
                 }
 

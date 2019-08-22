@@ -32,7 +32,7 @@
 
         <!-- Result View -->
         <Grid Grid.Row="1">
-            <ListView x:Name="FoundComponentsListView">
+            <ListView x:Name="FoundComponentsListView" ItemSelected="FoundComponentsListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

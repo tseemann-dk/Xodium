@@ -16,6 +16,7 @@ namespace Sidekick.Features.Shopper.ViewModels
     {
         private IReadOnlyList<ComponentDescriptorViewModel> foundComponents;
         private IReadOnlyCollection<IComponentDescriptor> lastFoundComponents;
+        private ComponentDescriptorViewModel selectedComponent;
         private bool isSearching;
         private bool isVisible;
         private string searchText;
@@ -52,6 +53,12 @@ namespace Sidekick.Features.Shopper.ViewModels
             set => this.RaiseAndSetIfChanged(ref searchText, value);
         }
 
+        public ComponentDescriptorViewModel SelectedComponent
+        {
+            get => selectedComponent;
+            set => this.RaiseAndSetIfChanged(ref selectedComponent, value);
+        }
+
         public ReactiveCommand<Unit, Unit> CancelCommand { get; }
         public ReactiveCommand<Unit, Unit> CommitCommand { get; }
         public ReactiveCommand<Unit, Task<Unit>> SearchCommand { get; }
@@ -69,6 +76,7 @@ namespace Sidekick.Features.Shopper.ViewModels
                 lastFoundComponents = state.FoundComponents;
             }
 
+            SelectedComponent = FoundComponents?.FirstOrDefault(x => x.ComponentNumber == state.SelectedComponentNumber);
             SetVisible(state.IsVisible);
         }
 
@@ -115,6 +123,12 @@ namespace Sidekick.Features.Shopper.ViewModels
         {
             await this.DispatchActionsAsync(Actions.ComponentLookupActionCreator.Search());
             return Unit.Default;
+        }
+
+        public void SetSelectedComponent(ComponentDescriptorViewModel value)
+        {
+            if (value == SelectedComponent) return;
+            this.DispatchAction(Actions.ComponentLookupActionCreator.SelectComponent(value?.ComponentNumber));
         }
     }
 }

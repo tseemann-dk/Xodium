@@ -15,13 +15,13 @@ namespace Sidekick.Features.Shopper.Models
         {
         }
 
-        public ShoppingGroup(string id, string number, string title, double quantity = 1, IEnumerable<INode> nodes = null)
+        public ShoppingGroup(string id, string number, string title, double quantity = 1, IReadOnlyList<INode> nodes = null)
         {
             Id = id ?? throw new System.ArgumentNullException(nameof(id));
             GroupNumber = number ?? throw new ArgumentNullException(nameof(number));
             Title = title;
             Quantity = quantity;
-            Nodes = nodes as IReadOnlyList<INode> ?? (nodes == null ? new List<INode>() : new List<INode>(nodes));
+            Nodes = nodes ?? new List<INode>();
             Price = Nodes.OfType<IShoppingNode>().Sum(x => x.Price);
         }
 
@@ -38,10 +38,10 @@ namespace Sidekick.Features.Shopper.Models
         [ExcludeFromCodeCoverage]
         private string DebuggerDisplay => $"{Title}";
 
-        public IShoppingGroup WithNodes(IEnumerable<INode> nodes) 
+        public IShoppingGroup WithNodes(IReadOnlyList<INode> nodes) 
             => new ShoppingGroup(Id, GroupNumber, Title, Quantity, nodes);
 
-        IContainer IContainer.WithNodes(IEnumerable<INode> nodes) => WithNodes(nodes);
+        IContainer IContainer.WithNodes(IReadOnlyList<INode> nodes) => WithNodes(nodes);
         INode INode.Clone() => WithNodes(Nodes);
     }
 }

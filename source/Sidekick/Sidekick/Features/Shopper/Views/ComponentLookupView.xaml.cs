@@ -20,13 +20,20 @@ namespace Sidekick.Features.Shopper.Views
 
             this.WhenActivated(disposable =>
             {
+                this.OneWayBind(ViewModel, vm => vm.FoundComponents, v => v.FoundComponentsListView.ItemsSource)
+                    .DisposeWith(disposable);
+
                 this.OneWayBind(ViewModel, vm => vm.SearchText, v => v.SearchTextEntry.Text)
                     .DisposeWith(disposable);
 
+                this.BindCommand(ViewModel, vm => vm.SearchCommand, v => v.SearchButton)
+                    .DisposeWith(disposable);
+
                 Observable
-                    .FromEventPattern<TextChangedEventArgs>(SearchTextEntry, nameof(Entry.TextChanged))
+                    .FromEventPattern<TextChangedEventArgs>(SearchTextEntry, nameof(SearchBar.TextChanged))
                     .Select(x => x.EventArgs.NewTextValue)
-                    .Subscribe(x => ViewModel.ChangeSearchText(x), e => { });
+                    .Subscribe(x => ViewModel.ChangeSearchText(x), e => { })
+                    .DisposeWith(disposable);
             });
         }
     }

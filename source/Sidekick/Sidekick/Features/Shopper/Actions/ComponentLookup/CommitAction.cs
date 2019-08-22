@@ -2,14 +2,10 @@
 
 namespace Sidekick.Features.Shopper.Actions.ComponentLookup
 {
-    public class CommitAction : ReduxAction<CommitAction.Properties>
+    public class CommitAction : ReduxAction
     {
         public CommitAction()
-            : base(typeof(CommitAction).FullName, new Properties())
-        {
-        }
-
-        public struct Properties
+            : base(typeof(CommitAction).FullName)
         {
         }
     }

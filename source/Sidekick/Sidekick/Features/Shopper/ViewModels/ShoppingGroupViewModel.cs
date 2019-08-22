@@ -135,7 +135,7 @@ namespace Sidekick.Features.Shopper.ViewModels
             var groupNumber = this.GetAppState().Global.NextGroupNumber;
             var title = $"Group {groupNumber}";
 
-            this.DispatchAction(new Actions.ShoppingList.AddGroupAction(
+            this.DispatchAction(Actions.ShoppingListActionCreator.AddGroup(
                 CurrentGroup.Id,
                 new ShoppingGroup($"G{groupNumber}", title, 1),
                 FocusedNode?.Id)
@@ -154,14 +154,14 @@ namespace Sidekick.Features.Shopper.ViewModels
             var prefix = string.Join(" ", words.Take(words.Length - 1));
             var newTitle = $"{prefix} {++count}";
 
-            this.DispatchAction(new Actions.ShoppingList.ChangeGroupTitleAction(CurrentGroup.Id, newTitle));
+            this.DispatchAction(Actions.ShoppingListActionCreator.ChangeGroupTitle(CurrentGroup.Id, newTitle));
         }
 
         private void DeleteNode()
         {
             if (focusedNode == null) return;
 
-            this.DispatchAction(new Actions.ShoppingList.DeleteNodeAction(CurrentGroup.Id, FocusedNode.Id));
+            this.DispatchAction(Actions.ShoppingListActionCreator.DeleteNode(CurrentGroup.Id, FocusedNode.Id));
         }
 
         private void EnterFocusedGroup()
@@ -173,34 +173,34 @@ namespace Sidekick.Features.Shopper.ViewModels
         {
             if (!(node.Model is IShoppingGroup group)) return;
 
-            this.DispatchAction(new Actions.ShoppingSession.EnterGroupAction(group.Id));
+            this.DispatchAction(Actions.ShoppingSessionActionCreator.EnterGroup(group.Id));
         }
 
         private void ExitGroup()
         {
-            this.DispatchAction(new Actions.ShoppingSession.ExitGroupAction());
+            this.DispatchAction(Actions.ShoppingSessionActionCreator.ExitGroup());
         }
 
         public void FocusNode(ShoppingNodeListItemViewModel node)
         {
             if (node?.Id == FocusedNode?.Id) return;
 
-            this.DispatchAction(new Actions.ShoppingSession.FocusNodeAction(node?.Id));
+            this.DispatchAction(Actions.ShoppingSessionActionCreator.FocusNode(node?.Id));
         }
 
         private void MoveFocusedNodeDown()
         {
-            this.DispatchAction(new Actions.ShoppingList.MoveNodeDownAction(CurrentGroup.Id, FocusedNode?.Id));
+            this.DispatchAction(Actions.ShoppingListActionCreator.MoveNodeDown(CurrentGroup.Id, FocusedNode?.Id));
         }
 
         private void MoveFocusedNodeUp()
         {
-            this.DispatchAction(new Actions.ShoppingList.MoveNodeUpAction(CurrentGroup.Id, FocusedNode?.Id));
+            this.DispatchAction(Actions.ShoppingListActionCreator.MoveNodeUp(CurrentGroup.Id, FocusedNode?.Id));
         }
 
         private void PerformLookup()
         {
-            this.DispatchAction(new Actions.ComponentLookup.ShowAction());
+            this.DispatchAction(Actions.ComponentLookupActionCreator.Show());
         }
 
         #endregion

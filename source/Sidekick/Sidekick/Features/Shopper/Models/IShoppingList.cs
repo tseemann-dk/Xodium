@@ -11,7 +11,7 @@ namespace Sidekick.Features.Shopper.Models
         IShoppingList AddComponent(IComponent component);
         IShoppingList RemoveComponent(IComponent component);
         IShoppingList WithContent(IShoppingGroup content);
-        IShoppingList WithComponents(IEnumerable<IComponent> components);
+        IShoppingList WithComponents(IReadOnlyList<IComponent> components);
     }
 
     public static class ShoppingListExtensions

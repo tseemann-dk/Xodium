@@ -9,7 +9,7 @@ namespace Sidekick.Features.Shopper.Models
         string GroupNumber { get; }
         string Title { get; }
 
-        new IShoppingGroup WithNodes(IEnumerable<INode> nodes);
+        new IShoppingGroup WithNodes(IReadOnlyList<INode> nodes);
     }
 
     public static class ShoppingGroupExtensions

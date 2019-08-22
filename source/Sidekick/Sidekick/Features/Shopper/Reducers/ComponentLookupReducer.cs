@@ -11,6 +11,9 @@ namespace Sidekick.Features.Shopper.Reducers
         private static readonly Dictionary<Type, Func<AppState, object, AppState>> handlers = new Dictionary<Type, Func<AppState, object, AppState>>
         {
             [typeof(ChangeSearchTextAction)] = (s, a) => ChangeSearchText(s, (ChangeSearchTextAction)a),
+            [typeof(SearchCompletedAction)] = (s, a) => SearchCompleted(s, (SearchCompletedAction)a),
+            [typeof(SearchFailedAction)] = (s, a) => SearchFailed(s, (SearchFailedAction)a),
+            [typeof(SearchStartingAction)] = (s, _) => SearchStarting(s),
             [typeof(ShowAction)] = (s, a) => ChangeIsVisible(s, true),
             [typeof(HideAction)] = (s, a) => ChangeIsVisible(s, false)
         };
@@ -25,6 +28,18 @@ namespace Sidekick.Features.Shopper.Reducers
         private static AppState ChangeIsVisible(AppState state, bool isVisible) =>
             UpdateComponentLookup(state, x => x
                 .WithIsVisible(isVisible));
+
+        private static AppState SearchCompleted(AppState state, SearchCompletedAction action) =>
+            UpdateComponentLookup(state, x => x
+                .WithFoundComponents(action.Payload.Result));
+
+        private static AppState SearchFailed(AppState state, SearchFailedAction action) =>
+            UpdateComponentLookup(state, x => x
+                .WithSearchError(action.Payload.Exception.Message));
+
+        private static AppState SearchStarting(AppState state) =>
+            UpdateComponentLookup(state, x => x
+                .WithIsSearching(true));
 
         private static AppState UpdateComponentLookup(AppState state, Func<ComponentLookup, ComponentLookup> update) =>
             state.WithShoppingSession(state.ShoppingSession

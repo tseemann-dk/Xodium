@@ -53,8 +53,11 @@ namespace Sidekick
                 AppStateGenerator.GenerateSampleState(), 
                 StoreConfiguration.Middlewares);
 
+            var dispatcher = new ReduxDispatcher<AppState>(Store);
+
             registry.RegisterInstance(Store);
-            registry.RegisterInstance<IActionDispatcher>(new ReduxDispatcher<AppState>(Store));
+            registry.RegisterInstance<IActionDispatcher>(dispatcher);
+            registry.RegisterInstance<IActionDispatcher<AppState>>(dispatcher);
         }
     }
 }

@@ -9,12 +9,12 @@ namespace Sidekick.Features.Shopper.Models
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class ShoppingList : DocumentBase, IShoppingList
     {
-        private readonly List<IComponent> components;
+        private readonly IReadOnlyList<IComponent> components;
 
-        public ShoppingList(string id, string name, IShoppingGroup root, IEnumerable<IComponent> components = null)
+        public ShoppingList(string id, string name, IShoppingGroup root, IReadOnlyList<IComponent> components = null)
             : base(id, name, root)
         {
-            this.components = components?.ToList() ?? new List<IComponent>();
+            this.components = components ?? new List<IComponent>();
         }
 
         public new IShoppingGroup Content => base.Content as IShoppingGroup;
@@ -109,12 +109,12 @@ namespace Sidekick.Features.Shopper.Models
         }
 
         public ShoppingList WithContent(IShoppingGroup content) => new ShoppingList(Id, Name, content, Components);
-        public ShoppingList WithComponents(IEnumerable<IComponent> components) => new ShoppingList(Id, Name, Content, components);
+        public ShoppingList WithComponents(IReadOnlyList<IComponent> components) => new ShoppingList(Id, Name, Content, components);
         public override IDocument WithContent(IContainer content) => WithContent(content as IShoppingGroup);
 
         IShoppingList IShoppingList.AddComponent(IComponent component) => AddComponent(component);
         IShoppingList IShoppingList.RemoveComponent(IComponent component) => RemoveComponent(component);
         IShoppingList IShoppingList.WithContent(IShoppingGroup content) => WithContent(content);
-        IShoppingList IShoppingList.WithComponents(IEnumerable<IComponent> components) => WithComponents(components);
+        IShoppingList IShoppingList.WithComponents(IReadOnlyList<IComponent> components) => WithComponents(components);
     }
 }

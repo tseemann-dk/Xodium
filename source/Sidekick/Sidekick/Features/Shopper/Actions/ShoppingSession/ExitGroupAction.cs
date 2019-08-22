@@ -2,14 +2,10 @@
 
 namespace Sidekick.Features.Shopper.Actions.ShoppingSession
 {
-    public class ExitGroupAction : ReduxAction<ExitGroupAction.Properties>
+    public class ExitGroupAction : ReduxAction
     {
         public ExitGroupAction()
-            : base(typeof(ExitGroupAction).FullName, new Properties())
-        {
-        }
-
-        public struct Properties
+            : base(typeof(ExitGroupAction).FullName)
         {
         }
     }

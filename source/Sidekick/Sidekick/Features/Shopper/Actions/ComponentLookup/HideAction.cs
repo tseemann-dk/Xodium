@@ -2,14 +2,10 @@
 
 namespace Sidekick.Features.Shopper.Actions.ComponentLookup
 {
-    public class HideAction : ReduxAction<HideAction.Properties>
+    public class HideAction : ReduxAction
     {
         public HideAction()
-            : base(typeof(HideAction).FullName, new Properties())
-        {
-        }
-
-        public struct Properties
+            : base(typeof(HideAction).FullName)
         {
         }
     }

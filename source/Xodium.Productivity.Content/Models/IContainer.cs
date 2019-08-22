@@ -6,7 +6,7 @@ namespace Xodium.Productivity.Content.Models
 {
     public interface IContainer : IBranch
     {
-        IContainer WithNodes(IEnumerable<INode> nodes);
+        IContainer WithNodes(IReadOnlyList<INode> nodes);
     }
 
     public static class ContainerExtensions
@@ -24,7 +24,7 @@ namespace Xodium.Productivity.Content.Models
 
         public static T AddNodes<T>(this T self, IEnumerable<INode> nodes)
             where T : class, IContainer 
-            => self.WithNodes(self.Nodes.Concat(nodes)) as T;
+            => self.WithNodes(self.Nodes.Concat(nodes).ToList()) as T;
 
         public static T AddNodesAt<T>(this T self, IContainer parent, IEnumerable<INode> nodes)
             where T : class, IContainer

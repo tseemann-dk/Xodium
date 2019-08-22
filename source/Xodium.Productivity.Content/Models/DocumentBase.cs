@@ -20,6 +20,6 @@ namespace Xodium.Productivity.Content.Models
         public abstract IDocument WithContent(IContainer content);
 
         INode INode.Clone() => WithContent(Content);
-        IContainer IContainer.WithNodes(IEnumerable<INode> nodes) => WithContent(Content?.WithNodes(nodes));
+        IContainer IContainer.WithNodes(IReadOnlyList<INode> nodes) => WithContent(Content?.WithNodes(nodes));
     }
 }

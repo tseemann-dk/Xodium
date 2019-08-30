@@ -117,7 +117,7 @@ namespace Sidekick.Features.Shopper.ViewModels
 
         private void Cancel()
         {
-            this.DispatchAction(Actions.ComponentLookupActionCreator.Hide());
+            this.DispatchAction(Actions.ComponentLookupActionCreator.HideLookup());
         }
 
         private void Commit()

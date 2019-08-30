@@ -15,8 +15,8 @@ namespace Sidekick.Features.Shopper.Reducers
             [typeof(SearchFailedAction)] = (s, a) => SearchFailed(s, (SearchFailedAction)a),
             [typeof(SearchStartingAction)] = (s, _) => SearchStarting(s),
             [typeof(SelectComponentAction)] = (s, a) => SelectComponent(s, (SelectComponentAction)a),
-            [typeof(ShowAction)] = (s, a) => ChangeIsVisible(s, true),
-            [typeof(HideAction)] = (s, a) => ChangeIsVisible(s, false)
+            [typeof(ShowLookupAction)] = (s, a) => ChangeIsVisible(s, true),
+            [typeof(HideLookupAction)] = (s, a) => ChangeIsVisible(s, false)
         };
 
         public static ComponentLookup Execute(ComponentLookup state, object action) =>
@@ -42,8 +42,8 @@ namespace Sidekick.Features.Shopper.Reducers
 
         private static ComponentLookup SearchStarting(ComponentLookup state) =>
             state
-                .WithSearchError(null)
                 .WithFoundComponents(null)
+                .WithSearchError(null)
                 .WithIsSearching(true);
 
         private static ComponentLookup SelectComponent(ComponentLookup state, SelectComponentAction action) =>

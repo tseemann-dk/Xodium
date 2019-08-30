@@ -200,7 +200,7 @@ namespace Sidekick.Features.Shopper.ViewModels
 
         private void PerformLookup()
         {
-            this.DispatchAction(Actions.ComponentLookupActionCreator.Show());
+            this.DispatchAction(Actions.ComponentLookupActionCreator.ShowLookup());
         }
 
         #endregion

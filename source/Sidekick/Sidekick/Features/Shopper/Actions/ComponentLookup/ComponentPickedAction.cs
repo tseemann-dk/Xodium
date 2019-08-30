@@ -6,7 +6,7 @@ namespace Sidekick.Features.Shopper.Actions.ComponentLookup
     public class ComponentPickedAction : ReduxAction<ComponentPickedAction.Properties>
     {
         public ComponentPickedAction(IComponentDescriptor component)
-            : base(typeof(HideAction).FullName, new Properties(component))
+            : base(typeof(HideLookupAction).FullName, new Properties(component))
         {
         }
 

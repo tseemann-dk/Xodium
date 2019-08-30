@@ -13,13 +13,13 @@ namespace Sidekick.Features.Shopper.Actions
         public static IAction ChangeSearchText(string newSearchText) => new ChangeSearchTextAction(newSearchText);
         public static IAction Commit() => new PickComponentAction();
         public static IAction ComponentPicked(IComponentDescriptor component) => new ComponentPickedAction(component);
-        public static IAction Hide() => new HideAction();
+        public static IAction HideLookup() => new HideLookupAction();
         public static IAction Search(string searchText) => new SearchAction(searchText);
         public static IAction SearchStarting() => new SearchStartingAction();
         public static IAction SearchCompleted(IEnumerable<IComponentDescriptor> result) => new SearchCompletedAction(result);
         public static IAction SearchFailed(Exception exception) => new SearchFailedAction(exception);
         public static IAction SelectComponent(string componentNumber) => new SelectComponentAction(componentNumber);
-        public static IAction Show() => new ShowAction();
+        public static IAction ShowLookup() => new ShowLookupAction();
 
         /*
         public static ActionsCreator<AppState> Search()

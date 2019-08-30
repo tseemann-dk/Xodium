@@ -11,7 +11,7 @@ namespace Sidekick.Features.Shopper.Actions
     public static class ComponentLookupActionCreator
     {
         public static IAction ChangeSearchText(string newSearchText) => new ChangeSearchTextAction(newSearchText);
-        public static IAction Commit() => new CommitAction();
+        public static IAction Commit() => new PickComponentAction();
         public static IAction ComponentPicked(IComponentDescriptor component) => new ComponentPickedAction(component);
         public static IAction Hide() => new HideAction();
         public static IAction Search(string searchText) => new SearchAction(searchText);

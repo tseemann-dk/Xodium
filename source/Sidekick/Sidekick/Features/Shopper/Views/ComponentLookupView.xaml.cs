@@ -32,6 +32,9 @@ namespace Sidekick.Features.Shopper.Views
                 this.BindCommand(ViewModel, vm => vm.SearchCommand, v => v.SearchButton)
                     .DisposeWith(disposable);
 
+                this.OneWayBind(ViewModel, vm => vm.ErrorMessage, v => v.ErrorMessageLabel.Text)
+                    .DisposeWith(disposable);
+
                 Observable
                     .FromEventPattern<TextChangedEventArgs>(SearchTextEntry, nameof(SearchBar.TextChanged))
                     .Select(x => x.EventArgs.NewTextValue)

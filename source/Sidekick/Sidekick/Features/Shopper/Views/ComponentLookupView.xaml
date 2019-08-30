@@ -17,6 +17,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <!-- Search Bar -->
@@ -32,7 +33,10 @@
 
         <!-- Result View -->
         <Grid Grid.Row="1">
-            <ListView x:Name="FoundComponentsListView" ItemSelected="FoundComponentsListView_ItemSelected">
+            <ListView 
+                x:Name="FoundComponentsListView" 
+                ItemSelected="FoundComponentsListView_ItemSelected"
+                SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -49,6 +53,10 @@
                 <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsRunning="True"/>
             </Grid>
         </Grid>
+
+        <StackLayout Grid.Row="2">
+            <Label x:Name="ErrorMessageLabel" TextColor="Red"/>
+        </StackLayout>
         
     </Grid>
 

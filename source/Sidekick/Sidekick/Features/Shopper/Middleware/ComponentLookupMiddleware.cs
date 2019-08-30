@@ -40,10 +40,12 @@ namespace Sidekick.Features.Shopper.Middleware
             store.Dispatch(ComponentLookupActionCreator.SearchStarting());
             try
             {
-                // Search for action.Payload.SearchText
-                await Task.Delay(2000);
+                var searchText = action.Payload.SearchText;
 
-                //throw new InvalidOperationException("Not supported");
+                if (searchText.Length <= 3)
+                    throw new InvalidOperationException($"Search text \"{searchText}\" is too short");
+
+                await Task.Delay(2000);
 
                 store.Dispatch(ComponentLookupActionCreator.SearchCompleted(new[]
                 {

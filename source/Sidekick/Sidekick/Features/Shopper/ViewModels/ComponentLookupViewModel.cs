@@ -19,6 +19,7 @@ namespace Sidekick.Features.Shopper.ViewModels
         private ComponentDescriptorViewModel selectedComponent;
         private bool isSearching;
         private bool isVisible;
+        private string errorMessage;
         private string searchText;
 
         public ComponentLookupViewModel(IObservable<ComponentLookup> model, IExecutionEnvironment executionEnvironment) 
@@ -36,6 +37,12 @@ namespace Sidekick.Features.Shopper.ViewModels
                 .SelectMany(ApplyState)
                 .SubscribeOn(RxApp.MainThreadScheduler)
                 .Subscribe();
+        }
+
+        public string ErrorMessage
+        {
+            get => errorMessage;
+            set => this.RaiseAndSetIfChanged(ref errorMessage, value);
         }
 
         public IReadOnlyList<ComponentDescriptorViewModel> FoundComponents
@@ -70,6 +77,7 @@ namespace Sidekick.Features.Shopper.ViewModels
         {
             IsSearching = state.IsSearching;
             SearchText = state.SearchText;
+            ErrorMessage = state.SearchError;
 
             if (state.FoundComponents != lastFoundComponents)
             {

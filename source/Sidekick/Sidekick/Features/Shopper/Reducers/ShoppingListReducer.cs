@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Sidekick.Features.Shopper.Actions.ShoppingList;
 using Sidekick.Features.Shopper.Models;
 using Xodium.Flow;
-using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Features.Shopper.Reducers
 {

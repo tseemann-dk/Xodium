@@ -13,14 +13,14 @@ namespace Sidekick.Features.Shopper.Middleware
         {
             return store => next => action =>
             {
-                if (action is PickComponentAction)
-                {
-                    PickComponent(store);
-                }
-
                 if (action is SearchAction a)
                 {
                     return Search(store, a);
+                }
+
+                if (action is PickComponentAction)
+                {
+                    PickComponent(store);
                 }
 
                 return next(action);

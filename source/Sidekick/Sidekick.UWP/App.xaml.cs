@@ -8,6 +8,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Xodium.Redux;
 
 namespace Sidekick.UWP
 {
@@ -29,14 +30,18 @@ namespace Sidekick.UWP
                 Xamarin.Forms.Forms.Init(e);
                 Rg.Plugins.Popup.Popup.Init();
 
-                var bootstrapper = new UwpBootstrapper((reducer, state, middlewares) => isDebugging
-                    ? new TimeMachineStore<AppState>(reducer, state, middlewares) as IStore<AppState>
-                    : new Store<AppState>(reducer, state, middlewares));
+                var bootstrapper = new UwpBootstrapper((reducer, state, middlewares) => 
+                    new ReduxStore<AppState>(
+                        r => isDebugging
+                            ? new TimeMachineStore<AppState>(r, state, middlewares) as IStore<AppState>
+                            : new Store<AppState>(r, state, middlewares),
+                        reducer
+                    ));
 
                 Startup.Init(bootstrapper);
 
-                rootFrame = isDebugging
-                    ? new DevFrame { TimeMachineStore = (IStore<TimeMachineState>)bootstrapper.Store }
+                rootFrame = isDebugging && bootstrapper.Store is ReduxStore<AppState> rs
+                    ? new DevFrame { TimeMachineStore = (IStore<TimeMachineState>)rs.Store }
                     : new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;

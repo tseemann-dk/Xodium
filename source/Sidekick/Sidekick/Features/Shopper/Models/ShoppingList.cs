@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -52,6 +53,11 @@ namespace Sidekick.Features.Shopper.Models
             }
 
             return ReplaceNode(parentGroup, newParentGroup);
+        }
+
+        public IShoppingGroup FindGroup(string groupId)
+        {
+            return Content.FindNode<IShoppingGroup>(x => x.Id == groupId);
         }
 
         public ShoppingList ChangeGroupTitle(IShoppingGroup group, string newTitle)

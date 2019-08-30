@@ -32,7 +32,10 @@ namespace Sidekick.Features.Shopper.ViewModels
             CommitCommand = ReactiveCommand.Create(() => Commit());
             SearchCommand = ReactiveCommand.Create(() => Search(), canSearch);
 
-            Model.Subscribe(state => ApplyState(state));
+            Model
+                .SelectMany(ApplyState)
+                .SubscribeOn(RxApp.MainThreadScheduler)
+                .Subscribe();
         }
 
         public IReadOnlyList<ComponentDescriptorViewModel> FoundComponents
@@ -63,7 +66,7 @@ namespace Sidekick.Features.Shopper.ViewModels
         public ReactiveCommand<Unit, Unit> CommitCommand { get; }
         public ReactiveCommand<Unit, Task<Unit>> SearchCommand { get; }
 
-        private void ApplyState(ComponentLookup state)
+        private async Task<Unit> ApplyState(ComponentLookup state)
         {
             IsSearching = state.IsSearching;
             SearchText = state.SearchText;
@@ -77,10 +80,11 @@ namespace Sidekick.Features.Shopper.ViewModels
             }
 
             SelectedComponent = FoundComponents?.FirstOrDefault(x => x.ComponentNumber == state.SelectedComponentNumber);
-            SetVisible(state.IsVisible);
+            await SetVisible(state.IsVisible);
+            return Unit.Default;
         }
 
-        private async void SetVisible(bool value)
+        private async Task SetVisible(bool value)
         {
             if (value == isVisible) return;
 
@@ -121,7 +125,11 @@ namespace Sidekick.Features.Shopper.ViewModels
 
         public async Task<Unit> Search()
         {
-            await this.DispatchActionsAsync(Actions.ComponentLookupActionCreator.Search());
+            //await this.DispatchActionsAsync(Actions.ComponentLookupActionCreator.Search());
+
+            this.DispatchAction(Actions.ComponentLookupActionCreator.Search(SearchText));
+            await Task.CompletedTask;
+
             return Unit.Default;
         }
 

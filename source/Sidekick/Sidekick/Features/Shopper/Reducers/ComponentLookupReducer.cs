@@ -1,14 +1,14 @@
-﻿using Sidekick.Features.Shopper.Actions.ComponentLookup;
-using Sidekick.Features.Shopper.Models;
-using Sidekick.State;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Sidekick.Features.Shopper.Actions.ComponentLookup;
+using Sidekick.Features.Shopper.Models;
+using Xodium.Flow;
 
 namespace Sidekick.Features.Shopper.Reducers
 {
     public static class ComponentLookupReducer
     {
-        private static readonly Dictionary<Type, Func<AppState, object, AppState>> handlers = new Dictionary<Type, Func<AppState, object, AppState>>
+        private static readonly Dictionary<Type, Reducer<ComponentLookup>> handlers = new Dictionary<Type, Reducer<ComponentLookup>>
         {
             [typeof(ChangeSearchTextAction)] = (s, a) => ChangeSearchText(s, (ChangeSearchTextAction)a),
             [typeof(SearchCompletedAction)] = (s, a) => SearchCompleted(s, (SearchCompletedAction)a),
@@ -19,41 +19,34 @@ namespace Sidekick.Features.Shopper.Reducers
             [typeof(HideAction)] = (s, a) => ChangeIsVisible(s, false)
         };
 
-        public static AppState Execute(AppState state, object action) =>
-            handlers.TryGetValue(action.GetType(), out var handler) ? handler.Invoke(state, action) : state;
+        public static ComponentLookup Execute(ComponentLookup state, object action) =>
+            handlers.TryGetValue(action.GetType(), out var handler) ? handler(state, action) : state;
 
-        private static AppState ChangeSearchText(AppState state, ChangeSearchTextAction action) =>
-            ReduceComponentLookup(state, x => x
-                .WithSearchText(action.Payload.NewSearchText));
+        private static ComponentLookup ChangeSearchText(ComponentLookup state, ChangeSearchTextAction action) => 
+            state.WithSearchText(action.Payload.NewSearchText);
 
-        private static AppState ChangeIsVisible(AppState state, bool isVisible) =>
-            ReduceComponentLookup(state, x => x
-                .WithIsVisible(isVisible));
+        private static ComponentLookup ChangeIsVisible(ComponentLookup state, bool isVisible) =>
+            state.WithIsVisible(isVisible);
 
-        private static AppState SearchCompleted(AppState state, SearchCompletedAction action) =>
-            ReduceComponentLookup(state, x => x
+        private static ComponentLookup SearchCompleted(ComponentLookup state, SearchCompletedAction action) =>
+            state
                 .WithFoundComponents(action.Payload.Result)
                 .WithSearchError(null)
-                .WithIsSearching(false));
+                .WithIsSearching(false);
 
-        private static AppState SearchFailed(AppState state, SearchFailedAction action) =>
-            ReduceComponentLookup(state, x => x
+        private static ComponentLookup SearchFailed(ComponentLookup state, SearchFailedAction action) =>
+            state
                 .WithFoundComponents(null)
                 .WithSearchError(action.Payload.Exception.Message)
-                .WithIsSearching(false));
+                .WithIsSearching(false);
 
-        private static AppState SearchStarting(AppState state) =>
-            ReduceComponentLookup(state, x => x
+        private static ComponentLookup SearchStarting(ComponentLookup state) =>
+            state
                 .WithSearchError(null)
                 .WithFoundComponents(null)
-                .WithIsSearching(true));
+                .WithIsSearching(true);
 
-        private static AppState SelectComponent(AppState state, SelectComponentAction action) =>
-            ReduceComponentLookup(state, x => x
-                .WithSelectedComponentNumber(action.Payload.ComponentNumber));
-
-        private static AppState ReduceComponentLookup(AppState state, Func<ComponentLookup, ComponentLookup> reduce) =>
-            state.WithShoppingSession(state.ShoppingSession
-                .WithComponentLookup(reduce(state.ShoppingSession.ComponentLookup)));
+        private static ComponentLookup SelectComponent(ComponentLookup state, SelectComponentAction action) =>
+            state.WithSelectedComponentNumber(action.Payload.ComponentNumber);
     }
 }

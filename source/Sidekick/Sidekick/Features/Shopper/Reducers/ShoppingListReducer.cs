@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using Sidekick.Features.Shopper.Actions.ShoppingList;
 using Sidekick.Features.Shopper.Models;
-using Sidekick.State;
+using Xodium.Flow;
 using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Features.Shopper.Reducers
 {
     public static class ShoppingListReducer
     {
-        private static readonly Dictionary<Type, Func<AppState, object, AppState>> handlers = new Dictionary<Type, Func<AppState, object, AppState>>
+        private static readonly Dictionary<Type, Reducer<ShoppingList>> handlers = new Dictionary<Type, Reducer<ShoppingList>>
         {
             [typeof(AddComponentAction)] = (s, a) => AddComponent(s, (AddComponentAction)a),
             [typeof(AddGroupAction)] = (s, a) => AddGroup(s, (AddGroupAction)a),
@@ -20,56 +20,28 @@ namespace Sidekick.Features.Shopper.Reducers
             [typeof(MoveNodeUpAction)] = (s, a) => MoveNodeUp(s, (MoveNodeUpAction)a),
         };
 
-        public static AppState Execute(AppState state, object action) =>
-            handlers.TryGetValue(action.GetType(), out var handler) ? handler.Invoke(state, action) : state;
+        public static ShoppingList Execute(ShoppingList state, object action) =>
+            handlers.TryGetValue(action.GetType(), out var handler) ? handler(state, action) : state;
 
-        private static AppState AddComponent(AppState state, AddComponentAction action) =>
-            ReduceShoppingList(state, x => x
-                .AddComponent(action.Payload.Component));
+        private static ShoppingList AddComponent(ShoppingList state, AddComponentAction action) =>
+            state.AddComponent(action.Payload.Component);
 
-        private static AppState AddGroup(AppState state, AddGroupAction action) =>
-            ReduceShoppingSession(state, x => x
-                .WithShoppingList(x.ShoppingList
-                    .AddNode(x.GetCurrentGroup(), action.Payload.Group, action.Payload.InsertAfterNodeId))
-                .WithFocusedNodeId(action.Payload.Group.Id));
+        private static ShoppingList AddGroup(ShoppingList state, AddGroupAction action) =>
+            state.AddNode(state.FindGroup(action.Payload.ParentGroupId), action.Payload.Group, action.Payload.InsertAfterNodeId);
 
-        private static AppState AddItem(AppState state, AddItemAction action) =>
-            ReduceShoppingSession(state, x => x
-                .WithShoppingList(x.ShoppingList
-                    .AddNode(x.GetCurrentGroup(), action.Payload.Item, action.Payload.InsertAfterNodeId))
-                .WithFocusedNodeId(action.Payload.Item.Id));
+        private static ShoppingList AddItem(ShoppingList state, AddItemAction action) =>
+            state.AddNode(state.FindGroup(action.Payload.ParentGroupId), action.Payload.Item, action.Payload.InsertAfterNodeId);
 
-        private static AppState ChangeGroupTitle(AppState state, ChangeGroupTitleAction action) => 
-            ReduceShoppingList(state, x => x
-                .ChangeGroupTitle(state.ShoppingSession.GetCurrentGroup(), action.Payload.NewTitle));
+        private static ShoppingList ChangeGroupTitle(ShoppingList state, ChangeGroupTitleAction action) => 
+            state.ChangeGroupTitle(state.FindGroup(action.Payload.GroupId), action.Payload.NewTitle);
 
-        private static AppState DeleteNode(AppState state, DeleteNodeAction action)
-        {
-            var session = state.ShoppingSession;
-            var currentGroup = session.GetCurrentGroup();
-            var node = currentGroup.GetChildNode(action.Payload.NodeId) as IShoppingNode;
-            var neighborId = (currentGroup.GetNextNode(node) ?? currentGroup.GetPreviousNode(node))?.Id;
+        private static ShoppingList DeleteNode(ShoppingList state, DeleteNodeAction action) =>
+            state.DeleteNode(state.FindGroup(action.Payload.ParentGroupId), action.Payload.NodeId);
 
-            return ReduceShoppingSession(state, x => x
-                .WithShoppingList(x.ShoppingList
-                    .DeleteNode(currentGroup, node))
-                .WithFocusedNodeId(neighborId));
-        }
+        private static ShoppingList MoveNodeDown(ShoppingList state, MoveNodeDownAction action) =>
+            state.MoveNodeDown(state.FindGroup(action.Payload.ParentGroupId), action.Payload.NodeId);
 
-        private static AppState MoveNodeDown(AppState state, MoveNodeDownAction action) =>
-            ReduceShoppingList(state, x => x
-                .MoveNodeDown(state.ShoppingSession.GetCurrentGroup(), action.Payload.NodeId));
-
-        private static AppState MoveNodeUp(AppState state, MoveNodeUpAction action) =>
-            ReduceShoppingList(state, x => x
-                .MoveNodeUp(state.ShoppingSession.GetCurrentGroup(), action.Payload.NodeId));
-
-        private static AppState ReduceShoppingList(AppState state, Func<ShoppingList, ShoppingList> reduce) =>
-            ReduceShoppingSession(state, x => x
-                .WithShoppingList(reduce(x.ShoppingList)));
-
-        private static AppState ReduceShoppingSession(AppState state, Func<ShoppingSession, ShoppingSession> reduce) =>
-            state.WithShoppingSession(reduce(state.ShoppingSession));
-
+        private static ShoppingList MoveNodeUp(ShoppingList state, MoveNodeUpAction action) =>
+            state.MoveNodeUp(state.FindGroup(action.Payload.ParentGroupId), action.Payload.NodeId);
     }
 }

@@ -1,20 +1,10 @@
-﻿using Redux;
-using Sidekick.Features.Shopper.Middleware;
-using Sidekick.Features.Shopper.Reducers;
+﻿using Sidekick.Features.Shopper.Middleware;
 
 namespace Sidekick.State
 {
     static class StoreConfiguration
     {
-        public static readonly Reducer<AppState>[] Reducers =
-        {
-            GlobalStateReducer.Execute,
-            ShoppingSessionReducer.Execute,
-            ShoppingListReducer.Execute,
-            ComponentLookupReducer.Execute
-        };
-
-        public static readonly Middleware<AppState>[] Middlewares =
+        public static readonly Redux.Middleware<AppState>[] Middlewares =
         {
             ComponentLookupMiddleware.CreateMiddleware(),
             ShoppingListMiddleware.CreateMiddleware()

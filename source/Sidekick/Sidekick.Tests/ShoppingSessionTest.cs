@@ -1,21 +1,25 @@
 using System;
 using FluentAssertions;
-using Redux;
 using Sidekick.Features.Shopper.Actions.ShoppingList;
 using Sidekick.Features.Shopper.Actions.ShoppingSession;
 using Sidekick.Features.Shopper.Models;
 using Sidekick.State;
+using Xodium.Flow;
+using Xodium.Redux;
 using Xunit;
 
 namespace Sidekick.Tests
 {
     public class ShoppingSessionTest
     {
-        private readonly Store<AppState> store;
+        private readonly IStore<AppState> store;
 
         public ShoppingSessionTest()
         {
-            store = new Store<AppState>(AppStateReducer.Execute, AppStateGenerator.GenerateDefaultState());
+            store = new ReduxStore<AppState>(
+                r => new Redux.Store<AppState>(r, AppStateGenerator.GenerateDefaultState()), 
+                AppStateReducer.Execute
+            );
         }
 
         [Fact]

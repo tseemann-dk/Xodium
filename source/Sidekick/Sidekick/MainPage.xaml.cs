@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Reactive.Linq;
 using Newtonsoft.Json;
-using Redux;
 using Redux.DevTools;
-using Redux.Reactive;
 using Sidekick.State;
 using Sidekick.Features.Shopper.ViewModels;
 using Sidekick.Features.Shopper.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xodium.Redux;
+using Xodium.Flow;
 
 namespace Sidekick
 {
@@ -21,7 +21,7 @@ namespace Sidekick
             InitializeComponent();
 
             var environment = Startup.ExecutionEnvironment;
-            var store = environment.GetService<IStore<AppState>>();
+            var store = environment.GetService<IStore>() as IStore<AppState>;
 
             var isDebugging =
                 System.Diagnostics.Debugger.IsAttached &&
@@ -29,9 +29,13 @@ namespace Sidekick
 
             DebuggerView.IsVisible = isDebugging;
             RightColumn.Width = isDebugging ? GridLength.Star : new GridLength(0);
-            TimeMachineSection.BindingContext = store as TimeMachineStore<AppState>;
 
-            var appStateChanges = store.ObserveState();
+            if (store is ReduxStore<AppState> s)
+            {
+                TimeMachineSection.BindingContext = s.Store as TimeMachineStore<AppState>;
+            }
+
+            var appStateChanges = store.StateChanges;
 
             var shoppingSessionChanges = appStateChanges
                 .Select(state => state.ShoppingSession)

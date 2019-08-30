@@ -1,5 +1,4 @@
 ﻿using System;
-using Redux;
 using Sidekick.Features.Shopper.ViewModels;
 using Sidekick.Features.Shopper.Views;
 using Sidekick.State;
@@ -12,7 +11,7 @@ using Xodium.Redux;
 
 namespace Sidekick
 {
-    public delegate IStore<T> StoreProvider<T>(Reducer<T> reducer, T state, Middleware<T>[] middlewares);
+    public delegate IStore<TState> StoreProvider<TState>(Reducer<TState> reducer, TState state, Redux.Middleware<TState>[] middlewares);
 
     public class Bootstrapper : BootstrapperBase
     {
@@ -20,8 +19,10 @@ namespace Sidekick
 
         public Bootstrapper(StoreProvider<AppState> storeProvider = null)
         {
-            this.storeProvider = storeProvider ?? ((reducer, state, middlewares) => 
-                new Store<AppState>(reducer, state, middlewares));
+            StoreProvider<AppState> p = (reducer, state, middlewares) =>
+                new ReduxStore<AppState>(r => new Redux.Store<AppState>(r, state, middlewares), reducer);
+
+            this.storeProvider = storeProvider ?? p;
         }
 
         public IStore<AppState> Store { get; private set; }
@@ -53,11 +54,8 @@ namespace Sidekick
                 AppStateGenerator.GenerateSampleState(), 
                 StoreConfiguration.Middlewares);
 
-            var dispatcher = new ReduxDispatcher<AppState>(Store);
-
             registry.RegisterInstance(Store);
-            registry.RegisterInstance<IActionDispatcher>(dispatcher);
-            registry.RegisterInstance<IActionDispatcher<AppState>>(dispatcher);
+            registry.RegisterInstance<IStore>(Store);
         }
     }
 }

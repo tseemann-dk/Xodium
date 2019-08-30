@@ -1,12 +1,11 @@
-﻿using Redux;
-using Sidekick.Features.Shopper.Models;
+﻿using Sidekick.Features.Shopper.Models;
 using Sidekick.State;
 
 namespace Sidekick.Features.Shopper.Middleware
 {
     public static class ShoppingListMiddleware
     {
-        public static Middleware<AppState> CreateMiddleware()
+        public static Redux.Middleware<AppState> CreateMiddleware()
         {
             return store => next => action =>
             {

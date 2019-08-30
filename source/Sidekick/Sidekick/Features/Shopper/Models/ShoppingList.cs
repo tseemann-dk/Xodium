@@ -55,6 +55,11 @@ namespace Sidekick.Features.Shopper.Models
             return ReplaceNode(parentGroup, newParentGroup);
         }
 
+        public IComponent FindComponent(IComponentReference reference)
+        {
+            return Components.FirstOrDefault(x => x.EqualsReference(reference));
+        }
+
         public IShoppingGroup FindGroup(string groupId)
         {
             return Content.FindNode<IShoppingGroup>(x => x.Id == groupId);

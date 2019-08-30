@@ -12,7 +12,7 @@ namespace Xodium.Mvvm
 
         void RegisterServices(IDependencyRegistry registry);
 
-        IActionDispatcher ActionDispatcher { get; }
+        IStore Store { get; }
         IClipboardService ClipboardService { get; }
         ICommunicationService CommunicationService { get; }
         IDeviceService DeviceService { get; }

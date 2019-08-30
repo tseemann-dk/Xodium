@@ -12,10 +12,10 @@ namespace Xodium.Mvvm
     public static class NavigationSourceExtensions
     {
         public static void DispatchAction(this INavigationSource self, IAction action) 
-            => self.ExecutionEnvironment.ActionDispatcher.Dispatch(action);
+            => self.ExecutionEnvironment.Store.Dispatch(action);
 
         public static Task DispatchActionsAsync<T>(this INavigationSource self, ActionsCreator<T> actionsCreator) 
-            => self.ExecutionEnvironment.GetService<IActionDispatcher<T>>().DispatchAsync(actionsCreator);
+            => self.ExecutionEnvironment.GetService<IStore<T>>().DispatchAsync(actionsCreator);
 
         public static Task GoBack(this INavigationSource self) 
             => self.ExecutionEnvironment.NavigationService.GoBack();

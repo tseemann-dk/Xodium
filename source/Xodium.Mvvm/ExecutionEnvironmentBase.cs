@@ -9,7 +9,7 @@ namespace Xodium.Mvvm
     {
         private readonly Func<IDependencyResolver> dependencyResolver;
 
-        private readonly Lazy<IActionDispatcher> actionDispatcher;
+        private readonly Lazy<IStore> store;
         private readonly Lazy<IClipboardService> clipboardService;
         private readonly Lazy<ICommunicationService> communicationService;
         private readonly Lazy<IDeviceService> deviceService;
@@ -31,7 +31,7 @@ namespace Xodium.Mvvm
         {
             this.dependencyResolver = dependencyResolver ?? throw new ArgumentNullException(nameof(dependencyResolver));
 
-            actionDispatcher = new Lazy<IActionDispatcher>(() => GetService<IActionDispatcher>());
+            store = new Lazy<IStore>(() => GetService<IStore>());
             clipboardService = new Lazy<IClipboardService>(() => GetService<IClipboardService>());
             communicationService = new Lazy<ICommunicationService>(() => GetService<ICommunicationService>());
             deviceService = new Lazy<IDeviceService>(() => GetService<IDeviceService>());
@@ -50,7 +50,7 @@ namespace Xodium.Mvvm
             synchronizerService = new Lazy<ISynchronizerService>(() => GetService<ISynchronizerService>());
         }
 
-        public virtual IActionDispatcher ActionDispatcher => actionDispatcher.Value;
+        public virtual IStore Store => store.Value;
         public virtual IClipboardService ClipboardService => clipboardService.Value;
         public virtual IDeviceService DeviceService => deviceService.Value;
         public virtual ICommunicationService CommunicationService => communicationService.Value;

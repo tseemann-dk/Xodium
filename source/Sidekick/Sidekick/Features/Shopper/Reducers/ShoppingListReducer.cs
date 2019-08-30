@@ -26,21 +26,41 @@ namespace Sidekick.Features.Shopper.Reducers
             state.AddComponent(action.Payload.Component);
 
         private static ShoppingList AddGroup(ShoppingList state, AddGroupAction action) =>
-            state.AddNode(state.FindGroup(action.Payload.ParentGroupId), action.Payload.Group, action.Payload.InsertAfterNodeId);
+            state.AddNode(
+                state.FindGroup(action.Payload.ParentGroupId), 
+                action.Payload.Group, 
+                action.Payload.InsertAfterNodeId
+            );
 
         private static ShoppingList AddItem(ShoppingList state, AddItemAction action) =>
-            state.AddNode(state.FindGroup(action.Payload.ParentGroupId), action.Payload.Item, action.Payload.InsertAfterNodeId);
+            state.AddNode(
+                state.FindGroup(action.Payload.ParentGroupId), 
+                action.Payload.Item, 
+                action.Payload.InsertAfterNodeId
+            );
 
         private static ShoppingList ChangeGroupTitle(ShoppingList state, ChangeGroupTitleAction action) => 
-            state.ChangeGroupTitle(state.FindGroup(action.Payload.GroupId), action.Payload.NewTitle);
+            state.ChangeGroupTitle(
+                state.FindGroup(action.Payload.GroupId), 
+                action.Payload.NewTitle
+            );
 
         private static ShoppingList DeleteNode(ShoppingList state, DeleteNodeAction action) =>
-            state.DeleteNode(state.FindGroup(action.Payload.ParentGroupId), action.Payload.NodeId);
+            state.DeleteNode(
+                state.FindGroup(action.Payload.ParentGroupId), 
+                action.Payload.NodeId
+            );
 
         private static ShoppingList MoveNodeDown(ShoppingList state, MoveNodeDownAction action) =>
-            state.MoveNodeDown(state.FindGroup(action.Payload.ParentGroupId), action.Payload.NodeId);
+            state.MoveNodeDown(
+                state.FindGroup(action.Payload.ParentGroupId), 
+                action.Payload.NodeId
+            );
 
         private static ShoppingList MoveNodeUp(ShoppingList state, MoveNodeUpAction action) =>
-            state.MoveNodeUp(state.FindGroup(action.Payload.ParentGroupId), action.Payload.NodeId);
+            state.MoveNodeUp(
+                state.FindGroup(action.Payload.ParentGroupId), 
+                action.Payload.NodeId
+            );
     }
 }

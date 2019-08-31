@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Sidekick.Shopper.Models;
 
@@ -6,18 +7,30 @@ namespace Sidekick.Shopper.eBay
 {
     public class eBayShop : IShop
     {
+        private readonly List<ComponentDescriptor> components;
+
+        public eBayShop()
+        {
+            components = CreateComponents();
+        }
+
         public ShopIdentity Identity { get; } = new ShopIdentity("eBay");
 
         public Task<IReadOnlyList<IComponentDescriptor>> FindComponents(string searchText)
         {
-            var components = new List<IComponentDescriptor> 
-            {
-                new ComponentDescriptor(new ComponentReference(Identity, "EB-0001"), "eBay Component 1", 1.99),
-                new ComponentDescriptor(new ComponentReference(Identity, "EB-0002"), "eBay Component 2", 2.99),
-                new ComponentDescriptor(new ComponentReference(Identity, "EB-0003"), "eBay Component 3", 3.99)
-            };
+            var matches = components
+                .Where(x => x.Text.Contains(searchText))
+                .ToList();
 
-            return Task.FromResult<IReadOnlyList<IComponentDescriptor>>(components);
+            return Task.FromResult<IReadOnlyList<IComponentDescriptor>>(matches);
+        }
+
+        private List<ComponentDescriptor> CreateComponents()
+        {
+            return Enumerable
+                .Range(1, 100)
+                .Select(x => ComponentDescriptor.Create(Identity, $"EB-{x}", $"eBay Component {x}", x + .99))
+                .ToList();
         }
     }
 }

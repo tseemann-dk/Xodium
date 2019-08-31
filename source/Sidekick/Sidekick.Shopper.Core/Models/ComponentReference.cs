@@ -11,7 +11,10 @@ namespace Sidekick.Shopper.Models
         }
 
         public static ComponentReference Create(string shopId, string componentNumber) =>
-            new ComponentReference(ShopIdentity.Create(shopId), componentNumber);
+            Create(ShopIdentity.Create(shopId), componentNumber);
+
+        public static ComponentReference Create(ShopIdentity shopIdentity, string componentNumber) =>
+            new ComponentReference(shopIdentity, componentNumber);
 
         public ShopIdentity Shop { get; }
         public string ComponentNumber { get; }

@@ -18,6 +18,15 @@
                 text, price
             );
 
+        public static ComponentDescriptor Create(
+            ShopIdentity shopIdentity, string componentNumber,
+            string text, double price = 0)
+            =>
+            new ComponentDescriptor(
+                ComponentReference.Create(shopIdentity, componentNumber),
+                text, price
+            );
+
         public IComponentReference Reference { get; }
         public string Text { get; }
         public double Price { get; }

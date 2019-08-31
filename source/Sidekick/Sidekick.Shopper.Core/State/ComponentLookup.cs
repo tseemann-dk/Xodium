@@ -34,7 +34,9 @@ namespace Sidekick.Shopper.State
         public string SearchText { get; }
         public string SelectedComponentNumber { get; }
 
-        public IComponentDescriptor GetSelectedComponent() => SelectedComponentNumber == null ? null : FoundComponents?.FirstOrDefault(x => x.Reference.ComponentNumber == SelectedComponentNumber);
+        public IComponentDescriptor GetSelectedComponent() => 
+            SelectedComponentNumber == null ? null : 
+            FoundComponents?.FirstOrDefault(x => x.Reference.ComponentNumber == SelectedComponentNumber);
 
         public ComponentLookup WithFoundComponents(IReadOnlyCollection<IComponentDescriptor> foundComponents) => 
             foundComponents == FoundComponents ? this :

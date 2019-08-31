@@ -1,8 +1,9 @@
 using System;
 using FluentAssertions;
-using Sidekick.Features.Shopper.Actions.ShoppingList;
-using Sidekick.Features.Shopper.Actions.ShoppingSession;
-using Sidekick.Features.Shopper.Models;
+using Sidekick.Reducers;
+using Sidekick.Shopper.Actions.ShoppingList;
+using Sidekick.Shopper.Actions.ShoppingSession;
+using Sidekick.Shopper.Models;
 using Sidekick.State;
 using Xodium.Flow;
 using Xodium.Redux;

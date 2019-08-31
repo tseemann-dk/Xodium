@@ -30,6 +30,10 @@
     <ProjectReference Include="..\..\Xodium.Platform.Xamarin\Xodium.Platform.Xamarin.csproj" />
     <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj" />
     <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj" />
+    <ProjectReference Include="..\Sidekick.Core\Sidekick.Core.csproj" />
+    <ProjectReference Include="..\Sidekick.Shopper.Core\Sidekick.Shopper.Core.csproj" />
+    <ProjectReference Include="..\Sidekick.Shopper.eBay\Sidekick.Shopper.eBay.csproj" />
+    <ProjectReference Include="..\Sidekick.Shopper\Sidekick.Shopper.csproj" />
   </ItemGroup>
 
   <ItemGroup>

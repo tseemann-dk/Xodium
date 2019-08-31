@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ComponentLookupViewBase
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Sidekick.Shopper.Views"
+    xmlns:popup="clr-namespace:Xodium.Platform.Xamarin.Views;assembly=Xodium.Platform.Xamarin"
+    mc:Ignorable="d"
+    x:Class="Sidekick.Shopper.Views.ComponentLookupView"
+    popup:PopupView.OkCommand="{Binding CommitCommand}"
+    popup:PopupView.CancelCommand="{Binding CancelCommand}"
+    HeightRequest="400"
+    WidthRequest="600">
+
+    <Grid RowSpacing="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Search Bar -->
+        <StackLayout Grid.Row="0" Orientation="Horizontal" Spacing="4">
+            <Entry x:Name="SearchTextEntry" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="SearchButton" Text="Search" HorizontalOptions="End"/>
+        </StackLayout>
+        
+        <!--<SearchBar 
+            x:Name="SearchBar" 
+            Grid.Row="0" 
+            SearchCommand="{Binding SearchCommand}"/>-->
+
+        <!-- Result View -->
+        <Grid Grid.Row="1">
+            <ListView 
+                x:Name="FoundComponentsListView" 
+                ItemSelected="FoundComponentsListView_ItemSelected"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ComponentNumber}" HorizontalOptions="Start"/>
+                                <Label Text="{Binding Text}" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="{Binding Price}" HorizontalOptions="End"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid BackgroundColor="White" Opacity="0.5" IsVisible="{Binding IsSearching}">
+                <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsRunning="True"/>
+            </Grid>
+        </Grid>
+
+        <StackLayout Grid.Row="2">
+            <Label x:Name="ErrorMessageLabel" TextColor="Red"/>
+        </StackLayout>
+        
+    </Grid>
+
+</views:ComponentLookupViewBase>

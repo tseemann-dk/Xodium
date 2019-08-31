@@ -182,6 +182,10 @@
       <Project>{4a79797f-8251-4072-9ae4-a79fbd9af10b}</Project>
       <Name>Xodium.Redux</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sidekick.Core\Sidekick.Core.csproj">
+      <Project>{cd0af6fd-7338-4564-9149-22d538074617}</Project>
+      <Name>Sidekick.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sidekick\Sidekick.csproj">
       <Project>{82C93EA4-A7A8-4252-B49A-F2DE9BD77C08}</Project>
       <Name>Sidekick</Name>

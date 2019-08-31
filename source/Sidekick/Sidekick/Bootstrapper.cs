@@ -1,6 +1,8 @@
 ﻿using System;
-using Sidekick.Features.Shopper.ViewModels;
-using Sidekick.Features.Shopper.Views;
+using Sidekick.Reducers;
+using Sidekick.Shopper.Models;
+using Sidekick.Shopper.ViewModels;
+using Sidekick.Shopper.Views;
 using Sidekick.State;
 using Xodium.Flow;
 using Xodium.Injection;
@@ -36,6 +38,7 @@ namespace Sidekick
 
             RegisterStore(registry);
 
+            registry.RegisterInstance<IShop>(new Shopper.eBay.eBayShop());
             registry.RegisterFactory<INavigationService>(resolver => new NavigationService(App.NavigationPage, () => ViewRegistry));
             registry.RegisterFactory<IDialogService>(resolver => new DialogService(App.NavigationPage, () => ViewRegistry));
         }
@@ -52,7 +55,7 @@ namespace Sidekick
             Store = storeProvider(
                 AppStateReducer.Execute, 
                 AppStateGenerator.GenerateSampleState(), 
-                StoreConfiguration.Middlewares);
+                Configuration.Middlewares);
 
             registry.RegisterInstance(Store);
             registry.RegisterInstance<IStore>(Store);

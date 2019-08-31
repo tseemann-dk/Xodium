@@ -120,9 +120,15 @@ namespace Sidekick.Shopper.State
             return WithContent(Content.ReplaceNode(oldNode, newNode));
         }
 
-        public ShoppingList WithTitle(string title) => new ShoppingList(Id, Name, Content.WithTitle(title), Components);
-        public ShoppingList WithContent(IShoppingGroup content) => new ShoppingList(Id, Name, content, Components);
-        public ShoppingList WithComponents(IReadOnlyList<IComponent> components) => new ShoppingList(Id, Name, Content, components);
+        public ShoppingList WithTitle(string title) => 
+            WithContent(Content.WithTitle(title));
+        
+        public ShoppingList WithContent(IShoppingGroup content) => 
+            content == Content ? this : new ShoppingList(Id, Name, content, Components);
+        
+        public ShoppingList WithComponents(IReadOnlyList<IComponent> components) => 
+            components == Components ? this : new ShoppingList(Id, Name, Content, components);
+        
         public override IDocument WithContent(IContainer content) => WithContent(content as IShoppingGroup);
 
         IShoppingList IShoppingList.AddComponent(IComponent component) => AddComponent(component);

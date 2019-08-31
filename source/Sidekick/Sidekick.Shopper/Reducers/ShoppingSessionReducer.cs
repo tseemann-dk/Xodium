@@ -63,7 +63,9 @@ namespace Sidekick.Shopper.Reducers
             if (parentGroupId == null) 
                 return state;
 
-            return state.WithCurrentGroupId(parentGroupId, state.CurrentGroupId);
+            return state
+                .WithCurrentGroupId(parentGroupId)
+                .WithFocusedNodeId(state.CurrentGroupId);
         }
 
         private static ShoppingSession FocusNode(ShoppingSession state, FocusNodeAction action) =>

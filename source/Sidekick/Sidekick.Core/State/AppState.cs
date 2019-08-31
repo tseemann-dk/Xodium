@@ -14,7 +14,10 @@ namespace Sidekick.State
         public GlobalState Global { get; }
         public ShoppingSession ShoppingSession { get; }
 
-        public AppState WithGlobal(GlobalState global) => new AppState(global, ShoppingSession);
-        public AppState WithShoppingSession(ShoppingSession shoppingSession) => new AppState(Global, shoppingSession);
+        public AppState WithGlobal(GlobalState global) => 
+            global == Global ? this : new AppState(global, ShoppingSession);
+
+        public AppState WithShoppingSession(ShoppingSession shoppingSession) => 
+            shoppingSession == ShoppingSession ? this : new AppState(Global, shoppingSession);
     }
 }

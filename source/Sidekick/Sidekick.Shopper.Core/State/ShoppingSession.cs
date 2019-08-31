@@ -20,16 +20,20 @@ namespace Sidekick.Shopper.State
 
         public IShoppingGroup GetCurrentGroup() => ShoppingList.Content.FindNode<IShoppingGroup>(x => x.Id == CurrentGroupId);
 
-        public ShoppingSession WithShoppingList(ShoppingList shoppingList) 
-            => new ShoppingSession(shoppingList, CurrentGroupId, FocusedNodeId, ComponentLookup);
+        public ShoppingSession WithShoppingList(ShoppingList shoppingList) =>
+            shoppingList == ShoppingList ? this :
+            new ShoppingSession(shoppingList, CurrentGroupId, FocusedNodeId, ComponentLookup);
 
-        public ShoppingSession WithComponentLookup(ComponentLookup componentLookup)
-            => new ShoppingSession(ShoppingList, CurrentGroupId, FocusedNodeId, componentLookup);
+        public ShoppingSession WithComponentLookup(ComponentLookup componentLookup) =>
+            componentLookup == ComponentLookup ? this :
+            new ShoppingSession(ShoppingList, CurrentGroupId, FocusedNodeId, componentLookup);
 
-        public ShoppingSession WithCurrentGroupId(string currentGroupId, string focusedNodeId = null) 
-            => new ShoppingSession(ShoppingList, currentGroupId, focusedNodeId, ComponentLookup);
+        public ShoppingSession WithCurrentGroupId(string currentGroupId) =>
+            currentGroupId == CurrentGroupId ? this :
+            new ShoppingSession(ShoppingList, currentGroupId, FocusedNodeId, ComponentLookup);
 
-        public ShoppingSession WithFocusedNodeId(string focusedNodeId) 
-            => new ShoppingSession(ShoppingList, CurrentGroupId, focusedNodeId, ComponentLookup);
+        public ShoppingSession WithFocusedNodeId(string focusedNodeId) =>
+            focusedNodeId == FocusedNodeId ? this :
+            new ShoppingSession(ShoppingList, CurrentGroupId, focusedNodeId, ComponentLookup);
     }
 }

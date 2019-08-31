@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Sidekick.Shopper.Actions;
 using Sidekick.Shopper.Actions.ComponentLookup;
-using Sidekick.Shopper.Models;
 using Sidekick.State;
 
 namespace Sidekick.Shopper.Middleware

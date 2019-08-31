@@ -51,8 +51,6 @@ namespace Sidekick.Shopper.Middleware
                 if (searchText.Length > 10)
                     throw new InvalidOperationException($"Search text \"{searchText}\" is too long");
 
-                //await Task.Delay(2000);
-
                 var components = await shop.FindComponents(searchText);
                 store.Dispatch(ComponentLookupActionCreator.SearchCompleted(components));
             }

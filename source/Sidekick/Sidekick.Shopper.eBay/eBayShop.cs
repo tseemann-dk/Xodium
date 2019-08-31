@@ -16,13 +16,14 @@ namespace Sidekick.Shopper.eBay
 
         public ShopIdentity Identity { get; } = new ShopIdentity("eBay");
 
-        public Task<IReadOnlyList<IComponentDescriptor>> FindComponents(string searchText)
+        public async Task<IReadOnlyList<IComponentDescriptor>> FindComponents(string searchText)
         {
             var matches = components
                 .Where(x => x.Text.Contains(searchText))
                 .ToList();
 
-            return Task.FromResult<IReadOnlyList<IComponentDescriptor>>(matches);
+            await Task.Delay(2000);
+            return matches;
         }
 
         private List<ComponentDescriptor> CreateComponents()

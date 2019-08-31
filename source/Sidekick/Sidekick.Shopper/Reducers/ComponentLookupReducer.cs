@@ -19,7 +19,7 @@ namespace Sidekick.Shopper.Reducers
             [typeof(HideLookupAction)] = (s, a) => ChangeIsVisible(s, false)
         };
 
-        public static ComponentLookup Execute(ComponentLookup state, object action) =>
+        public static ComponentLookup Reduce(ComponentLookup state, object action) =>
             handlers.TryGetValue(action.GetType(), out var handler) ? handler(state, action) : state;
 
         private static ComponentLookup ChangeSearchText(ComponentLookup state, ChangeSearchTextAction action) => 

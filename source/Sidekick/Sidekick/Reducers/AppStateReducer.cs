@@ -5,11 +5,11 @@ namespace Sidekick.Reducers
 {
     public static class AppStateReducer
     {
-        public static AppState Execute(AppState state, object action)
+        public static AppState Reduce(AppState state, object action)
         {
             return state
-                .WithGlobal(GlobalStateReducer.Execute(state.Global, action))
-                .WithShoppingSession(ShoppingSessionReducer.Execute(state.ShoppingSession, action));
+                .WithGlobal(GlobalStateReducer.Reduce(state.Global, action))
+                .WithShoppingSession(ShoppingSessionReducer.Reduce(state.ShoppingSession, action));
         }
     }
 }

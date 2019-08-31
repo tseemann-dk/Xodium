@@ -9,7 +9,7 @@ namespace Sidekick.State
         public static AppState GenerateSampleState()
         {
             return new AppState(
-                new GlobalState(3, 2),
+                new GlobalState(2, 1),
                 BuildShoppingSession(BuildSampleShoppingList())
             );
         }

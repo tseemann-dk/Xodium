@@ -19,7 +19,7 @@ namespace Sidekick.Shopper.Reducers
             [typeof(MoveNodeUpAction)] = (s, a) => MoveNodeUp(s, (MoveNodeUpAction)a),
         };
 
-        public static ShoppingList Execute(ShoppingList state, object action) =>
+        public static ShoppingList Reduce(ShoppingList state, object action) =>
             handlers.TryGetValue(action.GetType(), out var handler) ? handler(state, action) : state;
 
         private static ShoppingList AddComponent(ShoppingList state, AddComponentAction action) =>

@@ -29,10 +29,13 @@ namespace Sidekick.Shopper.Middleware
 
         private static void PickComponent(Redux.IStore<AppState> store)
         {
-            var state = store.GetState();
+            var component = store.GetState().ShoppingSession.ComponentLookup.GetSelectedComponent();
 
-            store.Dispatch(ComponentLookupActionCreator.ComponentPicked(state.ShoppingSession.ComponentLookup.GetSelectedComponent()));
-            store.Dispatch(ComponentLookupActionCreator.HideLookup());
+            if (component != null)
+            {
+                store.Dispatch(ComponentLookupActionCreator.ComponentPicked(component));
+                store.Dispatch(ComponentLookupActionCreator.HideLookup());
+            }
         }
 
         private static async Task Search(Redux.IStore<AppState> store, SearchAction action)

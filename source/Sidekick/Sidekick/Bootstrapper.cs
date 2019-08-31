@@ -53,7 +53,7 @@ namespace Sidekick
         private void RegisterStore(IDependencyRegistry registry)
         {
             Store = storeProvider(
-                AppStateReducer.Execute, 
+                AppStateReducer.Reduce, 
                 AppStateGenerator.GenerateSampleState(), 
                 Configuration.Middlewares);
 

@@ -3,20 +3,20 @@
     public class GlobalState
     {
         public GlobalState()
-            : this(1, 1)
+            : this(0, 0)
         {
         }
 
-        public GlobalState(int nextComponentNumber, int nextGroupNumber)
+        public GlobalState(int componentNumber, int groupNumber)
         {
-            NextComponentNumber = nextComponentNumber;
-            NextGroupNumber = nextGroupNumber;
+            ComponentNumber = componentNumber;
+            GroupNumber = groupNumber;
         }
 
-        public int NextComponentNumber { get; }
-        public int NextGroupNumber { get; }
+        public int ComponentNumber { get; }
+        public int GroupNumber { get; }
 
-        public GlobalState WithNextComponentNumber() => new GlobalState(NextComponentNumber + 1, NextGroupNumber);
-        public GlobalState WithNextGroupNumber() => new GlobalState(NextComponentNumber, NextGroupNumber + 1);
+        public GlobalState WithNextComponentNumber() => new GlobalState(ComponentNumber + 1, GroupNumber);
+        public GlobalState WithNextGroupNumber() => new GlobalState(ComponentNumber, GroupNumber + 1);
     }
 }

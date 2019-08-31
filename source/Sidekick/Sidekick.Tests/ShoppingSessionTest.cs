@@ -1,8 +1,7 @@
 using System;
 using FluentAssertions;
 using Sidekick.Reducers;
-using Sidekick.Shopper.Actions.ShoppingList;
-using Sidekick.Shopper.Actions.ShoppingSession;
+using Sidekick.Shopper.Actions;
 using Sidekick.Shopper.Models;
 using Sidekick.State;
 using Xodium.Flow;
@@ -19,7 +18,7 @@ namespace Sidekick.Tests
         {
             store = new ReduxStore<AppState>(
                 r => new Redux.Store<AppState>(r, AppStateGenerator.GenerateDefaultState()), 
-                AppStateReducer.Execute
+                AppStateReducer.Reduce
             );
         }
 
@@ -31,12 +30,12 @@ namespace Sidekick.Tests
             
             // Add a new group and verify that it is focused
             var newGroup = new ShoppingGroup("G2", "Group 2", 1);
-            store.Dispatch(new AddGroupAction(startGroup.Id, newGroup));
+            store.Dispatch(ShoppingListActionCreator.AddGroup(startGroup.Id, newGroup));
             state = store.GetState();
             state.ShoppingSession.FocusedNodeId.Should().Be(newGroup.Id);
 
             // Enter the new group and verify that it was entered
-            store.Dispatch(new EnterGroupAction(newGroup.Id));
+            store.Dispatch(ShoppingSessionActionCreator.EnterGroup(newGroup.Id));
             state = store.GetState();
             state.ShoppingSession.GetCurrentGroup().Id.Should().Be(newGroup.Id);
         }
@@ -49,12 +48,12 @@ namespace Sidekick.Tests
 
             // Add a new item and verify that it is focused
             var newItem = new ShoppingItem(null, 0);
-            store.Dispatch(new AddItemAction(startGroup.Id, newItem));
+            store.Dispatch(ShoppingListActionCreator.AddItem(startGroup.Id, newItem));
             state = store.GetState();
             state.ShoppingSession.FocusedNodeId.Should().Be(newItem.Id);
 
             // Attempt to enter the new item and verify failure
-            store.Invoking(x => x.Dispatch(new EnterGroupAction(newItem.Id)))
+            store.Invoking(x => x.Dispatch(ShoppingSessionActionCreator.EnterGroup(newItem.Id)))
                 .Should().Throw<InvalidCastException>();
         }
         
@@ -66,16 +65,16 @@ namespace Sidekick.Tests
 
             // Add a new group
             var newGroup = new ShoppingGroup("G2", "Group 2", 1);
-            store.Dispatch(new AddGroupAction(startGroup.Id, newGroup));
+            store.Dispatch(ShoppingListActionCreator.AddGroup(startGroup.Id, newGroup));
 
             // Enter the new group
-            store.Dispatch(new EnterGroupAction(newGroup.Id));
+            store.Dispatch(ShoppingSessionActionCreator.EnterGroup(newGroup.Id));
             state = store.GetState();
             var currentGroup = state.ShoppingSession.GetCurrentGroup();
             currentGroup.Id.Should().Be(newGroup.Id);
 
             // Exit group and verify that we are back at parent
-            store.Dispatch(new ExitGroupAction());
+            store.Dispatch(ShoppingSessionActionCreator.ExitGroup());
             state = store.GetState();
             currentGroup = state.ShoppingSession.GetCurrentGroup();
             currentGroup.Id.Should().Be(startGroup.Id);
@@ -91,7 +90,7 @@ namespace Sidekick.Tests
             var startGroup = state.ShoppingSession.GetCurrentGroup();
             
             // Attempt to exit group
-            store.Dispatch(new ExitGroupAction());
+            store.Dispatch(ShoppingSessionActionCreator.ExitGroup());
 
             // Verify that we have not moved
             state = store.GetState();

@@ -20,10 +20,10 @@ namespace Sidekick.Shopper.Reducers
             [typeof(Actions.ShoppingList.DeleteNodeAction)] = (s, a) => DeleteNode(s, (Actions.ShoppingList.DeleteNodeAction)a)
         };
 
-        public static ShoppingSession Execute(ShoppingSession state, object action) =>
+        public static ShoppingSession Reduce(ShoppingSession state, object action) =>
             (handlers.TryGetValue(action.GetType(), out var handler) ? handler(state, action) : state)
-                .WithComponentLookup(ComponentLookupReducer.Execute(state.ComponentLookup, action))
-                .WithShoppingList(ShoppingListReducer.Execute(state.ShoppingList, action));
+                .WithComponentLookup(ComponentLookupReducer.Reduce(state.ComponentLookup, action))
+                .WithShoppingList(ShoppingListReducer.Reduce(state.ShoppingList, action));
 
         private static ShoppingSession AddGroup(ShoppingSession state, Actions.ShoppingList.AddGroupAction action) =>
             state.WithFocusedNodeId(action.Payload.Group.Id);

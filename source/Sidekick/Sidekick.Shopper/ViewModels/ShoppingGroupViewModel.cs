@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
 using ReactiveUI;
+using Sidekick.Actions;
 using Sidekick.Shopper.Models;
 using Sidekick.Shopper.State;
 using Sidekick.UI.Extensions;
@@ -133,7 +134,9 @@ namespace Sidekick.Shopper.ViewModels
 
         private void AddNewGroup()
         {
-            var groupNumber = this.GetAppState().Global.NextGroupNumber;
+            this.DispatchAction(GlobalActionCreator.GetNextGroupNumber());
+
+            var groupNumber = this.GetAppState().Global.GroupNumber;
             var title = $"Group {groupNumber}";
 
             this.DispatchAction(Actions.ShoppingListActionCreator.AddGroup(

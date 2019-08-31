@@ -10,7 +10,7 @@ namespace Sidekick.Shopper.Reducers
     {
         private static readonly Dictionary<Type, Reducer<ComponentLookup>> handlers = new Dictionary<Type, Reducer<ComponentLookup>>
         {
-            [typeof(ChangeSearchTextAction)] = (s, a) => ChangeSearchText(s, (ChangeSearchTextAction)a),
+            [typeof(SetSearchTextAction)] = (s, a) => ChangeSearchText(s, (SetSearchTextAction)a),
             [typeof(SearchCompletedAction)] = (s, a) => SearchCompleted(s, (SearchCompletedAction)a),
             [typeof(SearchFailedAction)] = (s, a) => SearchFailed(s, (SearchFailedAction)a),
             [typeof(SearchStartingAction)] = (s, _) => SearchStarting(s),
@@ -22,7 +22,7 @@ namespace Sidekick.Shopper.Reducers
         public static ComponentLookup Reduce(ComponentLookup state, object action) =>
             handlers.TryGetValue(action.GetType(), out var handler) ? handler(state, action) : state;
 
-        private static ComponentLookup ChangeSearchText(ComponentLookup state, ChangeSearchTextAction action) => 
+        private static ComponentLookup ChangeSearchText(ComponentLookup state, SetSearchTextAction action) => 
             state.WithSearchText(action.Payload.NewSearchText);
 
         private static ComponentLookup ChangeIsVisible(ComponentLookup state, bool isVisible) =>

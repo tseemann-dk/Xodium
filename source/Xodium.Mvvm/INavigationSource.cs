@@ -14,6 +14,9 @@ namespace Xodium.Mvvm
         public static void DispatchAction(this INavigationSource self, IAction action) 
             => self.ExecutionEnvironment.Store.Dispatch(action);
 
+        public static Task DispatchActionAsync(this INavigationSource self, IAction action)
+            => self.ExecutionEnvironment.Store.DispatchAsync(action);
+
         public static Task DispatchActionsAsync<T>(this INavigationSource self, ActionsCreator<T> actionsCreator) 
             => self.ExecutionEnvironment.GetService<IStore<T>>().DispatchAsync(actionsCreator);
 

@@ -123,13 +123,13 @@ namespace Sidekick.Shopper.ViewModels
 
         private void Commit()
         {
-            this.DispatchAction(Actions.ComponentLookupActionCreator.Commit());
+            this.DispatchAction(Actions.ComponentLookupActionCreator.PickComponent());
         }
 
         public void ChangeSearchText(string value)
         {
             if (value == SearchText) return;
-            this.DispatchAction(Actions.ComponentLookupActionCreator.ChangeSearchText(value));
+            this.DispatchAction(Actions.ComponentLookupActionCreator.SetSearchText(value));
         }
 
         public async Task<Unit> Search()
@@ -137,10 +137,7 @@ namespace Sidekick.Shopper.ViewModels
             //await this.DispatchActionsAsync(Actions.ComponentLookupActionCreator.Search());
 
             var shop = ExecutionEnvironment.GetService<IShop>();
-
-            this.DispatchAction(Actions.ComponentLookupActionCreator.Search(SearchText, shop));
-            await Task.CompletedTask;
-
+            await this.DispatchActionAsync(Actions.ComponentLookupActionCreator.Search(shop));
             return Unit.Default;
         }
 

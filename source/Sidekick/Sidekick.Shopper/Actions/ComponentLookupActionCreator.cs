@@ -8,15 +8,15 @@ namespace Sidekick.Shopper.Actions
 {
     public static class ComponentLookupActionCreator
     {
-        public static IAction ChangeSearchText(string newSearchText) => new ChangeSearchTextAction(newSearchText);
-        public static IAction Commit() => new PickComponentAction();
         public static IAction ComponentPicked(IComponentDescriptor component) => new ComponentPickedAction(component);
         public static IAction HideLookup() => new HideLookupAction();
-        public static IAction Search(string searchText, IShop shop) => new SearchAction(searchText, shop);
+        public static IAction PickComponent() => new PickComponentAction();
+        public static IAction Search(IShop shop, string searchText = null) => new SearchAction(searchText, shop);
         public static IAction SearchStarting() => new SearchStartingAction();
         public static IAction SearchCompleted(IEnumerable<IComponentDescriptor> result) => new SearchCompletedAction(result);
         public static IAction SearchFailed(Exception exception) => new SearchFailedAction(exception);
         public static IAction SelectComponent(string componentNumber) => new SelectComponentAction(componentNumber);
+        public static IAction SetSearchText(string newSearchText) => new SetSearchTextAction(newSearchText);
         public static IAction ShowLookup() => new ShowLookupAction();
 
         /*

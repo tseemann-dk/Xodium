@@ -2,10 +2,10 @@
 
 namespace Sidekick.Shopper.Actions.ComponentLookup
 {
-    public class ChangeSearchTextAction : ReduxAction<ChangeSearchTextAction.Properties>
+    public class SetSearchTextAction : ReduxAction<SetSearchTextAction.Properties>
     {
-        public ChangeSearchTextAction(string newSearchText)
-            : base(typeof(ChangeSearchTextAction).FullName, new Properties(newSearchText))
+        public SetSearchTextAction(string newSearchText)
+            : base(typeof(SetSearchTextAction).FullName, new Properties(newSearchText))
         {
         }
 

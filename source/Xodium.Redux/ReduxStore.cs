@@ -28,7 +28,8 @@ namespace Xodium.Redux
         public IObservable<TState> StateChanges => Store.ObserveState();
 
         public object Dispatch(object action) => Store.Dispatch(action);
-        
+        public Task DispatchAsync(object action) => Dispatch(action) as Task;
+
         public Task DispatchAsync(ActionsCreator<TState> actionsCreator) => 
             Store.DispatchAsync((dispatcher, getState) => actionsCreator(action => dispatcher(action), getState));
         

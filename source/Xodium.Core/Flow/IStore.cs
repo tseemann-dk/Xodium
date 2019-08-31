@@ -6,6 +6,7 @@ namespace Xodium.Flow
     public interface IStore
     {
         object Dispatch(object action);
+        Task DispatchAsync(object action);
         object GetState();
     }
 

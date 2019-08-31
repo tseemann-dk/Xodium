@@ -52,10 +52,16 @@ namespace Sidekick
 
         private void RegisterStore(IDependencyRegistry registry)
         {
+            var middlewares = new[]
+            {
+                Shopper.Middleware.ComponentLookupMiddleware.CreateMiddleware(),
+                Shopper.Middleware.ShoppingListMiddleware.CreateMiddleware()
+            };
+
             Store = storeProvider(
                 AppStateReducer.Reduce, 
                 AppStateGenerator.GenerateSampleState(), 
-                Configuration.Middlewares);
+                middlewares);
 
             registry.RegisterInstance(Store);
             registry.RegisterInstance<IStore>(Store);

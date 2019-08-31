@@ -25,9 +25,6 @@ namespace Sidekick.Shopper.Middleware
             var state = store.GetState();
             var session = state.ShoppingSession;
 
-            //var componentNumber = state.Global.NextComponentNumber;
-            //var component = new Component(ShopIdentity.Internal, componentNumber.ToString(), $"Component {componentNumber}", 10);
-
             var c = action.Payload.Component;
             var component = state.ShoppingSession.ShoppingList.FindComponent(c.Reference);
 

@@ -12,7 +12,7 @@ namespace Sidekick.Shopper.Actions
         public static IAction Commit() => new PickComponentAction();
         public static IAction ComponentPicked(IComponentDescriptor component) => new ComponentPickedAction(component);
         public static IAction HideLookup() => new HideLookupAction();
-        public static IAction Search(string searchText) => new SearchAction(searchText);
+        public static IAction Search(string searchText, IShop shop) => new SearchAction(searchText, shop);
         public static IAction SearchStarting() => new SearchStartingAction();
         public static IAction SearchCompleted(IEnumerable<IComponentDescriptor> result) => new SearchCompletedAction(result);
         public static IAction SearchFailed(Exception exception) => new SearchFailedAction(exception);

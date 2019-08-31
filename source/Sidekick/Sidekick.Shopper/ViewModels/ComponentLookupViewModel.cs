@@ -136,7 +136,9 @@ namespace Sidekick.Shopper.ViewModels
         {
             //await this.DispatchActionsAsync(Actions.ComponentLookupActionCreator.Search());
 
-            this.DispatchAction(Actions.ComponentLookupActionCreator.Search(SearchText));
+            var shop = ExecutionEnvironment.GetService<IShop>();
+
+            this.DispatchAction(Actions.ComponentLookupActionCreator.Search(SearchText, shop));
             await Task.CompletedTask;
 
             return Unit.Default;

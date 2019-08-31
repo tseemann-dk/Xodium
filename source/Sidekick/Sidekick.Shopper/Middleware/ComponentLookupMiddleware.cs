@@ -43,19 +43,26 @@ namespace Sidekick.Shopper.Middleware
             store.Dispatch(ComponentLookupActionCreator.SearchStarting());
             try
             {
+                var shop = action.Payload.Shop;
                 var searchText = action.Payload.SearchText;
+
+                if (shop == null)
+                    throw new InvalidOperationException("Shop is missing");
 
                 if (searchText.Length <= 3)
                     throw new InvalidOperationException($"Search text \"{searchText}\" is too short");
 
                 await Task.Delay(2000);
 
-                store.Dispatch(ComponentLookupActionCreator.SearchCompleted(new[]
-                {
-                    new ComponentDescriptor(new ComponentReference(ShopIdentity.Internal, "C001"), "First Component", 10),
-                    new ComponentDescriptor(new ComponentReference(ShopIdentity.Internal, "C002"), "Second Component", 20),
-                    new ComponentDescriptor(new ComponentReference(ShopIdentity.Internal, "C003"), "Third Component", 30)
-                }));
+                var components = await shop.FindComponents(searchText);
+                store.Dispatch(ComponentLookupActionCreator.SearchCompleted(components));
+
+                //store.Dispatch(ComponentLookupActionCreator.SearchCompleted(new[]
+                //{
+                //    new ComponentDescriptor(new ComponentReference(ShopIdentity.Internal, "C001"), "First Component", 10),
+                //    new ComponentDescriptor(new ComponentReference(ShopIdentity.Internal, "C002"), "Second Component", 20),
+                //    new ComponentDescriptor(new ComponentReference(ShopIdentity.Internal, "C003"), "Third Component", 30)
+                //}));
             }
             catch (Exception exception)
             {

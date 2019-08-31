@@ -59,20 +59,25 @@ namespace Sidekick.Tests
             ComponentLookup.SearchError.Should().NotBeNull();
         }
 
-        //[Fact]
-        //public void PickComponent_WhenNoComponentIsSelected_Fails()
-        //{
-        //    Store.Dispatch(ComponentLookupActionCreator.PickComponent());
-        //}
+        [Fact]
+        public void PickComponent_WhenNoComponentIsSelected_KeepsLookupOpen()
+        {
+            Store.Dispatch(ComponentLookupActionCreator.ShowLookup());
+            Store.Dispatch(ComponentLookupActionCreator.PickComponent());
+            ComponentLookup.IsVisible.Should().BeTrue();
+        }
 
         [Fact]
-        public async Task PickComponent_WhenComponentIsSelected_PicksComponent()
+        public async Task PickComponent_WhenComponentIsSelected_PicksComponentAndClosesLookup()
         {
             var group = ShoppingSession.GetCurrentGroup();
             var nodeCount = group.Nodes.Count;
 
-            // Search 
+            // Show lookup
             Store.Dispatch(ComponentLookupActionCreator.ShowLookup());
+            ComponentLookup.IsVisible.Should().BeTrue();
+
+            // Perform search
             Store.Dispatch(ComponentLookupActionCreator.SetSearchText("Component 5"));
             await Store.DispatchAsync(ComponentLookupActionCreator.Search(shop));
 
@@ -94,6 +99,9 @@ namespace Sidekick.Tests
             // Verify item has correct component
             var item = node as IShoppingItem;
             item.ComponentNumber.Should().Be(component.Reference.ComponentNumber);
+
+            // Verify lookup is hidden
+            ComponentLookup.IsVisible.Should().BeFalse();
         }
     }
 }

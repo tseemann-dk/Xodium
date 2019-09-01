@@ -8,9 +8,14 @@ namespace Sidekick.Tests.TestDoubles
     class ShopFake : IShop
     {
         private const string shopId = "mocked";
-        private readonly List<ComponentDescriptor> components = CreateComponents();
+        private readonly List<ComponentDescriptor> components;
 
-        public ShopIdentity Identity { get; } = new ShopIdentity(shopId);
+        public ShopFake()
+        {
+            components = CreateComponents();
+        }
+
+        public ShopIdentity ShopIdentity { get; } = new ShopIdentity(shopId);
 
         public Task<IReadOnlyList<IComponentDescriptor>> FindComponents(string searchText)
         {
@@ -21,10 +26,10 @@ namespace Sidekick.Tests.TestDoubles
             return Task.FromResult<IReadOnlyList<IComponentDescriptor>>(matches);
         }
 
-        private static List<ComponentDescriptor> CreateComponents()
+        private List<ComponentDescriptor> CreateComponents()
         {
             return Enumerable.Range(1, 10)
-                .Select(i => ComponentDescriptor.Create(shopId, $"C{i}", $"Component {i}", i * 10))
+                .Select(i => ComponentDescriptor.Create(ShopIdentity, $"C{i}", $"{i}", $"Component {i}", i * 10))
                 .ToList();
         }
     }

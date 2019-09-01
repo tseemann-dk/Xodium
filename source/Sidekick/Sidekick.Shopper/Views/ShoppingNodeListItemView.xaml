@@ -17,9 +17,9 @@
             </Image.GestureRecognizers>
         </Image>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-            <Label Text="{Binding DisplayNumber}" HorizontalOptions="Start" />
-            <Label Text="{Binding Text}" HorizontalOptions="Start"/>
-            <Label Text="{Binding Value}" HorizontalOptions="EndAndExpand"/>
+            <Label Text="{Binding DisplayNumber}" HorizontalOptions="Start" MinimumWidthRequest="100"/>
+            <Label Text="{Binding Text}" HorizontalOptions="StartAndExpand" LineBreakMode="TailTruncation"/>
+            <Label Text="{Binding Value}" HorizontalOptions="End"/>
         </StackLayout>
     </StackLayout>
 

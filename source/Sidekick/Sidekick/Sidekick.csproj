@@ -33,6 +33,7 @@
     <ProjectReference Include="..\Sidekick.Core\Sidekick.Core.csproj" />
     <ProjectReference Include="..\Sidekick.Shopper.Core\Sidekick.Shopper.Core.csproj" />
     <ProjectReference Include="..\Sidekick.Shopper.eBay\Sidekick.Shopper.eBay.csproj" />
+    <ProjectReference Include="..\Sidekick.Shopper.Flickr\Sidekick.Shopper.Flickr.csproj" />
     <ProjectReference Include="..\Sidekick.Shopper\Sidekick.Shopper.csproj" />
   </ItemGroup>
 

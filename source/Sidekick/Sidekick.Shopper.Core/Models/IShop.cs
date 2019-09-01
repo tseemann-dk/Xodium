@@ -5,7 +5,7 @@ namespace Sidekick.Shopper.Models
 {
     public interface IShop
     {
-        ShopIdentity Identity { get; }
+        ShopIdentity ShopIdentity { get; }
 
         Task<IReadOnlyList<IComponentDescriptor>> FindComponents(string searchText);
     }

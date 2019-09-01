@@ -38,7 +38,9 @@ namespace Sidekick
 
             RegisterStore(registry);
 
-            registry.RegisterInstance<IShop>(new Shopper.eBay.eBayShop());
+            //registry.RegisterInstance<IShop>(new Shopper.eBay.eBayShop());
+            registry.RegisterInstance<IShop>(new Shopper.Flickr.FlickrShop());
+
             registry.RegisterFactory<INavigationService>(resolver => new NavigationService(App.NavigationPage, () => ViewRegistry));
             registry.RegisterFactory<IDialogService>(resolver => new DialogService(App.NavigationPage, () => ViewRegistry));
         }

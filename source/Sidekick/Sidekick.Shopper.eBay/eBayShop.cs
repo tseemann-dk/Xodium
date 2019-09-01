@@ -14,7 +14,7 @@ namespace Sidekick.Shopper.eBay
             components = CreateComponents();
         }
 
-        public ShopIdentity Identity { get; } = new ShopIdentity("eBay");
+        public ShopIdentity ShopIdentity { get; } = new ShopIdentity("eBay");
 
         public async Task<IReadOnlyList<IComponentDescriptor>> FindComponents(string searchText)
         {
@@ -30,7 +30,14 @@ namespace Sidekick.Shopper.eBay
         {
             return Enumerable
                 .Range(1, 100)
-                .Select(x => ComponentDescriptor.Create(Identity, $"EB-{x}", $"eBay Component {x}", x + .99))
+                .Select(x => ComponentDescriptor.Create(
+                    ShopIdentity, 
+                    $"EB-{x}", 
+                    $"{x}", 
+                    $"eBay Component {x}", 
+                    null, 
+                    x + .99
+                ))
                 .ToList();
         }
     }

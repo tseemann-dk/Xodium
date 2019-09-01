@@ -2,33 +2,35 @@
 {
     public class ComponentDescriptor : IComponentDescriptor
     {
-        public ComponentDescriptor(IComponentReference reference, string text, double price)
+        public ComponentDescriptor(IComponentReference reference, string text, string thumbnailUrl, double price)
         {
             Reference = reference ?? throw new System.ArgumentNullException(nameof(reference));
             Text = text;
+            ThumbnailUrl = thumbnailUrl;
             Price = price;
         }
 
         public static ComponentDescriptor Create(
-            string shopId, string componentNumber,
-            string text, double price = 0) 
+            string shopId, string componentId, string componentNumber,
+            string text, string thumbnailUrl = null,  double price = 0) 
             =>
             new ComponentDescriptor(
-                ComponentReference.Create(shopId, componentNumber),
-                text, price
+                ComponentReference.Create(shopId, componentId, componentNumber),
+                text, thumbnailUrl, price
             );
 
         public static ComponentDescriptor Create(
-            ShopIdentity shopIdentity, string componentNumber,
-            string text, double price = 0)
+            ShopIdentity shopIdentity, string componentId, string componentNumber,
+            string text, string thumbnailUrl = null, double price = 0)
             =>
             new ComponentDescriptor(
-                ComponentReference.Create(shopIdentity, componentNumber),
-                text, price
+                ComponentReference.Create(shopIdentity, componentId, componentNumber),
+                text, thumbnailUrl, price
             );
 
         public IComponentReference Reference { get; }
         public string Text { get; }
+        public string ThumbnailUrl { get; }
         public double Price { get; }
     }
 }

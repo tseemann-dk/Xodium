@@ -16,6 +16,7 @@ namespace Sidekick.Shopper.Actions.ComponentLookup
             {
                 Component = component ?? throw new System.ArgumentNullException(nameof(component));
             }
+
             public IComponentDescriptor Component { get; }
         }
     }

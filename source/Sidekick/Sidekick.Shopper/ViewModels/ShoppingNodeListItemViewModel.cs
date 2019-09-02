@@ -20,7 +20,9 @@ namespace Sidekick.Shopper.ViewModels
         public string DisplayNumber => Model.ReferenceNumber;
         public string Glyph => IsGroup ? MaterialDesignIcon.Folder : MaterialDesignIcon.File;
         public bool IsGroup => Model is IShoppingGroup;
+        public bool IsItem => Model is IShoppingItem;
         public string Text => Model.Text;
+        public Uri ThumbnailUri => (Model is IShoppingItem item && item.ThumbnailUrl != null) ? new Uri(item.ThumbnailUrl) : null;
         public double Value => Model.Price;
 
         public ReactiveCommand<Unit, Unit> OpenCommand { get; }

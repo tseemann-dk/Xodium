@@ -30,7 +30,7 @@ namespace Sidekick.Shopper.Middleware
 
             if (component == null)
             {
-                component = new Component(c.Reference.Shop, c.Reference.ComponentNumber, c.Text, c.Price);
+                component = new Component(c.Reference.Shop, c.Reference.ComponentNumber, c.Text, c.ThumbnailUrl, c.Price);
                 store.Dispatch(ShoppingListActionCreator.AddComponent(component));
             }
 

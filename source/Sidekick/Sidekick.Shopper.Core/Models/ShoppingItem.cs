@@ -30,6 +30,8 @@ namespace Sidekick.Shopper.Models
         public double Quantity { get; }
         public double? Price { get; }
 
+        public string ThumbnailUrl => Component?.ThumbnailUrl;
+
         private string DisplayNumber => ComponentNumber;
         private string DisplayText => Text ?? Component?.Text;
 

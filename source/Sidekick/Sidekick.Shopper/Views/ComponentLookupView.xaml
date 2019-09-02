@@ -40,20 +40,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="4">
-                                <Image 
-                                    HeightRequest="48" 
-                                    WidthRequest="48" 
-                                    Source="{Binding ThumbnailUri}"
-                                    BackgroundColor="DarkGray"/>
-                                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" Spacing="4">
-                                    <Label Text="{Binding Text}" FontSize="14"/>
-                                    <StackLayout Orientation="Horizontal" Spacing="8">
-                                        <Label FontSize="12" TextColor="Gray" Text="{Binding ComponentNumber}"/>
-                                        <Label FontSize="12" TextColor="Gray" Text="{Binding Price}"/>
-                                    </StackLayout>
-                                </StackLayout>
-                            </StackLayout>
+                            <views:ComponentListItemView/>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

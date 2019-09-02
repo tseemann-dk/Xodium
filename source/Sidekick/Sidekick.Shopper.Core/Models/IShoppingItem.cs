@@ -6,5 +6,6 @@ namespace Sidekick.Shopper.Models
     {
         string ComponentNumber { get; }
         [JsonIgnore] IComponent Component { get; }
+        [JsonIgnore] string ThumbnailUrl { get; }
     }
 }

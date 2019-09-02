@@ -5,6 +5,7 @@
         ShopIdentity Origin { get; }
         string ComponentNumber { get; }
         string Text { get; }
+        string ThumbnailUrl { get; }
         double Price { get; }
     }
 

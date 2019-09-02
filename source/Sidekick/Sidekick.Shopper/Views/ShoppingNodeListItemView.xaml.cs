@@ -11,9 +11,9 @@ namespace Sidekick.Shopper.Views
         {
             InitializeComponent();
 
-            ImageSource.FontFamily = ResourceResolver.MaterialFontFamily;
-            ImageSource.Size = 32;
-            ImageSource.Color = Color.Black;
+            GroupImageSource.FontFamily = ResourceResolver.MaterialFontFamily;
+            GroupImageSource.Size = 60;
+            GroupImageSource.Color = Color.Black;
         }
     }
 }

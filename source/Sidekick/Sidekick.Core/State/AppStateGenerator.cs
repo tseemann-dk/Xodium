@@ -44,8 +44,8 @@ namespace Sidekick.State
         {
             var components = new[]
             {
-                new Component(ShopIdentity.Internal, "1", "Component 1", 10),
-                new Component(ShopIdentity.Internal, "2", "Component 2", 20)
+                new Component(ShopIdentity.Internal, "1", "Component 1", null, 10),
+                new Component(ShopIdentity.Internal, "2", "Component 2", null, 20)
             };
 
             return new ShoppingList("list-1", "L1",

@@ -29,7 +29,7 @@ namespace Sidekick.Tests.TestDoubles
         private List<ComponentDescriptor> CreateComponents()
         {
             return Enumerable.Range(1, 10)
-                .Select(i => ComponentDescriptor.Create(ShopIdentity, $"C{i}", $"{i}", $"Component {i}", i * 10))
+                .Select(i => ComponentDescriptor.Create(ShopIdentity, $"C{i}", $"{i}", $"Component {i}", "", i * 10))
                 .ToList();
         }
     }

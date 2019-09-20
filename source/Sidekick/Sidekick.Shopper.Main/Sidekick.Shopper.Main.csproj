@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Sidekick.Shopper</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Xodium.Mvvm.ReactiveUI\Xodium.Mvvm.ReactiveUI.csproj" />
+    <ProjectReference Include="..\..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+    <ProjectReference Include="..\..\Xodium.Platform.Xamarin\Xodium.Platform.Xamarin.csproj" />
+    <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj" />
+    <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj" />
+    <ProjectReference Include="..\Sidekick.Core\Sidekick.Core.csproj" />
+    <ProjectReference Include="..\Sidekick.Shopper.Core\Sidekick.Shopper.Core.csproj" />
+  </ItemGroup>
+
+</Project>

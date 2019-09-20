@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sidekick\Sidekick.csproj" />
+    <ProjectReference Include="..\Sidekick.XF\Sidekick.XF.csproj" />
   </ItemGroup>
 
 </Project>

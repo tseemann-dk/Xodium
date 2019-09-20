@@ -1,0 +1,121 @@
+﻿<UserControl
+    x:Class="Sidekick.Shopper.UI.Uno.Views.ShoppingGroupView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sidekick.Shopper.UI.Uno.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ToolButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="4"/>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <TextBlock 
+            x:Name="TitleLabel"
+            Text="(ShoppingGroupView)"
+            Grid.Row="0" 
+            FontSize="20"/>
+
+        <!-- Node List -->
+        <ListView x:Name="NodeListView" Grid.Row="1" ItemsSource="{Binding Nodes}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Text}"/>
+                    <!--<views:ShoppingNodeListItemView/>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Info -->
+        <TextBlock
+            x:Name="InfoLabel"
+            Grid.Row="2" 
+            FontSize="8"/>
+
+        <StackPanel Grid.Row="3" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
+
+            <!-- Button Row 1 -->
+            <Grid Margin="0" Padding="0" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button 
+                    Grid.Column="0" 
+                    Content="Back"
+                    x:Name="GoBackButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+                <Button 
+                    Grid.Column="1" 
+                    Content="Enter"
+                    x:Name="GoForwardButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+                <Button 
+                    Grid.Column="2" 
+                    Content="Move"
+                    x:Name="MoveDownButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+                <Button 
+                    Grid.Column="3" 
+                    Content="Move"
+                    x:Name="MoveUpButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+            </Grid>
+
+            <!-- Button Row 2 -->
+            <Grid Margin="0" Padding="0" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button 
+                    Grid.Column="0" 
+                    Content="Item"
+                    x:Name="PerformLookupButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+                <Button 
+                    Grid.Column="1" 
+                    Content="Group"
+                    x:Name="AddGroupButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+                <Button 
+                    Grid.Column="2" 
+                    Content="Edit"
+                    x:Name="RenameButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+                <Button 
+                    Grid.Column="3" 
+                    Content="Delete"
+                    x:Name="DeleteButton" 
+                    Style="{StaticResource ToolButtonStyle}"/>
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

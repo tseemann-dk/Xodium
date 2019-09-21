@@ -1,25 +1,22 @@
 ﻿using System;
 using Sidekick.Reducers;
 using Sidekick.Shopper.Models;
-using Sidekick.Shopper.UI.XF.Views;
-using Sidekick.Shopper.ViewModels;
 using Sidekick.State;
 using Xodium.Flow;
 using Xodium.Injection;
 using Xodium.Mvvm;
 using Xodium.Platform.Xamarin;
-using Xodium.Platform.Xamarin.Services;
 using Xodium.Redux;
 
-namespace Sidekick.XF
+namespace Sidekick
 {
     public delegate IStore<TState> StoreProvider<TState>(Reducer<TState> reducer, TState state, Redux.Middleware<TState>[] middlewares);
 
-    public class Bootstrapper : BootstrapperBase
+    public class AppBootstrapper : BootstrapperBase
     {
         private readonly StoreProvider<AppState> storeProvider;
 
-        public Bootstrapper(StoreProvider<AppState> storeProvider = null)
+        public AppBootstrapper(StoreProvider<AppState> storeProvider = null)
         {
             StoreProvider<AppState> p = (reducer, state, middlewares) =>
                 new ReduxStore<AppState>(r => new Redux.Store<AppState>(r, state, middlewares), reducer);
@@ -39,16 +36,6 @@ namespace Sidekick.XF
 
             //registry.RegisterInstance<IShop>(new Shopper.eBay.eBayShop());
             registry.RegisterInstance<IShop>(new Shopper.Flickr.FlickrShop());
-
-            registry.RegisterFactory<INavigationService>(resolver => new NavigationService(App.NavigationPage, () => ViewRegistry));
-            registry.RegisterFactory<IDialogService>(resolver => new DialogService(App.NavigationPage, () => ViewRegistry));
-        }
-
-        protected override void RegisterViews(IViewRegistry registry)
-        {
-            base.RegisterViews(registry);
-
-            registry.RegisterViewType<ComponentLookupView, ComponentLookupViewModel>();
         }
 
         private void RegisterStore(IDependencyRegistry registry)

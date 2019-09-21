@@ -83,7 +83,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sidekick.Shopper.Flickr", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shopper", "Shopper", "{9C4862E8-C4D5-40BD-8046-6B51B542476A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Uno", "Uno", "{03495C3A-F358-4E42-86F1-F4F0870DD4B4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Uno Platform", "Uno Platform", "{03495C3A-F358-4E42-86F1-F4F0870DD4B4}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Sidekick.Uno.Shared", "Sidekick\Sidekick.Uno.Shared\Sidekick.Uno.Shared.shproj", "{6279C845-92F8-4333-AB99-3D213163593C}"
 EndProject

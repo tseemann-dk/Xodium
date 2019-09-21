@@ -68,6 +68,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="AndroidUnoBootstrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Fonts\winjs-symbols.ttf" />
@@ -85,6 +86,28 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Xodium.Core\Xodium.Core.csproj">
+      <Project>{2158dfbd-a40e-4f0d-a703-16ff1970d739}</Project>
+      <Name>Xodium.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Mvvm\Xodium.Mvvm.csproj">
+      <Project>{6417C355-2592-4649-8713-6287D35AA4A7}</Project>
+      <Name>Xodium.Mvvm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj">
+      <Project>{4a79797f-8251-4072-9ae4-a79fbd9af10b}</Project>
+      <Name>Xodium.Redux</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sidekick.Core\Sidekick.Core.csproj">
+      <Project>{cd0af6fd-7338-4564-9149-22d538074617}</Project>
+      <Name>Sidekick.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sidekick.Main\Sidekick.Main.csproj">
+      <Project>{153e47a3-15fa-4390-9809-688c3a11e9d6}</Project>
+      <Name>Sidekick.Main</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems" Label="Shared" Condition="Exists('..\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems')" />
   <Import Project="..\Sidekick.Shopper.UI.Uno\Sidekick.Shopper.UI.Uno.projitems" Label="Shared" />

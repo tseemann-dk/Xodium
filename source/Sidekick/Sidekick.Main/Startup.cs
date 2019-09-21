@@ -7,7 +7,7 @@ using Xodium.Injection;
 using Xodium.Injection.MicrosoftHosting;
 using Xodium.Mvvm;
 
-namespace Sidekick.XF
+namespace Sidekick
 {
     public static class Startup
     {
@@ -23,7 +23,7 @@ namespace Sidekick.XF
 
         public static IExecutionEnvironment ExecutionEnvironment => executionEnvironment.Value;
 
-        public static void Init(Bootstrapper bootstrapper)
+        public static void Init(AppBootstrapper bootstrapper)
         {
             var builder = new HostBuilder()
                 .ConfigureHostConfiguration(ConfigureHost)
@@ -38,7 +38,7 @@ namespace Sidekick.XF
             builder.AddCommandLine(new string[] { $"ContentRoot={FileSystem.AppDataDirectory}" });
         }
 
-        private static void ConfigureServices(HostBuilderContext context, IServiceCollection services, Bootstrapper bootstrapper)
+        private static void ConfigureServices(HostBuilderContext context, IServiceCollection services, AppBootstrapper bootstrapper)
         {
             if (context.HostingEnvironment.IsDevelopment())
             {

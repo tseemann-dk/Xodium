@@ -6,9 +6,9 @@ using Xodium.Platform.Uwp;
 
 namespace Sidekick.XF.UWP
 {
-    public class UwpBootstrapper : Bootstrapper
+    public class UwpXFBootstrapper : XFBootstrapper
     {
-        public UwpBootstrapper(StoreProvider<AppState> storeProvider)
+        public UwpXFBootstrapper(StoreProvider<AppState> storeProvider)
             : base(storeProvider)
         {
         }

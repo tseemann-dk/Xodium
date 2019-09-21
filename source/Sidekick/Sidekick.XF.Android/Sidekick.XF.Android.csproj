@@ -73,7 +73,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndroidBootstrapper.cs" />
+    <Compile Include="AndroidXFBootstrapper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -139,6 +139,10 @@
     <ProjectReference Include="..\Sidekick.Core\Sidekick.Core.csproj">
       <Project>{cd0af6fd-7338-4564-9149-22d538074617}</Project>
       <Name>Sidekick.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sidekick.Main\Sidekick.Main.csproj">
+      <Project>{153E47A3-15FA-4390-9809-688C3A11E9D6}</Project>
+      <Name>Sidekick.Main</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sidekick.XF\Sidekick.XF.csproj">
       <Project>{99AD4B80-8E37-433C-8455-562C128C1849}</Project>

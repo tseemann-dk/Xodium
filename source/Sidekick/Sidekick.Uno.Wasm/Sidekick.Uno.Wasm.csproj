@@ -37,6 +37,12 @@
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.244" />
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.244" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Xodium.Core\Xodium.Core.csproj" />
+    <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj" />
+    <ProjectReference Include="..\Sidekick.Core\Sidekick.Core.csproj" />
+    <ProjectReference Include="..\Sidekick.Main\Sidekick.Main.csproj" />
+  </ItemGroup>
   <Import Project="..\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems" Label="Shared" Condition="Exists('..\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems')" />
   <Import Project="..\Sidekick.Shopper.UI.Uno\Sidekick.Shopper.UI.Uno.projitems" Label="Shared" Condition="Exists('..\Sidekick.Shopper.UI.Uno\Sidekick.Shopper.UI.Uno.projitems')" />
 </Project>

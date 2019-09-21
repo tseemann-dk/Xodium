@@ -12,7 +12,7 @@ namespace Sidekick.XF.iOS
             Xamarin.Forms.Forms.Init();
             Rg.Plugins.Popup.Popup.Init();
 
-            Startup.Init(new iOSBootstrapper());
+            Startup.Init(new iOSXFBootstrapper());
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

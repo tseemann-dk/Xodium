@@ -6,9 +6,9 @@ using Xodium.Platform.iOS;
 
 namespace Sidekick.XF.iOS
 {
-    public class iOSBootstrapper : Bootstrapper
+    public class iOSXFBootstrapper : XFBootstrapper
     {
-        public iOSBootstrapper(StoreProvider<AppState> storeProvider = null) 
+        public iOSXFBootstrapper(StoreProvider<AppState> storeProvider = null) 
             : base(storeProvider)
         {
         }

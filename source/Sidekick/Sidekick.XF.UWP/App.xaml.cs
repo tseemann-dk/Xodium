@@ -30,7 +30,7 @@ namespace Sidekick.XF.UWP
                 Xamarin.Forms.Forms.Init(e);
                 Rg.Plugins.Popup.Popup.Init();
 
-                var bootstrapper = new UwpBootstrapper((reducer, state, middlewares) => 
+                var bootstrapper = new UwpXFBootstrapper((reducer, state, middlewares) => 
                     new ReduxStore<AppState>(
                         r => isDebugging
                             ? new TimeMachineStore<AppState>(r, state, middlewares) as IStore<AppState>

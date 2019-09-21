@@ -20,7 +20,7 @@ namespace Sidekick.XF.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
-            var bootstrapper = new AndroidBootstrapper(this);
+            var bootstrapper = new AndroidXFBootstrapper(this);
             Startup.Init(bootstrapper);
 
             LoadApplication(new App());

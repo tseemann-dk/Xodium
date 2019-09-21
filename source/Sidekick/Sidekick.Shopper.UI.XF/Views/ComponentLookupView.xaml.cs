@@ -38,7 +38,7 @@ namespace Sidekick.Shopper.UI.XF.Views
                 Observable
                     .FromEventPattern<TextChangedEventArgs>(SearchTextEntry, nameof(SearchBar.TextChanged))
                     .Select(x => x.EventArgs.NewTextValue)
-                    .Subscribe(x => ViewModel.ChangeSearchText(x), e => { })
+                    .Subscribe(x => ViewModel.SetSearchText(x), e => { })
                     .DisposeWith(disposable);
             });
         }

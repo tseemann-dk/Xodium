@@ -50,10 +50,24 @@
             </Grid>
         </Grid>
 
-        <StackLayout Grid.Row="2">
+        <!-- Error Message & Buttons -->
+        <StackLayout Grid.Row="2" Orientation="Vertical">
             <Label x:Name="ErrorMessageLabel" TextColor="Red"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="8">
+                <Button
+                    x:Name="OkButton"
+                    Text="OK" 
+                    Command="{Binding SubmitCommand}"
+                    WidthRequest="80"/>
+                <Button 
+                    x:Name="CancelButton"
+                    Text="Cancel" 
+                    Command="{Binding CancelCommand}"
+                    WidthRequest="80"/>
+            </StackLayout>
         </StackLayout>
         
     </Grid>
 
 </views:ComponentLookupViewBase>
+    

@@ -5,7 +5,6 @@ using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using ReactiveUI;
-using Sidekick.Extensions;
 using Sidekick.Shopper.Models;
 using Sidekick.Shopper.State;
 using Xodium.Mvvm;
@@ -29,9 +28,11 @@ namespace Sidekick.Shopper.ViewModels
             var canSearch = this.WhenAnyValue(x => x.SearchText)
                 .Select(x => !string.IsNullOrEmpty(x));
 
+            // TODO: Dispose
             this.WhenAnyValue(x => x.SearchText)
-                .Subscribe(_ => ChangeSearchText(SearchText));
+                .Subscribe(_ => SetSearchText(SearchText));
 
+            // TODO: Dispose
             this.WhenAnyValue(x => x.SelectedComponent)
                 .Subscribe(_ => SetSelectedComponent(SelectedComponent));
 
@@ -85,7 +86,7 @@ namespace Sidekick.Shopper.ViewModels
         public ReactiveCommand<Unit, Unit> SubmitCommand { get; }
         public ReactiveCommand<Unit, Task<Unit>> SearchCommand { get; }
 
-        private async Task<Unit> ApplyState(ComponentLookup state)
+        private Task<Unit> ApplyState(ComponentLookup state)
         {
             IsSearching = state.IsSearching;
             SearchText = state.SearchText;
@@ -100,34 +101,9 @@ namespace Sidekick.Shopper.ViewModels
             }
 
             SelectedComponent = FoundComponents?.FirstOrDefault(x => x.ComponentNumber == state.SelectedComponentNumber);
-            IsVisible = state.IsVisible; //await SetVisible(state.IsVisible);
-            return Unit.Default;
+            IsVisible = state.IsVisible;
+            return Task.FromResult(Unit.Default);
         }
-
-        /*
-        private async Task SetVisible(bool value)
-        {
-            if (value == isVisible) return;
-
-            try
-            {
-                if (value)
-                {
-                    isVisible = true;
-                    await ExecutionEnvironment.NavigationService.OpenPopup(this);
-                }
-                else
-                {
-                    await ExecutionEnvironment.NavigationService.GoBack();
-                    isVisible = false;
-                }
-            }
-            catch (Exception exception)
-            {
-                await this.HandleException(exception);
-            }
-        }
-        */
 
         private void Cancel()
         {
@@ -139,24 +115,20 @@ namespace Sidekick.Shopper.ViewModels
             this.DispatchAction(Actions.ComponentLookupActionCreator.PickComponent());
         }
 
-        public void ChangeSearchText(string value)
-        {
-            //if (value == SearchText) return;
-            this.DispatchAction(Actions.ComponentLookupActionCreator.SetSearchText(value));
-        }
-
         public async Task<Unit> Search()
         {
-            //await this.DispatchActionsAsync(Actions.ComponentLookupActionCreator.Search());
-
             var shop = ExecutionEnvironment.GetService<IShop>();
             await this.DispatchActionAsync(Actions.ComponentLookupActionCreator.Search(shop));
             return Unit.Default;
         }
 
+        public void SetSearchText(string value)
+        {
+            this.DispatchAction(Actions.ComponentLookupActionCreator.SetSearchText(value));
+        }
+
         public void SetSelectedComponent(ComponentDescriptorViewModel value)
         {
-            //if (value == SelectedComponent) return;
             this.DispatchAction(Actions.ComponentLookupActionCreator.SelectComponent(value?.ComponentNumber));
         }
     }

@@ -9,86 +9,101 @@
     mc:Ignorable="d"
     x:Class="Sidekick.Shopper.UI.XF.Views.ShoppingGroupView">
 
-    <Grid RowSpacing="0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <Grid>
 
-        <Label 
-            x:Name="TitleLabel"
-            Grid.Row="0" 
-            FontSize="Large"/>
+        <!-- Main View -->
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <!--<ListView 
-            x:Name="NodeListView"
-            Grid.Row="1"
-            RowHeight="32"
-            ItemTapped="NodeListView_ItemTapped"
-            ItemSelected="NodeListView_ItemSelected">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
+            <Label 
+                x:Name="TitleLabel"
+                Grid.Row="0" 
+                FontSize="Large"/>
+
+            <!--<ListView 
+                x:Name="NodeListView"
+                Grid.Row="1"
+                RowHeight="32"
+                ItemTapped="NodeListView_ItemTapped"
+                ItemSelected="NodeListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <views:ShoppingNodeListItemView/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>       
+            </ListView>-->
+
+            <!--
+            SelectedItem="{Binding FocusedNode, Mode=TwoWay}"
+            SelectionChanged="NodeCollectionView_SelectionChanged"
+            -->
+            <CollectionView 
+                x:Name="NodeCollectionView"
+                Grid.Row="1"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
                         <views:ShoppingNodeListItemView/>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>       
-        </ListView>-->
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
-        <!--
-        SelectedItem="{Binding FocusedNode, Mode=TwoWay}"
-        SelectionChanged="NodeCollectionView_SelectionChanged"
-        -->
-        <CollectionView 
-            x:Name="NodeCollectionView"
-            Grid.Row="1"
-            SelectionMode="Single">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <views:ShoppingNodeListItemView/>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            <Label 
+                x:Name="InfoLabel"
+                Grid.Row="2" 
+                FontSize="Small"/>
 
-        <Label 
-            x:Name="InfoLabel"
-            Grid.Row="2" 
-            FontSize="Small"/>
+            <StackLayout Grid.Row="3" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
 
-        <StackLayout Grid.Row="3" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
+                <Grid Margin="0" Padding="0" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-            <Grid Margin="0" Padding="0" ColumnSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                <controls:ToolButton Grid.Column="0" x:Name="GoBackButton" Text="Back"/>
-                <controls:ToolButton Grid.Column="1" x:Name="GoForwardButton" Text="Enter"/>
-                <controls:ToolButton Grid.Column="2" x:Name="MoveDownButton" Text="Move"/>
-                <controls:ToolButton Grid.Column="3" x:Name="MoveUpButton" Text="Move"/>
+                    <controls:ToolButton Grid.Column="0" x:Name="GoBackButton" Text="Back"/>
+                    <controls:ToolButton Grid.Column="1" x:Name="GoForwardButton" Text="Enter"/>
+                    <controls:ToolButton Grid.Column="2" x:Name="MoveDownButton" Text="Move"/>
+                    <controls:ToolButton Grid.Column="3" x:Name="MoveUpButton" Text="Move"/>
+                </Grid>
+
+                <Grid Margin="0" Padding="0" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <controls:ToolButton Grid.Column="0" x:Name="PerformLookupButton" Text="Item"/>
+                    <controls:ToolButton Grid.Column="1" x:Name="AddGroupButton" Text="Group"/>
+                    <controls:ToolButton Grid.Column="2" x:Name="RenameButton" Text="Edit"/>
+                    <controls:ToolButton Grid.Column="3" x:Name="DeleteButton" Text="Delete"/>
+                </Grid>
+
+            </StackLayout>
+
+        </Grid>
+
+        <!-- Component Lookup Overlay -->
+        <Grid IsVisible="{Binding ComponentLookup.IsVisible}">
+            <Grid BackgroundColor="White" Opacity=".8"/>
+            <Grid BackgroundColor="#808080" Margin="64" Padding="2">
+                <Grid BackgroundColor="LightGray" Padding="16">
+                    <views:ComponentLookupView BindingContext="{Binding ComponentLookup}"/>
+                </Grid>
             </Grid>
+        </Grid>
 
-            <Grid Margin="0" Padding="0" ColumnSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <controls:ToolButton Grid.Column="0" x:Name="PerformLookupButton" Text="Item"/>
-                <controls:ToolButton Grid.Column="1" x:Name="AddGroupButton" Text="Group"/>
-                <controls:ToolButton Grid.Column="2" x:Name="RenameButton" Text="Edit"/>
-                <controls:ToolButton Grid.Column="3" x:Name="DeleteButton" Text="Delete"/>
-            </Grid>
-            
-        </StackLayout>
-        
     </Grid>
     
 </views:ShoppingGroupViewBase>

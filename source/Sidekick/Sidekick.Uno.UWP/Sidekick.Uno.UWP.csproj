@@ -106,9 +106,21 @@
       <Project>{2158DFBD-A40E-4F0D-A703-16FF1970D739}</Project>
       <Name>Xodium.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Mvvm.ReactiveUI\Xodium.Mvvm.ReactiveUI.csproj">
+      <Project>{32df0473-e25c-48d6-a634-99093017b64e}</Project>
+      <Name>Xodium.Mvvm.ReactiveUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Xodium.Mvvm\Xodium.Mvvm.csproj">
       <Project>{6417C355-2592-4649-8713-6287D35AA4A7}</Project>
       <Name>Xodium.Mvvm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj">
+      <Project>{53e482dd-18df-4a9d-9b6c-3e9986be986e}</Project>
+      <Name>Xodium.Productivity.Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xodium.Productivity\Xodium.Productivity.csproj">
+      <Project>{197fceb2-a016-47f3-ac46-960a09eb1b20}</Project>
+      <Name>Xodium.Productivity</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Xodium.Redux\Xodium.Redux.csproj">
       <Project>{4a79797f-8251-4072-9ae4-a79fbd9af10b}</Project>
@@ -121,6 +133,14 @@
     <ProjectReference Include="..\Sidekick.Main\Sidekick.Main.csproj">
       <Project>{153e47a3-15fa-4390-9809-688c3a11e9d6}</Project>
       <Name>Sidekick.Main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sidekick.Shopper.Core\Sidekick.Shopper.Core.csproj">
+      <Project>{D0B6008B-419B-4A3D-9D69-E5EB4DAA67AB}</Project>
+      <Name>Sidekick.Shopper.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sidekick.Shopper.Main\Sidekick.Shopper.Main.csproj">
+      <Project>{0DBA17CB-6852-4D55-8AC5-673406976701}</Project>
+      <Name>Sidekick.Shopper.Main</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

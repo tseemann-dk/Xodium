@@ -9,14 +9,14 @@ namespace Sidekick.Shopper.UI.Uno.Views
         {
             this.InitializeComponent();
 
-            DataContext = new
-            {
-                Nodes = Enumerable.Range(1, 100).Select(x => new
-                {
-                    Number = x.ToString(),
-                    Text = $"Node {x}"
-                })
-            };
+            //DataContext = new
+            //{
+            //    Nodes = Enumerable.Range(1, 100).Select(x => new
+            //    {
+            //        Number = x.ToString(),
+            //        Text = $"Node {x}"
+            //    })
+            //};
         }
     }
 }

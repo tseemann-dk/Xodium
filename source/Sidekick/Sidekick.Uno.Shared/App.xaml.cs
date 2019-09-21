@@ -26,12 +26,13 @@ namespace Sidekick.Uno
 				// this.DebugSettings.EnableFrameRateCounter = true;
 			}
 #endif
-            Frame rootFrame = Windows.UI.Xaml.Window.Current.Content as Frame;
 
-            if (rootFrame == null)
+            if (!(Windows.UI.Xaml.Window.Current.Content is Frame rootFrame))
             {
-                rootFrame = new Frame();
+                var bootstrapper = new UnoBootstrapper();
+                Startup.Init(bootstrapper);
 
+                rootFrame = new Frame();
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
@@ -39,7 +40,7 @@ namespace Sidekick.Uno
                     //TODO: Load state from previously suspended application
                 }
 
-                Windows.UI.Xaml.Window.Current.Content = rootFrame;
+                Window.Current.Content = rootFrame;
             }
 
             if (e.PrelaunchActivated == false)

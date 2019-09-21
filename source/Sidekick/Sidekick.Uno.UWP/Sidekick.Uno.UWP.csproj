@@ -142,6 +142,10 @@
       <Project>{0DBA17CB-6852-4D55-8AC5-673406976701}</Project>
       <Name>Sidekick.Shopper.Main</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sidekick.UI.Uno\Sidekick.UI.Uno.csproj">
+      <Project>{f9e1d05b-f4c1-4e9d-8f9a-8f681f7947fa}</Project>
+      <Name>Sidekick.UI.Uno</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

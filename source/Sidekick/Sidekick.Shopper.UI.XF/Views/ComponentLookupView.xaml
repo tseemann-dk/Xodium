@@ -8,7 +8,7 @@
     xmlns:popup="clr-namespace:Xodium.Platform.Xamarin.Views;assembly=Xodium.Platform.Xamarin"
     mc:Ignorable="d"
     x:Class="Sidekick.Shopper.UI.XF.Views.ComponentLookupView"
-    popup:PopupView.OkCommand="{Binding CommitCommand}"
+    popup:PopupView.OkCommand="{Binding SubmitCommand}"
     popup:PopupView.CancelCommand="{Binding CancelCommand}"
     HeightRequest="400"
     WidthRequest="600">

@@ -9,6 +9,10 @@
     <Import_RootNamespace>Sidekick.Shopper.UI.Uno</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Views\ComponentListItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\ComponentLookupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -17,13 +21,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\ShoppingNodeListItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ComponentListItemView.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ComponentLookupView.xaml.cs">
       <DependentUpon>ComponentLookupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ShoppingGroupView.xaml.cs">
       <DependentUpon>ShoppingGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ShoppingNodeListItemView.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="C:\Source\Torsten\Xodium\source\Sidekick\Sidekick.Shopper.UI.Uno\Views\ComponentListItemView.xaml.cs">
+      <DependentUpon>ComponentListItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="C:\Source\Torsten\Xodium\source\Sidekick\Sidekick.Shopper.UI.Uno\Views\ShoppingNodeListItemView.xaml.cs">
+      <DependentUpon>ShoppingNodeListItemView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

@@ -48,6 +48,9 @@ namespace Sidekick.Shopper.Middleware
                 if (shop == null)
                     throw new InvalidOperationException("Shop is missing");
 
+                if (searchText == null)
+                    throw new InvalidOperationException("SearchText is missing");
+
                 if (searchText.Length > 10)
                     throw new InvalidOperationException($"Search text \"{searchText}\" is too long");
 

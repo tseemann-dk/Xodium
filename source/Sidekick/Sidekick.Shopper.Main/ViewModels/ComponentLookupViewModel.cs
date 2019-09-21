@@ -26,12 +26,17 @@ namespace Sidekick.Shopper.ViewModels
         public ComponentLookupViewModel(IObservable<ComponentLookup> model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
         {
-            var canSearch = this
-                .WhenAnyValue(x => x.SearchText)
+            var canSearch = this.WhenAnyValue(x => x.SearchText)
                 .Select(x => !string.IsNullOrEmpty(x));
 
+            this.WhenAnyValue(x => x.SearchText)
+                .Subscribe(_ => ChangeSearchText(SearchText));
+
+            this.WhenAnyValue(x => x.SelectedComponent)
+                .Subscribe(_ => SetSelectedComponent(SelectedComponent));
+
             CancelCommand = ReactiveCommand.Create(() => Cancel());
-            CommitCommand = ReactiveCommand.Create(() => Commit());
+            SubmitCommand = ReactiveCommand.Create(() => Submit());
             SearchCommand = ReactiveCommand.Create(() => Search(), canSearch);
 
             Model
@@ -58,6 +63,12 @@ namespace Sidekick.Shopper.ViewModels
             set => this.RaiseAndSetIfChanged(ref isSearching, value);
         }
 
+        public bool IsVisible
+        {
+            get => isVisible;
+            set => this.RaiseAndSetIfChanged(ref isVisible, value);
+        }
+
         public string SearchText
         {
             get => searchText;
@@ -71,7 +82,7 @@ namespace Sidekick.Shopper.ViewModels
         }
 
         public ReactiveCommand<Unit, Unit> CancelCommand { get; }
-        public ReactiveCommand<Unit, Unit> CommitCommand { get; }
+        public ReactiveCommand<Unit, Unit> SubmitCommand { get; }
         public ReactiveCommand<Unit, Task<Unit>> SearchCommand { get; }
 
         private async Task<Unit> ApplyState(ComponentLookup state)
@@ -89,10 +100,11 @@ namespace Sidekick.Shopper.ViewModels
             }
 
             SelectedComponent = FoundComponents?.FirstOrDefault(x => x.ComponentNumber == state.SelectedComponentNumber);
-            await SetVisible(state.IsVisible);
+            IsVisible = state.IsVisible; //await SetVisible(state.IsVisible);
             return Unit.Default;
         }
 
+        /*
         private async Task SetVisible(bool value)
         {
             if (value == isVisible) return;
@@ -115,20 +127,21 @@ namespace Sidekick.Shopper.ViewModels
                 await this.HandleException(exception);
             }
         }
+        */
 
         private void Cancel()
         {
             this.DispatchAction(Actions.ComponentLookupActionCreator.HideLookup());
         }
 
-        private void Commit()
+        private void Submit()
         {
             this.DispatchAction(Actions.ComponentLookupActionCreator.PickComponent());
         }
 
         public void ChangeSearchText(string value)
         {
-            if (value == SearchText) return;
+            //if (value == SearchText) return;
             this.DispatchAction(Actions.ComponentLookupActionCreator.SetSearchText(value));
         }
 
@@ -143,7 +156,7 @@ namespace Sidekick.Shopper.ViewModels
 
         public void SetSelectedComponent(ComponentDescriptorViewModel value)
         {
-            if (value == SelectedComponent) return;
+            //if (value == SelectedComponent) return;
             this.DispatchAction(Actions.ComponentLookupActionCreator.SelectComponent(value?.ComponentNumber));
         }
     }

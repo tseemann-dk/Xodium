@@ -18,6 +18,9 @@ namespace Sidekick.Uno
             this.Suspending += OnSuspending;
         }
 
+        public static new App Current => Application.Current as App;
+        public Frame NavigationFrame { get; private set; }
+
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
@@ -52,6 +55,8 @@ namespace Sidekick.Uno
 
                 Windows.UI.Xaml.Window.Current.Activate();
             }
+
+            NavigationFrame = rootFrame;
         }
 
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)

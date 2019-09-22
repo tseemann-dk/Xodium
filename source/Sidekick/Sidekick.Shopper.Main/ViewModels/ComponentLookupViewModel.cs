@@ -5,7 +5,6 @@ using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using ReactiveUI;
-using Sidekick.Extensions;
 using Sidekick.Shopper.Models;
 using Sidekick.Shopper.State;
 using Xodium.Mvvm;
@@ -26,12 +25,19 @@ namespace Sidekick.Shopper.ViewModels
         public ComponentLookupViewModel(IObservable<ComponentLookup> model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
         {
-            var canSearch = this
-                .WhenAnyValue(x => x.SearchText)
+            var canSearch = this.WhenAnyValue(x => x.SearchText)
                 .Select(x => !string.IsNullOrEmpty(x));
 
+            // TODO: Dispose
+            this.WhenAnyValue(x => x.SearchText)
+                .Subscribe(_ => SetSearchText(SearchText));
+
+            // TODO: Dispose
+            this.WhenAnyValue(x => x.SelectedComponent)
+                .Subscribe(_ => SetSelectedComponent(SelectedComponent));
+
             CancelCommand = ReactiveCommand.Create(() => Cancel());
-            CommitCommand = ReactiveCommand.Create(() => Commit());
+            SubmitCommand = ReactiveCommand.Create(() => Submit());
             SearchCommand = ReactiveCommand.Create(() => Search(), canSearch);
 
             Model
@@ -58,6 +64,12 @@ namespace Sidekick.Shopper.ViewModels
             set => this.RaiseAndSetIfChanged(ref isSearching, value);
         }
 
+        public bool IsVisible
+        {
+            get => isVisible;
+            set => this.RaiseAndSetIfChanged(ref isVisible, value);
+        }
+
         public string SearchText
         {
             get => searchText;
@@ -71,10 +83,10 @@ namespace Sidekick.Shopper.ViewModels
         }
 
         public ReactiveCommand<Unit, Unit> CancelCommand { get; }
-        public ReactiveCommand<Unit, Unit> CommitCommand { get; }
+        public ReactiveCommand<Unit, Unit> SubmitCommand { get; }
         public ReactiveCommand<Unit, Task<Unit>> SearchCommand { get; }
 
-        private async Task<Unit> ApplyState(ComponentLookup state)
+        private Task<Unit> ApplyState(ComponentLookup state)
         {
             IsSearching = state.IsSearching;
             SearchText = state.SearchText;
@@ -89,31 +101,8 @@ namespace Sidekick.Shopper.ViewModels
             }
 
             SelectedComponent = FoundComponents?.FirstOrDefault(x => x.ComponentNumber == state.SelectedComponentNumber);
-            await SetVisible(state.IsVisible);
-            return Unit.Default;
-        }
-
-        private async Task SetVisible(bool value)
-        {
-            if (value == isVisible) return;
-
-            try
-            {
-                if (value)
-                {
-                    isVisible = true;
-                    await ExecutionEnvironment.NavigationService.OpenPopup(this);
-                }
-                else
-                {
-                    await ExecutionEnvironment.NavigationService.GoBack();
-                    isVisible = false;
-                }
-            }
-            catch (Exception exception)
-            {
-                await this.HandleException(exception);
-            }
+            IsVisible = state.IsVisible;
+            return Task.FromResult(Unit.Default);
         }
 
         private void Cancel()
@@ -121,29 +110,25 @@ namespace Sidekick.Shopper.ViewModels
             this.DispatchAction(Actions.ComponentLookupActionCreator.HideLookup());
         }
 
-        private void Commit()
+        private void Submit()
         {
             this.DispatchAction(Actions.ComponentLookupActionCreator.PickComponent());
         }
 
-        public void ChangeSearchText(string value)
-        {
-            if (value == SearchText) return;
-            this.DispatchAction(Actions.ComponentLookupActionCreator.SetSearchText(value));
-        }
-
         public async Task<Unit> Search()
         {
-            //await this.DispatchActionsAsync(Actions.ComponentLookupActionCreator.Search());
-
             var shop = ExecutionEnvironment.GetService<IShop>();
             await this.DispatchActionAsync(Actions.ComponentLookupActionCreator.Search(shop));
             return Unit.Default;
         }
 
+        public void SetSearchText(string value)
+        {
+            this.DispatchAction(Actions.ComponentLookupActionCreator.SetSearchText(value));
+        }
+
         public void SetSelectedComponent(ComponentDescriptorViewModel value)
         {
-            if (value == SelectedComponent) return;
             this.DispatchAction(Actions.ComponentLookupActionCreator.SelectComponent(value?.ComponentNumber));
         }
     }

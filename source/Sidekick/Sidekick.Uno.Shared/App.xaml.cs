@@ -43,7 +43,9 @@ namespace Sidekick.Uno
                     //TODO: Load state from previously suspended application
                 }
 
+#if __UWP__ || __ANDROID__
                 Window.Current.Content = rootFrame;
+#endif
             }
 
             if (e.PrelaunchActivated == false)

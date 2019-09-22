@@ -5,117 +5,153 @@
     xmlns:local="using:Sidekick.Shopper.UI.Uno.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:Sidekick.UI.Uno.Converters"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
 
     <UserControl.Resources>
+        
         <ResourceDictionary>
+    
+            <!-- Styles -->
             <Style x:Key="ToolButtonStyle" TargetType="Button">
                 <Setter Property="HorizontalAlignment" Value="Stretch"/>
                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 <Setter Property="Margin" Value="4"/>
             </Style>
+            
+            <!-- Converters -->
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            
         </ResourceDictionary>
+        
     </UserControl.Resources>
+
+    <Grid>
     
-    <Grid RowSpacing="0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <!-- Main View -->
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <!-- Title -->
-        <TextBlock 
-            x:Name="TitleLabel"
-            Text="(ShoppingGroupView)"
-            Grid.Row="0" 
-            FontSize="20"/>
+            <!-- Title -->
+            <TextBlock 
+                x:Name="TitleLabel"
+                Text="{Binding Title}"
+                Grid.Row="0" 
+                FontSize="20"/>
 
-        <!-- Node List -->
-        <ListView x:Name="NodeListView" Grid.Row="1" ItemsSource="{Binding Nodes}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Text}"/>
-                    <!--<views:ShoppingNodeListItemView/>-->
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            <!-- Node List -->
+            <ListView 
+                x:Name="NodeListView" 
+                Grid.Row="1" 
+                ItemsSource="{Binding Nodes}"
+                SelectedItem="{Binding FocusedNode, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:ShoppingNodeListItemView/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
-        <!-- Info -->
-        <TextBlock
-            x:Name="InfoLabel"
-            Grid.Row="2" 
-            FontSize="8"/>
+            <!-- Info -->
+            <TextBlock
+                x:Name="InfoLabel"
+                Grid.Row="2" 
+                FontSize="8"/>
 
-        <StackPanel Grid.Row="3" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
+            <StackPanel Grid.Row="3" Orientation="Vertical" Margin="2" Padding="0" Spacing="0">
 
-            <!-- Button Row 1 -->
-            <Grid Margin="0" Padding="0" ColumnSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <!-- Button Row 1 -->
+                <Grid Margin="0" Padding="0" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Button 
-                    Grid.Column="0" 
-                    Content="Back"
-                    x:Name="GoBackButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
-                <Button 
-                    Grid.Column="1" 
-                    Content="Enter"
-                    x:Name="GoForwardButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
-                <Button 
-                    Grid.Column="2" 
-                    Content="Move"
-                    x:Name="MoveDownButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
-                <Button 
-                    Grid.Column="3" 
-                    Content="Move"
-                    x:Name="MoveUpButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
+                    <Button 
+                        Grid.Column="0" 
+                        Content="Back"
+                        x:Name="GoBackButton" 
+                        Command="{Binding ExitGroupCommand}"
+                        Style="{StaticResource ToolButtonStyle}"/>
+                    <Button 
+                        Grid.Column="1" 
+                        Content="Enter"
+                        x:Name="GoForwardButton" 
+                        Command="{Binding EnterGroupCommand}"
+                        Style="{StaticResource ToolButtonStyle}"/>
+                    <Button 
+                        Grid.Column="2" 
+                        Content="Move"
+                        x:Name="MoveDownButton" 
+                        Command="{Binding MoveNodeDownCommand}"
+                        Style="{StaticResource ToolButtonStyle}"/>
+                    <Button 
+                        Grid.Column="3" 
+                        Content="Move"
+                        x:Name="MoveUpButton" 
+                        Command="{Binding MoveNodeUpCommand}"
+                        Style="{StaticResource ToolButtonStyle}"/>
+                </Grid>
+
+                <!-- Button Row 2 -->
+                <Grid Margin="0" Padding="0" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button 
+                        Grid.Column="0" 
+                        Content="Item"
+                        x:Name="PerformLookupButton" 
+                        Command="{Binding PerformLookupCommand}"
+                        Style="{StaticResource ToolButtonStyle}">
+                    </Button>
+                    <Button 
+                        Grid.Column="1" 
+                        Content="Group"
+                        x:Name="AddGroupButton" 
+                        Command="{Binding AddNewGroupCommand}"
+                        Style="{StaticResource ToolButtonStyle}"/>
+                    <Button 
+                        Grid.Column="2" 
+                        Content="Edit"
+                        x:Name="RenameButton" 
+                        Command="{Binding ChangeTitleCommand}"
+                        Style="{StaticResource ToolButtonStyle}"/>
+                    <Button 
+                        Grid.Column="3" 
+                        Content="Delete"
+                        x:Name="DeleteButton" 
+                        Command="{Binding DeleteNodeCommand}"
+                        Style="{StaticResource ToolButtonStyle}"/>
+                </Grid>
+
+            </StackPanel>
+
+        </Grid>
+
+        <!-- Component Lookup Overlay -->
+        <Grid Visibility="{Binding ComponentLookup.IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid Background="White" Opacity=".8"/>
+            <Grid Background="#808080" Margin="64">
+                <Grid Background="LightGray" Margin="2" Padding="16">
+                    <local:ComponentLookupView DataContext="{Binding ComponentLookup}"/>
+                </Grid>
             </Grid>
-
-            <!-- Button Row 2 -->
-            <Grid Margin="0" Padding="0" ColumnSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Button 
-                    Grid.Column="0" 
-                    Content="Item"
-                    x:Name="PerformLookupButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
-                <Button 
-                    Grid.Column="1" 
-                    Content="Group"
-                    x:Name="AddGroupButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
-                <Button 
-                    Grid.Column="2" 
-                    Content="Edit"
-                    x:Name="RenameButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
-                <Button 
-                    Grid.Column="3" 
-                    Content="Delete"
-                    x:Name="DeleteButton" 
-                    Style="{StaticResource ToolButtonStyle}"/>
-            </Grid>
-
-        </StackPanel>
+        </Grid>
 
     </Grid>
-
+    
 </UserControl>

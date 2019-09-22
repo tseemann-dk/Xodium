@@ -2,6 +2,7 @@
 using Xodium.Injection;
 using Xodium.Flow;
 using Xodium.Services;
+using Xodium.Exceptions;
 
 namespace Xodium.Mvvm
 {
@@ -68,8 +69,8 @@ namespace Xodium.Mvvm
         public virtual IShareService ShareService => shareService.Value;
         public virtual ISynchronizerService SynchronizerService => synchronizerService.Value;
 
-        public T GetService<T>() => dependencyResolver().Resolve<T>();
-        public object GetService(Type type) => dependencyResolver().Resolve(type);
+        public T GetService<T>() where T : class => dependencyResolver().Resolve<T>() ?? throw new ServiceNotFoundException(typeof(T));
+        public object GetService(Type type) => dependencyResolver().Resolve(type) ?? throw new ServiceNotFoundException(type);
 
         public abstract void RegisterServices(IDependencyRegistry registry);
     }

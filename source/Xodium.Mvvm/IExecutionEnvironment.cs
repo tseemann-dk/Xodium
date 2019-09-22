@@ -7,7 +7,7 @@ namespace Xodium.Mvvm
 {
     public interface IExecutionEnvironment
     {
-        T GetService<T>();
+        T GetService<T>() where T : class;
         object GetService(Type type);
 
         void RegisterServices(IDependencyRegistry registry);

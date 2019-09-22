@@ -150,6 +150,10 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Xodium.Core\Xodium.Core.csproj">
+      <Project>{2158DFBD-A40E-4F0D-A703-16FF1970D739}</Project>
+      <Name>Xodium.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Xodium.Mvvm\Xodium.Mvvm.csproj">
       <Project>{6417C355-2592-4649-8713-6287D35AA4A7}</Project>
       <Name>Xodium.Mvvm</Name>

@@ -43,7 +43,7 @@ namespace Sidekick.Uno
                     //TODO: Load state from previously suspended application
                 }
 
-#if __UWP__ || __ANDROID__
+#if !__IOS__
                 Window.Current.Content = rootFrame;
 #endif
             }

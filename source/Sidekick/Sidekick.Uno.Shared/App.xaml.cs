@@ -43,9 +43,7 @@ namespace Sidekick.Uno
                     //TODO: Load state from previously suspended application
                 }
 
-#if !__IOS__
-                Window.Current.Content = rootFrame;
-#endif
+                Windows.UI.Xaml.Window.Current.Content = rootFrame;
             }
 
             if (e.PrelaunchActivated == false)

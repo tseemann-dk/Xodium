@@ -20,7 +20,13 @@
                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 <Setter Property="Margin" Value="4"/>
             </Style>
-            
+
+            <!-- Styles -->
+            <Style x:Key="ToolIconStyle" TargetType="FontIcon">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="Margin" Value="0,0,8,0"/>
+            </Style>
+
             <!-- Converters -->
             <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
             
@@ -78,28 +84,44 @@
 
                     <Button 
                         Grid.Column="0" 
-                        Content="Back"
                         x:Name="GoBackButton" 
                         Command="{Binding ExitGroupCommand}"
-                        Style="{StaticResource ToolButtonStyle}"/>
+                        Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE72B;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Back"/>
+                        </StackPanel>
+                    </Button>
                     <Button 
                         Grid.Column="1" 
-                        Content="Enter"
                         x:Name="GoForwardButton" 
                         Command="{Binding EnterGroupCommand}"
-                        Style="{StaticResource ToolButtonStyle}"/>
+                        Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE72A;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Enter"/>
+                        </StackPanel>
+                    </Button>
                     <Button 
                         Grid.Column="2" 
-                        Content="Move"
                         x:Name="MoveDownButton" 
                         Command="{Binding MoveNodeDownCommand}"
-                        Style="{StaticResource ToolButtonStyle}"/>
+                        Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE74B;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Down"/>
+                        </StackPanel>
+                    </Button>
                     <Button 
                         Grid.Column="3" 
-                        Content="Move"
                         x:Name="MoveUpButton" 
                         Command="{Binding MoveNodeUpCommand}"
-                        Style="{StaticResource ToolButtonStyle}"/>
+                        Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE74A;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Up"/>
+                        </StackPanel>
+                    </Button>
                 </Grid>
 
                 <!-- Button Row 2 -->
@@ -113,29 +135,44 @@
 
                     <Button 
                         Grid.Column="0" 
-                        Content="Item"
                         x:Name="PerformLookupButton" 
                         Command="{Binding PerformLookupCommand}"
                         Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE710;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Item"/>
+                        </StackPanel>
                     </Button>
                     <Button 
                         Grid.Column="1" 
-                        Content="Group"
                         x:Name="AddGroupButton" 
                         Command="{Binding AddNewGroupCommand}"
-                        Style="{StaticResource ToolButtonStyle}"/>
+                        Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE710;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Group"/>
+                        </StackPanel>
+                    </Button>
                     <Button 
                         Grid.Column="2" 
-                        Content="Edit"
                         x:Name="RenameButton" 
                         Command="{Binding ChangeTitleCommand}"
-                        Style="{StaticResource ToolButtonStyle}"/>
+                        Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE70F;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Edit"/>
+                        </StackPanel>
+                    </Button>
                     <Button 
                         Grid.Column="3" 
-                        Content="Delete"
                         x:Name="DeleteButton" 
                         Command="{Binding DeleteNodeCommand}"
-                        Style="{StaticResource ToolButtonStyle}"/>
+                        Style="{StaticResource ToolButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE74D;" Style="{StaticResource ToolIconStyle}"/>
+                            <TextBlock Text="Delete"/>
+                        </StackPanel>
+                    </Button>
                 </Grid>
 
             </StackPanel>

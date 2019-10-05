@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Rg.Plugins.Popup.Contracts;
+using Rg.Plugins.Popup.Events;
 using Rg.Plugins.Popup.Pages;
 using Xodium.Platform.Xamarin.Tests.Utilities;
 
@@ -10,6 +12,11 @@ namespace Xodium.Platform.Xamarin.Tests.TestDoubles
     {
         private PageStack<PopupPage> stack = new PageStack<PopupPage>();
         public IReadOnlyList<PopupPage> PopupStack => stack.Pages;
+
+        public event EventHandler<PopupNavigationEventArgs> Pushing;
+        public event EventHandler<PopupNavigationEventArgs> Pushed;
+        public event EventHandler<PopupNavigationEventArgs> Popping;
+        public event EventHandler<PopupNavigationEventArgs> Popped;
 
         public Task PopAllAsync(bool animate = true) => stack.PopAll();
         public Task PopAsync(bool animate = true) => stack.Pop();

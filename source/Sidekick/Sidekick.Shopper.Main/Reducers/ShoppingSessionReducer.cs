@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Sidekick.Shopper.Actions.ShoppingSession;
 using Sidekick.Shopper.Models;
 using Sidekick.Shopper.State;
+using Xodium.DataStructures;
 using Xodium.Flow;
-using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Shopper.Reducers
 {

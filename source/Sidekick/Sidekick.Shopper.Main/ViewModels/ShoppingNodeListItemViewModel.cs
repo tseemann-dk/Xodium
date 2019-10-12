@@ -4,7 +4,7 @@ using ReactiveUI;
 using Sidekick.Shopper.Models;
 using Sidekick.Resources;
 using Xodium.Mvvm;
-using Xodium.Productivity.Content.Models;
+using Xodium.DataStructures;
 
 namespace Sidekick.Shopper.ViewModels
 {

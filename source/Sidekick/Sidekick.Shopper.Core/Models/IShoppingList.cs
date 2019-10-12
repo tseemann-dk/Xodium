@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Xodium.Productivity.Content.Models;
+using Xodium.DataStructures;
 
 namespace Sidekick.Shopper.Models
 {

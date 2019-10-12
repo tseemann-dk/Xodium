@@ -11,7 +11,7 @@ using Sidekick.Extensions;
 using Xodium.Collections;
 using Xodium.Mvvm;
 using Xodium.Mvvm.ReactiveUI;
-using Xodium.Productivity.Content.Models;
+using Xodium.DataStructures;
 
 namespace Sidekick.Shopper.ViewModels
 {

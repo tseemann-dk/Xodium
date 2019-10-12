@@ -2,11 +2,12 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Xodium.Productivity.Content.Models;
-using Xodium.Productivity.Content.Utilities;
+using Xodium.Core.Tests.Models;
+using Xodium.Core.Tests.Utilities;
+using Xodium.DataStructures;
 using Xunit;
 
-namespace Xodium.Productivity.Tests.Content
+namespace Xodium.Core.Tests
 {
     [ExcludeFromCodeCoverage]
     public partial class TreeManipulationTest

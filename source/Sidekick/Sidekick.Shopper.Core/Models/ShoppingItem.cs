@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using Xodium.Productivity.Content.Models;
+using Xodium.DataStructures;
 
 namespace Sidekick.Shopper.Models
 {
@@ -32,8 +32,12 @@ namespace Sidekick.Shopper.Models
 
         public string ThumbnailUrl => Component?.ThumbnailUrl;
 
+        public ShoppingItem Clone() => new ShoppingItem(Id, Component, Quantity, Text, Price);
+
         private string DisplayNumber => ComponentNumber;
         private string DisplayText => Text ?? Component?.Text;
+
+        INode INode.Clone() => Clone();
 
         string IShoppingNode.ReferenceNumber => DisplayNumber;
         string IShoppingNode.Text => DisplayText;
@@ -41,7 +45,5 @@ namespace Sidekick.Shopper.Models
 
         [ExcludeFromCodeCoverage]
         private string DebuggerDisplay => $"{DisplayNumber}, {DisplayText}";
-
-        public INode Clone() => new ShoppingItem(Id, Component, Quantity, Text, Price);
     }
 }

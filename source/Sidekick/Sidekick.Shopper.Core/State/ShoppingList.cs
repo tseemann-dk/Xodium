@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Sidekick.Shopper.Models;
-using Xodium.Productivity.Content.Models;
+using Xodium.DataStructures;
 
 namespace Sidekick.Shopper.State
 {
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class ShoppingList : DocumentBase, IShoppingList
     {
-        private readonly IReadOnlyList<IComponent> components;
-
         public ShoppingList(string id, string name, IShoppingFolder root, IReadOnlyList<IComponent> components = null)
             : base(id, name, root)
         {
-            this.components = components ?? new List<IComponent>();
+            Components = components ?? new List<IComponent>();
         }
 
         public new IShoppingFolder Content => base.Content as IShoppingFolder;
-        public IReadOnlyList<IComponent> Components => components;
+        public IReadOnlyList<IComponent> Components { get; }
 
         [ExcludeFromCodeCoverage]
         private string DebuggerDisplay => $"{Name}; {Content.Title}";

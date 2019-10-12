@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xodium.Productivity.Content.Models;
-using Xodium.Productivity.Content.Utilities;
+using Xodium.Core.Tests.Utilities;
+using Xodium.DataStructures;
 
-namespace Xodium.Productivity.Tests.Content
+namespace Xodium.Core.Tests.Models
 {
     public class SampleNode : ITree
     {

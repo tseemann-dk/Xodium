@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Xodium.Productivity.Content.Models
+namespace Xodium.DataStructures
 {
     public interface INode
     {

@@ -6,7 +6,7 @@ using Sidekick.Shopper.Actions;
 using Sidekick.Shopper.Models;
 using Sidekick.Shopper.State;
 using Sidekick.Tests.TestDoubles;
-using Xodium.Productivity.Content.Models;
+using Xodium.DataStructures;
 using Xunit;
 
 namespace Sidekick.Tests

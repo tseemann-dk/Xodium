@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Xodium.Productivity.Content.Models
+namespace Xodium.DataStructures
 {
     public abstract class DocumentBase : IDocument
     {

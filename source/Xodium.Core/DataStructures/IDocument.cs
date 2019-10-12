@@ -1,4 +1,4 @@
-﻿namespace Xodium.Productivity.Content.Models
+﻿namespace Xodium.DataStructures
 {
     public interface IDocument : ITree
     {

@@ -17,7 +17,7 @@ namespace Sidekick.Tests
             };
 
             Store = new ReduxStore<AppState>(
-                r => new Redux.Store<AppState>(r, AppStateGenerator.GenerateDefaultState(), middlewares), 
+                r => new Redux.Store<AppState>(r, AppStateGenerator.GenerateSampleState(), middlewares), 
                 AppStateReducer.Reduce
             );
         }

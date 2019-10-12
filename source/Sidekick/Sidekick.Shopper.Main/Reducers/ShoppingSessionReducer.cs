@@ -12,60 +12,67 @@ namespace Sidekick.Shopper.Reducers
     {
         private static readonly Dictionary<Type, Reducer<ShoppingSession>> handlers = new Dictionary<Type, Reducer<ShoppingSession>>
         {
-            [typeof(EnterGroupAction)] = (s, a) => EnterGroup(s, (EnterGroupAction)a),
-            [typeof(ExitGroupAction)] = (s, _) => ExitGroup(s),
+            [typeof(EnterFolderAction)] = (s, a) => EnterFolder(s, (EnterFolderAction)a),
+            [typeof(ExitFolderAction)] = (s, _) => ExitFolder(s),
             [typeof(FocusNodeAction)] = (s, a) => FocusNode(s, (FocusNodeAction)a),
-            [typeof(Actions.ShoppingList.AddGroupAction)] = (s, a) => AddGroup(s, (Actions.ShoppingList.AddGroupAction)a),
+            [typeof(Actions.ShoppingList.AddFolderAction)] = (s, a) => AddFolder(s, (Actions.ShoppingList.AddFolderAction)a),
             [typeof(Actions.ShoppingList.AddItemAction)] = (s, a) => AddItem(s, (Actions.ShoppingList.AddItemAction)a),
             [typeof(Actions.ShoppingList.DeleteNodeAction)] = (s, a) => DeleteNode(s, (Actions.ShoppingList.DeleteNodeAction)a)
         };
 
-        public static ShoppingSession Reduce(ShoppingSession state, object action) =>
-            (handlers.TryGetValue(action.GetType(), out var handler) ? handler(state, action) : state)
-                .WithComponentLookup(ComponentLookupReducer.Reduce(state.ComponentLookup, action))
-                .WithShoppingList(ShoppingListReducer.Reduce(state.ShoppingList, action));
+        public static ShoppingSession Reduce(ShoppingSession state, object action)
+        {
+            if (handlers.TryGetValue(action.GetType(), out var handler))
+            {
+                state = handler(state, action);
+            }
 
-        private static ShoppingSession AddGroup(ShoppingSession state, Actions.ShoppingList.AddGroupAction action) =>
-            state.WithFocusedNodeId(action.Payload.Group.Id);
+            return state
+                .WithComponentLookup(ComponentLookupReducer.Reduce(state.ComponentLookup, action))
+                .WithShoppingList(ShoppingListReducer.Reduce(state.ShoppingList, action));;
+        }
+
+        private static ShoppingSession AddFolder(ShoppingSession state, Actions.ShoppingList.AddFolderAction action) =>
+            state.WithFocusedNodeId(action.Payload.Folder.Id);
 
         private static ShoppingSession AddItem(ShoppingSession state, Actions.ShoppingList.AddItemAction action) =>
             state.WithFocusedNodeId(action.Payload.Item.Id);
 
         private static ShoppingSession DeleteNode(ShoppingSession state, Actions.ShoppingList.DeleteNodeAction action)
         {
-            var group = state.ShoppingList.FindGroup(action.Payload.ParentGroupId);
-            var node = group.GetChildNode(action.Payload.NodeId) as IShoppingNode;
-            var neighborId = (group.GetNextNode(node) ?? group.GetPreviousNode(node))?.Id;
+            var folder = state.ShoppingList.FindFolder(action.Payload.FolderId);
+            var node = folder.GetChildNode(action.Payload.NodeId) as IShoppingNode;
+            var neighborId = (folder.GetNextSibling(node) ?? folder.GetPreviousSibling(node))?.Id;
 
             return state.WithFocusedNodeId(neighborId);
         }
 
-        private static ShoppingSession EnterGroup(ShoppingSession state, EnterGroupAction action)
+        private static ShoppingSession EnterFolder(ShoppingSession state, EnterFolderAction action)
         {
-            var nodeId = action.Payload.GroupId;
-            var parentGroup = state.GetCurrentGroup();
-            var node = parentGroup.GetChildNode(action.Payload.GroupId);
+            var folderId = action.Payload.FolderId;
+            var currentFolder = state.GetCurrentFolder();
+            var node = currentFolder.GetChildNode(action.Payload.FolderId);
 
             if (node == null)
-                throw new KeyNotFoundException($"Node {nodeId} was not found in group {parentGroup.Id}");
+                throw new KeyNotFoundException($"Node {folderId} was not found in folder {currentFolder.Id}");
 
-            if (!(node is IShoppingGroup))
-                throw new InvalidCastException($"Node {nodeId} is not a group");
+            if (!(node is IShoppingFolder))
+                throw new InvalidCastException($"Node {folderId} is not a folder");
 
-            return state.WithCurrentGroupId(nodeId);
+            return state.WithCurrentFolderId(folderId);
         }
 
-        private static ShoppingSession ExitGroup(ShoppingSession state)
+        private static ShoppingSession ExitFolder(ShoppingSession state)
         {
-            var currentGroup = state.GetCurrentGroup();
-            var parentGroupId = currentGroup?.GetParent(state.ShoppingList.Content)?.Id;
+            var currentFolder = state.GetCurrentFolder();
+            var parentFolderId = currentFolder?.GetParent(state.ShoppingList.Content)?.Id;
 
-            if (parentGroupId == null) 
+            if (parentFolderId == null) 
                 return state;
 
             return state
-                .WithCurrentGroupId(parentGroupId)
-                .WithFocusedNodeId(state.CurrentGroupId);
+                .WithCurrentFolderId(parentFolderId)
+                .WithFocusedNodeId(state.CurrentFolderId);
         }
 
         private static ShoppingSession FocusNode(ShoppingSession state, FocusNodeAction action) =>

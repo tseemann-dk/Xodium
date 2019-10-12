@@ -5,20 +5,20 @@ namespace Sidekick.Shopper.Actions.ShoppingList
 {
     public class MoveNodeDownAction : ReduxAction<MoveNodeDownAction.Properties>
     {
-        public MoveNodeDownAction(string parentGroupId, string nodeId)
-            : base(typeof(MoveNodeDownAction).FullName, new Properties(parentGroupId, nodeId))
+        public MoveNodeDownAction(string folderId, string nodeId)
+            : base(typeof(MoveNodeDownAction).FullName, new Properties(folderId, nodeId))
         {
         }
 
         public struct Properties
         {
-            public Properties(string parentGroupId, string nodeId)
+            public Properties(string folderId, string nodeId)
             {
-                ParentGroupId = parentGroupId ?? throw new ArgumentNullException(nameof(parentGroupId));
+                FolderId = folderId ?? throw new ArgumentNullException(nameof(folderId));
                 NodeId = nodeId ?? throw new ArgumentNullException(nameof(nodeId));
             }
 
-            public string ParentGroupId;
+            public string FolderId;
             public string NodeId;
         }
     }

@@ -48,11 +48,11 @@ namespace Sidekick.Shopper.Middleware
                 if (shop == null)
                     throw new InvalidOperationException("Shop is missing");
 
-                if (searchText == null)
-                    throw new InvalidOperationException("SearchText is missing");
+                if (string.IsNullOrEmpty(searchText))
+                    throw new InvalidOperationException("Search text is missing");
 
-                if (searchText.Length > 10)
-                    throw new InvalidOperationException($"Search text \"{searchText}\" is too long");
+                if (searchText.Length < 2)
+                    throw new InvalidOperationException($"Search text \"{searchText}\" is too short");
 
                 var components = await shop.FindComponents(searchText);
                 store.Dispatch(ComponentLookupActionCreator.SearchCompleted(components));

@@ -10,8 +10,8 @@ namespace Sidekick.State
             {
                 case GetNextComponentNumberAction _:
                     return state.WithNextComponentNumber();
-                case GetNextGroupNumberAction _:
-                    return state.WithNextGroupNumber();
+                case GetNextFolderNumberAction _:
+                    return state.WithNextFolderNumber();
                 default:
                     return state;
             }

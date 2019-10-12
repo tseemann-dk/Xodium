@@ -4,7 +4,7 @@ namespace Xodium.Productivity.Content.Models
 {
     public abstract class DocumentBase : IDocument
     {
-        public DocumentBase(string id, string name, IContainer content)
+        protected DocumentBase(string id, string name, ITree content)
         {
             Id = id ?? throw new System.ArgumentNullException(nameof(id));
             Name = name;
@@ -13,13 +13,13 @@ namespace Xodium.Productivity.Content.Models
 
         public string Id { get; }
         public string Name { get; }
-        public IContainer Content { get; }
+        public ITree Content { get; }
 
-        IReadOnlyList<INode> IBranch.Nodes => Content?.Nodes;
+        IReadOnlyList<INode> ITree.Nodes => Content?.Nodes;
 
-        public abstract IDocument WithContent(IContainer content);
+        public abstract IDocument WithContent(ITree content);
 
         INode INode.Clone() => WithContent(Content);
-        IContainer IContainer.WithNodes(IReadOnlyList<INode> nodes) => WithContent(Content?.WithNodes(nodes));
+        ITree ITree.WithNodes(IReadOnlyList<INode> nodes) => WithContent(Content?.WithNodes(nodes));
     }
 }

@@ -5,42 +5,42 @@ using Xodium.Productivity.Content.Models;
 
 namespace Xodium.Productivity.Content.Utilities
 {
-    public delegate T ContainerCreator<T>(string id, IEnumerable<INode> nodes) where T : IContainer;
+    public delegate T NodeCreator<T>(string id, IEnumerable<INode> nodes) where T : ITree;
     public delegate string IdentityProvider(string parentId, int index);
     public delegate IEnumerable<INode> NodesProvider();
 
-    public class TreeBuilder<TContainer>
-        where TContainer : class, IContainer
+    public class TreeBuilder<TNode>
+        where TNode : class, ITree
     {
-        private readonly ContainerCreator<TContainer> containerCreator;
+        private readonly NodeCreator<TNode> nodeCreator;
         private readonly IdentityProvider identityProvider;
 
-        public TreeBuilder(ContainerCreator<TContainer> containerCreator, IdentityProvider identityProvider = null)
+        public TreeBuilder(NodeCreator<TNode> nodeCreator, IdentityProvider identityProvider = null)
         {
-            this.containerCreator = containerCreator ?? throw new ArgumentNullException(nameof(containerCreator));
+            this.nodeCreator = nodeCreator ?? throw new ArgumentNullException(nameof(nodeCreator));
             this.identityProvider = identityProvider ?? ((id, index) => $"{id}.{index}");
         }
 
-        public TContainer CreateContainer(string id, IEnumerable<INode> nodes = null) => containerCreator(id, nodes);
+        public TNode CreateNode(string id, IEnumerable<INode> children = null) => nodeCreator(id, children);
+        public string ProvideId(string id, int index) => identityProvider(id, index);
 
-        public TContainer BuildTree(string id, int depth, int width, NodesProvider getLeaves = null)
+        public TNode BuildTree(string id, int depth, int width, NodesProvider getLeaves = null)
         { 
-            return CreateContainer(id, depth > 0
+            return CreateNode(id, depth > 0
                 ? Enumerable.Range(1, width).Select(x => BuildTree($"{id}.{x}", depth - 1, width, getLeaves))
                 : getLeaves?.Invoke());
         }
 
-        public TContainer BuildTreeViaEvolution(string id, int depth, int width, Func<IEnumerable<INode>> getLeaves = null)
+        public TNode BuildTreeViaEvolution(string id, int depth, int width, Func<IEnumerable<INode>> getLeaves = null)
         {
-            IContainer container = CreateContainer(id);
+            TNode node = CreateNode(id);
 
             if (depth > 0)
             {
                 foreach (var x in Enumerable.Range(1, width))
                 {
-                    container = container.AddNode(
-                        BuildTreeViaEvolution(
-                            GetContainerId(id, x), depth - 1, width, getLeaves));
+                    node = node.AddNode(
+                        BuildTreeViaEvolution(ProvideId(id, x), depth - 1, width, getLeaves));
                 }
             }
             else
@@ -49,13 +49,11 @@ namespace Xodium.Productivity.Content.Utilities
 
                 if (leaves != null)
                 {
-                    container = container.AddNodes(leaves);
+                    node = node.AddNodes(leaves);
                 }
             }
 
-            return container as TContainer;
+            return node;
         }
-
-        public string GetContainerId(string id, int index) => identityProvider(id, index);
     }
 }

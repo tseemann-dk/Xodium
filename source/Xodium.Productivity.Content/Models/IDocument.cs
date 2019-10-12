@@ -1,8 +1,8 @@
 ﻿namespace Xodium.Productivity.Content.Models
 {
-    public interface IDocument : IContainer
+    public interface IDocument : ITree
     {
         string Name { get; }
-        IContainer Content { get; }
+        ITree Content { get; }
     }
 }

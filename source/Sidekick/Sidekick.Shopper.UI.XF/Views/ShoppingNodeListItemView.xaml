@@ -20,12 +20,12 @@
                 Source="{Binding ThumbnailUri}"
                 BackgroundColor="DarkGray"/>
         
-            <!-- Group Image -->
+            <!-- Folder Image -->
             <Image 
-                x:Name="GroupImage"
-                IsVisible="{Binding IsGroup}">
+                x:Name="FolderImage"
+                IsVisible="{Binding IsFolder}">
                 <Image.Source>
-                    <FontImageSource x:Name="GroupImageSource" Glyph="{Binding Glyph}"/>
+                    <FontImageSource x:Name="FolderImageSource" Glyph="{Binding Glyph}"/>
                 </Image.Source>
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding OpenCommand}"/>

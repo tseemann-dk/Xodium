@@ -13,13 +13,13 @@ namespace Sidekick.Shopper.State
     {
         private readonly IReadOnlyList<IComponent> components;
 
-        public ShoppingList(string id, string name, IShoppingGroup root, IReadOnlyList<IComponent> components = null)
+        public ShoppingList(string id, string name, IShoppingFolder root, IReadOnlyList<IComponent> components = null)
             : base(id, name, root)
         {
             this.components = components ?? new List<IComponent>();
         }
 
-        public new IShoppingGroup Content => base.Content as IShoppingGroup;
+        public new IShoppingFolder Content => base.Content as IShoppingFolder;
         public IReadOnlyList<IComponent> Components => components;
 
         [ExcludeFromCodeCoverage]
@@ -33,27 +33,27 @@ namespace Sidekick.Shopper.State
         }
 
         public ShoppingList AddNode(
-            IShoppingGroup parentGroup,
+            IShoppingFolder folder,
             INode node,
             string afterNodeId = null)
         {
-            IShoppingGroup newParentGroup;
+            IShoppingFolder newFolder;
 
             if (afterNodeId == null)
             {
-                newParentGroup = parentGroup.InsertNode(0, node);
+                newFolder = folder.InsertNode(0, node);
             }
             else
             {
-                var afterNode = parentGroup.Nodes.FirstOrDefault(x => x.Id == afterNodeId);
-                var index = parentGroup.GetIndexOfNode(afterNode);
+                var afterNode = folder.Nodes.FirstOrDefault(x => x.Id == afterNodeId);
+                var index = folder.GetIndexOfNode(afterNode);
 
-                newParentGroup = index >= parentGroup.Nodes.Count
-                    ? parentGroup.AddNode(node)
-                    : parentGroup.InsertNode(index + 1, node);
+                newFolder = index >= folder.Nodes.Count
+                    ? folder.AddNode(node)
+                    : folder.InsertNode(index + 1, node);
             }
 
-            return ReplaceNode(parentGroup, newParentGroup);
+            return ReplaceNode(folder, newFolder);
         }
 
         public IComponent FindComponent(IComponentReference reference)
@@ -61,48 +61,48 @@ namespace Sidekick.Shopper.State
             return Components.FirstOrDefault(x => x.EqualsReference(reference));
         }
 
-        public IShoppingGroup FindGroup(string groupId)
+        public IShoppingFolder FindFolder(string id)
         {
-            return Content.FindNode<IShoppingGroup>(x => x.Id == groupId);
+            return Content.FindNode<IShoppingFolder>(x => x.Id == id);
         }
 
-        public ShoppingList ChangeGroupTitle(IShoppingGroup group, string newTitle)
+        public ShoppingList ChangeFolderTitle(IShoppingFolder folder, string newTitle)
         {
-            return ReplaceNode(group, group.WithTitle(newTitle));
+            return ReplaceNode(folder, folder.WithTitle(newTitle));
         }
 
-        public ShoppingList DeleteNode(IShoppingGroup parentGroup, string nodeId)
+        public ShoppingList DeleteNode(IShoppingFolder folder, string nodeId)
         {
-            return DeleteNode(parentGroup, parentGroup.GetChildNode(nodeId) as IShoppingNode);
+            return DeleteNode(folder, folder.GetChildNode(nodeId) as IShoppingNode);
         }
 
-        public ShoppingList DeleteNode(IShoppingGroup parentGroup, IShoppingNode node)
+        public ShoppingList DeleteNode(IShoppingFolder folder, IShoppingNode node)
         {
-            return ReplaceNode(parentGroup, parentGroup.RemoveNode(node));
+            return ReplaceNode(folder, folder.RemoveNode(node));
         }
 
-        public ShoppingList MoveNodeDown(IShoppingGroup parentGroup, string nodeId)
+        public ShoppingList MoveNodeDown(IShoppingFolder folder, string nodeId)
         {
-            return MoveNodeDown(parentGroup, parentGroup.GetChildNode(nodeId) as IShoppingNode);
+            return MoveNodeDown(folder, folder.GetChildNode(nodeId) as IShoppingNode);
         }
 
-        public ShoppingList MoveNodeDown(IShoppingGroup parentGroup, IShoppingNode node)
+        public ShoppingList MoveNodeDown(IShoppingFolder folder, IShoppingNode node)
         {
-            var nextNode = parentGroup.GetNextNode(node);
+            var nextNode = folder.GetNextSibling(node);
             if (nextNode == null) return this;
-            return ReplaceNode(parentGroup, parentGroup.SwapChildNodes(node, nextNode));
+            return ReplaceNode(folder, folder.SwapChildNodes(node, nextNode));
         }
 
-        public ShoppingList MoveNodeUp(IShoppingGroup parentGroup, string nodeId)
+        public ShoppingList MoveNodeUp(IShoppingFolder folder, string nodeId)
         {
-            return MoveNodeUp(parentGroup, parentGroup.GetChildNode(nodeId) as IShoppingNode);
+            return MoveNodeUp(folder, folder.GetChildNode(nodeId) as IShoppingNode);
         }
 
-        public ShoppingList MoveNodeUp(IShoppingGroup parentGroup, IShoppingNode node)
+        public ShoppingList MoveNodeUp(IShoppingFolder folder, IShoppingNode node)
         {
-            var previousNode = parentGroup.GetPreviousNode(node);
+            var previousNode = folder.GetPreviousSibling(node);
             if (previousNode == null) return this;
-            return ReplaceNode(parentGroup, parentGroup.SwapChildNodes(node, previousNode));
+            return ReplaceNode(folder, folder.SwapChildNodes(node, previousNode));
         }
 
         public ShoppingList RemoveComponent(IComponent component)
@@ -114,8 +114,8 @@ namespace Sidekick.Shopper.State
 
         public ShoppingList ReplaceNode(IShoppingNode oldNode, IShoppingNode newNode)
         {
-            if (oldNode is IShoppingGroup oldGroup && oldGroup.Id == Content.Id && newNode is IShoppingGroup newGroup)
-                return WithContent(newGroup);
+            if (oldNode is IShoppingFolder oldFolder && oldFolder.Id == Content.Id && newNode is IShoppingFolder newFolder)
+                return WithContent(newFolder);
 
             return WithContent(Content.ReplaceNode(oldNode, newNode));
         }
@@ -123,17 +123,17 @@ namespace Sidekick.Shopper.State
         public ShoppingList WithTitle(string title) => 
             WithContent(Content.WithTitle(title));
         
-        public ShoppingList WithContent(IShoppingGroup content) => 
+        public ShoppingList WithContent(IShoppingFolder content) => 
             content == Content ? this : new ShoppingList(Id, Name, content, Components);
         
         public ShoppingList WithComponents(IReadOnlyList<IComponent> components) => 
             components == Components ? this : new ShoppingList(Id, Name, Content, components);
         
-        public override IDocument WithContent(IContainer content) => WithContent(content as IShoppingGroup);
+        public override IDocument WithContent(ITree content) => WithContent(content as IShoppingFolder);
 
         IShoppingList IShoppingList.AddComponent(IComponent component) => AddComponent(component);
         IShoppingList IShoppingList.RemoveComponent(IComponent component) => RemoveComponent(component);
-        IShoppingList IShoppingList.WithContent(IShoppingGroup content) => WithContent(content);
+        IShoppingList IShoppingList.WithContent(IShoppingFolder content) => WithContent(content);
         IShoppingList IShoppingList.WithComponents(IReadOnlyList<IComponent> components) => WithComponents(components);
     }
 }

@@ -5,8 +5,8 @@ namespace Sidekick.Shopper.Actions
 {
     public static class ShoppingSessionActionCreator
     {
-        public static IAction EnterGroup(string groupId) => new EnterGroupAction(groupId);
-        public static IAction ExitGroup() => new ExitGroupAction();
+        public static IAction EnterFolder(string folderId) => new EnterFolderAction(folderId);
+        public static IAction ExitFolder() => new ExitFolderAction();
         public static IAction FocusNode(string nodeId) => new FocusNodeAction(nodeId);
     }
 }

@@ -35,7 +35,7 @@ namespace Sidekick.Shopper.Middleware
             }
 
             store.Dispatch(ShoppingListActionCreator.AddItem(
-                session.CurrentGroupId,
+                session.CurrentFolderId,
                 new ShoppingItem(component, 1), 
                 insertAfterNodeId: session.FocusedNodeId
             ));

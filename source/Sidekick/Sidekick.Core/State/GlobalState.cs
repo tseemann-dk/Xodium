@@ -7,16 +7,16 @@
         {
         }
 
-        public GlobalState(int componentNumber, int groupNumber)
+        public GlobalState(int componentNumber, int folderNumber)
         {
             ComponentNumber = componentNumber;
-            GroupNumber = groupNumber;
+            FolderNumber = folderNumber;
         }
 
         public int ComponentNumber { get; }
-        public int GroupNumber { get; }
+        public int FolderNumber { get; }
 
-        public GlobalState WithNextComponentNumber() => new GlobalState(ComponentNumber + 1, GroupNumber);
-        public GlobalState WithNextGroupNumber() => new GlobalState(ComponentNumber, GroupNumber + 1);
+        public GlobalState WithNextComponentNumber() => new GlobalState(ComponentNumber + 1, FolderNumber);
+        public GlobalState WithNextFolderNumber() => new GlobalState(ComponentNumber, FolderNumber + 1);
     }
 }

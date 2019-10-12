@@ -9,16 +9,16 @@ using Xamarin.Forms.Xaml;
 
 namespace Sidekick.Shopper.UI.XF.Views
 {
-    public abstract class ShoppingGroupViewBase : ReactiveContentView<ShoppingGroupViewModel> { }
+    public abstract class ShoppingFolderViewBase : ReactiveContentView<ShoppingFolderViewModel> { }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ShoppingGroupView : ShoppingGroupViewBase
+    public partial class ShoppingFolderView : ShoppingFolderViewBase
     {
-        public ShoppingGroupView(ShoppingGroupViewModel viewModel)
+        public ShoppingFolderView(ShoppingFolderViewModel viewModel)
         {
             InitializeComponent();
 
-            AddGroupButton.Glyph = MaterialDesignIcon.FolderPlus;
+            AddFolderButton.Glyph = MaterialDesignIcon.FolderPlus;
             DeleteButton.Glyph = MaterialDesignIcon.Delete;
             GoBackButton.Glyph = MaterialDesignIcon.ArrowLeftBold;
             GoForwardButton.Glyph = MaterialDesignIcon.ArrowRightBold;
@@ -55,10 +55,10 @@ namespace Sidekick.Shopper.UI.XF.Views
                     v => v.InfoLabel.Text)
                     .DisposeWith(disposables);
 
-                // AddGroupButton
+                // AddFolderButton
                 this.BindCommand(ViewModel, 
-                    vm => vm.AddNewGroupCommand, 
-                    v => v.AddGroupButton)
+                    vm => vm.AddNewFolderCommand, 
+                    v => v.AddFolderButton)
                     .DisposeWith(disposables);
 
                 // DeleteButton
@@ -69,13 +69,13 @@ namespace Sidekick.Shopper.UI.XF.Views
 
                 // GoForwardButton
                 this.BindCommand(ViewModel,
-                    vm => vm.EnterGroupCommand,
+                    vm => vm.EnterFolderCommand,
                     v => v.GoForwardButton)
                     .DisposeWith(disposables);
 
                 // GoBackButton
                 this.BindCommand(ViewModel,
-                    vm => vm.ExitGroupCommand,
+                    vm => vm.ExitFolderCommand,
                     v => v.GoBackButton)
                     .DisposeWith(disposables);
 

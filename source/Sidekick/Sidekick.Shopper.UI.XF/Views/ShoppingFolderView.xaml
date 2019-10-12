@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<views:ShoppingGroupViewBase
+<views:ShoppingFolderViewBase
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -7,7 +7,7 @@
     xmlns:views="clr-namespace:Sidekick.Shopper.UI.XF.Views"
     xmlns:controls="clr-namespace:Sidekick.UI.XF.Controls;assembly=Sidekick.UI.XF"
     mc:Ignorable="d"
-    x:Class="Sidekick.Shopper.UI.XF.Views.ShoppingGroupView">
+    x:Class="Sidekick.Shopper.UI.XF.Views.ShoppingFolderView">
 
     <Grid>
 
@@ -85,7 +85,7 @@
                     </Grid.ColumnDefinitions>
 
                     <controls:ToolButton Grid.Column="0" x:Name="PerformLookupButton" Text="Item"/>
-                    <controls:ToolButton Grid.Column="1" x:Name="AddGroupButton" Text="Group"/>
+                    <controls:ToolButton Grid.Column="1" x:Name="AddFolderButton" Text="Folder"/>
                     <controls:ToolButton Grid.Column="2" x:Name="RenameButton" Text="Edit"/>
                     <controls:ToolButton Grid.Column="3" x:Name="DeleteButton" Text="Delete"/>
                 </Grid>
@@ -106,4 +106,4 @@
 
     </Grid>
     
-</views:ShoppingGroupViewBase>
+</views:ShoppingFolderViewBase>

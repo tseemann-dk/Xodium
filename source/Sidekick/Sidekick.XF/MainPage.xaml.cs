@@ -42,12 +42,12 @@ namespace Sidekick.XF
                 .StartWith(store.GetState().ShoppingSession)
                 .DistinctUntilChanged();
 
-            var vm = new ShoppingGroupViewModel(shoppingSessionChanges, environment);
+            var vm = new ShoppingFolderViewModel(shoppingSessionChanges, environment);
 
             appStateChanges.Subscribe(appState => UpdateAppStateView(appState));
             //UpdateAppStateView(store.GetState());
 
-            Workspace.Children.Add(new ShoppingGroupView(vm));
+            Workspace.Children.Add(new ShoppingFolderView(vm));
         }
 
         private void UpdateAppStateView(AppState appState)

@@ -18,14 +18,14 @@ namespace Sidekick.Tests
         }
 
         [Fact]
-        public void GetNextGroupNumber_IncreasesGroupNumber()
+        public void GetNextFolderNumber_IncreasesFolderNumber()
         {
             var state = Store.GetState();
-            var groupNumber = state.Global.GroupNumber;
+            var folderNumber = state.Global.FolderNumber;
 
-            Store.Dispatch(GlobalActionCreator.GetNextGroupNumber());
+            Store.Dispatch(GlobalActionCreator.GetNextFolderNumber());
             state = Store.GetState();
-            state.Global.GroupNumber.Should().Be(groupNumber + 1);
+            state.Global.FolderNumber.Should().Be(folderNumber + 1);
         }
     }
 }

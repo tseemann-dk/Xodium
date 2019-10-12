@@ -4,30 +4,101 @@ using System.Linq;
 
 namespace Xodium.Productivity.Content.Models
 {
-    public interface IContainer : IBranch
+    public interface ITree : INode
     {
-        IContainer WithNodes(IReadOnlyList<INode> nodes);
+        IReadOnlyList<INode> Nodes { get; }
+
+        ITree WithNodes(IReadOnlyList<INode> nodes);
     }
 
-    public static class ContainerExtensions
+    public static class TreeExtensions
     {
-        public static IEnumerable<IContainer> GetContainers(this IContainer self) 
-            => self.Nodes.OfType<IContainer>();
+        #region Find & Inspect Methods
+
+        public static ITree FindParentOf(this ITree root, INode node)
+        {
+            if (node == null)
+                throw new ArgumentNullException(nameof(node));
+
+            if (root.Nodes.Contains(node))
+                return root;
+
+            return root.Nodes
+                .OfType<ITree>()
+                .Select(x => x.FindParentOf(node))
+                .FirstOrDefault(x => x != null);
+        }
+
+        public static INode FindNode(this ITree root, Func<INode, bool> predicate)
+            => FindNode<INode>(root, predicate);
+
+        public static T FindNode<T>(this ITree root, Func<T, bool> predicate)
+            where T : INode
+        {
+            if (predicate == null)
+                throw new ArgumentNullException(nameof(predicate));
+
+            if (root is T node && predicate(node))
+                return node;
+
+            return root.Nodes
+                .OfType<ITree>()
+                .Select(x => x.FindNode(predicate))
+                .FirstOrDefault(x => x != null);
+        }
+
+        public static INode GetChildNode(this ITree self, string nodeId)
+        {
+            return self.Nodes.FirstOrDefault(x => x.Id == nodeId) ?? throw new KeyNotFoundException($"Child node {nodeId} not found at branch node {self.Id}");
+        }
+
+        public static int GetIndexOfNode(this ITree self, INode node)
+        {
+            int index = 0;
+
+            foreach (var item in self.Nodes)
+            {
+                if (item == node)
+                    return index;
+
+                index++;
+            }
+
+            return -1;
+        }
+
+        public static INode GetNextSibling(this ITree self, INode node)
+        {
+            return self.Nodes.SkipWhile(x => x != node).Skip(1).FirstOrDefault();
+        }
+
+        public static INode GetPreviousSibling(this ITree self, INode node)
+        {
+            var index = self.GetIndexOfNode(node);
+            return index > 0 ? self.Nodes[index - 1] : null;
+        }
+
+        public static IEnumerable<ITree> GetSubTrees(this ITree self)
+            => self.Nodes.OfType<ITree>();
+
+        #endregion
+
+        #region Add Methods
 
         public static T AddNode<T>(this T self, INode node)
-            where T : class, IContainer
+            where T : class, ITree
             => self.AddNodes(new[] { node });
 
-        public static T AddNodeAt<T>(this T self, IContainer parent, INode node)
-            where T : class, IContainer
+        public static T AddNodeAt<T>(this T self, ITree parent, INode node)
+            where T : class, ITree
             => self.AddNodesAt(parent, new[] { node });
 
         public static T AddNodes<T>(this T self, IEnumerable<INode> nodes)
-            where T : class, IContainer 
+            where T : class, ITree
             => self.WithNodes(self.Nodes.Concat(nodes).ToList()) as T;
 
-        public static T AddNodesAt<T>(this T self, IContainer parent, IEnumerable<INode> nodes)
-            where T : class, IContainer
+        public static T AddNodesAt<T>(this T self, ITree parent, IEnumerable<INode> nodes)
+            where T : class, ITree
         {
             if (self.TryAddNodes(parent, nodes, out var result))
             {
@@ -37,24 +108,28 @@ namespace Xodium.Productivity.Content.Models
             throw new ArgumentException("Not found", nameof(parent));
         }
 
+        #endregion
+
+        #region Insert Methods
+
         public static T InsertNode<T>(this T self, int index, INode node)
-            where T : class, IContainer
+            where T : class, ITree
             => self.InsertNodes(index, new[] { node });
 
-        public static T InsertNodeAt<T>(this T self, IContainer parent, int index, INode node)
-            where T : class, IContainer
+        public static T InsertNodeAt<T>(this T self, ITree parent, int index, INode node)
+            where T : class, ITree
             => self.InsertNodesAt(parent, index, new[] { node });
 
         public static T InsertNodes<T>(this T self, int index, IEnumerable<INode> nodes)
-            where T : class, IContainer
+            where T : class, ITree
         {
             var newNodes = self.Nodes.ToList();
             newNodes.InsertRange(index, nodes);
             return self.WithNodes(newNodes) as T;
         }
 
-        public static T InsertNodesAt<T>(this T self, IContainer parent, int index, IEnumerable<INode> nodes)
-            where T : class, IContainer
+        public static T InsertNodesAt<T>(this T self, ITree parent, int index, IEnumerable<INode> nodes)
+            where T : class, ITree
         {
             if (self.TryInsertNodes(parent, index, nodes, out var result))
             {
@@ -64,15 +139,19 @@ namespace Xodium.Productivity.Content.Models
             throw new ArgumentException("Not found", nameof(parent));
         }
 
+        #endregion
+
+        #region Remove Methods
+
         public static T RemoveNode<T>(this T self, INode oldNode)
-            where T : class, IContainer
+            where T : class, ITree
         {
             if (oldNode.IsChildOf(self))
             {
                 return self.RemoveChildNode(oldNode);
             }
 
-            if (oldNode.GetParent(self) is IContainer parent)
+            if (oldNode.GetParent(self) is ITree parent)
             {
                 return self.RemoveNodeAt(parent, oldNode);
             }
@@ -81,15 +160,15 @@ namespace Xodium.Productivity.Content.Models
         }
 
         private static T RemoveChildNode<T>(this T self, INode oldNode)
-            where T : class, IContainer
+            where T : class, ITree
         {
             var nodes = self.Nodes.ToList();
             nodes.Remove(oldNode);
             return self.WithNodes(nodes) as T;
         }
 
-        public static T RemoveNodeAt<T>(this T self, IContainer parent, INode oldNode)
-            where T : class, IContainer
+        public static T RemoveNodeAt<T>(this T self, ITree parent, INode oldNode)
+            where T : class, ITree
         {
             if (self.TryRemoveNode(parent, oldNode, out var result))
             {
@@ -100,7 +179,7 @@ namespace Xodium.Productivity.Content.Models
         }
 
         public static T RemoveChildNodes<T>(this T self, IEnumerable<INode> oldNodes)
-            where T : class, IContainer
+            where T : class, ITree
         {
             var nodes = self.Nodes.ToList();
             nodes.RemoveAll(x => oldNodes.Contains(x));
@@ -108,14 +187,14 @@ namespace Xodium.Productivity.Content.Models
         }
 
         public static T ReplaceNode<T>(this T self, INode oldNode, INode newNode)
-            where T : class, IContainer
+            where T : class, ITree
         {
             if (self.Nodes.Contains(oldNode))
             {
                 return self.ReplaceChildNode(oldNode, newNode);
             }
 
-            if (oldNode.GetParent(self) is IContainer parent)
+            if (oldNode.GetParent(self) is ITree parent)
             {
                 return self.ReplaceNodeAt(parent, oldNode, newNode);
             }
@@ -123,8 +202,12 @@ namespace Xodium.Productivity.Content.Models
             throw new ArgumentException("Not found", nameof(oldNode));
         }
 
+        #endregion
+
+        #region Replace Methods
+
         private static T ReplaceChildNode<T>(this T self, INode oldNode, INode newNode)
-            where T : class, IContainer
+            where T : class, ITree
         {
             var nodes = self.Nodes.ToList();
             var index = nodes.IndexOf(oldNode);
@@ -138,8 +221,8 @@ namespace Xodium.Productivity.Content.Models
             return self.WithNodes(nodes) as T;
         }
 
-        public static T ReplaceNodeAt<T>(this T self, IContainer parent, INode oldNode, INode newNode)
-            where T : class, IContainer
+        public static T ReplaceNodeAt<T>(this T self, ITree parent, INode oldNode, INode newNode)
+            where T : class, ITree
         {
             if (self.TryReplaceNode(parent, oldNode, newNode, out var result))
             {
@@ -150,7 +233,7 @@ namespace Xodium.Productivity.Content.Models
         }
 
         public static T SwapChildNodes<T>(this T self, INode node1, INode node2)
-            where T : class, IContainer
+            where T : class, ITree
         {
             var nodes = self.Nodes.ToList();
             var index1 = nodes.IndexOf(node1);
@@ -168,8 +251,12 @@ namespace Xodium.Productivity.Content.Models
             return self.WithNodes(nodes) as T;
         }
 
-        public static bool TryAddNodes<T>(this T self, IContainer parent, IEnumerable<INode> nodes, out T result)
-            where T : class, IContainer
+        #endregion
+
+        #region Internal Methods
+
+        private static bool TryAddNodes<T>(this T self, ITree parent, IEnumerable<INode> nodes, out T result)
+            where T : class, ITree
         {
             if (self == parent)
             {
@@ -177,11 +264,11 @@ namespace Xodium.Productivity.Content.Models
                 return true;
             }
 
-            foreach (var container in self.GetContainers())
+            foreach (var branchNode in self.GetSubTrees())
             {
-                if (container.TryAddNodes(parent, nodes, out var branch))
+                if (branchNode.TryAddNodes(parent, nodes, out var branch))
                 {
-                    result = self.ReplaceChildNode(container, branch);
+                    result = self.ReplaceChildNode(branchNode, branch);
                     return true;
                 }
             }
@@ -190,8 +277,8 @@ namespace Xodium.Productivity.Content.Models
             return false;
         }
 
-        public static bool TryInsertNodes<T>(this T self, IContainer parent, int index, IEnumerable<INode> nodes, out T result)
-            where T : class, IContainer
+        private static bool TryInsertNodes<T>(this T self, ITree parent, int index, IEnumerable<INode> nodes, out T result)
+            where T : class, ITree
         {
             if (self == parent)
             {
@@ -199,11 +286,11 @@ namespace Xodium.Productivity.Content.Models
                 return true;
             }
 
-            foreach (var container in self.GetContainers())
+            foreach (var branchNode in self.GetSubTrees())
             {
-                if (container.TryInsertNodes(parent, index, nodes, out var branch))
+                if (branchNode.TryInsertNodes(parent, index, nodes, out var branch))
                 {
-                    result = self.ReplaceChildNode(container, branch);
+                    result = self.ReplaceChildNode(branchNode, branch);
                     return true;
                 }
             }
@@ -212,8 +299,8 @@ namespace Xodium.Productivity.Content.Models
             return false;
         }
 
-        public static bool TryRemoveNode<T>(this T self, IContainer parent, INode oldNode, out T result)
-            where T : class, IContainer
+        private static bool TryRemoveNode<T>(this T self, ITree parent, INode oldNode, out T result)
+            where T : class, ITree
         {
             if (self == parent)
             {
@@ -221,11 +308,11 @@ namespace Xodium.Productivity.Content.Models
                 return true;
             }
 
-            foreach (var container in self.GetContainers())
+            foreach (var branchNode in self.GetSubTrees())
             {
-                if (container.TryRemoveNode(parent, oldNode, out var branch))
+                if (branchNode.TryRemoveNode(parent, oldNode, out var branch))
                 {
-                    result = self.ReplaceChildNode(container, branch);
+                    result = self.ReplaceChildNode(branchNode, branch);
                     return true;
                 }
             }
@@ -234,8 +321,8 @@ namespace Xodium.Productivity.Content.Models
             return false;
         }
 
-        public static bool TryReplaceNode<T>(this T self, IContainer parent, INode oldNode, INode newNode, out T result)
-            where T : class, IContainer
+        private static bool TryReplaceNode<T>(this T self, ITree parent, INode oldNode, INode newNode, out T result)
+            where T : class, ITree
         {
             if (self == parent)
             {
@@ -243,11 +330,11 @@ namespace Xodium.Productivity.Content.Models
                 return true;
             }
 
-            foreach (var container in self.GetContainers())
+            foreach (var branchNode in self.GetSubTrees())
             {
-                if (container.TryReplaceNode(parent, oldNode, newNode, out var branch))
+                if (branchNode.TryReplaceNode(parent, oldNode, newNode, out var branch))
                 {
-                    result = self.ReplaceChildNode(container, branch);
+                    result = self.ReplaceChildNode(branchNode, branch);
                     return true;
                 }
             }
@@ -255,5 +342,7 @@ namespace Xodium.Productivity.Content.Models
             result = null;
             return false;
         }
+
+        #endregion
     }
 }

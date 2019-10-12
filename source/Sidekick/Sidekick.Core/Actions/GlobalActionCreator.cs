@@ -6,6 +6,6 @@ namespace Sidekick.Actions
     public static class GlobalActionCreator
     {
         public static IAction GetNextComponentNumber() => new GetNextComponentNumberAction();
-        public static IAction GetNextGroupNumber() => new GetNextGroupNumberAction();
+        public static IAction GetNextFolderNumber() => new GetNextFolderNumberAction();
     }
 }

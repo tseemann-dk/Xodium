@@ -20,7 +20,7 @@ namespace Sidekick.Uno
                 .StartWith(store.GetState().ShoppingSession)
                 .DistinctUntilChanged();
 
-            var vm = new ShoppingGroupViewModel(shoppingSessionChanges, environment);
+            var vm = new ShoppingFolderViewModel(shoppingSessionChanges, environment);
             DataContext = vm;
 
             this.InitializeComponent();

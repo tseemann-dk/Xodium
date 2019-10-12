@@ -1,11 +1,10 @@
-﻿using System.Linq;
-using Windows.UI.Xaml.Controls;
+﻿using Windows.UI.Xaml.Controls;
 
 namespace Sidekick.Shopper.UI.Uno.Views
 {
-    public sealed partial class ShoppingGroupView : UserControl
+    public sealed partial class ShoppingFolderView : UserControl
     {
-        public ShoppingGroupView()
+        public ShoppingFolderView()
         {
             this.InitializeComponent();
 

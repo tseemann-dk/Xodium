@@ -36,7 +36,7 @@ namespace Sidekick.State
         private static ShoppingList BuildEmptyShoppingList()
         {
             return new ShoppingList("list-1", "L1",
-                new ShoppingGroup("group-1", "G1", "Group 1", 1)
+                new ShoppingFolder("folder-1", "F1", "Folder 1", 1)
             );
         }
 
@@ -49,7 +49,7 @@ namespace Sidekick.State
             };
 
             return new ShoppingList("list-1", "L1",
-                new ShoppingGroup("group-1", "G1", "Group 1", 1, new[]
+                new ShoppingFolder("folder-1", "F1", "Folder 1", 1, new[]
                 {
                     new ShoppingItem(components[0], 1),
                     new ShoppingItem(components[1], 1)

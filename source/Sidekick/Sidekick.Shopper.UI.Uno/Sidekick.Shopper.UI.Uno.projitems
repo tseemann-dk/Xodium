@@ -17,7 +17,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\ShoppingGroupView.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Views\ShoppingFolderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -31,8 +31,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ComponentLookupView.xaml.cs">
       <DependentUpon>ComponentLookupView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ShoppingGroupView.xaml.cs">
-      <DependentUpon>ShoppingGroupView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ShoppingFolderView.xaml.cs">
+      <DependentUpon>ShoppingFolderView.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ShoppingNodeListItemView.xaml.cs" />
   </ItemGroup>

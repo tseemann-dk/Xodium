@@ -15,16 +15,16 @@ using Xodium.Productivity.Content.Models;
 
 namespace Sidekick.Shopper.ViewModels
 {
-    public class ShoppingGroupViewModel : ReactiveViewModelBase<IObservable<ShoppingSession>>
+    public class ShoppingFolderViewModel : ReactiveViewModelBase<IObservable<ShoppingSession>>
     {
         private ShoppingSession session;
         private string title;
-        private IShoppingGroup currentGroup;
+        private IShoppingFolder currentFolder;
         private IShoppingList currentShoppingList;
         private ShoppingNodeListItemViewModel focusedNode;
         private readonly ObservableAsPropertyHelper<string> focusedNodeText;
 
-        public ShoppingGroupViewModel(IObservable<ShoppingSession> model, IExecutionEnvironment executionEnvironment) 
+        public ShoppingFolderViewModel(IObservable<ShoppingSession> model, IExecutionEnvironment executionEnvironment) 
             : base(model, executionEnvironment)
         {
             Nodes = new ObservableCollection<ShoppingNodeListItemViewModel>();
@@ -32,46 +32,46 @@ namespace Sidekick.Shopper.ViewModels
             var focusedNodeChanges = this
                 .WhenAnyValue(x => x.FocusedNode);
 
-            var currentGroupChanges = this
-                .WhenAnyValue(x => x.CurrentGroup);
+            var currentFolderChanges = this
+                .WhenAnyValue(x => x.CurrentFolder);
 
-            var currentGroupOrShoppingListChanges = this
-                .WhenAnyValue(x => x.CurrentGroup, x => x.CurrentShoppingList, 
-                (group, shoppingList) => (group, shoppingList));
+            var currentFolderOrShoppingListChanges = this
+                .WhenAnyValue(x => x.CurrentFolder, x => x.CurrentShoppingList, 
+                (folder, shoppingList) => (folder, shoppingList));
 
-            var currentGroupOrFocusedNodeChanges = this
-                .WhenAnyValue(x => x.CurrentGroup, x => x.FocusedNode, 
-                (group, node) => (group, node));
+            var currentFolderOrFocusedNodeChanges = this
+                .WhenAnyValue(x => x.CurrentFolder, x => x.FocusedNode, 
+                (folder, node) => (folder, node));
 
             var hasFocusedNode = focusedNodeChanges
                 .Select(x => x != null);
 
-            var isAtRoot = currentGroupOrShoppingListChanges
-                .Select(x => x.group == x.shoppingList?.Content);
+            var isAtRoot = currentFolderOrShoppingListChanges
+                .Select(x => x.folder == x.shoppingList?.Content);
 
             var isNotAtRoot = isAtRoot
                 .Select(x => !x);
 
-            var hasCurrentGroup = currentGroupChanges
+            var hasCurrentFolder = currentFolderChanges
                 .Select(x => x != null);
 
-            var focusedNodeIsGroup = focusedNodeChanges
-                .Select(x => x?.Model is ShoppingGroup);
+            var focusedNodeIsFolder = focusedNodeChanges
+                .Select(x => x?.Model is ShoppingFolder);
 
-            var focusedNodeIsNotFirst = currentGroupOrFocusedNodeChanges
-                .Select(x => !(x.node?.IsFirstNodeIn(x.group) ?? true));
+            var focusedNodeIsNotFirst = currentFolderOrFocusedNodeChanges
+                .Select(x => !(x.node?.IsFirstNodeIn(x.folder) ?? true));
 
-            var focusedNodeIsNotLast = currentGroupOrFocusedNodeChanges
-                .Select(x => !(x.node?.IsLastNodeIn(x.group) ?? true));
+            var focusedNodeIsNotLast = currentFolderOrFocusedNodeChanges
+                .Select(x => !(x.node?.IsLastNodeIn(x.folder) ?? true));
 
-            AddNewGroupCommand = ReactiveCommand.Create(() => AddNewGroup());
-            ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle(), hasCurrentGroup);
+            AddNewFolderCommand = ReactiveCommand.Create(() => AddNewFolder());
+            ChangeTitleCommand = ReactiveCommand.Create(() => ChangeTitle(), hasCurrentFolder);
             DeleteNodeCommand = ReactiveCommand.Create(() => DeleteNode(), hasFocusedNode);
-            EnterGroupCommand = ReactiveCommand.Create(() => EnterFocusedGroup(), focusedNodeIsGroup);
-            ExitGroupCommand = ReactiveCommand.Create(() => ExitGroup(), isNotAtRoot);
+            EnterFolderCommand = ReactiveCommand.Create(() => EnterFocusedFolder(), focusedNodeIsFolder);
+            ExitFolderCommand = ReactiveCommand.Create(() => ExitFolder(), isNotAtRoot);
             MoveNodeDownCommand = ReactiveCommand.Create(() => MoveFocusedNodeDown(), focusedNodeIsNotLast);
             MoveNodeUpCommand = ReactiveCommand.Create(() => MoveFocusedNodeUp(), focusedNodeIsNotFirst);
-            PerformLookupCommand = ReactiveCommand.Create(() => PerformLookup(), hasCurrentGroup);
+            PerformLookupCommand = ReactiveCommand.Create(() => PerformLookup(), hasCurrentFolder);
 
             ComponentLookup = new ComponentLookupViewModel(
                 Model
@@ -91,10 +91,10 @@ namespace Sidekick.Shopper.ViewModels
 
         public ComponentLookupViewModel ComponentLookup { get; }
 
-        public IShoppingGroup CurrentGroup
+        public IShoppingFolder CurrentFolder
         {
-            get => currentGroup;
-            set => this.RaiseAndSetIfChanged(ref currentGroup, value);
+            get => currentFolder;
+            set => this.RaiseAndSetIfChanged(ref currentFolder, value);
         }
 
         public IShoppingList CurrentShoppingList
@@ -123,25 +123,25 @@ namespace Sidekick.Shopper.ViewModels
 
         #region Commands
 
-        public ReactiveCommand<Unit, Unit> AddNewGroupCommand { get; }
+        public ReactiveCommand<Unit, Unit> AddNewFolderCommand { get; }
         public ReactiveCommand<Unit, Unit> ChangeTitleCommand { get; }
         public ReactiveCommand<Unit, Unit> DeleteNodeCommand { get; }
-        public ReactiveCommand<Unit, Unit> EnterGroupCommand { get; }
-        public ReactiveCommand<Unit, Unit> ExitGroupCommand { get; }
+        public ReactiveCommand<Unit, Unit> EnterFolderCommand { get; }
+        public ReactiveCommand<Unit, Unit> ExitFolderCommand { get; }
         public ReactiveCommand<Unit, Unit> MoveNodeDownCommand { get; }
         public ReactiveCommand<Unit, Unit> MoveNodeUpCommand { get; }
         public ReactiveCommand<Unit, Unit> PerformLookupCommand { get; }
 
-        private void AddNewGroup()
+        private void AddNewFolder()
         {
-            this.DispatchAction(GlobalActionCreator.GetNextGroupNumber());
+            this.DispatchAction(GlobalActionCreator.GetNextFolderNumber());
 
-            var groupNumber = this.GetAppState().Global.GroupNumber;
-            var title = $"Group {groupNumber}";
+            var folderNumber = this.GetAppState().Global.FolderNumber;
+            var title = $"Folder {folderNumber}";
 
-            this.DispatchAction(Actions.ShoppingListActionCreator.AddGroup(
-                CurrentGroup.Id,
-                new ShoppingGroup($"G{groupNumber}", title, 1),
+            this.DispatchAction(Actions.ShoppingListActionCreator.AddFolder(
+                CurrentFolder.Id,
+                new ShoppingFolder($"G{folderNumber}", title, 1),
                 FocusedNode?.Id)
             );
         }
@@ -158,31 +158,31 @@ namespace Sidekick.Shopper.ViewModels
             var prefix = string.Join(" ", words.Take(words.Length - 1));
             var newTitle = $"{prefix} {++count}";
 
-            this.DispatchAction(Actions.ShoppingListActionCreator.ChangeGroupTitle(CurrentGroup.Id, newTitle));
+            this.DispatchAction(Actions.ShoppingListActionCreator.ChangeFolderTitle(CurrentFolder.Id, newTitle));
         }
 
         private void DeleteNode()
         {
             if (focusedNode == null) return;
 
-            this.DispatchAction(Actions.ShoppingListActionCreator.DeleteNode(CurrentGroup.Id, FocusedNode.Id));
+            this.DispatchAction(Actions.ShoppingListActionCreator.DeleteNode(CurrentFolder.Id, FocusedNode.Id));
         }
 
-        private void EnterFocusedGroup()
+        private void EnterFocusedFolder()
         {
-            EnterGroup(focusedNode);
+            EnterFolder(focusedNode);
         }
 
-        public void EnterGroup(ShoppingNodeListItemViewModel node)
+        public void EnterFolder(ShoppingNodeListItemViewModel node)
         {
-            if (!(node.Model is IShoppingGroup group)) return;
+            if (!(node.Model is IShoppingFolder folder)) return;
 
-            this.DispatchAction(Actions.ShoppingSessionActionCreator.EnterGroup(group.Id));
+            this.DispatchAction(Actions.ShoppingSessionActionCreator.EnterFolder(folder.Id));
         }
 
-        private void ExitGroup()
+        private void ExitFolder()
         {
-            this.DispatchAction(Actions.ShoppingSessionActionCreator.ExitGroup());
+            this.DispatchAction(Actions.ShoppingSessionActionCreator.ExitFolder());
         }
 
         public void FocusNode(ShoppingNodeListItemViewModel node)
@@ -194,12 +194,12 @@ namespace Sidekick.Shopper.ViewModels
 
         private void MoveFocusedNodeDown()
         {
-            this.DispatchAction(Actions.ShoppingListActionCreator.MoveNodeDown(CurrentGroup.Id, FocusedNode?.Id));
+            this.DispatchAction(Actions.ShoppingListActionCreator.MoveNodeDown(CurrentFolder.Id, FocusedNode?.Id));
         }
 
         private void MoveFocusedNodeUp()
         {
-            this.DispatchAction(Actions.ShoppingListActionCreator.MoveNodeUp(CurrentGroup.Id, FocusedNode?.Id));
+            this.DispatchAction(Actions.ShoppingListActionCreator.MoveNodeUp(CurrentFolder.Id, FocusedNode?.Id));
         }
 
         private void PerformLookup()
@@ -215,13 +215,13 @@ namespace Sidekick.Shopper.ViewModels
         {
             session = state;
             CurrentShoppingList = state.ShoppingList;
-            CurrentGroup = state.ShoppingList.Content
-                .FindNode<IShoppingGroup>(x => x.Id == state.CurrentGroupId);
+            CurrentFolder = state.ShoppingList.Content
+                .FindNode<IShoppingFolder>(x => x.Id == state.CurrentFolderId);
 
-            Title = CurrentGroup?.Title;
+            Title = CurrentFolder?.Title;
 
             Nodes.MorphTo(
-                CurrentGroup?.Nodes.OfType<IShoppingNode>().ToArray() ?? new IShoppingNode[0],
+                CurrentFolder?.Nodes.OfType<IShoppingNode>().ToArray() ?? new IShoppingNode[0],
                 (x, y) => x.Id == y.Id,
                 (x, y) => x.IsSameNode(y),
                 CreateNodeViewModel);
@@ -232,7 +232,7 @@ namespace Sidekick.Shopper.ViewModels
         private ShoppingNodeListItemViewModel CreateNodeViewModel(IShoppingNode node)
         {
             var vm = new ShoppingNodeListItemViewModel(node, ExecutionEnvironment);
-            vm.OpenRequested += (s, e) => EnterGroup(vm);
+            vm.OpenRequested += (s, e) => EnterFolder(vm);
             return vm;
         }
 

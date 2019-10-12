@@ -6,6 +6,7 @@ using Sidekick.Shopper.Actions;
 using Sidekick.Shopper.Models;
 using Sidekick.Shopper.State;
 using Sidekick.Tests.TestDoubles;
+using Xodium.Productivity.Content.Models;
 using Xunit;
 
 namespace Sidekick.Tests
@@ -44,19 +45,44 @@ namespace Sidekick.Tests
         }
 
         [Fact]
-        public async Task Search_WhenSearchTextIsValid_FindsComponents()
+        public async Task Search_WhenSearchTextIsNull_ShowsErrorMessage()
         {
-            Store.Dispatch(ComponentLookupActionCreator.SetSearchText("Component 1"));
+            Store.Dispatch(ComponentLookupActionCreator.SetSearchText(null));
             await Store.DispatchAsync(ComponentLookupActionCreator.Search(shop));
-            ComponentLookup.FoundComponents.Should().NotBeEmpty();
+            ComponentLookup.SearchError.Should().NotBeNullOrEmpty();
         }
 
         [Fact]
-        public async Task Search_WhenSearchTextIsInvalid_ShowsErrorMessage()
+        public async Task Search_WhenSearchTextIsEmpty_ShowsErrorMessage()
         {
-            Store.Dispatch(ComponentLookupActionCreator.SetSearchText("1"));
+            Store.Dispatch(ComponentLookupActionCreator.SetSearchText(""));
             await Store.DispatchAsync(ComponentLookupActionCreator.Search(shop));
-            ComponentLookup.SearchError.Should().NotBeNull();
+            ComponentLookup.SearchError.Should().NotBeNullOrEmpty();
+        }
+
+        [Fact]
+        public async Task Search_WhenSearchTextIsTooShort_ShowsErrorMessage()
+        {
+            Store.Dispatch(ComponentLookupActionCreator.SetSearchText("x"));
+            await Store.DispatchAsync(ComponentLookupActionCreator.Search(shop));
+            ComponentLookup.SearchError.Should().NotBeNullOrEmpty();
+        }
+
+        [Fact]
+        public async Task Search_WhenSearchTextMatchesOneComponent_FindsComponent()
+        {
+            Store.Dispatch(ComponentLookupActionCreator.SetSearchText("Component 2"));
+            await Store.DispatchAsync(ComponentLookupActionCreator.Search(shop));
+            ComponentLookup.FoundComponents.Should().HaveCount(1);
+        }
+
+        [Fact]
+        public async Task Search_WhenSearchTextMatchesMultipleComponent_FindsComponents()
+        {
+            Store.Dispatch(ComponentLookupActionCreator.SetSearchText("Component 1"));
+            await Store.DispatchAsync(ComponentLookupActionCreator.Search(shop));
+            ComponentLookup.FoundComponents.Should().HaveCount(2);
+            ComponentLookup.FoundComponents.Select(x => x.Text).Should().BeEquivalentTo("Component 1", "Component 10");
         }
 
         [Fact]
@@ -70,8 +96,9 @@ namespace Sidekick.Tests
         [Fact]
         public async Task PickComponent_WhenComponentIsSelected_PicksComponentAndClosesLookup()
         {
-            var group = ShoppingSession.GetCurrentGroup();
-            var nodeCount = group.Nodes.Count;
+            var folder = ShoppingSession.GetCurrentFolder();
+            var nodeCount = folder.Nodes.Count;
+            var focusedNode = folder.Nodes.First(x => x.Id == ShoppingSession.FocusedNodeId);
 
             // Show lookup
             Store.Dispatch(ComponentLookupActionCreator.ShowLookup());
@@ -90,13 +117,13 @@ namespace Sidekick.Tests
             // Pick component
             Store.Dispatch(ComponentLookupActionCreator.PickComponent());
 
-            // Verify node was added
-            group = ShoppingSession.GetCurrentGroup();
-            group.Nodes.Count.Should().Be(nodeCount + 1);
-            var node = group.Nodes.First();
+            // Verify that new item was added after focused node
+            folder = ShoppingSession.GetCurrentFolder();
+            folder.Nodes.Count.Should().Be(nodeCount + 1);
+            var node = folder.GetNextSibling(focusedNode);
             node.Should().BeOfType<ShoppingItem>();
 
-            // Verify item has correct component
+            // Verify that item has correct component
             var item = node as IShoppingItem;
             item.ComponentNumber.Should().Be(component.Reference.ComponentNumber);
 

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xodium.DataStructures;
 
-namespace Xodium.Core.Tests.Utilities
+namespace Xodium.DataStructures
 {
     public delegate T NodeCreator<T>(string id, IEnumerable<INode> nodes) where T : ITree;
     public delegate string IdentityProvider(string parentId, int index);

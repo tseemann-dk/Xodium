@@ -27,7 +27,7 @@ namespace Xodium.Core.Tests.Utilities
         public TNode BuildTree(string id, int depth, int width, NodesProvider getLeaves = null)
         { 
             return CreateNode(id, depth > 0
-                ? Enumerable.Range(1, width).Select(x => BuildTree($"{id}.{x}", depth - 1, width, getLeaves))
+                ? Enumerable.Range(1, width).Select(x => BuildTree(identityProvider(id, x), depth - 1, width, getLeaves))
                 : getLeaves?.Invoke());
         }
 

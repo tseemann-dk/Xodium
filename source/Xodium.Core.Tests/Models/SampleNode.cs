@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xodium.Core.Tests.Utilities;
 using Xodium.DataStructures;
 
 namespace Xodium.Core.Tests.Models

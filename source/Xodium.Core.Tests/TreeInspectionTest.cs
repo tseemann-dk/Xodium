@@ -3,7 +3,6 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Xodium.Core.Tests.Models;
-using Xodium.Core.Tests.Utilities;
 using Xodium.DataStructures;
 using Xunit;
 

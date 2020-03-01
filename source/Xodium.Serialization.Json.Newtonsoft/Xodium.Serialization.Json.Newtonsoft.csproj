@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Torsten Seemann</Authors>
+    <Company>Torsten Seemann</Company>
+    <Product>Xodium</Product>
+    <Description>Xodium Serialization, Newtonsoft JSON support</Description>
+    <LangVersion>latest</LangVersion>
+    <IconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</IconUrl>
+    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+  </ItemGroup>
+
+</Project>

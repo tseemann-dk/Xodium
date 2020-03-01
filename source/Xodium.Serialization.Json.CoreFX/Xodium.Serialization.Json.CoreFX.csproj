@@ -6,19 +6,11 @@
     <Authors>Torsten Seemann</Authors>
     <Company>Torsten Seemann</Company>
     <Product>Xodium</Product>
-    <Description>Xodium Serialization, JSON support</Description>
+    <Description>Xodium Serialization, .NET Core FX (System.Text.Json) support</Description>
     <LangVersion>latest</LangVersion>
     <IconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</IconUrl>
     <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
-  </ItemGroup>
 
 </Project>

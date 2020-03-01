@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Xodium.Serialization.Json
+namespace Xodium.Serialization.Json.Newtonsoft
 {
     public class JsonObjectSerializer : IObjectSerializer
     {

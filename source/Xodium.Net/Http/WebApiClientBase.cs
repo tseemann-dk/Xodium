@@ -29,20 +29,22 @@ namespace Xodium.Net.Http
             this.httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         }
 
+        protected MediaTypeWithQualityHeaderValue JsonMediaType { get; } = new MediaTypeWithQualityHeaderValue("application/json");
+
         protected Task<TResult> Get<TResult>(
-            string path, IEnumerable<KeyValuePair<string, string>> arguments, CancellationToken cancellationToken) 
+            string path, IEnumerable<KeyValuePair<string, string>> arguments, CancellationToken cancellationToken)
             => PerformRequest<TResult>(HttpMethod.Get, BuildUri(path, arguments), cancellationToken);
 
         protected Task<TResult> Put<TBody, TResult>(
-            string path, IEnumerable<KeyValuePair<string, string>> arguments, TBody body, CancellationToken cancellationToken) 
+            string path, IEnumerable<KeyValuePair<string, string>> arguments, TBody body, CancellationToken cancellationToken)
             => PerformRequest<TBody, TResult>(HttpMethod.Put, BuildUri(path, arguments), body, cancellationToken);
 
         protected Task Put<TBody>(
-            string path, IEnumerable<KeyValuePair<string, string>> arguments, TBody body, CancellationToken cancellationToken) 
+            string path, IEnumerable<KeyValuePair<string, string>> arguments, TBody body, CancellationToken cancellationToken)
             => PerformRequest<TBody, object>(HttpMethod.Put, BuildUri(path, arguments), body, cancellationToken);
 
         protected Task Post<TBody>(
-            string path, IEnumerable<KeyValuePair<string, string>> arguments, 
+            string path, IEnumerable<KeyValuePair<string, string>> arguments,
             TBody body, CancellationToken cancellationToken)
             => PerformRequest<TBody, object>(HttpMethod.Post, BuildUri(path, arguments), body, cancellationToken);
 
@@ -55,6 +57,7 @@ namespace Xodium.Net.Http
             using (var stream = new MemoryStream())
             {
                 await serializer.Serialize(body, stream);
+                stream.Seek(0, SeekOrigin.Begin);
                 return await PerformRequest<TResult>(method, uri, cancellationToken, stream);
             }
         }
@@ -108,9 +111,12 @@ namespace Xodium.Net.Http
         {
             var request = new HttpRequestMessage(method, uri);
 
+            request.Headers.Accept.Add(JsonMediaType);
+
             if (content != null)
             {
                 request.Content = new StreamContent(content);
+                request.Content.Headers.ContentType = JsonMediaType;
             }
 
             return request;

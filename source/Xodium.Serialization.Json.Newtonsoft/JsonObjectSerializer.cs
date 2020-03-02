@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Xodium.Serialization.Json.Newtonsoft
@@ -14,7 +15,7 @@ namespace Xodium.Serialization.Json.Newtonsoft
             this.serializer = serializer ?? JsonSerializer.CreateDefault();
         }
 
-        public async Task Serialize<T>(T obj, Stream stream)
+        public async Task Serialize<T>(T obj, Stream stream, CancellationToken cancellationToken)
         {
             using (var streamWriter = new StreamWriter(stream, Encoding.UTF8, 1024, true))
             using (var jsonWriter = new JsonTextWriter(streamWriter))
@@ -25,7 +26,7 @@ namespace Xodium.Serialization.Json.Newtonsoft
             }
         }
 
-        public Task<T> Deserialize<T>(Stream stream)
+        public Task<T> Deserialize<T>(Stream stream, CancellationToken cancellationToken)
         {
             using (var streamReader = new StreamReader(stream, Encoding.UTF8, true, 1024, true))
             using (var jsonReader = new JsonTextReader(streamReader))

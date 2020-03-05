@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>Xodium.Platform.Windows.Wpf</RootNamespace>
+    <Authors>Torsten Seemann</Authors>
+    <Description>Xodium Library, Windows Presentation Foundation support (.NET Core)</Description>
+    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Xodium.Platform.Windows.Wpf\Converters\NullableToVisibilityConverter.cs" Link="Converters\NullableToVisibilityConverter.cs" />
+    <Compile Include="..\Xodium.Platform.Windows.Wpf\Services\DeviceService.cs" Link="Services\DeviceService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows.Wpf\Services\DialogService.cs" Link="Services\DialogService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows.Wpf\Services\NavigationService.cs" Link="Services\NavigationService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows.Wpf\Services\SynchronizerService.cs" Link="Services\SynchronizerService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows.Wpf\WpfExecutionEnvironment.cs" Link="WpfExecutionEnvironment.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Converters\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+    <ProjectReference Include="..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+    <ProjectReference Include="..\Xodium.Platform.Windows.NetCore\Xodium.Platform.Windows.NetCore.csproj" />
+  </ItemGroup>
+
+</Project>

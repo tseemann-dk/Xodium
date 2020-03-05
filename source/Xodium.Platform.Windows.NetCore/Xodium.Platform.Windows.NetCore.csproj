@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Xodium.Platform.Windows</RootNamespace>
+    <Authors>Torsten Seemann</Authors>
+    <Description>Xodium Library, Windows support (.NET Core)</Description>
+    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Xodium.Platform.Windows\Configuration\IniFile.cs" Link="Configuration\IniFile.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\File.cs" Link="Services\File.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\FileLauncherService.cs" Link="Services\FileLauncherService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\FileSystemEntry.cs" Link="Services\FileSystemEntry.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\FileSystemService.cs" Link="Services\FileSystemService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\Folder.cs" Link="Services\Folder.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\IRegistryKey.cs" Link="Services\IRegistryKey.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\PlatformService.cs" Link="Services\PlatformService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\RegistryDictionary.cs" Link="Services\RegistryDictionary.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\SettingsService.cs" Link="Services\SettingsService.cs" />
+    <Compile Include="..\Xodium.Platform.Windows\Services\WindowsRegistryKey.cs" Link="Services\WindowsRegistryKey.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+  </ItemGroup>
+
+</Project>

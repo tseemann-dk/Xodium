@@ -1,8 +1,8 @@
 ﻿using System;
 using Xodium.Injection;
 using Xodium.Mvvm;
-using Xodium.Platform.Windows.Wpf.Services;
 using Xodium.Platform.Windows.Services;
+using Xodium.Platform.Windows.Wpf.Services;
 using Xodium.Services;
 
 namespace Xodium.Platform.Windows.Wpf

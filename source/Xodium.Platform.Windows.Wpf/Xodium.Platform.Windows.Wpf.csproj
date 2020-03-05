@@ -47,8 +47,10 @@
   <ItemGroup>
     <Compile Include="Converters\NullableToVisibilityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DeviceService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\SynchronizerService.cs" />
     <Compile Include="WpfExecutionEnvironment.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System;
 using Xodium.Services;
 
-namespace Xodium.Platform.Windows.Services
+namespace Xodium.Platform.Windows.Wpf.Services
 {
     public class DeviceService : IDeviceService
     {

@@ -3,11 +3,11 @@ using System;
 
 namespace Xodium.Serialization.Json.Newtonsoft
 {
-    public class TypeResolvingSerializationBinder : DefaultSerializationBinder
+    public class TypeAwareSerializationBinder : DefaultSerializationBinder
     {
         private readonly ITypeResolver typeResolver;
 
-        public TypeResolvingSerializationBinder(ITypeResolver typeResolver)
+        public TypeAwareSerializationBinder(ITypeResolver typeResolver)
         {
             this.typeResolver = typeResolver ?? throw new ArgumentNullException(nameof(typeResolver));
         }

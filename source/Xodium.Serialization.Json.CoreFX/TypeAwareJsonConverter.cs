@@ -7,12 +7,12 @@ using System.Text.Json.Serialization;
 
 namespace Xodium.Serialization.Json.CoreFX
 {
-    public class TypeHierarchyConverter<T> : JsonConverter<T>
+    public class TypeAwareJsonConverter<T> : JsonConverter<T>
         where T : ITypeDiscriminated
     {
         private readonly IEnumerable<Type> types;
 
-        public TypeHierarchyConverter()
+        public TypeAwareJsonConverter()
         {
             types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(s => s.GetTypes())

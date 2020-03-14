@@ -4,22 +4,20 @@ using System;
 
 namespace Xodium.Serialization.Json.Newtonsoft
 {
-    public class TypeAwareJsonConverter : JsonConverter
+    public class TypeAwareJsonConverter<T> : JsonConverter
     {
-        private readonly Type baseType;
         private readonly ITypeResolver typeResolver;
         private readonly string discriminator;
 
-        public TypeAwareJsonConverter(Type baseType, ITypeResolver typeResolver, string discriminator = null)
+        public TypeAwareJsonConverter(ITypeResolver typeResolver, string discriminator = null)
         {
-            this.baseType = baseType ?? throw new ArgumentNullException(nameof(baseType));
             this.typeResolver = typeResolver ?? throw new ArgumentNullException(nameof(typeResolver));
             this.discriminator = discriminator ?? "type";
         }
 
         public override bool CanRead => true;
         public override bool CanWrite => false;
-        public override bool CanConvert(Type type) => baseType.IsAssignableFrom(type);
+        public override bool CanConvert(Type type) => typeof(T).IsAssignableFrom(type);
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {

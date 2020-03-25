@@ -268,6 +268,7 @@ namespace Xodium.Platform.Xamarin.Services
 
         protected virtual Task OnPageDismissed(Page page)
         {
+            page.BindingContext = null;
             return Task.CompletedTask;
         }
 

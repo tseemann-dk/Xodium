@@ -73,7 +73,7 @@ namespace Xodium.Mvvm
 
     public abstract class ViewModelBase<TModel> : ViewModelBase
     {
-        public ViewModelBase(TModel model, IExecutionEnvironment executionEnvironment, IParentViewModel parentViewModel = null)
+        protected ViewModelBase(TModel model, IExecutionEnvironment executionEnvironment, IParentViewModel parentViewModel = null)
             : base(executionEnvironment, parentViewModel)
         {
             Model = model;

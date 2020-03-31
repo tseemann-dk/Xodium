@@ -18,7 +18,14 @@ namespace Xodium.Platform.Xamarin.Tests.TestDoubles
         public event EventHandler<PopupNavigationEventArgs> Popping;
         public event EventHandler<PopupNavigationEventArgs> Popped;
 
-        public Task PopAllAsync(bool animate = true) => stack.PopAll();
+        public async Task PopAllAsync(bool animate = true)
+        {
+            while (stack.Pages.Count > 0)
+            {
+                await PopAsync(animate);
+            }
+        }
+
         public Task PopAsync(bool animate = true) => stack.Pop();
         public Task PushAsync(PopupPage page, bool animate = true) => stack.Push(page);
         public Task RemovePageAsync(PopupPage page, bool animate = true) => stack.RemovePage(page);

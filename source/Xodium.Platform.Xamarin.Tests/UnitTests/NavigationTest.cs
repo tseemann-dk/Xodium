@@ -83,7 +83,7 @@ namespace Xodium.Mvvm.Xamarin.Test.UnitTests
 
             testbed.VerifyDidGoTo(vm1, Times.Once);
             testbed.VerifyDidGoTo(vm2, Times.Once);
-            testbed.VerifyDidGoFrom(vm1, Times.Once);
+            testbed.VerifyDidGoBackFrom(vm1, Times.Once);
             testbed.VerifyDidNotLeave(vm2);
         }
 
@@ -125,16 +125,17 @@ namespace Xodium.Mvvm.Xamarin.Test.UnitTests
             var vm2 = testbed.CreateViewModelMock();
             var vm3 = testbed.CreateViewModelMock();
 
-            await navigationService.GoTo(vm1.Object);
-            await navigationService.GoTo(vm2.Object);
-            await navigationService.RestartAt(vm3.Object);
+            await navigationService.GoTo(vm1.Object);      // 0 -> 1
+            await navigationService.GoTo(vm2.Object);      // 1 -> 2
+            await navigationService.RestartAt(vm3.Object); // 2 -> 1 -> 0 -> 3
 
-            testbed.VerifyDidGoTo(vm1, Times.Once);
-            testbed.VerifyDidGoTo(vm2, Times.Once);
-            testbed.VerifyDidGoTo(vm3, Times.Once);
-            testbed.VerifyDidGoFrom(vm1, Times.Once); // Only one, when navigating to vm2, not when restarting at vm3
-            testbed.VerifyDidGoFrom(vm2, Times.Once);
-            testbed.VerifyDidNotLeave(vm3);
+            testbed.VerifyDidGoTo(vm1, Times.Once);        // 0 -> 1
+            testbed.VerifyDidGoTo(vm2, Times.Once);        // 1 -> 2
+            testbed.VerifyDidGoTo(vm3, Times.Once);        // 0 -> 3
+            testbed.VerifyDidGoFrom(vm1, Times.Once);      // 1 -> 2
+            testbed.VerifyDidGoBackFrom(vm2, Times.Once);  // 2 -> 1
+            testbed.VerifyDidGoBackFrom(vm1, Times.Once);  // 1 -> 0
+            testbed.VerifyDidNotLeave(vm3);                // 3
         }
 
         [Fact]
@@ -204,7 +205,7 @@ namespace Xodium.Mvvm.Xamarin.Test.UnitTests
             navigationService.CanGoBack.Should().BeFalse();
 
             (await navigationService
-                .Awaiting(async n => await n.GoBack())
+                .Awaiting(n => n.GoBack())
                 .Should()
                 .ThrowAsync<NavigationException>())
                 .WithMessage("Cannot navigate back");
@@ -226,7 +227,7 @@ namespace Xodium.Mvvm.Xamarin.Test.UnitTests
             navigationService.CanGoBack.Should().BeFalse();
 
             (await navigationService
-                .Awaiting(async n => await n.GoBack())
+                .Awaiting(n => n.GoBack())
                 .Should()
                 .ThrowAsync<NavigationException>())
                 .WithMessage("Cannot navigate back");

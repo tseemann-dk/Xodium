@@ -127,14 +127,8 @@ namespace Xodium.Platform.Xamarin.Services
 
         private async Task RestartAtPage(Page page)
         {
-            await OnNavigatingToPage(page);
-
-            foreach (var p in pageNavigator.Pages.Reverse())
-            {
-                await OnPageDismissed(p);
-            }
-
-            await pageNavigator.ResetTo(page);
+            await pageNavigator.Reset();
+            await NavigateToPage(page);
         }
 
         private async Task NavigateToModalPage(Page page)

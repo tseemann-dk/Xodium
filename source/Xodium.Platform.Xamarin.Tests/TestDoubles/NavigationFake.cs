@@ -21,7 +21,7 @@ namespace Xodium.Platform.Xamarin.Tests.TestDoubles
         public Task<Page> PopAsync(bool animated) => PopAsync();
         public Task<Page> PopModalAsync() => PopPage(modalStack);
         public Task<Page> PopModalAsync(bool animated) => PopModalAsync();
-        public Task PopToRootAsync() => regularStack.PopToRoot();
+        public Task PopToRootAsync() => PopToRoot(regularStack);
         public Task PopToRootAsync(bool animated) => PopToRootAsync();
         public Task PushAsync(Page page) => regularStack.Push(page);
         public Task PushAsync(Page page, bool animated) => PushAsync(page);
@@ -34,6 +34,14 @@ namespace Xodium.Platform.Xamarin.Tests.TestDoubles
             var page = await stack.Pop();
             OnPagePopped(page);
             return page;
+        }
+
+        private async Task PopToRoot(PageStack<Page> stack)
+        {
+            while (stack.Pages.Count > 1)
+            {
+                await PopPage(stack);
+            }
         }
 
         private void OnPagePopped(Page page)

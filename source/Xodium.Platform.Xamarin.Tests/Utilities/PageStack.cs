@@ -9,15 +9,9 @@ namespace Xodium.Platform.Xamarin.Tests.Utilities
     public class PageStack<T>
         where T : Page
     {
-        private List<T> pages = new List<T>();
+        private readonly List<T> pages = new List<T>();
 
         public IReadOnlyList<T> Pages => pages;
-
-        public Task PopAll()
-        {
-            pages.Clear();
-            return Task.CompletedTask;
-        }
 
         public Task<T> Pop()
         {
@@ -27,16 +21,6 @@ namespace Xodium.Platform.Xamarin.Tests.Utilities
             var page = pages.Last();
             pages.Remove(page);
             return Task.FromResult(page);
-        }
-
-        public Task PopToRoot()
-        {
-            if (pages.Count > 1)
-            {
-                pages.RemoveRange(1, pages.Count - 1);
-            }
-
-            return Task.CompletedTask;
         }
 
         public Task Push(T page)

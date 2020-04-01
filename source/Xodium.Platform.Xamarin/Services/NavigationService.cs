@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Rg.Plugins.Popup.Contracts;
@@ -19,6 +20,7 @@ namespace Xodium.Platform.Xamarin.Services
         private readonly IPageNavigator modalPageNavigator;
         private readonly IPageNavigator popupPageNavigator;
         private readonly IPageNavigator pageNavigator;
+        private int pagePoppedHandlerDisableCount;
 
         #region Construction
 
@@ -26,6 +28,7 @@ namespace Xodium.Platform.Xamarin.Services
             : this(page?.Navigation, PopupNavigation.Instance, getViewRegistry)
         {
             page.Popped += async (s, e) => await OnPagePopped(e.Page);
+            page.PoppedToRoot += async (s, e) => await OnPagesPopped(((PoppedToRootEventArgs)e).PoppedPages);
         }
 
         public NavigationService(INavigation basicNavigation, IPopupNavigation popupNavigation, Func<IViewRegistry> getViewRegistry)
@@ -89,6 +92,22 @@ namespace Xodium.Platform.Xamarin.Services
 
         #endregion
 
+        #region Pop Handler Enable/Disable
+
+        protected bool IsPagePoppedHandlerDisabled => pagePoppedHandlerDisableCount > 0;
+
+        protected void DisablePagePoppedHandler()
+        {
+            pagePoppedHandlerDisableCount++;
+        }
+
+        protected void EnablePagePoppedHandler()
+        {
+            pagePoppedHandlerDisableCount--;
+        }
+
+        #endregion
+
         #region Internal Navigation
 
         private Task NavigateTo(Type viewModelType, bool restart)
@@ -127,8 +146,33 @@ namespace Xodium.Platform.Xamarin.Services
 
         private async Task RestartAtPage(Page page)
         {
-            await pageNavigator.Reset();
-            await NavigateToPage(page);
+            // Go back to the current root, while notifying each page on the way 
+            // about the backwards to/from navigation
+            await pageNavigator.ResetToRoot();
+
+            // Simulate stepping back from the root (which is not really possible)
+            await OnNavigatingBackToPage(null);
+
+            // Simulate going forward from nowhere to the new root, i.e. a fresh start
+            await OnNavigatingToPage(page);
+
+            // Replace the old root page with the new root page, without handling the
+            // page popped notification, as this has already been done above
+            DisablePagePoppedHandler();
+            try
+            {
+                var oldRoot = CurrentPage;
+                await pageNavigator.ResetTo(page);
+
+                if (oldRoot != null)
+                {
+                    await OnPageDismissed(oldRoot);
+                }
+            }
+            finally
+            {
+                EnablePagePoppedHandler();
+            }
         }
 
         private async Task NavigateToModalPage(Page page)
@@ -250,6 +294,9 @@ namespace Xodium.Platform.Xamarin.Services
 
         public async Task OnPagePopped(Page page)
         {
+            if (IsPagePoppedHandlerDisabled)
+                return;
+
             try
             {
                 await OnPageDismissed(page);
@@ -257,6 +304,14 @@ namespace Xodium.Platform.Xamarin.Services
             finally
             {
                 await OnNavigatingBackToPage(CurrentPage);
+            }
+        }
+
+        public async Task OnPagesPopped(IEnumerable<Page> pages)
+        {
+            foreach (var page in pages)
+            {
+                await OnPagePopped(page);
             }
         }
 

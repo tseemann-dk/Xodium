@@ -113,9 +113,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xodium.Serialization.Json.N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xodium.Serialization.Json.CoreFX", "Xodium.Serialization.Json.CoreFX\Xodium.Serialization.Json.CoreFX.csproj", "{4E506D82-F211-4C39-A253-AB430CD6AB50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xodium.Platform.Windows.NetCore", "Xodium.Platform.Windows.NetCore\Xodium.Platform.Windows.NetCore.csproj", "{C8DB9D19-6093-43CD-9313-87F52C705E54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xodium.Platform.Windows.NetCore", "Xodium.Platform.Windows.NetCore\Xodium.Platform.Windows.NetCore.csproj", "{C8DB9D19-6093-43CD-9313-87F52C705E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xodium.Platform.Windows.Wpf.NetCore", "Xodium.Platform.Windows.Wpf.NetCore\Xodium.Platform.Windows.Wpf.NetCore.csproj", "{CD2EFAB2-3560-46E0-B173-10F74C7382C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xodium.Platform.Windows.Wpf.NetCore", "Xodium.Platform.Windows.Wpf.NetCore\Xodium.Platform.Windows.Wpf.NetCore.csproj", "{CD2EFAB2-3560-46E0-B173-10F74C7382C0}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -125,6 +125,8 @@ Global
 		Sidekick\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems*{7e25c66f-1d9f-4e3e-9f42-40251f7b0a95}*SharedItemsImports = 4
 		Sidekick\Sidekick.Shopper.UI.Uno\Sidekick.Shopper.UI.Uno.projitems*{a3ea9ab6-f17f-4821-900d-13684a1a605f}*SharedItemsImports = 4
 		Sidekick\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems*{a3ea9ab6-f17f-4821-900d-13684a1a605f}*SharedItemsImports = 4
+		Sidekick\Sidekick.Shopper.UI.Uno\Sidekick.Shopper.UI.Uno.projitems*{c9c4af22-1fba-4f10-bcbc-58547083a3bc}*SharedItemsImports = 5
+		Sidekick\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems*{c9c4af22-1fba-4f10-bcbc-58547083a3bc}*SharedItemsImports = 5
 		Sidekick\Sidekick.Shopper.UI.Uno\Sidekick.Shopper.UI.Uno.projitems*{fefdd466-25ba-4fab-ad31-1fd4099048f7}*SharedItemsImports = 4
 		Sidekick\Sidekick.Uno.Shared\Sidekick.Uno.Shared.projitems*{fefdd466-25ba-4fab-ad31-1fd4099048f7}*SharedItemsImports = 4
 	EndGlobalSection

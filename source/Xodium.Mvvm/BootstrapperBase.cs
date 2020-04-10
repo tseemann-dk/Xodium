@@ -27,15 +27,6 @@ namespace Xodium.Mvvm
 
         public IViewRegistry ViewRegistry { get; private set; }
 
-        public void Shutdown()
-        {
-            OnShutdown();
-        }
-
-        protected virtual void OnShutdown()
-        {
-        }
-
         protected virtual IViewRegistry CreateViewRegistry(Func<Type, object> resolver) => new ViewRegistry(resolver);
         protected abstract IExecutionEnvironment CreateExecutionEnvironment(Func<IDependencyResolver> resolver);
 

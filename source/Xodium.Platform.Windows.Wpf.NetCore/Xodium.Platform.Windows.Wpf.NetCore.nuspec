@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xodium.Platform.Windows.Wpf.NetCore</id>
+    <version>1.0.0.0</version>
+    <title>Xodium.Platform.Windows.Wpf.NetCore</title>
+    <authors>Torsten Seemann</authors>
+    <owners>Torsten Seemann</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Xodium Library, Windows Presentation Foundation support (.NET Core)</description>
+    <copyright>Copyright 2019</copyright>
+    <iconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</iconUrl>
+    <tags></tags>
+  </metadata>
+</package>

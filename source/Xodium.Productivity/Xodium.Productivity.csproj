@@ -6,12 +6,20 @@
     <Product>Xodium</Product>
     <Description>Xodium Library, Productivity features like calendar, e-mail, notes, contacts, documents and more</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
+    <PackageIconUrl></PackageIconUrl>
     <LangVersion>latest</LangVersion>
+    <PackageIcon>Xodium_64.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\images\Xodium_64.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

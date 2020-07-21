@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Torsten Seemann</Authors>
+    <Description>Xodium Library, Xamarin plugins support</Description>
+    <Product>Xodium</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>Xodium_64.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +21,13 @@
     <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
     <ProjectReference Include="..\Xodium.Platform.Common\Xodium.Platform.Common.csproj" />
     <ProjectReference Include="..\Xodium.Platform.Xamarin\Xodium.Platform.Xamarin.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\images\Xodium_64.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using Xodium.Services;
 
-namespace Xodium.Platform.Xamarin.Services
+namespace Xodium.Services
 {
     public class MediaFile : IMediaFile
     {

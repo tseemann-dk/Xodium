@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Xodium.Injection.MicrosoftExtensions\Xodium.Injection.MicrosoftExtensions.csproj" />
+    <ProjectReference Include="..\..\Xodium.Platform.Xamarin.Plugins\Xodium.Platform.Xamarin.Plugins.csproj" />
+    <ProjectReference Include="..\..\Xodium.Platform.Xamarin\Xodium.Platform.Xamarin.csproj" />
     <ProjectReference Include="..\Sidekick.Shopper.eBay\Sidekick.Shopper.eBay.csproj" />
     <ProjectReference Include="..\Sidekick.Shopper.Flickr\Sidekick.Shopper.Flickr.csproj" />
     <ProjectReference Include="..\Sidekick.Shopper.Main\Sidekick.Shopper.Main.csproj" />

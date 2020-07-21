@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xodium.Services;
 
 namespace Xodium.Platform.Xamarin.Services
@@ -12,11 +12,17 @@ namespace Xodium.Platform.Xamarin.Services
         {
         }
 
-        protected override Task<bool> InternalLaunchFile(string path)
+        protected override async Task<bool> InternalLaunchFile(string path)
         {
             var uri = new Uri("file://" + path);
-            Device.OpenUri(uri);
-            return Task.FromResult(true);
+
+            if (await Launcher.CanOpenAsync(uri))
+            {
+                await Launcher.OpenAsync(uri);
+                return true;
+            }
+
+            return false;
         }
     }
 }

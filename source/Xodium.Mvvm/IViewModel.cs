@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Xodium.Mvvm
 {
-    public interface IViewModel : INavigationSource, INavigationTarget
+    public interface IViewModel : INavigationSource, INavigationDestination
     {
         IParentViewModel ParentViewModel { get; }
 

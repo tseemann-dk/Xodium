@@ -18,7 +18,7 @@ namespace Sidekick.XF
         {
             base.RegisterServices(registry);
 
-            registry.RegisterFactory<INavigationService>(resolver => new NavigationService(App.NavigationPage, () => ViewRegistry));
+            registry.RegisterFactory<INavigationService>(resolver => new NavigationService(App.NavigationPage, new ViewRegistryProvider(() => ViewRegistry)));
             registry.RegisterFactory<IDialogService>(resolver => new DialogService(App.NavigationPage, () => ViewRegistry));
         }
 

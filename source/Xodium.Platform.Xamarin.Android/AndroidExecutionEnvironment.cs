@@ -2,10 +2,10 @@
 using System;
 using Xodium.Injection;
 using Xodium.Mvvm;
-using Xodium.Platform.Android.Services;
+using Xodium.Platform.Xamarin.Android.Services;
 using Xodium.Services;
 
-namespace Xodium.Platform.Android
+namespace Xodium.Platform.Xamarin.Android
 {
     public class AndroidExecutionEnvironment : ExecutionEnvironmentBase
     {

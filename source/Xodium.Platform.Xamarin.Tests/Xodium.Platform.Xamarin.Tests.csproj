@@ -31,6 +31,7 @@
     <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
     <ProjectReference Include="..\Xodium.Injection.UnityContainer\Xodium.Injection.UnityContainer.csproj" />
     <ProjectReference Include="..\Xodium.Mvvm\Xodium.Mvvm.csproj" />
+    <ProjectReference Include="..\Xodium.Platform.Xamarin.Plugins\Xodium.Platform.Xamarin.Plugins.csproj" />
     <ProjectReference Include="..\Xodium.Platform.Xamarin\Xodium.Platform.Xamarin.csproj" />
   </ItemGroup>
 

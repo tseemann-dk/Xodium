@@ -64,7 +64,7 @@ namespace Xodium.Platform.Windows.Wpf.Services
 
             if (!(view is FrameworkElement element)) return;
 
-            if (viewModel is INavigationTarget vm)
+            if (viewModel is INavigationDestination vm)
             {
                 await vm.NavigateTo();
             }

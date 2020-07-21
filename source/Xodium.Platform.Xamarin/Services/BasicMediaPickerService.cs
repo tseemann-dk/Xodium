@@ -5,11 +5,11 @@ using Xodium.Services;
 
 namespace Xodium.Platform.Xamarin.Services
 {
-    public class MediaPickerService : IMediaPickerService
+    public class BasicMediaPickerService : IMediaPickerService
     {
         private readonly IPhotoService photoService;
 
-        public MediaPickerService(IPhotoService photoService)
+        public BasicMediaPickerService(IPhotoService photoService)
         {
             this.photoService = photoService ?? throw new ArgumentNullException(nameof(photoService));
         }

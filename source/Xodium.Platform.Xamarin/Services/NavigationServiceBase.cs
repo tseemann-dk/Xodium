@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Rg.Plugins.Popup.Contracts;
-using Rg.Plugins.Popup.Pages;
-using Rg.Plugins.Popup.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xodium.Mvvm;
 using Xodium.Platform.Xamarin.Extensions;
@@ -12,10 +10,10 @@ using Xodium.Platform.Xamarin.Views;
 
 namespace Xodium.Platform.Xamarin.Services
 {
-    public class NavigationService : INavigationService
+    public abstract class NavigationServiceBase : INavigationService
     {
-        private INavigationTarget currentPlace;
-        private readonly Func<IViewRegistry> getViewRegistry;
+        private INavigationDestination currentPlace;
+        private readonly IViewRegistryProvider viewRegistryProvider;
         private readonly IPageNavigator regularPageNavigator;
         private readonly IPageNavigator modalPageNavigator;
         private readonly IPageNavigator popupPageNavigator;
@@ -24,31 +22,31 @@ namespace Xodium.Platform.Xamarin.Services
 
         #region Construction
 
-        public NavigationService(NavigationPage page, Func<IViewRegistry> getViewRegistry)
-            : this(page?.Navigation, PopupNavigation.Instance, getViewRegistry)
+        protected NavigationServiceBase(NavigationPage page, IPopupService popupService, IViewRegistryProvider viewRegistryProvider)
+            : this(page?.Navigation, popupService, viewRegistryProvider)
         {
             page.Popped += async (s, e) => await OnPagePopped(e.Page);
             page.PoppedToRoot += async (s, e) => await OnPagesPopped(((PoppedToRootEventArgs)e).PoppedPages);
         }
 
-        public NavigationService(INavigation basicNavigation, IPopupNavigation popupNavigation, Func<IViewRegistry> getViewRegistry)
+        protected NavigationServiceBase(INavigation basicNavigation, IPopupService popupService, IViewRegistryProvider viewRegistryProvider)
         {
             if (basicNavigation == null)
             {
                 throw new ArgumentNullException(nameof(basicNavigation));
             }
 
-            if (popupNavigation == null)
+            if (popupService == null)
             {
-                throw new ArgumentNullException(nameof(popupNavigation));
+                throw new ArgumentNullException(nameof(popupService));
             }
 
-            this.getViewRegistry = getViewRegistry ?? throw new ArgumentNullException(nameof(getViewRegistry));
+            this.viewRegistryProvider = viewRegistryProvider ?? throw new ArgumentNullException(nameof(viewRegistryProvider));
 
             pageNavigator = new CompositePageNavigator(new[] {
                 regularPageNavigator = new RegularPageNavigator(basicNavigation),
                 modalPageNavigator = new ModalPageNavigator(basicNavigation),
-                popupPageNavigator = new PopupPageNavigator(popupNavigation, page => OnPagePopped(page))
+                popupPageNavigator = new PopupPageNavigator(popupService, page => OnPagePopped(page))
             });
         }
 
@@ -57,7 +55,7 @@ namespace Xodium.Platform.Xamarin.Services
         #region Attached Properties
 
         public static readonly BindableProperty PageTitleProperty = BindableProperty.CreateAttached(
-            "PageTitle", typeof(string), typeof(NavigationService), default(string));
+            "PageTitle", typeof(string), typeof(NavigationServiceBase), default(string));
 
         public static string GetPageTitle(BindableObject bindable) => (string)bindable.GetValue(PageTitleProperty);
         public static void SetPageTitle(BindableObject bindable, string value) => bindable.SetValue(PageTitleProperty, value);
@@ -86,8 +84,7 @@ namespace Xodium.Platform.Xamarin.Services
 
         public Task OpenUri(Uri uri)
         {
-            Device.OpenUri(uri);
-            return Task.CompletedTask;
+            return Launcher.OpenAsync(uri);
         }
 
         #endregion
@@ -181,7 +178,7 @@ namespace Xodium.Platform.Xamarin.Services
             await modalPageNavigator.GoTo(page);
         }
 
-        private async Task NavigateToPopupPage(PopupPage page)
+        private async Task NavigateToPopupPage(Page page)
         {
             await OnNavigatingToPage(page);
             page.Disappearing += (s, e) => OnPageDismissed(page);
@@ -227,7 +224,7 @@ namespace Xodium.Platform.Xamarin.Services
                 await currentPlace.NavigateFrom();
             }
 
-            currentPlace = viewModel as INavigationTarget;
+            currentPlace = viewModel as INavigationDestination;
 
             if (currentPlace != null)
             {
@@ -242,12 +239,22 @@ namespace Xodium.Platform.Xamarin.Services
                 await currentPlace.NavigateBackFrom();
             }
 
-            currentPlace = viewModel as INavigationTarget;
+            currentPlace = viewModel as INavigationDestination;
 
             if (currentPlace != null)
             {
                 await currentPlace.NavigateBackTo();
             }
+        }
+
+        private Task SwitchToView(object target, object viewModel)
+        {
+            return SwitchToPage(EnsureAndPreparePage(target, viewModel));
+        }
+
+        private Task SwitchToPage(Page page)
+        {
+            return regularPageNavigator.ResetTo(page);
         }
 
         #endregion
@@ -330,9 +337,9 @@ namespace Xodium.Platform.Xamarin.Services
             return PreparePage(EnsurePage(content, viewModel));
         }
 
-        private PopupPage EnsureAndPreparePopupPage(object content, object viewModel)
+        private Page EnsureAndPreparePopupPage(object content, object viewModel)
         {
-            return PreparePage(EnsurePopupPage(content, viewModel)) as PopupPage;
+            return PreparePage(EnsurePopupPage(content, viewModel));
         }
 
         private Page EnsurePage(object content, object viewModel)
@@ -348,11 +355,11 @@ namespace Xodium.Platform.Xamarin.Services
             }
         }
 
-        private PopupPage EnsurePopupPage(object content, object viewModel)
+        private Page EnsurePopupPage(object content, object viewModel)
         {
             switch (content)
             {
-                case PopupPage page:
+                case Page page:
                     return page;
                 case View view:
                     return CreatePopupPage(view, viewModel);
@@ -390,15 +397,7 @@ namespace Xodium.Platform.Xamarin.Services
             return view;
         }
 
-        protected virtual PopupPage CreatePopupPage(View view, object viewModel)
-        {
-            return new PopupPage
-            {
-                BindingContext = viewModel,
-                Content = CreatePopupView(view),
-                CloseWhenBackgroundIsClicked = false
-            };
-        }
+        protected abstract Page CreatePopupPage(View view, object viewModel);
 
         protected virtual View CreatePopupView(View content)
         {
@@ -421,7 +420,7 @@ namespace Xodium.Platform.Xamarin.Services
                 throw new ArgumentNullException(nameof(viewModelType));
             }
 
-            return getViewRegistry()?.GetViewFor(viewModelType) ?? throw new NavigationException($"No view registered for {viewModelType.FullName}");
+            return viewRegistryProvider.ViewRegistry?.GetViewFor(viewModelType) ?? throw new NavigationException($"No view registered for {viewModelType.FullName}");
         }
 
         private object GetViewForViewModel(object viewModel)
@@ -431,7 +430,7 @@ namespace Xodium.Platform.Xamarin.Services
                 throw new ArgumentNullException(nameof(viewModel));
             }
 
-            var view = getViewRegistry()?.GetViewFor(viewModel);
+            var view = viewRegistryProvider.ViewRegistry?.GetViewFor(viewModel);
 
             if (view == null)
             {

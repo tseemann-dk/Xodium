@@ -3,7 +3,7 @@ using Android.Content;
 using Sidekick.State;
 using Xodium.Injection;
 using Xodium.Mvvm;
-using Xodium.Platform.Android;
+using Xodium.Platform.Xamarin.Android;
 
 namespace Sidekick.XF.Droid
 {

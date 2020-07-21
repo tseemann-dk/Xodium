@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Xodium.Mvvm.ReactiveUI
 {
-    public abstract class ReactiveViewModelBase : ReactiveObject, IParentViewModel, INavigationTarget
+    public abstract class ReactiveViewModelBase : ReactiveObject, IParentViewModel, INavigationDestination
     {
         private readonly ViewModelBranch branch;
 

@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Provider;
-using Xodium.Platform.Xamarin.Services;
 using Xodium.Services;
 
-namespace Xodium.Platform.Android.Services
+namespace Xodium.Platform.Xamarin.Android.Services
 {
     public class MediaPickerService : IMediaPickerService
     {

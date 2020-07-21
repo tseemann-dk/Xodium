@@ -1,6 +1,4 @@
-﻿using Rg.Plugins.Popup.Contracts;
-using Rg.Plugins.Popup.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,35 +8,35 @@ namespace Xodium.Platform.Xamarin.Services
 {
     internal class PopupPageNavigator : IPageNavigator
     {
-        private readonly IPopupNavigation navigation;
+        private readonly IPopupService popupService;
         private readonly Func<Page, Task> onPagePopped;
 
-        public PopupPageNavigator(IPopupNavigation navigation, Func<Page, Task> onPagePopped)
+        public PopupPageNavigator(IPopupService popupService, Func<Page, Task> onPagePopped)
         {
-            this.navigation = navigation ?? throw new ArgumentNullException(nameof(navigation));
+            this.popupService = popupService ?? throw new ArgumentNullException(nameof(popupService));
             this.onPagePopped = onPagePopped ?? throw new ArgumentNullException(nameof(onPagePopped));
         }
 
-        public IEnumerable<Page> Pages => navigation.PopupStack;
-        public Page FirstPage => navigation.PopupStack.FirstOrDefault();
-        public Page LastPage => navigation.PopupStack.LastOrDefault();
-        public int PageCount => navigation.PopupStack.Count();
-        public bool CanGoBack => navigation.PopupStack.Any();
+        public IEnumerable<Page> Pages => popupService.PopupStack;
+        public Page FirstPage => popupService.PopupStack.FirstOrDefault();
+        public Page LastPage => popupService.PopupStack.LastOrDefault();
+        public int PageCount => popupService.PopupStack.Count();
+        public bool CanGoBack => popupService.PopupStack.Any();
         public bool IsAtRoot => PageCount == 1;
-        public bool CanGoTo(Page page) => page is PopupPage;
-        public Task GoTo(Page page) => navigation.PushAsync(page as PopupPage);
+        public bool CanGoTo(Page page) => popupService.CanShowPage(page);
+        public Task GoTo(Page page) => popupService.PushPage(page);
 
         public async Task<Page> GoBack(bool animate)
         {
             var page = LastPage;
-            await navigation.PopAsync(animate);
+            await popupService.PopPage(animate);
             await onPagePopped(page);
             return page;
         }
 
         public Task Reset()
         {
-            return PageCount > 0 ? navigation.PopAllAsync() : Task.CompletedTask;
+            return PageCount > 0 ? popupService.PopAllPages() : Task.CompletedTask;
         }
 
         public async Task ResetTo(Page page)
@@ -51,7 +49,7 @@ namespace Xodium.Platform.Xamarin.Services
         {
             while (PageCount > 1)
             {
-                await navigation.PopAsync();
+                await popupService.PopPage();
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿using Android.Content;
 using Xodium.Platform.Xamarin.Services;
 
-namespace Xodium.Platform.Android.Services
+namespace Xodium.Platform.Xamarin.Android.Services
 {
     public class PlatformService : PlatformServiceBase
     {

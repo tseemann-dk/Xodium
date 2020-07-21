@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 //using XLabs.Platform.Services;
 
-namespace Xodium.Platform.Xamarin.Services
+namespace Xodium.Playform.Xamarin.Services
 {
     /*
     public class CommunicationService : ICommunicationService

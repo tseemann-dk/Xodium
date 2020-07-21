@@ -95,7 +95,7 @@ namespace Xodium.Platform.Xamarin.Services
                 }
             };
 
-            if (viewModel is INavigationTarget target)
+            if (viewModel is INavigationDestination target)
             {
                 await target.NavigateTo();
             }

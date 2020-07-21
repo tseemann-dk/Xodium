@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
     <ProjectReference Include="..\Xodium.Platform.Windows\Xodium.Platform.Windows.csproj" />
   </ItemGroup>
 

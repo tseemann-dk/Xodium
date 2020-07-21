@@ -73,7 +73,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AndroidXFBootstrapper.cs" />
@@ -127,9 +127,9 @@
       <Project>{6417c355-2592-4649-8713-6287d35aa4a7}</Project>
       <Name>Xodium.Mvvm</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Xodium.Platform.Android\Xodium.Platform.Android.csproj">
+    <ProjectReference Include="..\..\Xodium.Platform.Xamarin.Android\Xodium.Platform.Xamarin.Android.csproj">
       <Project>{81e3f05b-97cb-4d76-8027-b2ae01857eac}</Project>
-      <Name>Xodium.Platform.Android</Name>
+      <Name>Xodium.Platform.Xamarin.Android</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Xodium.Productivity.Content\Xodium.Productivity.Content.csproj">
       <Project>{53e482dd-18df-4a9d-9b6c-3e9986be986e}</Project>

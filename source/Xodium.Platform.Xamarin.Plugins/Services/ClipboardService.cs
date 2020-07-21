@@ -1,6 +1,6 @@
 ﻿using Plugin.Share;
-using System.Threading.Tasks;
 using Xodium.Services;
+using System.Threading.Tasks;
 
 namespace Xodium.Platform.Xamarin.Services
 {

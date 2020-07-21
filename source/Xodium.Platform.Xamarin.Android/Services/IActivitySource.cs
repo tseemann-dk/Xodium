@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Content;
 
-namespace Xodium.Platform.Android.Services
+namespace Xodium.Platform.Xamarin.Android.Services
 {
     public delegate void ActivityResultHandler(int requestCode, Result resultCode, Intent data);
 

@@ -59,7 +59,7 @@ namespace Xodium.Platform.Uwp.Services
         {
             var viewType = viewRegistry.GetViewTypeFor(viewModel.GetType());
 
-            if (viewModel is INavigationTarget target)
+            if (viewModel is INavigationDestination target)
             {
                 await target.NavigateTo();
             }

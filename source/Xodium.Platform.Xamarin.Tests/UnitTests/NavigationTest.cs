@@ -27,8 +27,8 @@ namespace Xodium.Mvvm.Xamarin.Test.UnitTests
             container.RegisterInstance<IViewRegistry>(viewRegistry);
 
             var navigation = new NavigationFake();
-            var popupNavigation = new PopupNavigationFake();
-            var ns = new NavigationService(navigation, popupNavigation, () => viewRegistry);
+            var popupService = new PopupServiceFake();
+            var ns = new NavigationService(navigation, popupService, new ViewRegistryProvider(() => viewRegistry));
 
             navigation.PagePopped += async (s, e) => await ns.OnPagePopped(e.Page);
             container.RegisterInstance<INavigationService>(ns);

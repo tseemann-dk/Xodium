@@ -2,7 +2,7 @@
 
 namespace Xodium.Mvvm
 {
-    public interface INavigationTarget
+    public interface INavigationDestination
     {
         Task NavigateBackFrom();
         Task NavigateBackTo();

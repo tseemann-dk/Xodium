@@ -8,7 +8,7 @@ using Android.OS;
 using Xodium.Geography;
 using Xodium.Services;
 
-namespace Xodium.Platform.Android.Services
+namespace Xodium.Platform.Xamarin.Android.Services
 {
     public class LocationService : ILocationService
     {

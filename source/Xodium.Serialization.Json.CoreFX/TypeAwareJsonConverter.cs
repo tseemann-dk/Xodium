@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text.Json;
@@ -9,12 +10,12 @@ namespace Xodium.Serialization.Json.CoreFX
     public class TypeAwareJsonConverter<T> : JsonConverter<T>
     {
         private readonly ITypeResolver typeResolver;
-        private readonly string discriminator;
+        private readonly string typeDiscriminator;
 
-        public TypeAwareJsonConverter(ITypeResolver typeResolver, string discriminator = null)
+        public TypeAwareJsonConverter(ITypeResolver typeResolver, string typeDiscriminator = null)
         {
             this.typeResolver = typeResolver ?? throw new ArgumentNullException(nameof(typeResolver));
-            this.discriminator = discriminator ?? "type";
+            this.typeDiscriminator = typeDiscriminator ?? "type";
         }
 
         public override bool CanConvert(Type typeToConvert) => typeof(T).IsAssignableFrom(typeToConvert);
@@ -26,8 +27,8 @@ namespace Xodium.Serialization.Json.CoreFX
 
             using (var jsonDocument = JsonDocument.ParseValue(ref reader))
             {
-                if (!jsonDocument.RootElement.TryGetProperty(discriminator, out var typeProperty))
-                    throw new JsonException($"Type discriminator property \"{discriminator}\" was not found");
+                if (!jsonDocument.RootElement.TryGetProperty(typeDiscriminator, out var typeProperty))
+                    throw new JsonException($"Type discriminator property \"{typeDiscriminator}\" was not found");
 
                 var typeName = typeProperty.GetString();
                 var type = typeResolver.ResolveType(null, typeName);
@@ -46,11 +47,11 @@ namespace Xodium.Serialization.Json.CoreFX
         {
             var properties = value.GetType()
                 .GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                .Where(x => x.GetCustomAttribute<JsonIgnoreAttribute>(true) == null)
+                .Where(x => ShouldWriteProperty(x, options))
                 .Select(x => new
                 {
                     Property = x,
-                    Name = x.GetCustomAttribute<JsonPropertyNameAttribute>(true)?.Name ?? ToCamelCase(x.Name)
+                    Name = x.GetCustomAttribute<JsonPropertyNameAttribute>(true)?.Name ?? GetPropertyName(x, options)
                 })
                 .OrderBy(x => GetPropertyOrder(x.Property, x.Name))
                 .ToList();
@@ -65,12 +66,35 @@ namespace Xodium.Serialization.Json.CoreFX
             JsonSerializer.Serialize(writer, values, options);
         }
 
-        protected virtual object GetPropertyOrder(PropertyInfo property, string name)
+        protected virtual bool ShouldWriteProperty(PropertyInfo property, JsonSerializerOptions options)
         {
-            return name != discriminator;
+            return IsDiscriminator(property) ||
+                (!ShouldIgnoreProperty(property) && CanWriteProperty(property, options));
         }
 
-        private static string ToCamelCase(string value) =>
-            string.IsNullOrEmpty(value) ? value : char.ToLowerInvariant(value.First()) + value.Substring(1);
+        protected bool ShouldIgnoreProperty(PropertyInfo property)
+        {
+            return property.GetCustomAttribute<JsonIgnoreAttribute>(true) != null;
+        }
+
+        protected bool CanWriteProperty(PropertyInfo property, JsonSerializerOptions options)
+        {
+            return !options.IgnoreReadOnlyProperties || property.CanWrite;
+        }
+
+        protected bool IsDiscriminator(PropertyInfo property)
+        {
+            return string.Compare(property.Name, typeDiscriminator, true, CultureInfo.InvariantCulture) == 0;
+        }
+
+        protected virtual string GetPropertyName(PropertyInfo property, JsonSerializerOptions options)
+        {
+            return options.PropertyNamingPolicy?.ConvertName(property.Name) ?? property.Name;
+        }
+
+        protected virtual object GetPropertyOrder(PropertyInfo property, string name)
+        {
+            return !IsDiscriminator(property);
+        }
     }
 }

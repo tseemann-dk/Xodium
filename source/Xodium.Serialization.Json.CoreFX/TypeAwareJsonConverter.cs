@@ -9,14 +9,14 @@ namespace Xodium.Serialization.Json.CoreFX
 {
     public class TypeAwareJsonConverter<T> : JsonConverter<T>
     {
-        private readonly ITypeResolver typeResolver;
-        private readonly string typeDiscriminator;
-
         public TypeAwareJsonConverter(ITypeResolver typeResolver, string typeDiscriminator = null)
         {
-            this.typeResolver = typeResolver ?? throw new ArgumentNullException(nameof(typeResolver));
-            this.typeDiscriminator = typeDiscriminator ?? "type";
+            TypeResolver = typeResolver ?? throw new ArgumentNullException(nameof(typeResolver));
+            TypeDiscriminator = typeDiscriminator ?? "type";
         }
+
+        public ITypeResolver TypeResolver { get; }
+        public string TypeDiscriminator { get; }
 
         public override bool CanConvert(Type typeToConvert) => typeof(T).IsAssignableFrom(typeToConvert);
 
@@ -27,11 +27,11 @@ namespace Xodium.Serialization.Json.CoreFX
 
             using (var jsonDocument = JsonDocument.ParseValue(ref reader))
             {
-                if (!jsonDocument.RootElement.TryGetProperty(typeDiscriminator, out var typeProperty))
-                    throw new JsonException($"Type discriminator property \"{typeDiscriminator}\" was not found");
+                if (!jsonDocument.RootElement.TryGetProperty(TypeDiscriminator, out var typeProperty))
+                    throw new JsonException($"Type discriminator property \"{TypeDiscriminator}\" was not found");
 
                 var typeName = typeProperty.GetString();
-                var type = typeResolver.ResolveType(null, typeName);
+                var type = TypeResolver.ResolveType(null, typeName);
 
                 if (type == null)
                     throw new JsonException($"Cannot resolve type \"{typeName}\"");
@@ -84,7 +84,7 @@ namespace Xodium.Serialization.Json.CoreFX
 
         protected bool IsDiscriminator(PropertyInfo property)
         {
-            return string.Compare(property.Name, typeDiscriminator, true, CultureInfo.InvariantCulture) == 0;
+            return string.Compare(property.Name, TypeDiscriminator, true, CultureInfo.InvariantCulture) == 0;
         }
 
         protected virtual string GetPropertyName(PropertyInfo property, JsonSerializerOptions options)

@@ -23,24 +23,60 @@ namespace Xodium.Serialization.Json.CoreFX
         public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             if (reader.TokenType != JsonTokenType.StartObject)
-                throw new JsonException($"Expected token type {nameof(JsonTokenType.StartObject)} but found {reader.TokenType}");
-
-            using (var jsonDocument = JsonDocument.ParseValue(ref reader))
             {
-                if (!jsonDocument.RootElement.TryGetProperty(TypeDiscriminator, out var typeProperty))
-                    throw new JsonException($"Type discriminator property \"{TypeDiscriminator}\" was not found");
-
-                var typeName = typeProperty.GetString();
-                var type = TypeResolver.ResolveType(null, typeName);
-
-                if (type == null)
-                    throw new JsonException($"Cannot resolve type \"{typeName}\"");
-
-                var jsonObject = jsonDocument.RootElement.GetRawText();
-                var result = (T)JsonSerializer.Deserialize(jsonObject, type);
-
-                return result;
+                throw new JsonException($"Expected object start but found {reader.TokenType}");
             }
+
+            if (!reader.Read() || reader.TokenType != JsonTokenType.PropertyName)
+            {
+                throw new JsonException($"Expected property but found {reader.TokenType}");
+            }
+
+            var name = reader.GetString();
+            if (name != TypeDiscriminator)
+            {
+                throw new JsonException($"Expected type discriminator \"{TypeDiscriminator}\" but found \"{name}\"");
+            }
+
+            if (!reader.Read() || reader.TokenType != JsonTokenType.String)
+            {
+                throw new JsonException($"Expected type discriminator string value but found {reader.TokenType}");
+            }
+
+            var typeName = reader.GetString();
+            var type = TypeResolver.ResolveType(null, typeName);
+
+            if (type == null)
+                throw new InvalidOperationException($"Unknown type name \"{typeName}\"");
+
+            var result = (T)Activator.CreateInstance(type);
+
+            var properties = type
+                .GetProperties(BindingFlags.Instance | BindingFlags.Public)
+                .Where(x => x.CanWrite)
+                .ToDictionary(x => ToPropertyName(x.Name, options));
+
+            while (reader.Read())
+            {
+                if (reader.TokenType == JsonTokenType.EndObject)
+                {
+                    return result;
+                }
+
+                if (reader.TokenType == JsonTokenType.PropertyName)
+                {
+                    var propertyName = reader.GetString();
+                    var property = properties.TryGetValue(propertyName, out var p) ? p : null;
+                    var value = JsonSerializer.Deserialize(ref reader, property?.PropertyType ?? typeof(object), options);
+
+                    if (property?.CanWrite ?? false)
+                    {
+                        property.SetValue(result, value);
+                    }
+                }
+            }
+
+            throw new JsonException("Unexpected end of stream");
         }
 
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
@@ -51,7 +87,7 @@ namespace Xodium.Serialization.Json.CoreFX
                 .Select(x => new
                 {
                     Property = x,
-                    Name = x.GetCustomAttribute<JsonPropertyNameAttribute>(true)?.Name ?? GetPropertyName(x, options)
+                    Name = x.GetCustomAttribute<JsonPropertyNameAttribute>(true)?.Name ?? ToPropertyName(x.Name, options)
                 })
                 .OrderBy(x => GetPropertyOrder(x.Property, x.Name))
                 .ToList();
@@ -66,6 +102,21 @@ namespace Xodium.Serialization.Json.CoreFX
             JsonSerializer.Serialize(writer, values, options);
         }
 
+        protected bool CanWriteProperty(PropertyInfo property, JsonSerializerOptions options)
+        {
+            return !options.IgnoreReadOnlyProperties || property.CanWrite;
+        }
+
+        protected virtual object GetPropertyOrder(PropertyInfo property, string name)
+        {
+            return !IsDiscriminator(property);
+        }
+
+        protected bool IsDiscriminator(PropertyInfo property)
+        {
+            return string.Compare(property.Name, TypeDiscriminator, true, CultureInfo.InvariantCulture) == 0;
+        }
+
         protected virtual bool ShouldWriteProperty(PropertyInfo property, JsonSerializerOptions options)
         {
             return IsDiscriminator(property) ||
@@ -77,24 +128,9 @@ namespace Xodium.Serialization.Json.CoreFX
             return property.GetCustomAttribute<JsonIgnoreAttribute>(true) != null;
         }
 
-        protected bool CanWriteProperty(PropertyInfo property, JsonSerializerOptions options)
+        protected string ToPropertyName(string name, JsonSerializerOptions options)
         {
-            return !options.IgnoreReadOnlyProperties || property.CanWrite;
-        }
-
-        protected bool IsDiscriminator(PropertyInfo property)
-        {
-            return string.Compare(property.Name, TypeDiscriminator, true, CultureInfo.InvariantCulture) == 0;
-        }
-
-        protected virtual string GetPropertyName(PropertyInfo property, JsonSerializerOptions options)
-        {
-            return options.PropertyNamingPolicy?.ConvertName(property.Name) ?? property.Name;
-        }
-
-        protected virtual object GetPropertyOrder(PropertyInfo property, string name)
-        {
-            return !IsDiscriminator(property);
+            return options.PropertyNamingPolicy?.ConvertName(name) ?? name;
         }
     }
 }

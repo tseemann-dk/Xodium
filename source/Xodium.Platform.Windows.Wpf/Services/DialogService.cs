@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using Xodium.Extensions;
 using Xodium.Mvvm;
 
 // TODO: Finish implementation
@@ -23,7 +24,7 @@ namespace Xodium.Platform.Windows.Wpf.Services
 
         public Task DisplayException(string title, Exception exception)
         {
-            MessageBox.Show(exception.Message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show(exception.GetMessageList(), title, MessageBoxButton.OK, MessageBoxImage.Error);
             return Task.CompletedTask;
         }
 

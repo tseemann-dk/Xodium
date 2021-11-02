@@ -8,10 +8,10 @@ namespace Xodium.Productivity.Microsoft365
 {
     public class MicrosoftGraphProductivityContext : IProductivityContext
     {
-        private readonly IGraphServiceClient graphClient;
+        private readonly GraphServiceClient graphClient;
         private readonly MicrosoftGraphOptions options;
 
-        public MicrosoftGraphProductivityContext(IGraphServiceClient graphClient, MicrosoftGraphOptions options = null)
+        public MicrosoftGraphProductivityContext(GraphServiceClient graphClient, MicrosoftGraphOptions options = null)
         {
             this.graphClient = graphClient ?? throw new System.ArgumentNullException(nameof(graphClient));
             this.options = options ?? MicrosoftGraphOptions.Empty;

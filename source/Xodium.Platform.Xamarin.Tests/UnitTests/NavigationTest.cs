@@ -664,7 +664,7 @@ namespace Xodium.Mvvm.Xamarin.Test.UnitTests
             await navigationService.GoBack();
 
             (await navigationService
-                .Awaiting(async n => await n.GoBack())
+                .Awaiting(n => n.GoBack())
                 .Should()
                 .ThrowAsync<NavigationException>())
                 .WithMessage("Cannot navigate back");

@@ -18,7 +18,7 @@ namespace Sidekick.XF.Droid
             Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+            Rg.Plugins.Popup.Popup.Init(this);
 
             var bootstrapper = new AndroidXFBootstrapper(this);
             Startup.Init(bootstrapper);

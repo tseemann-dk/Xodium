@@ -18,8 +18,8 @@ namespace Sidekick.XF
         {
             base.RegisterServices(registry);
 
-            registry.RegisterFactory<INavigationService>(resolver => new NavigationService(App.NavigationPage, new ViewRegistryProvider(() => ViewRegistry)));
-            registry.RegisterFactory<IDialogService>(resolver => new DialogService(App.NavigationPage, () => ViewRegistry));
+            registry.RegisterSingleton<INavigationService>(resolver => new NavigationService(App.NavigationPage, new ViewRegistryProvider(() => ViewRegistry)));
+            registry.RegisterSingleton<IDialogService>(resolver => new DialogService(App.NavigationPage, () => ViewRegistry));
         }
 
         protected override void RegisterViews(IViewRegistry registry)

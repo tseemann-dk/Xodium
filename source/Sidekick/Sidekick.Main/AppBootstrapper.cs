@@ -34,8 +34,8 @@ namespace Sidekick
 
             RegisterStore(registry);
 
-            //registry.RegisterInstance<IShop>(new Shopper.eBay.eBayShop());
-            registry.RegisterInstance<IShop>(new Shopper.Flickr.FlickrShop());
+            //registry.RegisterSingleton<IShop>(new Shopper.eBay.eBayShop());
+            registry.RegisterSingleton<IShop>(new Shopper.Flickr.FlickrShop());
         }
 
         private void RegisterStore(IDependencyRegistry registry)
@@ -51,8 +51,8 @@ namespace Sidekick
                 AppStateGenerator.GenerateSampleState(), 
                 middlewares);
 
-            registry.RegisterInstance(Store);
-            registry.RegisterInstance<IStore>(Store);
+            registry.RegisterSingleton(Store);
+            registry.RegisterSingleton<IStore>(Store);
         }
     }
 }

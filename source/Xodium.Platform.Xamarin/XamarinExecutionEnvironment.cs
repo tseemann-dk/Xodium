@@ -19,7 +19,7 @@ namespace Xodium.Platform.Xamarin
             // Register Xamarin common services here and register platform-specific services 
             // in derived environment classes, i.e. AndroidExecutionEnvironment and iOSExecutionEnvironment 
 
-            registry.RegisterInstance<ISynchronizerService>(new SynchronizerService());
+            registry.RegisterSingleton<ISynchronizerService>(new SynchronizerService());
         }
     }
 }

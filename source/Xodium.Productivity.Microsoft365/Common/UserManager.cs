@@ -10,9 +10,9 @@ namespace Xodium.Productivity.Microsoft365.Common
 {
     public class UserManager : IUserManager
     {
-        private readonly MSGraph.IGraphServiceClient graphClient;
+        private readonly MSGraph.GraphServiceClient graphClient;
 
-        public UserManager(MSGraph.IGraphServiceClient graphClient)
+        public UserManager(MSGraph.GraphServiceClient graphClient)
         {
             this.graphClient = graphClient ?? throw new ArgumentNullException(nameof(graphClient));
         }

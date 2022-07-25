@@ -1,5 +1,6 @@
 ﻿using System;
 using Unity;
+using Unity.Lifetime;
 
 namespace Xodium.Injection.UnityContainer
 {
@@ -12,23 +13,35 @@ namespace Xodium.Injection.UnityContainer
             this.container = container ?? throw new ArgumentNullException(nameof(container));
         }
 
-        public void RegisterInstance<T>(T instance) 
-            where T : class 
-            => container.RegisterInstance(instance);
+        public void RegisterSingleton<TInterface, TInstance>()
+            where TInterface : class
+            where TInstance : class, TInterface => 
+            container.RegisterType<TInterface, TInstance>(TypeLifetime.Singleton);
 
-        public void RegisterType<TFrom, TTo>()
-            where TFrom : class
-            where TTo : class, TFrom
-            => container.RegisterType<TFrom, TTo>();
+        public void RegisterSingleton<TInterface>(Func<IDependencyResolver, TInterface> factory)
+            where TInterface : class =>
+            container.RegisterFactory<TInterface>(container => factory(this), FactoryLifetime.Singleton);
 
-        public void RegisterFactory<T>(Func<IDependencyResolver, T> factory)
-            where T : class
-            => container.RegisterFactory<T>(container => factory(this));
+        public void RegisterSingleton<TInterface>(TInterface instance)
+            where TInterface : class => 
+            container.RegisterInstance(instance);
 
-        public T Resolve<T>() 
-            => container.Resolve<T>();
+        public void RegisterSingleton<TInterface, TInstance>(TInstance instance)
+            where TInterface : class
+            where TInstance : class, TInterface => 
+            container.RegisterInstance(typeof(TInterface), instance);
 
-        public object Resolve(Type type) 
-            => container.Resolve(type);
+        public void RegisterTransient<TInterface, TInstance>()
+            where TInterface : class
+            where TInstance : class, TInterface =>
+            container.RegisterType<TInterface, TInstance>(TypeLifetime.Transient);
+
+        public void RegisterTransient<TInterface>(Func<IDependencyResolver, TInterface> factory)
+            where TInterface : class =>
+            container.RegisterFactory<TInterface>(container => factory(this), FactoryLifetime.Transient);
+
+        public T Resolve<T>() => container.Resolve<T>();
+
+        public object Resolve(Type type) => container.Resolve(type);
     }
 }

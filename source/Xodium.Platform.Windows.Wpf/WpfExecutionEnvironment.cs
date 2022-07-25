@@ -19,15 +19,15 @@ namespace Xodium.Platform.Windows.Wpf
             var fileSystemService = new FileSystemService();
 
             // WPF Services
-            registry.RegisterInstance<INavigationService>(new NavigationService(() => GetService<IViewRegistry>()));
-            registry.RegisterInstance<IDialogService>(new DialogService());
+            registry.RegisterSingleton<INavigationService>(new NavigationService(() => GetService<IViewRegistry>()));
+            registry.RegisterSingleton<IDialogService>(new DialogService());
 
             // Basic Windows Services
-            registry.RegisterInstance<IDeviceService>(new DeviceService());
-            registry.RegisterInstance<IFileLauncherService>(new FileLauncherService(fileSystemService));
-            registry.RegisterInstance<IFileSystemService>(fileSystemService);
-            registry.RegisterInstance<IPlatformService>(new PlatformService());
-            registry.RegisterInstance<ISynchronizerService>(new SynchronizerService());
+            registry.RegisterSingleton<IDeviceService>(new DeviceService());
+            registry.RegisterSingleton<IFileLauncherService>(new FileLauncherService(fileSystemService));
+            registry.RegisterSingleton<IFileSystemService>(fileSystemService);
+            registry.RegisterSingleton<IPlatformService>(new PlatformService());
+            registry.RegisterSingleton<ISynchronizerService>(new SynchronizerService());
         }
     }
 }

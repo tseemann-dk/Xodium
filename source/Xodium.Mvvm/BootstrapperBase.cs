@@ -15,12 +15,12 @@ namespace Xodium.Mvvm
 
             var viewRegistry = CreateViewRegistry(type => resolver().Resolve(type));
             RegisterViews(viewRegistry);
-            registry.RegisterInstance(viewRegistry);
+            registry.RegisterSingleton(viewRegistry);
             ViewRegistry = viewRegistry;
 
             var environment = CreateExecutionEnvironment(resolver);
             environment.RegisterServices(registry);
-            registry.RegisterInstance(environment);
+            registry.RegisterSingleton(environment);
 
             RegisterServices(registry);
         }

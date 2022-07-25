@@ -24,14 +24,14 @@ namespace Xodium.Mvvm.Xamarin.Test.UnitTests
             environment = new XamarinExecutionEnvironment(() => container);
 
             var viewRegistry = new ViewRegistry();
-            container.RegisterInstance<IViewRegistry>(viewRegistry);
+            container.RegisterSingleton<IViewRegistry>(viewRegistry);
 
             var navigation = new NavigationFake();
             var popupService = new PopupServiceFake();
             var ns = new NavigationService(navigation, popupService, new ViewRegistryProvider(() => viewRegistry));
 
             navigation.PagePopped += async (s, e) => await ns.OnPagePopped(e.Page);
-            container.RegisterInstance<INavigationService>(ns);
+            container.RegisterSingleton<INavigationService>(ns);
 
             navigationService = environment.NavigationService;
             testbed = new ViewModelTestbed(environment, typeof(ContentView));

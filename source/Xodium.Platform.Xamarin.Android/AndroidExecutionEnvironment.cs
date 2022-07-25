@@ -19,8 +19,8 @@ namespace Xodium.Platform.Xamarin.Android
 
         public override void RegisterServices(IDependencyRegistry registry)
         {
-            registry.RegisterInstance<IDeviceService>(new DeviceService(context));
-            registry.RegisterInstance<IPlatformService>(new PlatformService(context));
+            registry.RegisterSingleton<IDeviceService>(new DeviceService(context));
+            registry.RegisterSingleton<IPlatformService>(new PlatformService(context));
         }
     }
 }

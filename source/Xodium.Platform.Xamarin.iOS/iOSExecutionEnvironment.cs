@@ -15,8 +15,8 @@ namespace Xodium.Platform.iOS
 
         public override void RegisterServices(IDependencyRegistry registry)
         {
-            registry.RegisterInstance<IDeviceService>(new DeviceService());
-            registry.RegisterInstance<IPlatformService>(new PlatformService());
+            registry.RegisterSingleton<IDeviceService>(new DeviceService());
+            registry.RegisterSingleton<IPlatformService>(new PlatformService());
         }
     }
 }

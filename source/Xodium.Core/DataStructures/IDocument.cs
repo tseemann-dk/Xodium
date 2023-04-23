@@ -1,8 +1,8 @@
 ﻿namespace Xodium.DataStructures
 {
-    public interface IDocument : ITree
+    public interface IDocument : IContainerNode
     {
         string Name { get; }
-        ITree Content { get; }
+        IContainerNode Content { get; }
     }
 }

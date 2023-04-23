@@ -11,33 +11,33 @@ namespace Xodium.DataStructures
 
     public static class NodeExtensions
     {
-        public static string GetPath(this INode node, ITree root)
+        public static string GetPath(this INode node, IContainerNode root)
         {
             var parents = node.GetAncestors(root).ToList();
 
             return string.Join("/", parents.Select(x => x.Id));
         }
 
-        public static ITree GetParent(this INode node, ITree root)
+        public static IContainerNode GetParent(this INode node, IContainerNode root)
         {
             return GetAncestors(node, root).LastOrDefault();
         }
 
-        public static IEnumerable<ITree> GetAncestors(this INode node, ITree root)
+        public static IEnumerable<IContainerNode> GetAncestors(this INode node, IContainerNode root)
         {
-            var ancestors = new Stack<ITree>();
+            var ancestors = new Stack<IContainerNode>();
 
-            return GetAncestors(node, root, ancestors) ? ancestors.Reverse() : Enumerable.Empty<ITree>();
+            return GetAncestors(node, root, ancestors) ? ancestors.Reverse() : Enumerable.Empty<IContainerNode>();
         }
 
-        private static bool GetAncestors(INode node, ITree root, Stack<ITree> ancestors)
+        private static bool GetAncestors(INode node, IContainerNode root, Stack<IContainerNode> ancestors)
         {
             ancestors.Push(root);
 
             if (node.IsChildOf(root))
                 return true;
 
-            foreach (var parent in root.Nodes.OfType<ITree>())
+            foreach (var parent in root.Nodes.OfType<IContainerNode>())
             {
                 if (GetAncestors(node, parent, ancestors))
                 {
@@ -49,13 +49,13 @@ namespace Xodium.DataStructures
             return false;
         }
 
-        public static bool IsChildOf(this INode node, ITree branch)
+        public static bool IsChildOf(this INode node, IContainerNode branch)
             => branch.Nodes.Contains(node);
 
-        public static bool IsFirstChildOf(this INode node, ITree branch)
+        public static bool IsFirstChildOf(this INode node, IContainerNode branch)
             => node != null && branch.Nodes.FirstOrDefault() == node;
 
-        public static bool IsLastChildOf(this INode node, ITree branch)
+        public static bool IsLastChildOf(this INode node, IContainerNode branch)
             => node != null && branch.Nodes.LastOrDefault() == node;
     }
 }

@@ -126,7 +126,7 @@ namespace Sidekick.Shopper.State
         public ShoppingList WithComponents(IReadOnlyList<IComponent> components) => 
             components == Components ? this : new ShoppingList(Id, Name, Content, components);
         
-        public override IDocument WithContent(ITree content) => WithContent(content as IShoppingFolder);
+        public override IDocument WithContent(IContainerNode content) => WithContent(content as IShoppingFolder);
 
         IShoppingList IShoppingList.AddComponent(IComponent component) => AddComponent(component);
         IShoppingList IShoppingList.RemoveComponent(IComponent component) => RemoveComponent(component);

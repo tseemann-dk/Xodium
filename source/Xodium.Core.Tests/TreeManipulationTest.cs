@@ -38,7 +38,7 @@ namespace Xodium.Core.Tests
             node.Id.Should().Be("A");
             node.Nodes.Should().HaveCount(1);
 
-            var child = node.GetSubTrees().First();
+            var child = node.GetSubContainers().First();
             child.Id.Should().Be("B");
         }
 
@@ -46,7 +46,7 @@ namespace Xodium.Core.Tests
         public void Clone_WhenNodeIsEmpty_ShouldCreateExactCopy()
         {
             var node = treeBuilder.CreateNode("A");
-            var copy = node.Clone() as ITree;
+            var copy = node.Clone() as IContainerNode;
 
             copy.Should().NotBeNull();
             copy.Should().NotBe(node);
@@ -58,7 +58,7 @@ namespace Xodium.Core.Tests
         public void Clone_WhenNodeHasChildren_ShouldCreateExactCopy()
         {
             var tree = treeBuilder.BuildTree("A", 1, 2);
-            var copy = tree.Clone() as ITree;
+            var copy = tree.Clone() as IContainerNode;
 
             // Validate root
             copy.Should().NotBeNull();
@@ -101,7 +101,7 @@ namespace Xodium.Core.Tests
             nodeA.Id.Should().Be("A");
             nodeA.Nodes.Should().HaveCount(1);
 
-            var child = nodeA.GetSubTrees().First();
+            var child = nodeA.GetSubContainers().First();
             child.Id.Should().Be("B");
         }
 
@@ -127,8 +127,8 @@ namespace Xodium.Core.Tests
             nodeA.Id.Should().Be("A");
             nodeA.Nodes.Should().HaveCount(2);
 
-            var nodeB = nodeA.GetSubTrees().First();
-            var nodeC = nodeA.GetSubTrees().Last();
+            var nodeB = nodeA.GetSubContainers().First();
+            var nodeC = nodeA.GetSubContainers().Last();
             nodeB.Id.Should().Be("B");
             nodeC.Id.Should().Be("C");
         }
@@ -139,15 +139,15 @@ namespace Xodium.Core.Tests
             var tree = treeBuilder.BuildTree("A", 3, 3);
 
             tree = tree.InsertNodeAt(
-                tree.GetSubTrees().First(),
+                tree.GetSubContainers().First(),
                 2, treeBuilder.CreateNode("B")
             );
 
             tree.Should().NotBeNull();
             tree.Nodes.Should().HaveCount(3);
-            tree.GetSubTrees().First().Nodes.Should().HaveCount(4);
+            tree.GetSubContainers().First().Nodes.Should().HaveCount(4);
 
-            var nodeB = tree.GetSubTrees().First().Nodes.Skip(2).First();
+            var nodeB = tree.GetSubContainers().First().Nodes.Skip(2).First();
             nodeB.Id.Should().Be("B");
         }
 
@@ -215,26 +215,26 @@ namespace Xodium.Core.Tests
 
             CheckTree(tree, "A", 3, 3);
 
-            var nodedA1 = tree.GetSubTrees().First();
-            var nodeA2 = tree.GetSubTrees().Skip(1).First();
-            var nodeA3 = tree.GetSubTrees().Skip(2).First();
+            var nodedA1 = tree.GetSubContainers().First();
+            var nodeA2 = tree.GetSubContainers().Skip(1).First();
+            var nodeA3 = tree.GetSubContainers().Skip(2).First();
 
-            var nodeA2_1 = TreeExtensions.GetSubTrees(nodeA2).First();
-            var nodeA2_2 = nodeA2.GetSubTrees().Skip(1).First();
-            var nodeA2_3 = nodeA2.GetSubTrees().Skip(2).First();
+            var nodeA2_1 = ContainerNodeExtensions.GetSubContainers(nodeA2).First();
+            var nodeA2_2 = nodeA2.GetSubContainers().Skip(1).First();
+            var nodeA2_3 = nodeA2.GetSubContainers().Skip(2).First();
 
             var nodeA2_2_replaced = treeBuilder.BuildTree("A.2.2", 1, 3);
             tree = tree.ReplaceNodeAt(nodeA2, nodeA2_2, nodeA2_2_replaced);
 
             CheckTree(tree, "A", 3, 3);
 
-            var nodeA1_new = tree.GetSubTrees().First();
-            var nodeA2_new = tree.GetSubTrees().Skip(1).First();
-            var nodeA3_new = tree.GetSubTrees().Skip(2).First();
+            var nodeA1_new = tree.GetSubContainers().First();
+            var nodeA2_new = tree.GetSubContainers().Skip(1).First();
+            var nodeA3_new = tree.GetSubContainers().Skip(2).First();
 
-            var nodeA2_1_new = TreeExtensions.GetSubTrees(nodeA2_new).First();
-            var nodeA2_2_new = nodeA2_new.GetSubTrees().Skip(1).First();
-            var nodeA2_3_new = nodeA2_new.GetSubTrees().Skip(2).First();
+            var nodeA2_1_new = ContainerNodeExtensions.GetSubContainers(nodeA2_new).First();
+            var nodeA2_2_new = nodeA2_new.GetSubContainers().Skip(1).First();
+            var nodeA2_3_new = nodeA2_new.GetSubContainers().Skip(2).First();
 
             nodeA1_new.Should().Be(nodedA1, "because it was unchanged");
             nodeA2_new.Should().NotBe(nodeA2, "because content was modified");
@@ -262,7 +262,7 @@ namespace Xodium.Core.Tests
         public void ReplaceNodeAt_WhenOldNodeIsNotFound_ShouldFail()
         {
             var nodeA = treeBuilder.BuildTree("A", 3, 3);
-            var nodeA1 = nodeA.GetSubTrees().First();
+            var nodeA1 = nodeA.GetSubContainers().First();
             var nodeB = treeBuilder.CreateNode("B");
             var nodeC = treeBuilder.CreateNode("C");
 
@@ -297,9 +297,9 @@ namespace Xodium.Core.Tests
         public void GetPath_OfSubNode_ShouldReturnPath()
         {
             var root = treeBuilder.BuildTree("A", 3, 3);
-            var child = root.GetSubTrees().Last();
-            var grandChild = child.GetSubTrees().Last();
-            var greatGrandChild = grandChild.GetSubTrees().Last();
+            var child = root.GetSubContainers().Last();
+            var grandChild = child.GetSubContainers().Last();
+            var greatGrandChild = grandChild.GetSubContainers().Last();
 
             var expected = string.Join('/', new[] { root, child, grandChild }.Select(x => x.Id));
             var actual = greatGrandChild.GetPath(root);
@@ -307,14 +307,14 @@ namespace Xodium.Core.Tests
             Assert.Equal(expected, actual);
         }
 
-        private void CheckTree(ITree tree, string id, int depth, int width)
+        private void CheckTree(IContainerNode tree, string id, int depth, int width)
         {
             tree.Should().NotBeNull();
             tree.Id.Should().Be(id);
             tree.Nodes.Should().HaveCount(depth > 0 ? width : 0);
 
             int x = 1;
-            foreach (var subTree in tree.GetSubTrees())
+            foreach (var subTree in tree.GetSubContainers())
             {
                 CheckTree(subTree, treeBuilder.ProvideId(id, x++), depth - 1, width);
             }

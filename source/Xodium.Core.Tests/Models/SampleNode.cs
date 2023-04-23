@@ -5,7 +5,7 @@ using Xodium.DataStructures;
 
 namespace Xodium.Core.Tests.Models
 {
-    public class SampleNode : ITree
+    public class SampleNode : IContainerNode
     {
         public SampleNode(string id, IEnumerable<INode> nodes)
         {
@@ -19,7 +19,7 @@ namespace Xodium.Core.Tests.Models
         public string Id { get; }
         public IReadOnlyList<INode> Nodes { get; }
 
-        public ITree WithNodes(IReadOnlyList<INode> nodes) 
+        public IContainerNode WithNodes(IReadOnlyList<INode> nodes) 
             => new SampleNode(Id, nodes);
 
         public INode Clone() => WithNodes(Nodes);

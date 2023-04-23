@@ -44,7 +44,7 @@ namespace Sidekick.Shopper.Models
         public IShoppingFolder WithNodes(IReadOnlyList<INode> nodes) 
             => new ShoppingFolder(Id, FolderNumber, Title, Quantity, nodes);
 
-        ITree ITree.WithNodes(IReadOnlyList<INode> nodes) => WithNodes(nodes);
+        IContainerNode IContainerNode.WithNodes(IReadOnlyList<INode> nodes) => WithNodes(nodes);
         INode INode.Clone() => WithNodes(Nodes);
     }
 }

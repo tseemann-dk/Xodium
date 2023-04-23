@@ -4,12 +4,12 @@ using System.Linq;
 
 namespace Xodium.DataStructures
 {
-    public delegate T NodeCreator<T>(string id, IEnumerable<INode> nodes) where T : ITree;
+    public delegate T NodeCreator<T>(string id, IEnumerable<INode> nodes) where T : IContainerNode;
     public delegate string IdentityProvider(string parentId, int index);
     public delegate IEnumerable<INode> NodesProvider();
 
     public class TreeBuilder<TNode>
-        where TNode : class, ITree
+        where TNode : class, IContainerNode
     {
         private readonly NodeCreator<TNode> nodeCreator;
         private readonly IdentityProvider identityProvider;

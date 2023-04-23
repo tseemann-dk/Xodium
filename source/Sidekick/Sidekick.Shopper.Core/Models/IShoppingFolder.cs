@@ -4,7 +4,7 @@ using Xodium.DataStructures;
 
 namespace Sidekick.Shopper.Models
 {
-    public interface IShoppingFolder : ITree, IShoppingNode
+    public interface IShoppingFolder : IContainerNode, IShoppingNode
     {
         string FolderNumber { get; }
         string Title { get; }
@@ -16,6 +16,6 @@ namespace Sidekick.Shopper.Models
     public static class ShoppingFolderExtensions
     {
         public static IEnumerable<IShoppingFolder> GetSubfolders(this IShoppingFolder self)
-            => self.GetSubTrees().OfType<IShoppingFolder>();
+            => self.GetSubContainers().OfType<IShoppingFolder>();
     }
 }

@@ -42,7 +42,7 @@ namespace Xodium.Core.Tests
         public void GetParent_WhenNodeIsFirstGrandChild_ReturnsParent()
         {
             var tree = treeBuilder.BuildTree("A", 2, 3);
-            var child = tree.GetSubTrees().First();
+            var child = tree.GetSubContainers().First();
             var grandChild = child.Nodes.First();
             var parentOfGrandChild = grandChild.GetParent(tree);
 
@@ -63,7 +63,7 @@ namespace Xodium.Core.Tests
         public void FindParentOf_WhenNodeExists_ShouldReturnParent()
         {
             var tree = treeBuilder.BuildTree("A", 3, 3);
-            var node = tree.GetSubTrees().First().GetSubTrees().First();
+            var node = tree.GetSubContainers().First().GetSubContainers().First();
             var parent = tree.FindParentOf(node);
 
             parent.Should().NotBeNull();
@@ -100,7 +100,7 @@ namespace Xodium.Core.Tests
         public void GetIndexOfNode_WhenNodeIsMissing_ShouldReturnNegative()
         {
             var tree = treeBuilder.BuildTree("A", 3, 2);
-            var node = tree.GetSubTrees().First().Nodes.First();
+            var node = tree.GetSubContainers().First().Nodes.First();
             var index = tree.GetIndexOfNode(node);
 
             index.Should().Be(-1);

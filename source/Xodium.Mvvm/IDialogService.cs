@@ -15,7 +15,7 @@ namespace Xodium.Mvvm
             Argument = argument;
         }
 
-        public UserAction(string name, System.Action action)
+        public UserAction(string name, Action action)
         {
             Name = name;
             Action = action;
@@ -23,7 +23,7 @@ namespace Xodium.Mvvm
 
         public string Name { get; private set; }
         public ICommand Command { get; }
-        public System.Action Action { get; }
+        public Action Action { get; }
         public object Argument { get; }
 
         public void Execute()
@@ -42,7 +42,7 @@ namespace Xodium.Mvvm
     public interface IDialogService
     {
         Task<bool> DisplayAlert(string title, string message, string accept = null, string cancel = null);
-        Task<UserAction> DisplayDialog(object viewModel, UserAction primaryAction = null, UserAction secondaryAction = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<UserAction> DisplayDialog(string title, object viewModel, UserAction primaryAction = null, UserAction secondaryAction = null, CancellationToken cancellationToken = default(CancellationToken));
         Task DisplayException(string title, Exception exception);
         Task<string> DisplayPrompt(string title, string message, string value, string accept = null, string cancel = null);
         Task<UserAction> SelectAction(string title, string cancel, IEnumerable<UserAction> actions);

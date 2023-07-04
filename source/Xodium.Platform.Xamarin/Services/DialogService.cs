@@ -40,7 +40,7 @@ namespace Xodium.Platform.Xamarin.Services
             throw new NotImplementedException();
         }
 
-        public async Task<UserAction> DisplayDialog(object viewModel, UserAction primaryAction, UserAction secondaryAction, CancellationToken cancellationToken)
+        public async Task<UserAction> DisplayDialog(string title,object viewModel, UserAction primaryAction, UserAction secondaryAction, CancellationToken cancellationToken)
         {
             if (viewModel == null)
                 throw new ArgumentNullException(nameof(viewModel));
@@ -78,6 +78,7 @@ namespace Xodium.Platform.Xamarin.Services
 
             var page = new ContentPage
             {
+                Title = title,
                 Content = new Grid
                 {
                     Margin = new Thickness(12),

@@ -20,7 +20,7 @@ namespace Xodium.Platform.Windows.Wpf
 
             // WPF Services
             registry.RegisterSingleton<INavigationService>(new NavigationService(() => GetService<IViewRegistry>()));
-            registry.RegisterSingleton<IDialogService>(new DialogService());
+            registry.RegisterSingleton<IDialogService>(new DialogService(() => GetService<IViewRegistry>()));
 
             // Basic Windows Services
             registry.RegisterSingleton<IDeviceService>(new DeviceService());

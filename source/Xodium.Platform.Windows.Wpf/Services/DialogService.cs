@@ -12,14 +12,36 @@ namespace Xodium.Platform.Windows.Wpf.Services
 {
     public class DialogService : IDialogService
     {
+        private readonly Func<IViewRegistry> getViewRegistry;
+
+        public DialogService(Func<IViewRegistry> getViewRegistry)
+        {
+            this.getViewRegistry = getViewRegistry ?? throw new ArgumentNullException(nameof(getViewRegistry));
+        }
+
         public Task<bool> DisplayAlert(string title, string message, string accept = null, string cancel = null)
         {
             return Task.FromResult(MessageBox.Show(message, title, MessageBoxButton.OKCancel) == MessageBoxResult.OK);
         }
 
-        public Task<UserAction> DisplayDialog(object viewModel, UserAction primaryAction = null, UserAction secondaryAction = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<UserAction> DisplayDialog(string title, object viewModel, UserAction primaryAction = null, UserAction secondaryAction = null, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            // TODO: Finish
+
+            var content = getViewRegistry().GetViewFor(viewModel);
+
+            var window = new Window
+            {
+                WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                WindowStyle = WindowStyle.SingleBorderWindow,
+                WindowState = WindowState.Normal,
+                SizeToContent = SizeToContent.WidthAndHeight,
+                Content = content
+            };
+
+            window.ShowDialog();
+
+            return Task.FromResult(new UserAction("", () => { }));
         }
 
         public Task DisplayException(string title, Exception exception)

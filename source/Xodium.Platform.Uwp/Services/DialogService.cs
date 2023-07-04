@@ -97,6 +97,7 @@ namespace Xodium.Platform.Uwp.Services
         }
 
         public async Task<UserAction> DisplayDialog(
+            string title,
             object viewModel, 
             UserAction primaryAction,
             UserAction secondaryAction, 
@@ -112,6 +113,7 @@ namespace Xodium.Platform.Uwp.Services
             return await DisplayDialog(view, primaryAction, secondaryAction,
                 dialog =>
                 {
+                    dialog.Title = title;
                     dialog.SetBinding(ContentDialog.IsPrimaryButtonEnabledProperty, new Binding
                     {
                         Source = viewModel,

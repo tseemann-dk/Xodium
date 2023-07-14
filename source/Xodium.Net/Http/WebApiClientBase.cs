@@ -29,6 +29,7 @@ namespace Xodium.Net.Http
             this.httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         }
 
+        protected HttpClient HttpClient => httpClient;
         protected MediaTypeWithQualityHeaderValue JsonMediaType { get; } = new MediaTypeWithQualityHeaderValue("application/json");
 
         protected Task<TResult> Get<TResult>(

@@ -24,21 +24,22 @@ namespace Xodium.Platform.Windows.Wpf.Services
             return Task.FromResult(MessageBox.Show(message, title, MessageBoxButton.OKCancel) == MessageBoxResult.OK);
         }
 
-        public Task<UserAction> DisplayDialog(string title, object viewModel, UserAction primaryAction = null, UserAction secondaryAction = null, CancellationToken cancellationToken = default)
+        public Task<UserAction> DisplayDialog(string title, object viewModel, UserAction primaryAction = null, UserAction secondaryAction = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // TODO: Finish
-
             var content = getViewRegistry().GetViewFor(viewModel);
 
             var window = new Window
             {
+                Title = title,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
                 WindowStyle = WindowStyle.SingleBorderWindow,
                 WindowState = WindowState.Normal,
+                ResizeMode = ResizeMode.NoResize,
                 SizeToContent = SizeToContent.WidthAndHeight,
                 Content = content
             };
 
+            window.DataContext = viewModel;
             window.ShowDialog();
 
             return Task.FromResult(new UserAction("", () => { }));

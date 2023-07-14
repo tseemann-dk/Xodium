@@ -58,7 +58,7 @@ namespace Xodium.Net.Http
         {
             using (var stream = new MemoryStream())
             {
-                await serializer.Serialize(body, stream);
+                await serializer.SerializeAsync(stream, body);
                 stream.Seek(0, SeekOrigin.Begin);
                 return await PerformRequest<TResult>(method, uri, cancellationToken, stream);
             }
@@ -89,7 +89,7 @@ namespace Xodium.Net.Http
                     }
                 }
 
-                return await serializer.Deserialize<TResult>(stream);
+                return await serializer.DeserializeAsync<TResult>(stream);
             }
         }
 

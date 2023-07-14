@@ -14,14 +14,16 @@ namespace Xodium.Serialization.Json.CoreFX
             this.options = options ?? new JsonSerializerOptions();
         }
 
-        public Task<T> Deserialize<T>(Stream stream, CancellationToken cancellationToken)
-        {
-            return JsonSerializer.DeserializeAsync<T>(stream, options, cancellationToken).AsTask();
-        }
+        public T Deserialize<T>(Stream stream) =>
+            JsonSerializer.Deserialize<T>(stream, options);
 
-        public Task Serialize<T>(T obj, Stream stream, CancellationToken cancellationToken)
-        {
-            return JsonSerializer.SerializeAsync<T>(stream, obj, options, cancellationToken);
-        }
+        public ValueTask<T> DeserializeAsync<T>(Stream stream, CancellationToken cancellationToken) =>
+            JsonSerializer.DeserializeAsync<T>(stream, options);
+
+        public void Serialize<T>(Stream stream, T value) =>
+            JsonSerializer.Serialize(stream, value, options);
+
+        public Task SerializeAsync<T>(Stream stream, T value, CancellationToken cancellationToken) =>
+            JsonSerializer.SerializeAsync(stream, value, options);
     }
 }

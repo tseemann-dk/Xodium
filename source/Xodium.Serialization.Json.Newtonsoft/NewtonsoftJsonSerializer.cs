@@ -15,7 +15,7 @@ namespace Xodium.Serialization.Json.Newtonsoft
             this.serializer = serializer ?? JsonSerializer.CreateDefault();
         }
 
-        public void Serialize<T>(Stream stream, T value)
+        public void Serialize<T>(T value, Stream stream)
         {
             using var streamWriter = new StreamWriter(stream, Encoding.UTF8, 1024, true);
             using var jsonWriter = new JsonTextWriter(streamWriter);
@@ -24,7 +24,7 @@ namespace Xodium.Serialization.Json.Newtonsoft
             stream.Position = 0;
         }
 
-        public async Task SerializeAsync<T>(Stream stream, T value, CancellationToken cancellationToken)
+        public async Task SerializeAsync<T>(T value, Stream stream, CancellationToken cancellationToken)
         {
             using var streamWriter = new StreamWriter(stream, Encoding.UTF8, 1024, true);
             using var jsonWriter = new JsonTextWriter(streamWriter);

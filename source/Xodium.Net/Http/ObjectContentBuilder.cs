@@ -22,7 +22,7 @@ namespace Xodium.Net.Http
         public async Task<HttpContent> BuildContent()
         {
             var stream = new MemoryStream();
-            await serializer.SerializeAsync(stream, value); 
+            await serializer.SerializeAsync(value, stream); 
             await stream.FlushAsync();
             stream.Position = 0;
             var content = new StreamContent(stream);

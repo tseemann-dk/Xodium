@@ -20,10 +20,10 @@ namespace Xodium.Serialization.Json.CoreFX
         public ValueTask<T> DeserializeAsync<T>(Stream stream, CancellationToken cancellationToken) =>
             JsonSerializer.DeserializeAsync<T>(stream, options);
 
-        public void Serialize<T>(Stream stream, T value) =>
+        public void Serialize<T>(T value, Stream stream) =>
             JsonSerializer.Serialize(stream, value, options);
 
-        public Task SerializeAsync<T>(Stream stream, T value, CancellationToken cancellationToken) =>
+        public Task SerializeAsync<T>(T value, Stream stream, CancellationToken cancellationToken) =>
             JsonSerializer.SerializeAsync(stream, value, options);
     }
 }

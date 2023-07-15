@@ -9,8 +9,8 @@ namespace Xodium.Serialization
     {
         ValueTask<T> DeserializeAsync<T>(Stream stream, CancellationToken cancellationToken = default);
         T Deserialize<T>(Stream stream);
-        Task SerializeAsync<T>(Stream stream, T value, CancellationToken cancellationToken = default);
-        void Serialize<T>(Stream stream, T value);
+        Task SerializeAsync<T>(T value, Stream stream, CancellationToken cancellationToken = default);
+        void Serialize<T>(T value, Stream stream);
     }
 
     public static class SerializerExtensions
@@ -46,7 +46,7 @@ namespace Xodium.Serialization
             Encoding encoding = null)
         {
             var stream = new MemoryStream();
-            serializer.Serialize(stream, obj);
+            serializer.Serialize(obj, stream);
             stream.Position = 0;
 
             using var reader = new StreamReader(stream, encoding ?? Encoding.UTF8);
@@ -60,7 +60,7 @@ namespace Xodium.Serialization
             CancellationToken cancellationToken = default)
         {
             var stream = new MemoryStream();
-            await serializer.SerializeAsync(stream, obj, cancellationToken);
+            await serializer.SerializeAsync(obj, stream, cancellationToken);
             stream.Position = 0;
 
             using var reader = new StreamReader(stream, encoding ?? Encoding.UTF8);

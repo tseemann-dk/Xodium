@@ -11,6 +11,7 @@ using Xodium.Serialization;
 
 namespace Xodium.Net.Http
 {
+    [Obsolete($"Use {nameof(RestClientBase)} instead")]
     public abstract class WebApiClientBase
     {
         private readonly Uri baseUri;

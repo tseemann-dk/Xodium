@@ -2,6 +2,7 @@
 
 namespace Xodium.Net.Http
 {
+    [Obsolete($"Use {nameof(RestClientException)} instead")]
     public class WebApiException : Exception
     {
         public WebApiException(int statusCode, string content)

@@ -16,9 +16,9 @@ namespace Xodium.Net.Http
     {
         private readonly Uri baseUri;
         private readonly HttpClient httpClient;
-        private readonly IObjectSerializer serializer;
+        private readonly ISerializer serializer;
 
-        protected WebApiClientBase(Uri baseUri, IObjectSerializer serializer, HttpMessageHandler handler = null)
+        protected WebApiClientBase(Uri baseUri, ISerializer serializer, HttpMessageHandler handler = null)
             : this(baseUri, handler == null ? new HttpClient() : new HttpClient(handler, false))
         {
             this.serializer = serializer ?? throw new ArgumentNullException(nameof(serializer));
@@ -32,7 +32,7 @@ namespace Xodium.Net.Http
 
         protected HttpClient HttpClient => httpClient;
         protected MediaTypeWithQualityHeaderValue JsonMediaType { get; } = new MediaTypeWithQualityHeaderValue("application/json");
-        protected IObjectSerializer Serializer => serializer;
+        protected ISerializer Serializer => serializer;
 
         protected Task<TResult> Get<TResult>(
             string path, IEnumerable<KeyValuePair<string, string>> arguments, CancellationToken cancellationToken)

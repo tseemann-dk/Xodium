@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace Xodium.Serialization.Json.CoreFX
 {
-    public class JsonObjectSerializer : IObjectSerializer
+    public class NativeJsonSerializer : ISerializer
     {
         private readonly JsonSerializerOptions options;
 
-        public JsonObjectSerializer(JsonSerializerOptions options)
+        public NativeJsonSerializer(JsonSerializerOptions options)
         {
             this.options = options ?? new JsonSerializerOptions();
         }

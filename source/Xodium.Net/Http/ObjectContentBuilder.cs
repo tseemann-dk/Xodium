@@ -9,10 +9,10 @@ namespace Xodium.Net.Http
     public class ObjectContentBuilder<T> : IContentBuilder
     {
         private readonly T value;
-        private readonly IObjectSerializer serializer;
+        private readonly ISerializer serializer;
         private readonly string mediaType;
 
-        public ObjectContentBuilder(T value, IObjectSerializer serializer, string mediaType)
+        public ObjectContentBuilder(T value, ISerializer serializer, string mediaType)
         {
             this.value = value;
             this.serializer = serializer;

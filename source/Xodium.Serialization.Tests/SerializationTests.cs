@@ -8,7 +8,7 @@ namespace Xodium.Serialization.Tests
     {
         [Theory]
         [MemberData(nameof(Serializers))]
-        public async Task CanSerializeAndDeserializePlainObject(IObjectSerializer serializer)
+        public async Task CanSerializeAndDeserializePlainObject(ISerializer serializer)
         {
             var obj1 = CreatePerson();
             var str = await serializer.SerializeAsync(obj1);
@@ -19,7 +19,7 @@ namespace Xodium.Serialization.Tests
 
         [Theory]
         [MemberData(nameof(Serializers))]
-        public async Task CanSerializeAndDeserializeUntypedData(IObjectSerializer serializer)
+        public async Task CanSerializeAndDeserializeUntypedData(ISerializer serializer)
         {
             var obj1 = CreateUntypedData();
             var str = await serializer.SerializeAsync(obj1);
@@ -34,16 +34,16 @@ namespace Xodium.Serialization.Tests
             new object[] { CreateNewtonsoftJsonSerializer() }
         };
 
-        private static Json.Newtonsoft.JsonObjectSerializer CreateNewtonsoftJsonSerializer()
+        private static Json.Newtonsoft.NewtonsoftJsonSerializer CreateNewtonsoftJsonSerializer()
         {
             var settings = new Nsj.JsonSerializerSettings
             {
             };
 
-            return new Json.Newtonsoft.JsonObjectSerializer();
+            return new Json.Newtonsoft.NewtonsoftJsonSerializer();
         }
 
-        private static Json.CoreFX.JsonObjectSerializer CreateCoreFXJsonSerializer()
+        private static Json.CoreFX.NativeJsonSerializer CreateCoreFXJsonSerializer()
         {
             var options = new Stj.JsonSerializerOptions
             {
@@ -53,7 +53,7 @@ namespace Xodium.Serialization.Tests
                 }
             };
 
-            return new Json.CoreFX.JsonObjectSerializer(options);
+            return new Json.CoreFX.NativeJsonSerializer(options);
         }
 
         private static Person CreatePerson() => new()

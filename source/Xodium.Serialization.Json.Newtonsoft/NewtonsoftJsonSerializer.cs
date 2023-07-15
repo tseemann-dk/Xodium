@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Xodium.Serialization.Json.Newtonsoft
 {
-    public class JsonObjectSerializer : IObjectSerializer
+    public class NewtonsoftJsonSerializer : ISerializer
     {
         private readonly JsonSerializer serializer;
 
-        public JsonObjectSerializer(JsonSerializer serializer = null)
+        public NewtonsoftJsonSerializer(JsonSerializer serializer = null)
         {
             this.serializer = serializer ?? JsonSerializer.CreateDefault();
         }

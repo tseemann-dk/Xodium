@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Xodium.Serialization
 {
-    public interface IObjectSerializer
+    public interface ISerializer
     {
         ValueTask<T> DeserializeAsync<T>(Stream stream, CancellationToken cancellationToken = default);
         T Deserialize<T>(Stream stream);
@@ -16,7 +16,7 @@ namespace Xodium.Serialization
     public static class SerializerExtensions
     {
         public static T Deserialize<T>(
-            this IObjectSerializer serializer,
+            this ISerializer serializer,
             string source,
             Encoding encoding = null)
         {
@@ -28,7 +28,7 @@ namespace Xodium.Serialization
         }
 
         public static ValueTask<T> DeserializeAsync<T>(
-            this IObjectSerializer serializer,
+            this ISerializer serializer,
             string source,
             Encoding encoding = null,
             CancellationToken cancellationToken = default)
@@ -41,7 +41,7 @@ namespace Xodium.Serialization
         }
 
         public static string Serialize(
-            this IObjectSerializer serializer,
+            this ISerializer serializer,
             object obj,
             Encoding encoding = null)
         {
@@ -54,7 +54,7 @@ namespace Xodium.Serialization
         }
 
         public static async Task<string> SerializeAsync(
-            this IObjectSerializer serializer,
+            this ISerializer serializer,
             object obj,
             Encoding encoding = null,
             CancellationToken cancellationToken = default)

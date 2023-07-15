@@ -14,7 +14,7 @@ namespace Xodium.Net.Http
     {
         private readonly HttpClient httpClient;
 
-        protected RestClientBase(HttpClient httpClient, IObjectSerializer serializer)
+        protected RestClientBase(HttpClient httpClient, ISerializer serializer)
             : this(httpClient, RestClientOptions.CreateForJsonSerializer(serializer))
         {
         }

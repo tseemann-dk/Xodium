@@ -28,6 +28,11 @@ namespace Xodium.Net.Http
         protected HttpClient HttpClient => httpClient;
         protected RestClientOptions Options { get; }
 
+        protected string BuildUri(string path, IEnumerable<KeyValuePair<string, string>> arguments = null) => 
+            arguments?.Any() ?? false
+                ? path + "?" + string.Join("&", arguments.Select(ToQueryParameter))
+                : path;
+
         protected Task<HttpResponseMessage> Delete(
             string path, CancellationToken cancellationToken) =>
             PerformRequest(HttpMethod.Delete, BuildUri(path), cancellationToken);
@@ -191,13 +196,6 @@ namespace Xodium.Net.Http
             request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(acceptMediaType));
             request.Content = content;
             return request;
-        }
-
-        private string BuildUri(string path, IEnumerable<KeyValuePair<string, string>> arguments = null)
-        {
-            return arguments?.Any() ?? false
-                ? path + "?" + string.Join("&", arguments.Select(ToQueryParameter))
-                : path;
         }
 
         private string ToQueryParameter(KeyValuePair<string, string> argument) => $"{argument.Key}={argument.Value}";

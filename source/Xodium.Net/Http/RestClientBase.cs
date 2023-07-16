@@ -103,38 +103,37 @@ namespace Xodium.Net.Http
         protected IContentBuilder ToObjectContentBuilder<T>(T value, string mediaType = null) => 
             new ObjectContentBuilder<T>(value, Options.Serializer, mediaType ?? Options.DefaultRequestMediaType);
 
+        protected virtual Task PrepareRequest(HttpRequestMessage request, CancellationToken cancellationToken) => Task.CompletedTask;
+
         private async Task<HttpResponseMessage> PerformRequest(
             HttpMethod method, string uri, CancellationToken cancellationToken)
         {
-            using (var request = CreateRequest(method, uri))
-            {
-                return await SendRequest(request, cancellationToken);
-            }
+            using var request = CreateRequest(method, uri);
+            await PrepareRequest(request, cancellationToken);
+            return await SendRequest(request, cancellationToken);
         }
 
         private async Task<TResult> PerformRequest<TResult>(
             HttpMethod method, string uri, CancellationToken cancellationToken)
         {
-            using (var request = CreateRequest(method, uri))
-            {
-                return await PerformRequest<TResult>(request, cancellationToken);
-            }
+            using var request = CreateRequest(method, uri);
+            return await PerformRequest<TResult>(request, cancellationToken);
         }
 
         private async Task<TResult> PerformRequest<TResult>(
             HttpMethod method, string uri, IContentBuilder contentBuilder, CancellationToken cancellationToken)
         {
-            using (var content = await contentBuilder.BuildContent())
-            using (var request = CreateRequest(method, uri, content))
-            {
-                return await PerformRequest<TResult>(request, cancellationToken);
-            }
+            using var content = await contentBuilder.BuildContent();
+            using var request = CreateRequest(method, uri, content);
+            return await PerformRequest<TResult>(request, cancellationToken);
         }
 
-        private Task<TResult> PerformRequest<TResult>(
+        private async Task<TResult> PerformRequest<TResult>(
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            return SendRequestAndReadResponse(request,
+            await PrepareRequest(request, cancellationToken);
+
+            return await SendRequestAndReadResponse(request,
                 async (response, stream) =>
                 {
                     try
@@ -155,11 +154,9 @@ namespace Xodium.Net.Http
             {
                 stream.Seek(0, SeekOrigin.Begin);
             }
-            
-            using (var reader = new StreamReader(stream))
-            {
-                return await reader.ReadToEndAsync();
-            }
+
+            using var reader = new StreamReader(stream);
+            return await reader.ReadToEndAsync();
         }
 
         private Task<HttpResponseMessage> SendRequest(HttpRequestMessage request, CancellationToken cancellationToken) =>
@@ -175,26 +172,22 @@ namespace Xodium.Net.Http
                 throw new ArgumentNullException(nameof(readResponse));
             }
 
-            using (var response = await SendRequest(request, cancellationToken))
+            using var response = await SendRequest(request, cancellationToken);
+            if (!response.IsSuccessStatusCode)
             {
-                if (!response.IsSuccessStatusCode)
-                {
-                    var result = await response.Content.ReadAsStringAsync();
-                    throw new HttpRequestException($"{(int)response.StatusCode} {response.ReasonPhrase}\n{result}");
-                }
-
-                using (var stream = await response.Content.ReadAsStreamAsync())
-                {
-                    return await readResponse(response, stream);
-                }
+                var result = await response.Content.ReadAsStringAsync();
+                throw new HttpRequestException($"{(int)response.StatusCode} {response.ReasonPhrase}\n{result}");
             }
+
+            using var stream = await response.Content.ReadAsStreamAsync();
+            return await readResponse(response, stream);
         }
 
         private HttpRequestMessage CreateRequest(
             HttpMethod method, string uri, HttpContent content = null, string acceptMediaType = null)
         {
             var request = new HttpRequestMessage(method, uri);
-            acceptMediaType = acceptMediaType ?? Options.DefaultResponseMediaType;
+            acceptMediaType ??= Options.DefaultResponseMediaType;
             request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(acceptMediaType));
             request.Content = content;
             return request;

@@ -7,6 +7,7 @@ using Android.Locations;
 using Android.OS;
 using Xodium.Geography;
 using Xodium.Services;
+using LocationRequest = Android.Gms.Location.LocationRequest;
 
 namespace Xodium.Platform.Xamarin.Android.Services
 {
@@ -87,7 +88,7 @@ namespace Xodium.Platform.Xamarin.Android.Services
     {
         private readonly Activity activity;
         private readonly LocationListenerSettings settings;
-        private readonly FusedLocationProviderClient client;
+        private readonly IFusedLocationProviderClient client;
 
         public LocationListener(Activity activity, LocationListenerSettings settings)
         {
@@ -103,10 +104,14 @@ namespace Xodium.Platform.Xamarin.Android.Services
 
         public async Task Start()
         {
-            var request = new LocationRequest()
-                .SetPriority(LocationRequest.PriorityHighAccuracy)
-                .SetInterval((long)settings.MinimumTime.TotalMilliseconds)
-                .SetSmallestDisplacement((long)settings.MinimumDistance.Meters);
+            var request = new LocationRequest
+                .Builder((long)settings.MinimumTime.TotalMilliseconds)
+                .Build();
+
+            //var request = new LocationRequest()
+            //    .SetPriority(LocationRequest.PriorityHighAccuracy)
+            //    .SetInterval((long)settings.MinimumTime.TotalMilliseconds)
+            //    .SetSmallestDisplacement((long)settings.MinimumDistance.Meters);
 
             await client.RequestLocationUpdatesAsync(request, this, activity.MainLooper);
             IsListening = true;

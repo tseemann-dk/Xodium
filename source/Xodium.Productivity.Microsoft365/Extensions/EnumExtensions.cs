@@ -1,55 +1,55 @@
 ﻿using Xodium.Productivity.Scheduling;
-using MSGraph = Microsoft.Graph;
+using MSGraphModels = Microsoft.Graph.Models;
 
 namespace Xodium.Productivity.Microsoft365.Extensions
 {
     public static class EnumExtensions
     {
-        public static Availability ToAvailability(this MSGraph.FreeBusyStatus self)
+        public static Availability ToAvailability(this MSGraphModels.FreeBusyStatus self)
         {
             switch (self)
             {
-                case MSGraph.FreeBusyStatus.Free:
+                case MSGraphModels.FreeBusyStatus.Free:
                     return Availability.Free;
-                case MSGraph.FreeBusyStatus.Tentative:
+                case MSGraphModels.FreeBusyStatus.Tentative:
                     return Availability.Tentative;
-                case MSGraph.FreeBusyStatus.Busy:
+                case MSGraphModels.FreeBusyStatus.Busy:
                     return Availability.Busy;
-                case MSGraph.FreeBusyStatus.Oof:
+                case MSGraphModels.FreeBusyStatus.Oof:
                     return Availability.Unavailable;
-                case MSGraph.FreeBusyStatus.WorkingElsewhere:
+                case MSGraphModels.FreeBusyStatus.WorkingElsewhere:
                     return Availability.Elsewhere;
-                case MSGraph.FreeBusyStatus.Unknown:
+                case MSGraphModels.FreeBusyStatus.Unknown:
                 default:
                     return Availability.Undefined;
             }
         }
 
-        public static Importance ToImportance(this MSGraph.Importance self)
+        public static Importance ToImportance(this MSGraphModels.Importance self)
         {
             switch (self)
             {
-                case MSGraph.Importance.Low:
+                case MSGraphModels.Importance.Low:
                     return Importance.Low;
-                case MSGraph.Importance.Normal:
+                case MSGraphModels.Importance.Normal:
                     return Importance.Normal;
-                case MSGraph.Importance.High:
+                case MSGraphModels.Importance.High:
                     return Importance.High;
                 default:
                     return Importance.Normal;
             }
         }
 
-        public static Sensitivity ToSensitivity(this MSGraph.Sensitivity self)
+        public static Sensitivity ToSensitivity(this MSGraphModels.Sensitivity self)
         {
             switch (self)
             {
-                case MSGraph.Sensitivity.Normal:
+                case MSGraphModels.Sensitivity.Normal:
                     return Sensitivity.Public;
-                case MSGraph.Sensitivity.Personal:
-                case MSGraph.Sensitivity.Private:
+                case MSGraphModels.Sensitivity.Personal:
+                case MSGraphModels.Sensitivity.Private:
                     return Sensitivity.Private;
-                case MSGraph.Sensitivity.Confidential:
+                case MSGraphModels.Sensitivity.Confidential:
                     return Sensitivity.Confidential;
                 default:
                     return Sensitivity.Public;

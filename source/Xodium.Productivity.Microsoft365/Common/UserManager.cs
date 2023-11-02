@@ -17,23 +17,23 @@ namespace Xodium.Productivity.Microsoft365.Common
             this.graphClient = graphClient ?? throw new ArgumentNullException(nameof(graphClient));
         }
 
-        private IUser Map(MSGraph.User value) => new User(value);
+        private IUser Map(MSGraph.Models.User value) => new User(value);
 
         public async Task<IUser> GetUser(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return Map(await graphClient.Users[id].Request().GetAsync());
+            return Map(await graphClient.Users[id].GetAsync());
         }
 
         public async Task<IReadOnlyList<IUser>> GetUsers(CancellationToken cancellationToken = default(CancellationToken))
         {
             var result = new List<IUser>();
-            var request = graphClient.Users.Request();
+            var request = graphClient.Users;
 
             while (request != null)
             {
-                var page = await request.GetAsync(cancellationToken);
-                result.AddRange(page.Select(Map));
-                request = page.NextPageRequest;
+                var page = await request.GetAsync(_ => { }, cancellationToken);
+                result.AddRange(page.Value.Select(Map));
+                request = null; // page.NextPageRequest;
             };
 
             return result;

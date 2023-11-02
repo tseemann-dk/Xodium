@@ -1,4 +1,4 @@
-﻿using Microsoft.Graph;
+﻿using Microsoft.Graph.Models;
 using Xodium.Geography;
 
 namespace Xodium.Productivity.Microsoft365.Extensions

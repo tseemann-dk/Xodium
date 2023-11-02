@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Linq;
 using Xodium.Productivity.Common;
-using MSGraph = Microsoft.Graph;
+using MSGraphModels = Microsoft.Graph.Models;
 
 namespace Xodium.Productivity.Microsoft365.Common
 {
     public class User : IUser
     {
-        private readonly MSGraph.User instance;
+        private readonly MSGraphModels.User instance;
 
-        public User(MSGraph.User instance)
+        public User(MSGraphModels.User instance)
         {
             this.instance = instance ?? throw new ArgumentNullException(nameof(instance));
         }

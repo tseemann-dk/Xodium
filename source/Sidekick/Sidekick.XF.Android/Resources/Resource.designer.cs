@@ -14685,6 +14685,9 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.checkedIconTint = global::Sidekick.XF.Droid.Resource.Attribute.checkedIconTint;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.checkedIconVisible = global::Sidekick.XF.Droid.Resource.Attribute.checkedIconVisible;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.checkedTextViewStyle = global::Sidekick.XF.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.checkMarkCompat = global::Sidekick.XF.Droid.Resource.Attribute.checkMarkCompat;
+			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.checkMarkTint = global::Sidekick.XF.Droid.Resource.Attribute.checkMarkTint;
+			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.checkMarkTintMode = global::Sidekick.XF.Droid.Resource.Attribute.checkMarkTintMode;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.chipBackgroundColor = global::Sidekick.XF.Droid.Resource.Attribute.chipBackgroundColor;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.chipCornerRadius = global::Sidekick.XF.Droid.Resource.Attribute.chipCornerRadius;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.chipEndPadding = global::Sidekick.XF.Droid.Resource.Attribute.chipEndPadding;
@@ -14869,6 +14872,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.elevation = global::Sidekick.XF.Droid.Resource.Attribute.elevation;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.elevationOverlayColor = global::Sidekick.XF.Droid.Resource.Attribute.elevationOverlayColor;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.elevationOverlayEnabled = global::Sidekick.XF.Droid.Resource.Attribute.elevationOverlayEnabled;
+			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.emojiCompatEnabled = global::Sidekick.XF.Droid.Resource.Attribute.emojiCompatEnabled;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.enableCopying = global::Sidekick.XF.Droid.Resource.Attribute.enableCopying;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.enabled = global::Sidekick.XF.Droid.Resource.Attribute.enabled;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.enableEdgeToEdge = global::Sidekick.XF.Droid.Resource.Attribute.enableEdgeToEdge;
@@ -15138,6 +15142,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.listPreferredItemPaddingStart = global::Sidekick.XF.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.logo = global::Sidekick.XF.Droid.Resource.Attribute.logo;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.logoDescription = global::Sidekick.XF.Droid.Resource.Attribute.logoDescription;
+			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.lStar = global::Sidekick.XF.Droid.Resource.Attribute.lStar;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.materialAlertDialogBodyTextStyle = global::Sidekick.XF.Droid.Resource.Attribute.materialAlertDialogBodyTextStyle;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.materialAlertDialogTheme = global::Sidekick.XF.Droid.Resource.Attribute.materialAlertDialogTheme;
 			global::Xodium.Platform.Xamarin.Android.Resource.Attribute.materialAlertDialogTitleIconStyle = global::Sidekick.XF.Droid.Resource.Attribute.materialAlertDialogTitleIconStyle;
@@ -15650,6 +15655,8 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Color.browser_actions_title_color = global::Sidekick.XF.Droid.Resource.Color.browser_actions_title_color;
 			global::Xodium.Platform.Xamarin.Android.Resource.Color.button_material_dark = global::Sidekick.XF.Droid.Resource.Color.button_material_dark;
 			global::Xodium.Platform.Xamarin.Android.Resource.Color.button_material_light = global::Sidekick.XF.Droid.Resource.Color.button_material_light;
+			global::Xodium.Platform.Xamarin.Android.Resource.Color.call_notification_answer_color = global::Sidekick.XF.Droid.Resource.Color.call_notification_answer_color;
+			global::Xodium.Platform.Xamarin.Android.Resource.Color.call_notification_decline_color = global::Sidekick.XF.Droid.Resource.Color.call_notification_decline_color;
 			global::Xodium.Platform.Xamarin.Android.Resource.Color.cardview_dark_background = global::Sidekick.XF.Droid.Resource.Color.cardview_dark_background;
 			global::Xodium.Platform.Xamarin.Android.Resource.Color.cardview_light_background = global::Sidekick.XF.Droid.Resource.Color.cardview_light_background;
 			global::Xodium.Platform.Xamarin.Android.Resource.Color.cardview_shadow_end_color = global::Sidekick.XF.Droid.Resource.Color.cardview_shadow_end_color;
@@ -16374,6 +16381,12 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.googleg_disabled_color_18 = global::Sidekick.XF.Droid.Resource.Drawable.googleg_disabled_color_18;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.googleg_standard_color_18 = global::Sidekick.XF.Droid.Resource.Drawable.googleg_standard_color_18;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_arrow_down_24dp = global::Sidekick.XF.Droid.Resource.Drawable.ic_arrow_down_24dp;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_call_answer = global::Sidekick.XF.Droid.Resource.Drawable.ic_call_answer;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_call_answer_low = global::Sidekick.XF.Droid.Resource.Drawable.ic_call_answer_low;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_call_answer_video = global::Sidekick.XF.Droid.Resource.Drawable.ic_call_answer_video;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_call_answer_video_low = global::Sidekick.XF.Droid.Resource.Drawable.ic_call_answer_video_low;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_call_decline = global::Sidekick.XF.Droid.Resource.Drawable.ic_call_decline;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_call_decline_low = global::Sidekick.XF.Droid.Resource.Drawable.ic_call_decline_low;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_clock_black_24dp = global::Sidekick.XF.Droid.Resource.Drawable.ic_clock_black_24dp;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_keyboard_black_24dp = global::Sidekick.XF.Droid.Resource.Drawable.ic_keyboard_black_24dp;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.ic_mtrl_checked_circle = global::Sidekick.XF.Droid.Resource.Drawable.ic_mtrl_checked_circle;
@@ -16415,6 +16428,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Sidekick.XF.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.preference_list_divider_material = global::Sidekick.XF.Droid.Resource.Drawable.preference_list_divider_material;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.test_custom_background = global::Sidekick.XF.Droid.Resource.Drawable.test_custom_background;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.test_level_drawable = global::Sidekick.XF.Droid.Resource.Drawable.test_level_drawable;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.tooltip_frame_dark = global::Sidekick.XF.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.tooltip_frame_light = global::Sidekick.XF.Droid.Resource.Drawable.tooltip_frame_light;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.accelerate = global::Sidekick.XF.Droid.Resource.Id.accelerate;
@@ -16761,6 +16775,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.ratio = global::Sidekick.XF.Droid.Resource.Id.ratio;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.rectangles = global::Sidekick.XF.Droid.Resource.Id.rectangles;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.recycler_view = global::Sidekick.XF.Droid.Resource.Id.recycler_view;
+			global::Xodium.Platform.Xamarin.Android.Resource.Id.report_drawn = global::Sidekick.XF.Droid.Resource.Id.report_drawn;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.reverseSawtooth = global::Sidekick.XF.Droid.Resource.Id.reverseSawtooth;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.right = global::Sidekick.XF.Droid.Resource.Id.right;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.rightToLeft = global::Sidekick.XF.Droid.Resource.Id.rightToLeft;
@@ -16904,6 +16919,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.view_offset_helper = global::Sidekick.XF.Droid.Resource.Id.view_offset_helper;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.view_transition = global::Sidekick.XF.Droid.Resource.Id.view_transition;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.view_tree_lifecycle_owner = global::Sidekick.XF.Droid.Resource.Id.view_tree_lifecycle_owner;
+			global::Xodium.Platform.Xamarin.Android.Resource.Id.view_tree_on_back_pressed_dispatcher_owner = global::Sidekick.XF.Droid.Resource.Id.view_tree_on_back_pressed_dispatcher_owner;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.view_tree_saved_state_registry_owner = global::Sidekick.XF.Droid.Resource.Id.view_tree_saved_state_registry_owner;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.view_tree_view_model_store_owner = global::Sidekick.XF.Droid.Resource.Id.view_tree_view_model_store_owner;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.visible = global::Sidekick.XF.Droid.Resource.Id.visible;
@@ -17136,10 +17152,18 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.String.abc_shareactionprovider_share_with = global::Sidekick.XF.Droid.Resource.String.abc_shareactionprovider_share_with;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.abc_shareactionprovider_share_with_application = global::Sidekick.XF.Droid.Resource.String.abc_shareactionprovider_share_with_application;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.abc_toolbar_collapse_description = global::Sidekick.XF.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.androidx_startup = global::Sidekick.XF.Droid.Resource.String.androidx_startup;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.appbar_scrolling_view_behavior = global::Sidekick.XF.Droid.Resource.String.appbar_scrolling_view_behavior;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.app_name = global::Sidekick.XF.Droid.Resource.String.app_name;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.bottomsheet_action_expand_halfway = global::Sidekick.XF.Droid.Resource.String.bottomsheet_action_expand_halfway;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.bottom_sheet_behavior = global::Sidekick.XF.Droid.Resource.String.bottom_sheet_behavior;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.call_notification_answer_action = global::Sidekick.XF.Droid.Resource.String.call_notification_answer_action;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.call_notification_answer_video_action = global::Sidekick.XF.Droid.Resource.String.call_notification_answer_video_action;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.call_notification_decline_action = global::Sidekick.XF.Droid.Resource.String.call_notification_decline_action;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.call_notification_hang_up_action = global::Sidekick.XF.Droid.Resource.String.call_notification_hang_up_action;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.call_notification_incoming_text = global::Sidekick.XF.Droid.Resource.String.call_notification_incoming_text;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.call_notification_ongoing_text = global::Sidekick.XF.Droid.Resource.String.call_notification_ongoing_text;
+			global::Xodium.Platform.Xamarin.Android.Resource.String.call_notification_screening_text = global::Sidekick.XF.Droid.Resource.String.call_notification_screening_text;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.character_counter_content_description = global::Sidekick.XF.Droid.Resource.String.character_counter_content_description;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.character_counter_overflowed_content_description = global::Sidekick.XF.Droid.Resource.String.character_counter_overflowed_content_description;
 			global::Xodium.Platform.Xamarin.Android.Resource.String.character_counter_pattern = global::Sidekick.XF.Droid.Resource.String.character_counter_pattern;
@@ -18102,6 +18126,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppBarLayout_liftOnScroll = global::Sidekick.XF.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId = global::Sidekick.XF.Droid.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppBarLayout_statusBarForeground = global::Sidekick.XF.Droid.Resource.Styleable.AppBarLayout_statusBarForeground;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatEmojiHelper = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatEmojiHelper;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatImageView = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatImageView;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatImageView_android_src = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatImageView_android_src;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatImageView_srcCompat = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
@@ -18135,6 +18160,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatTextView_drawableTint = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatTextView_drawableTintMode = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatTextView_emojiCompatEnabled = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatTextView_emojiCompatEnabled;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::Sidekick.XF.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
@@ -18361,6 +18387,11 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckBoxPreference_disableDependentsState = global::Sidekick.XF.Droid.Resource.Styleable.CheckBoxPreference_disableDependentsState;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckBoxPreference_summaryOff = global::Sidekick.XF.Droid.Resource.Styleable.CheckBoxPreference_summaryOff;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckBoxPreference_summaryOn = global::Sidekick.XF.Droid.Resource.Styleable.CheckBoxPreference_summaryOn;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckedTextView = global::Sidekick.XF.Droid.Resource.Styleable.CheckedTextView;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckedTextView_android_checkMark = global::Sidekick.XF.Droid.Resource.Styleable.CheckedTextView_android_checkMark;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckedTextView_checkMarkCompat = global::Sidekick.XF.Droid.Resource.Styleable.CheckedTextView_checkMarkCompat;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckedTextView_checkMarkTint = global::Sidekick.XF.Droid.Resource.Styleable.CheckedTextView_checkMarkTint;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CheckedTextView_checkMarkTintMode = global::Sidekick.XF.Droid.Resource.Styleable.CheckedTextView_checkMarkTintMode;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.Chip = global::Sidekick.XF.Droid.Resource.Styleable.Chip;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.ChipGroup = global::Sidekick.XF.Droid.Resource.Styleable.ChipGroup;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.ChipGroup_checkedChip = global::Sidekick.XF.Droid.Resource.Styleable.ChipGroup_checkedChip;
@@ -18451,6 +18482,8 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.ColorStateListItem_alpha = global::Sidekick.XF.Droid.Resource.Styleable.ColorStateListItem_alpha;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.ColorStateListItem_android_alpha = global::Sidekick.XF.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.ColorStateListItem_android_color = global::Sidekick.XF.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.ColorStateListItem_android_lStar = global::Sidekick.XF.Droid.Resource.Styleable.ColorStateListItem_android_lStar;
+			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.ColorStateListItem_lStar = global::Sidekick.XF.Droid.Resource.Styleable.ColorStateListItem_lStar;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CompoundButton = global::Sidekick.XF.Droid.Resource.Styleable.CompoundButton;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CompoundButton_android_button = global::Sidekick.XF.Droid.Resource.Styleable.CompoundButton_android_button;
 			global::Xodium.Platform.Xamarin.Android.Resource.Styleable.CompoundButton_buttonCompat = global::Sidekick.XF.Droid.Resource.Styleable.CompoundButton_buttonCompat;

@@ -2,7 +2,7 @@
 # Xodium
 A library of cross-platform functionality for solutions running on top of .NET. 
 
-Xodium provides a collection of reusable constructs and components designed for .NET applications that need to run across multiple devices, platforms and operating systems. One of the primary goals of the library is to handle differences between the various platforms via rich abstractions and platform-specific implementations of these abstractions for the most popular platforms.
+Xodium offers a set of reusable constructs and components tailored for .NET applications, ensuring compatibility across various devices, platforms, and operating systems. One of the primary goals of the library is to handle differences between the various platforms via rich abstractions and platform-specific implementations of these abstractions for the most popular platforms.
 
 Xodium contains essential ingredients for many application types across multiple platforms - just like sodium in the table salt of your household ...
 

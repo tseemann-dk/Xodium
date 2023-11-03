@@ -10,7 +10,6 @@
     <description>Xodium Library, Platform-specific implementations for Windows</description>
     <copyright>Copyright 2019</copyright>
     <iconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</iconUrl>
-    <icon>Xodium_64.png</icon>
     <tags></tags>
   </metadata>
 </package>

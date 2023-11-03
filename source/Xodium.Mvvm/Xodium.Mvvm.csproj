@@ -15,14 +15,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
+    <None Include="..\..\images\Xodium_64.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\images\Xodium_64.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+    <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
   </ItemGroup>
 
 </Project>

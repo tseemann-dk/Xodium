@@ -64,5 +64,8 @@
   <ItemGroup>
     <None Include="Xodium.Platform.iOS.nuspec" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Xodium_64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\images\Xodium_64.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Plugin.Share" Version="7.1.1" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
@@ -21,13 +28,6 @@
     <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />
     <ProjectReference Include="..\Xodium.Platform.Common\Xodium.Platform.Common.csproj" />
     <ProjectReference Include="..\Xodium.Platform.Xamarin\Xodium.Platform.Xamarin.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\images\Xodium_64.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>

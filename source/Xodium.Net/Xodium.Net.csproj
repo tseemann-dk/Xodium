@@ -11,7 +11,15 @@
     <IconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</IconUrl>
     <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>Xodium_64.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\images\Xodium_64.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Xodium.Core\Xodium.Core.csproj" />

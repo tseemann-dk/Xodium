@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -6,6 +6,7 @@
     <Authors>Torsten Seemann</Authors>
     <Description>Xodium Library, Windows support (.NET Core)</Description>
     <PackageIconUrl>https://tseemann-dk.github.io/images/Xodium_64.png</PackageIconUrl>
+    <PackageIcon>Xodium_64.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,8 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configuration\" />
-    <Folder Include="Services\" />
+    <None Include="..\..\images\Xodium_64.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

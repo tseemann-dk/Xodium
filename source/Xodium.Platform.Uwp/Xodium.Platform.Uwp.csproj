@@ -163,10 +163,7 @@
     <None Include="Xodium.Platform.Uwp.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\images\Xodium_64.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </Content>
+    <Content Include="Xodium_64.png" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

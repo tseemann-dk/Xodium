@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Xodium.Platform.Android.nuspec" />
+    <None Include="Xodium.Platform.Xamarin.Android.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Compat">

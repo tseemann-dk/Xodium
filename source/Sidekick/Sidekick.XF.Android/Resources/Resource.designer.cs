@@ -14,7 +14,7 @@ namespace Sidekick.XF.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.2.1.111")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.2.2.120")]
 	public partial class Resource
 	{
 		
@@ -16422,6 +16422,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notification_bg_normal = global::Sidekick.XF.Droid.Resource.Drawable.notification_bg_normal;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notification_bg_normal_pressed = global::Sidekick.XF.Droid.Resource.Drawable.notification_bg_normal_pressed;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notification_icon_background = global::Sidekick.XF.Droid.Resource.Drawable.notification_icon_background;
+			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notification_oversize_large_icon_bg = global::Sidekick.XF.Droid.Resource.Drawable.notification_oversize_large_icon_bg;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notification_template_icon_bg = global::Sidekick.XF.Droid.Resource.Drawable.notification_template_icon_bg;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notification_template_icon_low_bg = global::Sidekick.XF.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::Xodium.Platform.Xamarin.Android.Resource.Drawable.notification_tile_bg = global::Sidekick.XF.Droid.Resource.Drawable.notification_tile_bg;
@@ -16603,6 +16604,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.easeOut = global::Sidekick.XF.Droid.Resource.Id.easeOut;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.east = global::Sidekick.XF.Droid.Resource.Id.east;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.edit_query = global::Sidekick.XF.Droid.Resource.Id.edit_query;
+			global::Xodium.Platform.Xamarin.Android.Resource.Id.edit_text_id = global::Sidekick.XF.Droid.Resource.Id.edit_text_id;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.elastic = global::Sidekick.XF.Droid.Resource.Id.elastic;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.end = global::Sidekick.XF.Droid.Resource.Id.end;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.endToStart = global::Sidekick.XF.Droid.Resource.Id.endToStart;
@@ -16637,6 +16639,7 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.guideline = global::Sidekick.XF.Droid.Resource.Id.guideline;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.header_title = global::Sidekick.XF.Droid.Resource.Id.header_title;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.hideable = global::Sidekick.XF.Droid.Resource.Id.hideable;
+			global::Xodium.Platform.Xamarin.Android.Resource.Id.hide_ime_id = global::Sidekick.XF.Droid.Resource.Id.hide_ime_id;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.home = global::Sidekick.XF.Droid.Resource.Id.home;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.homeAsUp = global::Sidekick.XF.Droid.Resource.Id.homeAsUp;
 			global::Xodium.Platform.Xamarin.Android.Resource.Id.honorRequest = global::Sidekick.XF.Droid.Resource.Id.honorRequest;
@@ -17027,6 +17030,8 @@ namespace Sidekick.XF.Droid
 			global::Xodium.Platform.Xamarin.Android.Resource.Layout.FallbackToolbarDoNotUse = global::Sidekick.XF.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Xodium.Platform.Xamarin.Android.Resource.Layout.FlyoutContent = global::Sidekick.XF.Droid.Resource.Layout.FlyoutContent;
 			global::Xodium.Platform.Xamarin.Android.Resource.Layout.image_frame = global::Sidekick.XF.Droid.Resource.Layout.image_frame;
+			global::Xodium.Platform.Xamarin.Android.Resource.Layout.ime_base_split_test_activity = global::Sidekick.XF.Droid.Resource.Layout.ime_base_split_test_activity;
+			global::Xodium.Platform.Xamarin.Android.Resource.Layout.ime_secondary_split_test_activity = global::Sidekick.XF.Droid.Resource.Layout.ime_secondary_split_test_activity;
 			global::Xodium.Platform.Xamarin.Android.Resource.Layout.material_chip_input_combo = global::Sidekick.XF.Droid.Resource.Layout.material_chip_input_combo;
 			global::Xodium.Platform.Xamarin.Android.Resource.Layout.material_clockface_textview = global::Sidekick.XF.Droid.Resource.Layout.material_clockface_textview;
 			global::Xodium.Platform.Xamarin.Android.Resource.Layout.material_clockface_view = global::Sidekick.XF.Droid.Resource.Layout.material_clockface_view;

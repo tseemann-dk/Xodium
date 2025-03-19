@@ -294,11 +294,11 @@ namespace Xodium.Core.Tests
                 // Assign logger
                 var logger = new Logger();
                 messenger.Logger = logger;
-                Assert.Equal(0, logger.Log.Count);
+                Assert.Empty(logger.Log);
 
                 // Subscribe
                 messenger.Subscribe<Greeting>(this, (s, m) => receivedMessage = m);
-                Assert.Equal(1, logger.Log.Count);
+                Assert.Single(logger.Log);
 
                 // Publish
                 messenger.Publish(this, greeting);

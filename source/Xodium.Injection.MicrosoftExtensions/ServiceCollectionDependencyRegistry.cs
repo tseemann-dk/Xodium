@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Xodium.Injection.MicrosoftHosting
+namespace Xodium.Injection.MicrosoftExtensions
 {
     public class ServiceCollectionDependencyRegistry : IDependencyRegistry
     {

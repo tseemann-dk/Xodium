@@ -15,7 +15,7 @@ namespace Xodium.Data.Transport.Tests
             
             Assert.True(objectStream.SkipUntilObjectStart());
             Assert.Equal(1, objectStream.Read(data));
-            Assert.Equal(data[0], (byte)'{');
+            Assert.Equal((byte)'{', data[0]);
         }
     }
 }

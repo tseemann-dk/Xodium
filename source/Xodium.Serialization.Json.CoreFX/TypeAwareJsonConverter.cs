@@ -56,6 +56,17 @@ namespace Xodium.Serialization.Json.CoreFX
                 .Where(x => x.CanWrite)
                 .ToDictionary(x => ToPropertyName(x.Name, options));
 
+            // The discriminator token is consumed above (before this dictionary even exists) purely
+            // to resolve which CLR type to instantiate, so it's never revisited by the loop below -
+            // bind it onto a matching writable property here too, the same way every other property
+            // is bound, so a type whose discriminator-backing property isn't guaranteed to equal
+            // Activator.CreateInstance's default (e.g. GetType().Name) still ends up with the wire's
+            // actual value instead of that default.
+            if (properties.TryGetValue(TypeDiscriminator, out var discriminatorProperty))
+            {
+                discriminatorProperty.SetValue(result, typeName);
+            }
+
             while (reader.Read())
             {
                 if (reader.TokenType == JsonTokenType.EndObject)
